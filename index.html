@@ -6,6 +6,7 @@
     <title>동물자유연대_mobileMainRenewal</title>
   </head>
   <body>
+    <!-- icon, bg-deco는 css에서 ::after로 넣어주기 -->
     <div class="wrap">
       <!-- header -->
       <header id="header">
@@ -117,6 +118,9 @@
               </li>
             </ul>
           </nav>
+          <div class="search">
+            <button class="closed">닫기</button>
+          </div>
         </div>
       </header>
       <!-- main -->
@@ -136,6 +140,7 @@
                   미디어에 등장하는 동물의 안전과 권리를 <br />
                   보장하기 위해 서명에 참여해주세요.
                 </p>
+                <!-- web에서는 p태그를 display:none으로 처리해주고 br태그가 없는 새 문장으로 넣어주기  -->
               </div>
               <a href="#" class="sign-btn">서명하기</a>
             </li>
@@ -172,7 +177,7 @@
         <!-- main-activities -->
         <section class="sect main-activities">
           <div class="container">
-            <h2 class="tit"></h2>
+            <h2 class="tit">주요활동</h2>
             <ul class="content">
               <li>
                 <a href="">
@@ -271,64 +276,47 @@
               <li><img src="" alt="cat" /></li>
             </ul>
           </div>
-          <div class="bg-deco">
-            <img src="" alt="" />
-          </div>
         </section>
         <!-- oncenter-info -->
         <section class="sect oncenter-info">
           <div class="container">
             <ul class="info-list">
               <li>
-                <i class="rescue-icon">구조</i>
-                <div class="txt">
-                  <strong class="tit">구조</strong>
-                  <p class="content">
-                    삶의 끝자락에 놓인 <br />
-                    동물들의 생명의 불을 켜요.
-                  </p>
-                </div>
+                <strong class="tit">구조</strong>
+                <p class="content">
+                  삶의 끝자락에 놓인 <br />
+                  동물들의 생명의 불을 켜요.
+                </p>
               </li>
               <li>
-                <i class="affiliate">결연</i>
-                <div class="txt">
-                  <strong class="tit">결연</strong>
-                  <p class="content">
-                    마음으로 가족이 되어 <br />
-                    동물들의 삶을 지켜요.
-                  </p>
-                </div>
+                <strong class="tit">결연</strong>
+                <p class="content">
+                  마음으로 가족이 되어 <br />
+                  동물들의 삶을 지켜요.
+                </p>
               </li>
               <li>
-                <i class="protect">보호</i>
-                <div class="txt">
-                  <strong class="tit">보호</strong>
-                  <p class="content">
-                    생명으로서의 삶을 <br />
-                    최선을 다해 함께해요.
-                  </p>
-                </div>
+                <strong class="tit">보호</strong>
+                <p class="content">
+                  생명으로서의 삶을 <br />
+                  최선을 다해 함께해요.
+                </p>
               </li>
               <li>
-                <i class="adopt">입양</i>
-                <div class="txt">
-                  <strong class="tit">입양</strong>
-                  <p class="content">
-                    가족과 함께하는 <br />
-                    따뜻한 삶을 선물해요.
-                  </p>
-                </div>
+                <strong class="tit">입양</strong>
+                <p class="content">
+                  가족과 함께하는 <br />
+                  따뜻한 삶을 선물해요.
+                </p>
               </li>
             </ul>
-          </div>
-          <div class="bg-deco">
-            <img src="" alt="" />
           </div>
         </section>
         <!-- campaign -->
         <section class="sect campaign">
           <div class="container">
             <div class="txt-style">
+              <img src="" alt="campaign" />
               <img src="" alt="campaign" />
               <img src="" alt="campaign" />
               <img src="" alt="campaign" />
@@ -345,71 +333,197 @@
                       환경의 개선을 요구합니다.
                     </p>
                   </div>
-                  <i class="arr-right"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img src="" alt="" />
                   <div class="txt">
-                    <em class="sub-tit"></em>
-                    <strong class="tit"></strong>
-                    <p class="content"></p>
+                    <em class="sub-tit">산란계의 사육환경 개선</em>
+                    <strong class="tit">일리1, 2있는 달걀</strong>
+                    <p class="content">
+                      달걀 사육환경의 외부 포장 <br />
+                      표시제를 도입을 촉구합니다.
+                    </p>
                   </div>
-                  <i class="arr-right"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img src="" alt="" />
                   <div class="txt">
-                    <em class="sub-tit"></em>
-                    <strong class="tit"></strong>
-                    <p class="content"></p>
+                    <em class="sub-tit">개도살 및 식용금지</em>
+                    <strong class="tit">개식용 종식</strong>
+                    <p class="content">
+                      동물자유연대는 개식용 철폐 역사와 <br />
+                      함께 하고 있습니다.
+                    </p>
                   </div>
-                  <i class="arr-right"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img src="" alt="" />
                   <div class="txt">
-                    <em class="sub-tit"></em>
-                    <strong class="tit"></strong>
-                    <p class="content"></p>
+                    <em class="sub-tit">사육곰을 생츄어리로</em>
+                    <strong class="tit">사육곰에게 자유를</strong>
+                    <p class="content">
+                      국내에 남은 338마리의 사육곰이 <br />
+                      구출될 수 있도록 함께 힘을 모아주세요.
+                    </p>
                   </div>
-                  <i class="arr-right"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img src="" alt="" />
                   <div class="txt">
-                    <em class="sub-tit"></em>
-                    <strong class="tit"></strong>
-                    <p class="content"></p>
+                    <em class="sub-tit">맥도날드 케이지프리 촉구</em>
+                    <strong class="tit">언해피밀</strong>
+                    <p class="content">
+                      한국의 맥도날드에게 <br />
+                      케이지프리의 의지를 보여주세요.
+                    </p>
                   </div>
-                  <i class="arr-right"></i>
                 </a>
               </li>
             </ul>
           </div>
           <div class="bg-deco">
             <img src="" alt="" />
+            <!-- 캠페인 bg-deco는 예외 > img만 넣으면 됨 -->
           </div>
         </section>
-        <!-- news -->
-        <section class="sect news"></section>
-        <!-- newsletter -->
-        <section class="sect newsletter"></section>
-        <!-- sponsor -->
-        <section class="sect sponsor"></section>
+        <!-- notice -->
+        <section class="sect notice">
+          <div class="container">
+            <h2 class="tit">새소식</h2>
+            <ul class="list-notice">
+              <li>
+                <a href="#">
+                  <strong class="tit">
+                    [채용] 사단법인 동물자유연대 한국동물복지연구소 연구원 모집
+                  </strong>
+                  <p class="date">2023.11.07</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong class="tit">
+                    [공지] 2023 쓰담쓰담 지원사업 종료
+                  </strong>
+                  <p class="date">2023.10.31</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong class="tit">
+                    [채용] 사단법인 동물자유연대 홍보팀 활동가 모집
+                  </strong>
+                  <p class="date">2023.10.27</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong class="tit"> 결제수단 직접변경 제한 안내 </strong>
+                  <p class="date">2023.10.27</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong class="tit">
+                    [공지] 정기 출금일 정책 변경 안내
+                  </strong>
+                  <p class="date">2023.10.26</p>
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="btn-more">더보기</a>
+            <!-- 렌더링 순서를 고려할 때, h2 > ul 내용을 읽은 다음 "더보기"를 읽는 것이 자연스러움 -->
+            <!-- css로 아이콘 위치 잡아주면 됨 -->
+          </div>
+        </section>
+        <!-- subscribe -->
+        <section class="sect subscribe">
+          <div class="container">
+            <div class="txt">
+              <h2 class="tit">뉴스레터 구독</h2>
+              <p class="content">
+                동물자유연대 뉴스레터를 <br />
+                이메일로 받아보세요.
+                <!-- web에서는 여기서의 display:none;으로 바꾸고, br태그가 없는 새 p태그 넣어주기 -->
+              </p>
+            </div>
+            <div class="btn">
+              <a href="#" class="subs-btn">구독바로하기</a>
+            </div>
+          </div>
+        </section>
+        <!-- donation -->
+        <section class="sect donation">
+          <div class="container">
+            <div class="regular-donation">
+              <div class="txt">
+                <h2 class="tit">정기후원</h2>
+                <p class="content">
+                  동물구조, 학대대응, 캠페인, 교육 등 단체 모든 활동을
+                  후원합니다.
+                  <!-- 여기서의 p태그는 br태그 없이 반응형에 따라 정렬되도록 함 -->
+                </p>
+              </div>
+              <a href="#" class="btn-rd">후원하기</a>
+            </div>
+            <div class="associated-donation">
+              <div class="txt">
+                <h2 class="tit">결연후원</h2>
+                <p class="content">
+                  온센터 동물들의 보호와 치료, 입양을 후원합니다.
+                </p>
+              </div>
+              <a href="#" class="btn-ad">후원하기</a>
+            </div>
+          </div>
+        </section>
       </div>
       <!-- footer -->
       <div id="footer">
-        <div class="ft-logo"></div>
-        <div class="info"></div>
-        <div class="sns"></div>
+        <h1 class="ft-logo">
+          <img src="" alt="동물자유연대 Korean Animal Welfare Association" />
+        </h1>
+        <address class="info">
+          <span class="item">
+            "주소 : 서울특별시 성동구 행당로 17길 1-77 (우04714) "
+          </span>
+          <span class="item"> "고유번호 : 206-82-069 85" </span>
+          <span class="item"> "대표 : 조희경" </span>
+          <span class="item"> "개인정보관리담당자 : 장병진" </span>
+          <span class="item"> "전화 : 02-2292-6337" </span>
+          <span class="item"> "(평일 09:00~12:00, 13:00~18:00)" </span>
+          <span class="item"> "팩스 : 02-2292-6339 " </span>
+          <span class="item"> "이메일 : info@animals.or.kr" </span>
+          <span class="item"> 고유번호 : 206-82-069 85 </span>
+        </address>
+        <div class="terms">
+          <a href="#">가입약관</a>
+          <a href="#">개인정보처리방침</a>
+        </div>
+        <div class="sns">
+          <a href="#">
+            <i class="link_twitter"><span class="hide">twitter</span></i>
+          </a>
+          <a href="#">
+            <i class="link_facebook"><span class="hide">facebook</span></i>
+          </a>
+          <a href="#">
+            <i class="link_instagram"><span class="hide">instagram</span></i>
+          </a>
+          <a href="#">
+            <i class="link_youtube"><span class="hide">youtube</span></i>
+          </a>
+        </div>
+        <div class="copyright">
+          <span>"Copyright © 2022 동물자유연대. All rights reserved."</span>
+        </div>
       </div>
     </div>
   </body>
