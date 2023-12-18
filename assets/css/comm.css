@@ -6,4 +6,30 @@
   list-style: none;
   text-decoration: none;
   font-size: 16px;
+  box-sizing: border-box;
+}
+.blind {
+  position: absolute;
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+#header {
+  position: fixed;
+  width: 360px;
+  height: 60px;
+  padding: 12px 20px 0;
+  background-color: peru;
+  opacity: 0.6;
+}
+
+/* -------------------------bg 참고------------------------------ */
+body {
+  background: url(../../main_mob_opa.png) no-repeat 0 0;
 }

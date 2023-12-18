@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>동물자유연대_mobileMainRenewal</title>
+    <link rel="stylesheet" href="./assets/css/comm.css">
   </head>
   <body>
     <!-- icon, bg-deco는 css에서 ::after로 넣어주기 -->
@@ -14,15 +15,16 @@
           <h1 id="logo">
             <a href="/">
               <img
-                src=""
+                src="./images/logo/logo-white-mob.png"
                 alt="동물자유연대 Korean Animal Welfare Association"
-              />로고
+              />
+              <span class="blind">로고</span>
             </a>
           </h1>
-          <div class="navi">
-            <button type="button" class="search-icon">검색</button>
-            <button type="button" class="menu-icon">메뉴</button>
-          </div>
+          <di class="nav">
+            <button type="button" class="btn-search">검색</button>
+            <button type="button" class="btn-menu">메뉴</button>
+          </di v>
           <nav class="gnb">
             <div class="top">
               <div class="logo-gnb">
@@ -118,9 +120,6 @@
               </li>
             </ul>
           </nav>
-          <div class="search">
-            <button class="closed">닫기</button>
-          </div>
         </div>
       </header>
       <!-- main -->
@@ -525,6 +524,36 @@
           <span>"Copyright © 2022 동물자유연대. All rights reserved."</span>
         </div>
       </div>
+      <!-- search-layer -->
+      <section class="search-layer"> 
+        <div class="layer-head">
+          <h1 id="logo">
+            <a href="/">
+              <img
+                src=""
+                alt="동물자유연대 Korean Animal Welfare Association"
+              />로고
+            </a>
+          </h1>
+        </div>
+        <div class="layer-body">
+          <h2 class="screen-out">검색</h2>
+          <div class="area-search">
+            <div class="content">
+              <form action="" class="search">
+                <input type="text" id="inpSearch">
+              </form>
+              <div class="tag">
+                <a href="#" class="link-tag">#캠페인 참여</a>
+                <a href="#" class="link-tag">#TNR 신청하기</a>
+                <a href="#" class="link-tag">#입양 후 이야기</a>
+                <a href="#" class="link-tag">#유기동물구조 지침</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-close">닫기</button>
+      </section>
     </div>
   </body>
 </html>
