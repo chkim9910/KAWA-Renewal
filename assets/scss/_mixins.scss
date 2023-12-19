@@ -67,10 +67,6 @@
   }
 }
 
-@mixin ff-g {
-  font-family: "mGothic";
-}
-
 @mixin position($p: absolute, $t: null, $b: null, $l: null, $r: null) {
   position: $p;
   top: $t;
@@ -78,3 +74,43 @@
   left: $l;
   right: $r;
 }
+
+// --------------------mob-font--------------------
+// title
+@mixin mob-tit($fz: 30px, $fc: $txtTit) {
+  font-family: $font-family-tit;
+  font-weight: 700;
+  font-size: $fz;
+  letter-spacing: -3%;
+  color: $fc;
+}
+
+// body
+@mixin mob-bd($fz: 14px, $fc: $txtCont) {
+  font-family: $font-family-def;
+  font-weight: 500;
+  font-size: $fz;
+  letter-spacing: 0%;
+  color: $fc;
+}
+
+// --------------------web-font--------------------
+// title
+@mixin web-tit($fz: 48px, $fc: $txtTit) {
+  font-family: $font-family-tit;
+  font-weight: 700;
+  font-size: $fz;
+  letter-spacing: -3%;
+  color: $fc;
+}
+
+// body
+@mixin web-bd($fz: 16px, $fc: $txtCont) {
+  font-family: $font-family-tit;
+  font-weight: 700;
+  font-size: $fz;
+  letter-spacing: 0%;
+  color: $fc;
+}
+
+// $fc: $txtCont의 의미는 $fc의 default 값이 $txtCont라는 것
