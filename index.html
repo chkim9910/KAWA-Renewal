@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>동물자유연대_mobileMainRenewal</title>
-    <link rel="stylesheet" href="./assets/css/comm.css">
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/comm.css" />
   </head>
   <body>
     <!-- icon, bg-deco는 css에서 ::after로 넣어주기 -->
@@ -21,106 +26,111 @@
               <span class="blind">로고</span>
             </a>
           </h1>
-          <di class="nav">
-            <button type="button" class="btn-search">검색</button>
-            <button type="button" class="btn-menu">메뉴</button>
-          </di v>
-          <nav class="gnb">
-            <div class="top">
-              <div class="logo-gnb">
-                <a href="/"
-                  ><img
-                    src=""
-                    alt="동물자유연대 Korean Animal Welfare Association"
-                  />로고</a
-                >
-              </div>
-              <div class="menu">
-                <div class="lang-items">
-                  <button type="button" class="lang">언어선택</button>
-                  <div class="select-lang">
-                    <button type="button" class="ko">한국어</button>
-                    <button type="button" class="en">ENGLISH</button>
-                  </div>
-                </div>
-                <button type="button" class="close">닫기</button>
-              </div>
-            </div>
-            <div class="inner-items">
-              <a href="#" class="my-page-icon">마이페이지</a>
-              <a href="#" class="sponsor-icon">후원하기</a>
-              <a href="#" class="faq-icon">FAQ</a>
-            </div>
-            <ul class="depth1">
-              <li>
-                <a href="#">소개</a>
-                <ul class="depth2">
-                  <li><a href="#">인사말</a></li>
-                  <li><a href="#">미션·비전</a></li>
-                  <li><a href="#">연혁</a></li>
-                  <li><a href="#">조직도</a></li>
-                  <li><a href="#">공지사항</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">활동</a>
-                <ul class="depth2">
-                  <li><a href="#">정책·입법</a></li>
-                  <li><a href="#">반려동물</a></li>
-                  <li><a href="#">농장동물</a></li>
-                  <li><a href="#">동물실험</a></li>
-                  <li><a href="#">전시·야생동물</a></li>
-                  <li><a href="#">길고양이</a></li>
-                  <li><a href="#">위기동물</a></li>
-                  <li><a href="#">동물보호교육</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">참여</a>
-                <ul class="depth2">
-                  <li><a href="#">학대제보</a></li>
-                  <li><a href="#">쓰담쓰담</a></li>
-                  <li><a href="#">유기동물 발견 시</a></li>
-                  <li><a href="#">후원 회원게시판</a></li>
-                  <li><a href="#">사랑방</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">자료</a>
-                <ul class="depth2">
-                  <li><a href="#">보고서·출판물</a></li>
-                  <li><a href="#">매거진</a></li>
-                  <li><a href="#">동영상</a></li>
-                  <li><a href="#">보도자료</a></li>
-                  <li><a href="#">동물학대사건 판결 DB</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">후원</a>
-                <ul class="depth2">
-                  <li><a href="#">후원안내</a></li>
-                  <li><a href="#">살림공개</a></li>
-                  <li><a href="#">이벤트 후원</a></li>
-                  <li><a href="#">기업 후원</a></li>
-                  <li><a href="#">스타·팬클럽 후원</a></li>
-                  <li><a href="#">사랑곳간</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">온센터</a>
-                <ul class="depth2">
-                  <li><a href="#">온 소개</a></li>
-                  <li><a href="#">온 이야기</a></li>
-                  <li><a href="#">온 구조동물</a></li>
-                  <li><a href="#">결연후원</a></li>
-                  <li><a href="#">입양하기</a></li>
-                  <li><a href="#">입양 후 이야기</a></li>
-                  <li><a href="#">봉사활동</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+          <div class="nav">
+            <button type="button" class="btn-search">
+              <!-- <i class="las la-search"></i> -->
+              <span class="blind">검색</span>
+            </button>
+            <button type="button" class="btn-menu">
+              <span class="blind">메뉴</span>
+            </button>
+          </div>
         </div>
+        <nav class="gnb">
+          <div class="top">
+            <div class="logo-gnb">
+              <a href="/"
+                ><img
+                  src=""
+                  alt="동물자유연대 Korean Animal Welfare Association"
+                />로고</a
+              >
+            </div>
+            <div class="menu">
+              <div class="lang-items">
+                <button type="button" class="lang">언어선택</button>
+                <div class="select-lang">
+                  <button type="button" class="ko">한국어</button>
+                  <button type="button" class="en">ENGLISH</button>
+                </div>
+              </div>
+              <button type="button" class="close">닫기</button>
+            </div>
+          </div>
+          <div class="inner-items">
+            <a href="#" class="my-page-icon">마이페이지</a>
+            <a href="#" class="sponsor-icon">후원하기</a>
+            <a href="#" class="faq-icon">FAQ</a>
+          </div>
+          <ul class="depth1">
+            <li>
+              <a href="#">소개</a>
+              <ul class="depth2">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">미션·비전</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">조직도</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">활동</a>
+              <ul class="depth2">
+                <li><a href="#">정책·입법</a></li>
+                <li><a href="#">반려동물</a></li>
+                <li><a href="#">농장동물</a></li>
+                <li><a href="#">동물실험</a></li>
+                <li><a href="#">전시·야생동물</a></li>
+                <li><a href="#">길고양이</a></li>
+                <li><a href="#">위기동물</a></li>
+                <li><a href="#">동물보호교육</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">참여</a>
+              <ul class="depth2">
+                <li><a href="#">학대제보</a></li>
+                <li><a href="#">쓰담쓰담</a></li>
+                <li><a href="#">유기동물 발견 시</a></li>
+                <li><a href="#">후원 회원게시판</a></li>
+                <li><a href="#">사랑방</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">자료</a>
+              <ul class="depth2">
+                <li><a href="#">보고서·출판물</a></li>
+                <li><a href="#">매거진</a></li>
+                <li><a href="#">동영상</a></li>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">동물학대사건 판결 DB</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">후원</a>
+              <ul class="depth2">
+                <li><a href="#">후원안내</a></li>
+                <li><a href="#">살림공개</a></li>
+                <li><a href="#">이벤트 후원</a></li>
+                <li><a href="#">기업 후원</a></li>
+                <li><a href="#">스타·팬클럽 후원</a></li>
+                <li><a href="#">사랑곳간</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">온센터</a>
+              <ul class="depth2">
+                <li><a href="#">온 소개</a></li>
+                <li><a href="#">온 이야기</a></li>
+                <li><a href="#">온 구조동물</a></li>
+                <li><a href="#">결연후원</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">입양 후 이야기</a></li>
+                <li><a href="#">봉사활동</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
       <!-- main -->
       <div id="main">
@@ -525,7 +535,7 @@
         </div>
       </div>
       <!-- search-layer -->
-      <section class="search-layer"> 
+      <section class="search-layer">
         <div class="layer-head">
           <h1 id="logo">
             <a href="/">
@@ -541,7 +551,7 @@
           <div class="area-search">
             <div class="content">
               <form action="" class="search">
-                <input type="text" id="inpSearch">
+                <input type="text" id="inpSearch" />
               </form>
               <div class="tag">
                 <a href="#" class="link-tag">#캠페인 참여</a>

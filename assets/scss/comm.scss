@@ -1,0 +1,13 @@
+@import "variables", "mixins", "fonts", "reset";
+
+.wrap {
+  width: 100%;
+}
+
+/* -------------------------bg 참고------------------------------ */
+body {
+  background: url(../../main_mob_opa.png) no-repeat 50% 0;
+  background-size: 360px auto;
+}
+
+@import "main", "sub1", "sub2";
