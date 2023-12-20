@@ -1,1 +1,89 @@
+.sect {
+  display: block;
+}
+.main-visual {
+  height: 728px;
 
+  .horse {
+    @include flexOnlyAlignCenter;
+    width: 100%;
+    height: 100%;
+    // background: linear-gradient(
+    //     0deg,
+    //     rgba(0, 0, 0, 0.35) 0%,
+    //     rgba(0, 0, 0, 0.35) 100%
+    //   ),
+    //   url(../../images/main/sect1-main-visual/horse.png) no-repeat 55% 50% /
+    //     cover;
+  }
+  .chicken {
+    @include flexOnlyAlignCenter;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0.35) 100%
+      ),
+      url(../../images/main/sect1-main-visual/chicken.png) no-repeat 50% 50% /
+        cover;
+  }
+  .dog {
+    @include flexOnlyAlignCenter;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0.35) 100%
+      ),
+      url(../../images/main/sect1-main-visual/dog.png) no-repeat 50% 50% / cover;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    margin-left: 20px;
+    margin-top: 66px;
+  }
+  .txt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 26px 0;
+  }
+
+  .sub-tit {
+    @include mob-bd(14px);
+    color: $white;
+  }
+  .tit {
+    @include mob-tit(35px);
+    display: block;
+    color: $white;
+    .color-pr {
+      color: $primary;
+    }
+  }
+  .contents {
+    @include mob-bd(16px);
+    font-weight: 400;
+    line-height: normal;
+    color: $white;
+  }
+  .sign-btn {
+    display: block;
+    height: 44px;
+    width: 139px;
+    background-color: $primary;
+    border-radius: 10px;
+    .txt-sign-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 44px;
+      @include mob-bd(14px);
+      color: $white;
+    }
+  }
+}
