@@ -570,14 +570,16 @@ body {
   line-height: normal;
   color: #ffffff;
 }
-.main-visual .sign-btn {
+.main-visual .sign-btn,
+.main-visual .adopt-btn {
   display: block;
   height: 44px;
   width: 139px;
   background-color: #f76a00;
   border-radius: 10px;
 }
-.main-visual .sign-btn .txt-sign-btn {
+.main-visual .sign-btn .txt-sign-btn,
+.main-visual .adopt-btn .txt-sign-btn {
   display: flex;
   justify-content: center;
   align-items: center;
