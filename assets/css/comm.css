@@ -288,13 +288,8 @@ legend {
   width: 100%;
 }
 
-/* -------------------------bg 참고------------------------------ */
-body {
-  background: url(../../images/main/main_mob_opa.png) no-repeat 50% 0;
-  background-size: 360px auto;
-}
-
 #header {
+  position: fixed;
   width: 360px;
   height: 60px;
   padding: 17px 20px 0;
@@ -304,92 +299,209 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-#header .container #logo {
+#header .logo {
   height: 30px;
 }
-#header .container #logo a {
-  display: block;
-  height: 100%;
-}
-#header .container #logo a img {
+#header .logo img {
   display: block;
 }
-#header .container .nav {
+#header .nav {
   display: flex;
-  justify-content: space-between;
   gap: 16px;
   width: 77px;
 }
-#header .container .nav .btn-search {
+#header .btn-search {
   transform: rotate(270deg);
 }
-#header .container .nav .btn-search::before {
+#header .btn-search::before {
   content: "\f002";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 30px;
   color: #fff;
 }
-#header .container .nav .btn-menu {
+#header .btn-menu {
   width: 35px;
   height: 36px;
 }
-#header .container .nav .btn-menu::before {
+#header .btn-menu::before {
   content: "\f0c9";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 35px;
   color: #fff;
 }
-#header .gnb {
+
+#gnb {
   background: url(../../images/main/sidebar_mob.png) no-repeat 50% 0;
   background-size: 360px auto;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 728px;
+  min-height: 100vh;
   background-color: #222;
 }
-#header .gnb .top {
+
+.top {
   height: 60px;
   padding: 13px 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#header .gnb .top .logo-gnb {
-  height: 30px;
-}
-#header .gnb .top .logo-gnb a {
-  display: block;
-  height: 100%;
-}
-#header .gnb .top .menu {
+.top .menu {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 19px;
   width: 76px;
-  height: 40px;
 }
-#header .gnb .top .menu .lang-items {
+.top .lang-items {
   width: 30px;
 }
-#header .gnb .top .menu .lang-items .lang-icon {
+.top .lang-items .lang-icon {
   color: #fff;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 300;
 }
-#header .gnb .top .menu .lang-items .select-lang {
+.top .lang-items .select-lang {
+  display: none;
   position: absolute;
-  top: 60px;
-  left: 0;
+  top: 40px;
+  left: -22px;
+  text-align: center;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0%;
+  color: #666666;
 }
-#header .gnb .top .menu .close::before {
+.top .lang-items .select-lang .ko,
+.top .lang-items .select-lang .en {
+  display: block;
+  width: 76px;
+  height: 41px;
+  padding: 10px;
+  background-color: #fff;
+}
+.top .lang-items .select-lang .ko {
+  border-radius: 10px 10px 0 0;
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #0f6dcd;
+}
+.top .lang-items .select-lang .en {
+  border-radius: 0 0 10px 10px;
+  color: #666666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.top .close::before {
   content: "\f00d";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 30px;
   color: #fff;
+}
+
+.inner-items {
+  display: flex;
+  justify-content: center;
+  height: 84px;
+  padding: 12px 20px;
+  background: rgba(51, 51, 51, 0.5);
+  margin-top: 20px;
+}
+.inner-items .icons {
+  display: flex;
+  gap: 40px;
+  width: 236px;
+}
+.inner-items .icons .my-page-icon,
+.inner-items .icons .sponsor-icon,
+.inner-items .icons .faq-icon {
+  width: 52px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-align: center;
+}
+.inner-items .icons .my-page-icon::before {
+  display: block;
+  content: url(../../images/comm/my-page.png);
+}
+.inner-items .icons .sponsor-icon::before {
+  display: block;
+  content: url(../../images/comm/sponsorship.png);
+}
+.inner-items .icons .faq-icon::before {
+  display: block;
+  content: url(../../images/comm/faq.png);
+}
+
+.depth1 {
+  width: 100%;
+  height: 282px;
+  margin-top: 60px;
+  text-align: center;
+}
+.depth1 li {
+  height: 47px;
+}
+.depth1 li a {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 28px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+.depth1 li a span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+}
+.depth1 li a span:after {
+  content: "\f107";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 14px;
+}
+.depth1 li a .oncenter {
+  width: 173px;
+}
+.depth1 .depth2 {
+  display: none;
+  height: auto;
+  padding: 15px 0;
+  background: rgba(51, 51, 51, 0.5);
+}
+.depth1 .depth2 li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+}
+.depth1 .depth2 li a {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0%;
+  color: #666666;
+}
+.depth1 .dep2-oncenter {
+  display: block;
+}
+
+/* -------------------------bg 참고------------------------------ */
+body {
+  background: url(../../images/main/main_mob_opa.png) no-repeat 50% 0;
+  background-size: 360px auto;
 }/*# sourceMappingURL=comm.css.map */

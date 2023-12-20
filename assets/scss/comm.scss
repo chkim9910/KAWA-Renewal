@@ -4,6 +4,229 @@
   width: 100%;
 }
 
+#header {
+  position: fixed;
+  width: 360px;
+  height: 60px;
+  padding: 17px 20px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    height: 30px;
+    img {
+      display: block;
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 16px;
+    width: 77px;
+  }
+  .btn-search {
+    transform: rotate(270deg);
+
+    &::before {
+      content: "\f002";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+
+  .btn-menu {
+    width: 35px;
+    height: 36px;
+
+    &::before {
+      content: "\f0c9";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 35px;
+      color: #fff;
+    }
+  }
+}
+
+#gnb {
+  // display: none;
+  background: url(../../images/main/sidebar_mob.png) no-repeat 50% 0;
+  background-size: 360px auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #222;
+}
+.top {
+  height: 60px;
+  padding: 13px 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    width: 76px;
+  }
+
+  .lang-items {
+    width: 30px;
+
+    .lang-icon {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 300;
+    }
+    .select-lang {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: -22px;
+      // transform: translate(-50%, 0);
+      // width: 76px;
+      // height: 82px;
+      // background-color: #fff;
+      // border-radius: 10px;
+      text-align: center;
+      @include mob-bd(14px);
+
+      .ko,
+      .en {
+        display: block;
+        width: 76px;
+        height: 41px;
+        padding: 10px;
+        background-color: #fff;
+      }
+
+      .ko {
+        border-radius: 10px 10px 0 0;
+        color: $gray-100;
+        font-weight: 500;
+        background-color: $point;
+      }
+
+      .en {
+        border-radius: 0 0 10px 10px;
+        color: $txtCont;
+        font-family: $font-family-enNum;
+        font-weight: 500;
+      }
+    }
+  }
+  .close::before {
+    content: "\f00d";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #fff;
+  }
+}
+
+.inner-items {
+  display: flex;
+  justify-content: center;
+  height: 84px;
+  padding: 12px 20px;
+  background: rgba(51, 51, 51, 0.5);
+  margin-top: 20px;
+
+  .icons {
+    display: flex;
+    gap: 40px;
+    width: 236px;
+
+    .my-page-icon,
+    .sponsor-icon,
+    .faq-icon {
+      width: 52px;
+      @include mob_bd(12px, $gray-100);
+      text-align: center;
+    }
+
+    .my-page-icon::before {
+      display: block;
+      content: url(../../images/comm/my-page.png);
+    }
+    .sponsor-icon::before {
+      display: block;
+      content: url(../../images/comm/sponsorship.png);
+    }
+    .faq-icon::before {
+      display: block;
+      content: url(../../images/comm/faq.png);
+    }
+  }
+}
+
+.depth1 {
+  width: 100%;
+  height: 282px;
+  margin-top: 60px;
+  text-align: center;
+
+  li {
+    height: 47px;
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      padding: 12px 28px;
+
+      @include mob-bd(16px, $gray-100);
+      span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 166px;
+
+        &:after {
+          content: "\f107";
+          font-family: "Line Awesome Free";
+          font-weight: 900;
+          font-size: 14px;
+        }
+      }
+      .oncenter {
+        width: 173px;
+      }
+    }
+  }
+
+  .depth2 {
+    display: none;
+    height: auto;
+    padding: 15px 0;
+    background: rgba(51, 51, 51, 0.5);
+
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 38px;
+
+      a {
+        @include mob-bd(14px);
+      }
+    }
+  }
+  .dep2-oncenter {
+    display: block;
+  }
+}
+
 /* -------------------------bg 참고------------------------------ */
 body {
   background: url(../../images/main/main_mob_opa.png) no-repeat 50% 0;

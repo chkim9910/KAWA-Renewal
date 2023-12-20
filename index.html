@@ -29,12 +29,18 @@
     <link rel="stylesheet" href="./assets/css/comm.css" />
   </head>
   <body>
+    <!-- reset.scss의 u-skip 구조 참고해서 마크업해줌 -->
+    <div id="u-skip">
+      <a href="#gnb">주메뉴 바로가기</a>
+      <!-- #gnb: #gnb에게 연결되도록 함 -->
+      <a href="#main">본문 바로가기</a>
+    </div>
     <!-- icon, bg-deco는 css에서 ::after로 넣어주기 -->
     <div class="wrap">
       <!-- header -->
       <header id="header">
         <div class="container">
-          <h1 id="logo">
+          <h1 id="logo" class="logo">
             <a href="/">
               <img
                 src="./images/comm/logo-white-mob.png"
@@ -53,10 +59,10 @@
             </button>
           </div>
         </div>
-        <nav class="gnb">
+        <nav id="gnb">
           <div class="top">
-            <div class="logo-gnb">
-              <a href="/"
+            <div class="logo">
+              <a href="/" class="logo"
                 ><img
                   src="./images/comm/logo-white-mob.png"
                   alt="동물자유연대 Korean Animal Welfare Association"
@@ -83,13 +89,15 @@
             </div>
           </div>
           <div class="inner-items">
-            <a href="#" class="my-page-icon">마이페이지</a>
-            <a href="#" class="sponsor-icon">후원하기</a>
-            <a href="#" class="faq-icon">FAQ</a>
+            <div class="icons">
+              <a href="#" class="my-page-icon">마이페이지</a>
+              <a href="#" class="sponsor-icon">후원하기</a>
+              <a href="#" class="faq-icon">FAQ</a>
+            </div>
           </div>
           <ul class="depth1">
             <li>
-              <a href="#">소개</a>
+              <a href="#"><span>소개</span></a>
               <ul class="depth2">
                 <li><a href="#">인사말</a></li>
                 <li><a href="#">미션·비전</a></li>
@@ -99,7 +107,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">활동</a>
+              <a href="#"><span>활동</span></a>
               <ul class="depth2">
                 <li><a href="#">정책·입법</a></li>
                 <li><a href="#">반려동물</a></li>
@@ -112,7 +120,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">참여</a>
+              <a href="#"><span>참여</span></a>
               <ul class="depth2">
                 <li><a href="#">학대제보</a></li>
                 <li><a href="#">쓰담쓰담</a></li>
@@ -122,7 +130,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">자료</a>
+              <a href="#"><span>자료</span></a>
               <ul class="depth2">
                 <li><a href="#">보고서·출판물</a></li>
                 <li><a href="#">매거진</a></li>
@@ -132,7 +140,7 @@
               </ul>
             </li>
             <li>
-              <a href="#">후원</a>
+              <a href="#"><span>후원</span></a>
               <ul class="depth2">
                 <li><a href="#">후원안내</a></li>
                 <li><a href="#">살림공개</a></li>
@@ -143,8 +151,8 @@
               </ul>
             </li>
             <li>
-              <a href="#">온센터</a>
-              <ul class="depth2">
+              <a href="#"><span class="oncenter">온센터</span></a>
+              <ul class="depth2 dep2-oncenter">
                 <li><a href="#">온 소개</a></li>
                 <li><a href="#">온 이야기</a></li>
                 <li><a href="#">온 구조동물</a></li>
@@ -158,7 +166,7 @@
         </nav>
       </header>
       <!-- main -->
-      <div id="main">
+      <main id="main">
         <!-- main-visual -->
         <section class="sect main-visual">
           <ul class="list-slide">
@@ -518,10 +526,10 @@
             </div>
           </div>
         </section>
-      </div>
+      </main>
       <!-- footer -->
-      <div id="footer">
-        <h1 class="ft-logo">
+      <footer id="footer">
+        <h1 class="logo">
           <img src="" alt="동물자유연대 Korean Animal Welfare Association" />
         </h1>
         <address class="info">
@@ -558,7 +566,7 @@
         <div class="copyright">
           <span>"Copyright © 2022 동물자유연대. All rights reserved."</span>
         </div>
-      </div>
+      </footer>
       <!-- search-layer -->
       <section class="search-layer">
         <div class="layer-head">
