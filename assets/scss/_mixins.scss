@@ -5,7 +5,8 @@
   font-weight: 700;
   font-size: $fz;
   line-height: calc($fz * 1.3);
-  letter-spacing: calc($fz * -0.06);
+  letter-spacing: -0.5px;
+  // letter-spacing: calc($fz * -0.06);
   color: $fc;
 }
 
@@ -24,7 +25,8 @@
   font-family: $font-family-tit;
   font-weight: 700;
   font-size: $fz;
-  letter-spacing: calc($fz * -0.06);
+  letter-spacing: -0.5px;
+  // letter-spacing: calc($fz * -0.06);
   color: $fc;
 }
 
