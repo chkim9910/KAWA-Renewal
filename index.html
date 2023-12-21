@@ -254,12 +254,10 @@
         <!-- main-visual -->
         <swiper-container
           class="sect main-visual"
-          pagination="true"
-          pagination-clickable="true"
-          navigation="false"
+          navigation="true"
           space-between="20"
           centered-slides="false"
-          autoplay-delay="2500"
+          autoplay-delay="2500000"
           autoplay-disable-on-interaction="false"
         >
           <swiper-slide class="horse">
@@ -276,8 +274,8 @@
                 </p>
                 <!-- web에서는 p태그를 display:none으로 처리해주고 br태그가 없는 새 문장으로 넣어주기  -->
               </div>
-              <a href="#" class="sign-btn">
-                <span class="txt-sign-btn">서명하기</span>
+              <a href="#" class="btn-sign">
+                <span class="txt-btn-sign">서명하기</span>
               </a>
             </div>
           </swiper-slide>
@@ -294,9 +292,9 @@
                   나아갈 수 있도록 힘을 보태주세요.
                 </p>
               </div>
-              <a href="#" class="sign-btn">
-                <span class="txt-sign-btn">서명하기</span></a
-              >
+              <a href="#" class="btn-sign">
+                <span class="txt-btn-sign">서명하기</span>
+              </a>
             </div>
           </swiper-slide>
           <swiper-slide class="dog">
@@ -310,13 +308,12 @@
                   동물자유연대에서 입양하세요!
                 </p>
               </div>
-              <a href="#" class="adopt-btn">
-                <span class="txt-sign-btn">입양하기</span></a
-              >
+              <a href="#" class="btn-sign">
+                <span class="txt-btn-sign">입양하기</span>
+              </a>
             </div>
           </swiper-slide>
         </swiper-container>
-
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
         <!-- main-activities -->

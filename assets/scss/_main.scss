@@ -13,8 +13,8 @@
         rgba(0, 0, 0, 0.35) 0%,
         rgba(0, 0, 0, 0.35) 100%
       ),
-      url(../../images/main/sect1-main-visual/horse.png) no-repeat 55% 50% /
-        cover;
+      // url(../../images/main/sect1-main-visual/horse.png) no-repeat 55% 50% /
+      cover;
   }
   .chicken {
     @include flexOnlyAlignCenter;
@@ -49,42 +49,24 @@
   .txt {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 26px 0;
+    gap: 17px;
+    padding: 26px 0 24px;
   }
 
   .sub-tit {
-    @include mob-bd(14px);
-    color: $white;
+    @include mob-bd(14px, $white);
   }
   .tit {
-    @include mob-tit(35px);
+    @include mob-tit(32px, $white);
+    font-weight: 800;
     display: block;
-    color: $white;
     .color-pr {
       color: $primary;
     }
   }
   .contents {
-    @include mob-bd(16px);
-    font-weight: 400;
+    @include mob-bd(16px, $white);
+    font-weight: 300;
     line-height: normal;
-    color: $white;
-  }
-  .sign-btn,
-  .adopt-btn {
-    display: block;
-    height: 44px;
-    width: 139px;
-    background-color: $primary;
-    border-radius: 10px;
-    .txt-sign-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 44px;
-      @include mob-bd(14px);
-      color: $white;
-    }
   }
 }

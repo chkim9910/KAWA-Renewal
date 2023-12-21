@@ -1,13 +1,46 @@
 @import "variables", "mixins", "fonts", "reset";
 
+// swiper style
+.swiper {
+  height: 100vh;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: yellow;
+    svg {
+      background: yellow;
+    }
+  }
+}
+
+// btn style
+.btn-sign {
+  display: block;
+  height: 44px;
+  width: 139px;
+  border-radius: 10px;
+  background-color: $primary;
+  .txt-btn-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    @include mob-bd(14px, $white);
+  }
+}
+
+// layout
 .wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   width: 100%;
 }
 
 #header {
   position: fixed;
   width: 360px;
-  height: 60px;
+  height: $hdH;
   padding: 17px 20px 0;
 
   // container
@@ -205,6 +238,12 @@
   }
 }
 
+#main {
+  flex-grow: 1;
+}
+#footer {
+  height: $ftH;
+}
 /* -------------------------bg 참고------------------------------ */
 body {
   background: url(../../images/main/main_mob_opa.png) no-repeat 50% 0;
