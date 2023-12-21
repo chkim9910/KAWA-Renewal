@@ -2,8 +2,8 @@
   display: block;
 }
 .main-visual {
-  height: 728px;
-
+  height: 100vh;
+  // height: 728px;
   .horse {
     @include flexOnlyAlignCenter;
     width: 100%;
@@ -13,8 +13,8 @@
         rgba(0, 0, 0, 0.35) 0%,
         rgba(0, 0, 0, 0.35) 100%
       ),
-      // url(../../images/main/sect1-main-visual/horse.png) no-repeat 55% 50% /
-      cover;
+      url(../../images/main/sect1-main-visual/horse.png) no-repeat 55% 50% /
+        cover;
   }
   .chicken {
     @include flexOnlyAlignCenter;
@@ -46,6 +46,11 @@
     margin-left: 20px;
     margin-top: 66px;
   }
+  @media screen and (min-width: 768px) {
+    .container {
+      margin-left: 16.6667vw;
+    }
+  }
   .txt {
     display: flex;
     flex-direction: column;
@@ -69,4 +74,101 @@
     font-weight: 300;
     line-height: normal;
   }
+}
+@media screen and (min-width: 1280px) {
+}
+
+.main-activities {
+  // background: url(../../images/main/mobile-ver2-mainSec1.png) no-repeat 50% 0;
+  // background-size: 360px auto;
+  padding: 86px 20px 42px;
+  .hd {
+    @include mob-tit(30px, $txtTit);
+  }
+  .swiper-main-activities {
+    height: 163px;
+    margin-top: 45px;
+    .swiper-slide {
+      border-radius: 10px;
+      width: 316px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .txt {
+        @include mob-tit(14px, $white);
+        text-align: center;
+      }
+    }
+  }
+  .thumb-tit {
+    height: 58px;
+    .tit {
+      display: flex;
+      align-items: flex-end;
+      @include mob-tit(16px, $primary);
+    }
+  }
+  .law-policy {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../images/main/sect2-main-activities/01-lawPolicy.jpg) no-repeat
+        50% 50% / cover;
+  }
+  .companion-animal {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../images/main/sect2-main-activities/02-dog.png) no-repeat 50% 50% /
+        cover;
+  }
+  .farm-animal {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../images/main/sect2-main-activities/03-farm.png) no-repeat 50% 30% /
+        cover;
+  }
+  .animal-experiment {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../images/main/sect2-main-activities/04-experiment.png) no-repeat
+        50% 50% / cover;
+  }
+  .exhibition-animal {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../images/main/sect2-main-activities/05-exhibition.png) no-repeat
+        50% 50% / cover;
+  }
+  .street-cat {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../images/main/sect2-main-activities/06-cat.png) no-repeat 50% 50% /
+        cover;
+  }
+}
+
+.oncenter {
+  background: url(../../images/main/mobile-ver2-mainSec2.png) no-repeat 50% 0;
+  padding: 169px 20px 60px;
 }

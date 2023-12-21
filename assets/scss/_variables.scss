@@ -22,7 +22,7 @@ $txtTit: $gray-800;
 $txtTit-2: $gray-700;
 $txtCont: $gray-600;
 $txtCont-2: $gray-500;
-// --swiper-theme-color: #007aff;
+
 // font setting
 $font-size: 16px;
 $font-family-def: "Pretendard Variable", Pretendard, -apple-system,
@@ -55,6 +55,11 @@ $breakpoint-xxl: 1440px;
 // $gray-800: #424242;
 // $gray-900: #21 2121;
 
-:host {
-  --swiper-theme-color: yellow;
+// :root {
+//   --swiper-navigation-size: 20px;
+//   --swiper-theme-color: white;
+// }
+:root {
+  --swiper-theme-color: #ffffff !important;
+  --swiper-pagination-color: #ffffff;
 }

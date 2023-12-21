@@ -3,13 +3,35 @@
 // swiper style
 .swiper {
   height: 100vh;
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    background: yellow;
-    svg {
-      background: yellow;
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    margin: 198px 251px 0 0;
+    &:after {
+      display: block;
+      content: "\f105";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 18px;
+      color: $white;
     }
+  }
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    margin: 198px 0 0 12px;
+    &:after {
+      display: block;
+      content: "\f104";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 18px;
+      color: $white;
+    }
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
   }
 }
 
@@ -39,9 +61,11 @@
 
 #header {
   position: fixed;
-  width: 360px;
+  width: 100%;
   height: $hdH;
   padding: 17px 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 
   // container
   .container {
@@ -246,8 +270,9 @@
 }
 /* -------------------------bg 참고------------------------------ */
 body {
-  background: url(../../images/main/main_mob_opa.png) no-repeat 50% 0;
-  background-size: 360px auto;
+  z-index: -100;
+  // background: url(../../images/main/main_mob_opa.png) no-repeat 50% 0;
+  // background-size: 360px auto;
 }
 
 @import "main", "sub1", "sub2";

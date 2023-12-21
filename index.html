@@ -26,7 +26,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/comm.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+    <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
     <!-- reset.scss의 u-skip 구조 참고해서 마크업해줌 -->
@@ -252,72 +258,68 @@
       <!-- main -->
       <main id="main">
         <!-- main-visual -->
-        <swiper-container
-          class="sect main-visual"
-          navigation="true"
-          space-between="20"
-          centered-slides="false"
-          autoplay-delay="2500000"
-          autoplay-disable-on-interaction="false"
-        >
-          <swiper-slide class="horse">
-            <div class="container">
-              <div class="txt">
-                <em class="sub-tit">동물자유연대 캠페인</em>
-                <strong class="tit">
-                  미디어 출연 동물 보호<br />
-                  <span class="color-pr">가이드라인 제작 촉구</span>
-                </strong>
-                <p class="contents">
-                  미디어에 등장하는 동물의 안전과 권리를 <br />
-                  보장하기 위해 서명에 참여해주세요.
-                </p>
-                <!-- web에서는 p태그를 display:none으로 처리해주고 br태그가 없는 새 문장으로 넣어주기  -->
+        <div class="swiper sect main-visual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide horse">
+              <div class="container">
+                <div class="txt">
+                  <em class="sub-tit">동물자유연대 캠페인</em>
+                  <strong class="tit">
+                    미디어 출연 동물 보호<br />
+                    <span class="color-pr">가이드라인 제작 촉구</span>
+                  </strong>
+                  <p class="contents">
+                    미디어에 등장하는 동물의 안전과 권리를 <br />
+                    보장하기 위해 서명에 참여해주세요.
+                  </p>
+                  <!-- web에서는 p태그를 display:none으로 처리해주고 br태그가 없는 새
+                    문장으로 넣어주기 -->
+                </div>
+                <a href="#" class="btn-sign">
+                  <span class="txt-btn-sign">서명하기</span>
+                </a>
               </div>
-              <a href="#" class="btn-sign">
-                <span class="txt-btn-sign">서명하기</span>
-              </a>
             </div>
-          </swiper-slide>
-          <swiper-slide class="chicken">
-            <div class="container">
-              <div class="txt">
-                <em class="sub-tit">동물자유연대 캠페인</em>
-                <strong class="tit">
-                  CAGE FREE KOREA <br />
-                  <span class="color-pr">산란계 케이지 사육 반대</span>
-                </strong>
-                <p class="contents">
-                  서명을 통하여 기업들이 ‘케이지 프리’ 선언으로 <br />
-                  나아갈 수 있도록 힘을 보태주세요.
-                </p>
+            <div class="swiper-slide chicken">
+              <div class="container">
+                <div class="txt">
+                  <em class="sub-tit">동물자유연대 캠페인</em>
+                  <strong class="tit">
+                    CAGE FREE KOREA <br />
+                    <span class="color-pr">산란계 케이지 사육 반대</span>
+                  </strong>
+                  <p class="contents">
+                    서명을 통하여 기업들이 ‘케이지 프리’ 선언으로 <br />
+                    나아갈 수 있도록 힘을 보태주세요.
+                  </p>
+                </div>
+                <a href="#" class="btn-sign">
+                  <span class="txt-btn-sign">서명하기</span>
+                </a>
               </div>
-              <a href="#" class="btn-sign">
-                <span class="txt-btn-sign">서명하기</span>
-              </a>
             </div>
-          </swiper-slide>
-          <swiper-slide class="dog">
-            <div class="container">
-              <div class="txt">
-                <em class="sub-tit">동물자유연대 캠페인 </em>
-                <strong class="tit">입양캠페인 </strong>
-                <p class="contents">
-                  도움이 필요한 동물에게 보금자리를 <br />
-                  내어줄 수 있는 기회! <br />
-                  동물자유연대에서 입양하세요!
-                </p>
+            <div class="swiper-slide dog">
+              <div class="container">
+                <div class="txt">
+                  <em class="sub-tit">동물자유연대 캠페인 </em>
+                  <strong class="tit">입양캠페인 </strong>
+                  <p class="contents">
+                    도움이 필요한 동물에게 보금자리를 <br />
+                    내어줄 수 있는 기회! <br />
+                    동물자유연대에서 입양하세요!
+                  </p>
+                </div>
+                <a href="#" class="btn-sign">
+                  <span class="txt-btn-sign">입양하기</span>
+                </a>
               </div>
-              <a href="#" class="btn-sign">
-                <span class="txt-btn-sign">입양하기</span>
-              </a>
             </div>
-          </swiper-slide>
-        </swiper-container>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
         <!-- main-activities -->
-        <section class="sect main-activities">
+        <!-- <section class="sect main-activities">
           <div class="container">
             <h2 class="tit">주요활동</h2>
             <ul class="content">
@@ -401,7 +403,90 @@
               </li>
             </ul>
           </div>
-        </section>
+        </section> -->
+        <div class="sect main-activities">
+          <h2 class="hd">주요활동</h2>
+          <div
+            style="
+              --swiper-navigation-color: #fff;
+              --swiper-pagination-color: #fff;
+            "
+            class="swiper swiper-main-activities"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide law-policy">
+                <a href="#">
+                  <div class="container">
+                    <p class="txt">
+                      정책 연구와 관련 법의 제개정을 <br />
+                      위한 활동을 전개합니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide companion-animal">
+                <a href="#">
+                  <div class="container">
+                    <p class="txt">
+                      올바른 공생 문화를 조성하기 위한 <br />
+                      캠페인과 제반 제도를 정비합니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide farm-animal">
+                <a href="#">
+                  <div class="container">
+                    <p class="txt">
+                      농장동물 복지 증진을 촉구하는 <br />
+                      캠페인과 입법 활동을 전개합니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide animal-experiment">
+                <a href="#">
+                  <div class="container">
+                    <p class="txt">
+                      대체 소재 개발과 사용을 촉구하는 <br />
+                      캠페인과 입법 활동을 전개합니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide exhibition-animal">
+                <a href="#">
+                  <div class="container">
+                    <p class="txt">
+                      전시환경 개선과 동물복지 증진을 위한 <br />
+                      캠페인과 입법 활동을 전개합니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide street-cat">
+                <a href="#">
+                  <div class="container">
+                    <p class="txt">
+                      거리 위생을 관리하고,TNR을 시행하여 <br />
+                      적정한 개체 수 유지를 위해 활동합니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div thumbsSlider="" class="swiper thumb-tit">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tit">정책·입법</div>
+              <div class="swiper-slide tit">반려동물</div>
+              <div class="swiper-slide tit">농장동물</div>
+              <div class="swiper-slide tit">동물실험</div>
+              <div class="swiper-slide tit">전시동물</div>
+              <div class="swiper-slide tit">길고양이</div>
+            </div>
+          </div>
+        </div>
         <!-- oncenter -->
         <section class="sect oncenter">
           <div class="container">
