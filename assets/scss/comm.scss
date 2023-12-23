@@ -2,7 +2,7 @@
 
 // swiper style
 .swiper {
-  height: 100vh;
+  // height: 100vh;
   .swiper-button-next {
     width: 40px;
     height: 40px;
@@ -61,12 +61,15 @@
 
 #header {
   position: fixed;
-  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  // width: 100%;
   height: $hdH;
   padding: 17px 20px 0;
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-
   // container
   .container {
     display: flex;
@@ -261,12 +264,94 @@
     display: block;
   }
 }
-
 #main {
   flex-grow: 1;
+  .sect {
+    height: 100vh;
+    display: block;
+  }
 }
 #footer {
+  // background: url(../../images/main/mobile-ver2-foooter.png) no-repeat 50% 0 /
+  //   cover;
   height: $ftH;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .logo {
+    &:before {
+      content: "";
+      background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0 / 45%;
+      display: block;
+      height: 45px;
+    }
+  }
+  .info {
+    margin-top: 11px;
+  }
+  .item {
+    @include mob-bd(12px, #999);
+    display: block;
+    height: 16px;
+    word-break: keep-all;
+    margin-bottom: 2px;
+  }
+  .terms {
+    @include mob-bd(12px, $txtCont);
+  }
+  .bw-bar {
+    &:after {
+      content: " |";
+    }
+  }
+  .sns {
+    display: flex;
+  }
+  .link {
+    display: block;
+    width: 40px;
+    height: 50px;
+    padding: 10px 5px;
+  }
+  .link_twitter {
+    &:before {
+      @include footerIconBefore;
+      background: url(../../images/comm/twitter-icon.png) no-repeat 50% 0 /
+        cover;
+    }
+  }
+  .link_twitter {
+    &:before {
+      @include footerIconBefore;
+      background: url(../../images/comm/twitter-icon.png) no-repeat 50% 0 /
+        cover;
+    }
+  }
+  .link_facebook {
+    &:before {
+      @include footerIconBefore;
+      background: url(../../images/comm/facebook-icon.png) no-repeat 50% 0 /
+        cover;
+    }
+  }
+  .link_instagram {
+    &:before {
+      @include footerIconBefore;
+      background: url(../../images/comm/insta-icon.png) no-repeat 50% 0 / cover;
+    }
+  }
+  .link_youtube {
+    &:before {
+      @include footerIconBefore;
+      background: url(../../images/comm/youtube-icon.png) no-repeat 50% 0 /
+        cover;
+    }
+  }
+  .copyright {
+    @include mob-tit(12px, #999);
+    margin-top: 10px;
+  }
 }
 /* -------------------------bg 참고------------------------------ */
 body {

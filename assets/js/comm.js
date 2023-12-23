@@ -1,3 +1,4 @@
+// swiper
 var swiper = new Swiper(".main-visual", {
   slidesPerView: 1, // 보여질 슬라이드 수
   centeredSlides: true, // 가운데 정렬된 슬라이드
@@ -34,3 +35,70 @@ var swiper2 = new Swiper(".swiper-main-activities", {
     swiper: swiper,
   },
 });
+
+var swiper = new Swiper(".carousel-campaign", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+// // gsap
+// gsap.registerPlugin(ScrollTrigger);
+
+// let coloredSections = gsap.utils.toArray("[data-color]");
+// coloredSections.forEach((section, i) => {
+//   // grab the colors from the attribute
+//   let [bgColor, color] = section.getAttribute("data-color").split(" ");
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: "400 bottom",
+//     end: "+=100%",
+//     onToggle: (self) => {
+//       // whenever we enter a section from either direction (scrolling up or down), animate to its color
+//       if (self.isActive) {
+//         gsap.to("body", {
+//           backgroundColor: bgColor,
+//         });
+//         // when we LEAVE the very first section scrolling in reverse -OR- when we scroll past the very last section (forward), return to the "normal" colors
+//       } else if (
+//         (i === 0 && self.direction < 0) ||
+//         (i === coloredSections.length - 1 && self.direction > 0)
+//       ) {
+//         gsap.to("body", {
+//           backgroundColor: "$white",
+//         });
+//       }
+//     },
+//   });
+// });
+
+// ScrollTrigger.create({
+//   trigger: ".campaign",
+//   pin: ".container",
+//   start: "top top",
+//   end: "bottom bottom",
+//   markers: false,
+// });
+
+// let bg = gsap.utils.toArray(".bg-deco");
+// gsap.set(bg, { yPercent: 200, opacity: 0 });
+
+// headings.forEach((bg, i) => {
+//   let tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".trigger",
+//       start: () => `top+=${i * window.innerHeight} top`,
+//       end: () => `top+=${(i + 1) * window.innerHeight} top`,
+//       markers: true,
+//       scrub: true,
+//     },
+//   });
+
+//   tl.to(bg, { yPercent: 0, opacity: 1 }).to(
+//     bg,
+//     { yPercent: -200, opacity: 0 },
+//     "+=1"
+//   );
+// });

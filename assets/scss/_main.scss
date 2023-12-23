@@ -1,6 +1,4 @@
-.sect {
-  display: block;
-}
+// main-visual
 .main-visual {
   height: 100vh;
   // height: 728px;
@@ -77,12 +75,13 @@
 }
 @media screen and (min-width: 1280px) {
 }
-
+// main-activities
 .main-activities {
   // background: url(../../images/main/mobile-ver2-mainSec1.png) no-repeat 50% 0;
   // background-size: 360px auto;
+  background-color: #fff;
   padding: 86px 20px 42px;
-  .hd {
+  .tit {
     @include mob-tit(30px, $txtTit);
   }
   .swiper-main-activities {
@@ -167,8 +166,490 @@
         cover;
   }
 }
-
+// oncenter
 .oncenter {
-  background: url(../../images/main/mobile-ver2-mainSec2.png) no-repeat 50% 0;
+  height: 120vh !important;
+  // background: url(../../images/main/mobile-ver2-mainSec2.png) no-repeat 50% 0;
   padding: 169px 20px 60px;
+  background: url(../../images/main/sect3-oncenter/bg-deco-mob.png) no-repeat 0
+    0;
+
+  .txt {
+    margin-top: -3px;
+  }
+  .tit {
+    @include mob-tit(30px, $txtTit);
+  }
+  .content {
+    @include mob-bd(14px, $txtTit);
+    line-height: 32px;
+  }
+  .img-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 322px;
+    height: 305px;
+    padding-top: 50px;
+  }
+  .img {
+    width: 155px;
+    height: 146px;
+    border: 1px solid $gray-300;
+    border-radius: 10px;
+  }
+  .dog {
+    background: url(../../images/main/sect3-oncenter/01-dog.png) no-repeat 50%
+      50% /142%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background-size: 180%;
+    }
+  }
+  .oncat-info {
+    background: url(../../images/main/sect3-oncenter/02-oncat-info.png)
+      no-repeat 40% 50% /130%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background-size: 160%;
+    }
+  }
+  .ondog-info {
+    background: url(../../images/main/sect3-oncenter/03-ondog-info.png)
+      no-repeat 40% 50% /130%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background-size: 160%;
+    }
+  }
+  .cat {
+    background: url(../../images/main/sect3-oncenter/04-cat.png) no-repeat 50%
+      50% /158%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background-size: 190%;
+    }
+  }
+}
+// oncenter-info
+.oncenter-info {
+  // background: url(../../images/main/mobile-ver2-mainSec2-2.png) no-repeat 50% 0;
+  padding: 120px 20px;
+  background-color: $bgcBk;
+  .tit {
+    display: block;
+    @include mob-tit(20px, $white);
+    padding-top: 10px;
+    padding-right: 18px;
+  }
+  .content {
+    @include mob-bd(14px, $white);
+    opacity: 0.8;
+  }
+  .container {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -182px;
+      display: block;
+      width: 252px;
+      height: 280px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      z-index: 0;
+      content: "";
+    }
+  }
+  .rescue {
+    display: flex;
+    padding: 3px 0;
+    &:before {
+      background: url(../../images/main/sect4-oncenter-info/01-rescue.png)
+        no-repeat 0 0 / cover;
+      @include iconBefore;
+    }
+  }
+  .affiliate {
+    display: flex;
+    padding: 33px 0 0 49px;
+    &:before {
+      background: url(../../images/main/sect4-oncenter-info/02-affiliate.png)
+        no-repeat 0 0 / cover;
+      @include iconBefore;
+    }
+  }
+  .protect {
+    display: flex;
+    padding: 35px 0 0 49px;
+    &:before {
+      background: url(../../images/main/sect4-oncenter-info/03-protect.png)
+        no-repeat 0 0 / cover;
+      @include iconBefore;
+    }
+  }
+  .adopt {
+    display: flex;
+    padding: 38px 0;
+    &:before {
+      background: url(../../images/main/sect4-oncenter-info/04-adopt.png)
+        no-repeat 0 0 / cover;
+      @include iconBefore;
+    }
+  }
+}
+// campaign
+.campaign {
+  // background: url(../../images/main/mobile-ver2-mainSec3.png) no-repeat 50% 0 /
+  //   cover;
+  // background-size: 360px auto;
+  padding: 60px 20px;
+  background-color: $bgcBk;
+  .container {
+    position: relative;
+    .bg-deco {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 500px;
+      background: url(../../images/main/sect5-campaign/bg-deco-mob.png)
+          no-repeat 50% 50% / 40%,
+        $bgcBk;
+      background-blend-mode: color-dodge;
+      background-attachment: fixed;
+    }
+    .txt-style {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 80px 0;
+
+      .tit {
+        background: url(../../images/main/sect5-campaign/CAMPAIGN-tit-mob.png)
+          no-repeat 50% 0 / 86%;
+        height: 220px;
+      }
+
+      .below-1 {
+        @include camp-txtDs;
+        background: url(../../images/main/sect5-campaign/CAMPAIGN-1-mob.png)
+          no-repeat 50% 0 / 100%;
+      }
+      .below-2 {
+        @include camp-txtDs(271px);
+        background: url(../../images/main/sect5-campaign/CAMPAIGN-2-mob.png)
+          no-repeat 50% 0 / 100%;
+      }
+      .below-3 {
+        @include camp-txtDs(314px);
+        background: url(../../images/main/sect5-campaign/CAMPAIGN-3-mob.png)
+          no-repeat 50% 0 / 100%;
+      }
+    }
+  }
+  .carousel-campaign {
+    height: 480px;
+    margin-top: 326px;
+    border: 1px solid rgba(158, 158, 158, 0.1);
+    border-radius: 10px;
+    .txt {
+      margin-top: 81px;
+      text-align: center;
+      &:after {
+        display: block;
+        margin-left: 137px;
+        margin-top: 20px;
+        width: 45px;
+        height: 15px;
+        content: "";
+        background: url(../../images/main/sect5-campaign/arrow.png) no-repeat 0
+          0 /80%;
+      }
+    }
+    .sub-tit,
+    .tit {
+      display: block;
+    }
+    .sub-tit {
+      @include mob-bd(12px, $white);
+    }
+    .tit {
+      @include mob-tit(26px, $white);
+      margin-top: 7px;
+    }
+    .content {
+      @include mob-bd(14px, $white);
+      margin-top: 7px;
+    }
+  }
+  .pig {
+    @include camp-eachCard;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../../images/main/sect5-campaign/01-pig-on.png) no-repeat 50% 50% /
+        115%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        ),
+        url(../../images/main/sect5-campaign/01-pig-on.png) no-repeat 50% 50% /
+          120%;
+    }
+  }
+  .egg {
+    @include camp-eachCard;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../../images/main/sect5-campaign/02-egg-on.jpg) no-repeat 50% 50% /105%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        ),
+        url(../../images/main/sect5-campaign/02-egg-on.jpg) no-repeat 50% 50% /
+          110%;
+    }
+  }
+  .bear {
+    @include camp-eachCard;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../../images/main/sect5-campaign/03-bear.jpg) no-repeat 50% 50% /280%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        ),
+        url(../../images/main/sect5-campaign/03-bear.jpg) no-repeat 50% 50% /
+          300%;
+    }
+  }
+  .dog {
+    @include camp-eachCard;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../../images/main/sect5-campaign/04-dog.jpg) no-repeat 60% 50% / 220%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        ),
+        url(../../images/main/sect5-campaign/04-dog.jpg) no-repeat 60% 50% /
+          230%;
+    }
+  }
+  .mcdonald {
+    @include camp-eachCard;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../../images/main/sect5-campaign/05-mcdonald.jpeg) no-repeat 10% 50% /
+        250%;
+    transition: all 0.8s ease-in-out 0.1s;
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        ),
+        url(../../images/main/sect5-campaign/05-mcdonald.jpeg) no-repeat 10% 50% /
+          270%;
+    }
+  }
+  .swiper-pagination-bullet {
+    opacity: 0.3;
+    background: $white;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+}
+//notice
+.notice {
+  // background: url(../../images/main/mobile-ver2-mainSec4.png) no-repeat 50% 0 /
+  //   cover;
+  padding: 60px 20px;
+  .container {
+    position: relative;
+  }
+  .tit-notice {
+    @include mob-tit(30px, $txtTit);
+    text-align: center;
+  }
+  .list-notice {
+    padding-top: 31px;
+  }
+  .list {
+    height: 98px;
+    word-break: keep-all;
+    border-top: 1px solid #eee;
+  }
+  .border-bm {
+    border-bottom: 1px solid #eee;
+  }
+  .list-1,
+  .list-2,
+  .list-3,
+  .list-4,
+  .list-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 21px;
+  }
+  .tit {
+    @include mob-tit(14px, $txtTit);
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 279px;
+  }
+  .date {
+    @include mob-bd(14px, $txtCont-2);
+    display: block;
+    height: 21px;
+  }
+  .btn-more {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 40px;
+    height: 20px;
+    &:before {
+      content: "";
+      background: url(../../images/comm/Vector.png) no-repeat 50% 0 / 100%;
+      display: block;
+      height: 100%;
+    }
+  }
+}
+//subscribe
+.subscribe {
+  // background: url(../../images/main/mobile-ver2-mainSec5.png) no-repeat 50% 0 /
+  //   cover;
+  position: relative;
+  background-size: 360px auto;
+  background-color: $sub-1;
+  padding: 70px 20px 60px;
+  &:after {
+    content: "";
+    background: url(../../images/main/sect7-newsletter/bg-deco.png) no-repeat
+      50% 0 / cover;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 1px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+  }
+  .tit {
+    @include mob-tit(30px, $white);
+    letter-spacing: normal;
+  }
+  .content {
+    @include mob-bd(16px, rgba(255, 255, 255, 0.7));
+    line-height: 24px;
+    padding-top: 10px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 184px;
+    height: 41px;
+    padding: 10px 45px;
+    border-radius: 10px;
+    background-color: $secondary;
+    z-index: 1;
+    .txt-btn {
+      @include mob-bd(14px, $white);
+    }
+  }
+}
+//donation
+.donation {
+  // background: url(../../images/main/mobile-ver2-mainSec6.png) no-repeat 50% 0 /
+  //   cover;
+  // background-size: 360px auto;
+  padding: 60px 20px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+    padding-top: 3px;
+  }
+  .regular-donation,
+  .associated-donation {
+    display: flex;
+    width: 100%;
+    gap: 19px;
+  }
+  .txt {
+    width: 162px;
+    word-break: keep-all;
+  }
+  .tit {
+    @include mob-tit(26px, $txtTit);
+    letter-spacing: normal;
+    line-height: 39px;
+  }
+  .content {
+    @include mob-bd(14px, $txtCont);
+    margin-top: 9px;
+    letter-spacing: normal;
+  }
+  .btn-rd,
+  .btn-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 139px;
+    height: 41px;
+    padding: 10px 45px;
+    flex-grow: 1;
+    border-radius: 10px;
+    background-color: $secondary;
+    @include mob-bd(14px, $white);
+    margin-top: 22px;
+  }
+  .btn-rd {
+    margin-top: 33px;
+  }
 }
