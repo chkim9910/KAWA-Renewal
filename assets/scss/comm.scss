@@ -52,8 +52,8 @@
     }
     @media screen and (min-width: 1280px) {
       &:before {
-        width: 213px;
-        height: 63px;
+        width: 11.093vw;
+        height: 3.281vw;
         background-size: 100%;
       }
     }
@@ -85,8 +85,8 @@
   }
   @media screen and (min-width: 1280px) {
     .nav {
-      width: 176px;
-      gap: 28px;
+      width: 9.166vw;
+      gap: 1.458vw;
       justify-content: flex-end;
     }
   }
@@ -101,7 +101,7 @@
     }
     @media screen and (min-width: 1280px) {
       &:before {
-        font-size: 40px;
+        font-size: 2.083vw;
       }
     }
   }
@@ -130,7 +130,7 @@
       display: block;
       .lang-icon {
         color: #fff;
-        font-size: 40px;
+        font-size: 2.083vw;
         font-weight: 300;
       }
     }
@@ -142,11 +142,10 @@
     .btn-login-web {
       display: block;
     }
-
     .material-symbols-outlined {
       font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
       color: $white;
-      font-size: 40px;
+      font-size: 2.083vw;
     }
 
     // .icon-login {

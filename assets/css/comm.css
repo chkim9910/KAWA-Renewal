@@ -336,8 +336,8 @@ legend {
 }
 @media screen and (min-width: 1280px) {
   #header #logo:before {
-    width: 213px;
-    height: 63px;
+    width: 11.093vw;
+    height: 3.281vw;
     background-size: 100%;
   }
 }
@@ -373,8 +373,8 @@ legend {
 }
 @media screen and (min-width: 1280px) {
   #header .nav {
-    width: 176px;
-    gap: 28px;
+    width: 9.166vw;
+    gap: 1.458vw;
     justify-content: flex-end;
   }
 }
@@ -390,7 +390,7 @@ legend {
 }
 @media screen and (min-width: 1280px) {
   #header .btn-search:before {
-    font-size: 40px;
+    font-size: 2.083vw;
   }
 }
 #header .btn-menu {
@@ -418,7 +418,7 @@ legend {
   }
   #header .btn-lang-web .lang-icon {
     color: #fff;
-    font-size: 40px;
+    font-size: 2.083vw;
     font-weight: 300;
   }
 }
@@ -432,7 +432,7 @@ legend {
   #header .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 2.083vw;
   }
 }
 #header #gnb {
