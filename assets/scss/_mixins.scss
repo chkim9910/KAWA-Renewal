@@ -28,16 +28,18 @@
   font-weight: 700;
   font-size: $fz;
   letter-spacing: -0.5px;
+  line-height: calc($fz * 1.2);
   // letter-spacing: calc($fz * -0.06);
   color: $fc;
 }
 
 // body
 @mixin web-bd($fz: 16px, $fc: $txtCont) {
-  font-family: $font-family-tit;
-  font-weight: 700;
+  font-family: $font-family-def;
+  font-weight: 500;
   font-size: $fz;
   letter-spacing: 0%;
+  line-height: calc($fz * 1.2);
   color: $fc;
 }
 // $fc: $txtCont의 의미는 $fc의 default 값이 $txtCont라는 것
@@ -64,11 +66,22 @@
   border-radius: 40px;
   z-index: 1;
 }
+
+@mixin iconBeforeWeb {
+  content: "";
+  display: block;
+  height: 130px;
+  width: 130px;
+}
 @mixin footerIconBefore {
   display: block;
   width: 30px;
   height: 30px;
   content: "";
+}
+@mixin footerIconBeforeWeb {
+  width: 40px;
+  height: 40px;
 }
 
 @mixin camp-txtDs($top: 228px) {
@@ -85,6 +98,18 @@
   width: 320px;
   border-radius: 10px;
   height: 100%;
+}
+
+@mixin arrowMainAct {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 45px;
+  height: 15px;
+  content: "";
+  background: url(../../images/main/sect5-campaign/arrow.png) no-repeat 0 0 /70%;
 }
 // --------------------------------------------------------------------------------
 // @mixin posX {

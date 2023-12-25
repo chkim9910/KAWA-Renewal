@@ -3,7 +3,7 @@ var swiper = new Swiper(".main-visual", {
   slidesPerView: 1, // 보여질 슬라이드 수
   centeredSlides: true, // 가운데 정렬된 슬라이드
   autoplay: {
-    delay: 5000, // 자동 재생 딜레이(ms)
+    delay: 500000, // 자동 재생 딜레이(ms)
     disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
   },
   pagination: {
@@ -22,11 +22,17 @@ var swiper = new Swiper(".thumb-tit", {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    1280: {
+      spaceBetween: 0,
+      slidesPerView: 6,
+    },
+  },
 });
 var swiper2 = new Swiper(".swiper-main-activities", {
   loop: true,
   spaceBetween: 10,
-  //
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -34,7 +40,44 @@ var swiper2 = new Swiper(".swiper-main-activities", {
   thumbs: {
     swiper: swiper,
   },
+  variableWidth: true,
+  breakpoints: {
+    1280: {
+      spaceBetween: 12,
+    },
+  },
 });
+
+// // 기존 Swiper 초기화 코드
+// var swiper = new Swiper(".swiper-main-activities", {
+//   // Swiper 설정
+// });
+// // 스크린 사이즈에 따라 슬라이드 너비 변경
+// function handleSlideWidthChange(mediaQuery) {
+//   if (mediaQuery.matches) {
+//     swiper.on("slideChange", function () {
+//       var activeSlide = document.querySelector(
+//         ".swiper-slide.swiper-slide-active"
+//       );
+//       activeSlide.style.width = "60vw"; // 원하는 너비 값으로 변경
+//       var nextSlide = document.querySelector(".swiper-slide.swiper-slide-next");
+//       nextSlide.style.width = "20vw";
+//     });
+//   } else {
+//     // 1280px 미만의 경우에 대한 처리 (예: 다른 스타일 또는 너비)
+//     swiper.on("slideChange", function () {
+//       var activeSlide = document.querySelector(
+//         ".swiper-slide.swiper-slide-active"
+//       );
+//       activeSlide.style.width = ""; // 원래의 너비 또는 다른 스타일로 변경
+//     });
+//   }
+// }
+// // 1280px 이상일 때의 미디어 쿼리
+// var mediaQuery = window.matchMedia("(min-width: 1280px)");
+// handleSlideWidthChange(mediaQuery); // 페이지 로드 시 한번 호출
+// // 미디어 쿼리 변경 시 이벤트 핸들러
+// mediaQuery.addListener(handleSlideWidthChange);
 
 var swiper = new Swiper(".carousel-campaign", {
   slidesPerView: "auto",
@@ -44,6 +87,7 @@ var swiper = new Swiper(".carousel-campaign", {
     clickable: true,
   },
 });
+
 // // gsap
 // gsap.registerPlugin(ScrollTrigger);
 

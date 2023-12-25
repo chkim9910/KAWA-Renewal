@@ -41,12 +41,15 @@
     display: flex;
     flex-direction: column;
     height: 250px;
-    margin-left: 20px;
+    margin-left: 5.555vw;
     margin-top: 66px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     .container {
-      margin-left: 16.6667vw;
+      margin-left: 16.666vw;
+    }
+    .dog-container {
+      margin-top: 180px;
     }
   }
   .txt {
@@ -55,9 +58,19 @@
     gap: 17px;
     padding: 26px 0 24px;
   }
-
+  @media screen and (min-width: 1280px) {
+    .txt {
+      padding: 1.354vw 0 2.916vw;
+      gap: 15px;
+    }
+  }
   .sub-tit {
-    @include mob-bd(14px, $white);
+    @include mob-bd(14px, rgba(255, 255, 255, 0.7));
+  }
+  @media screen and (min-width: 1280px) {
+    .sub-tit {
+      @include web-bd(18px, rgba(255, 255, 255, 0.6));
+    }
   }
   .tit {
     @include mob-tit(32px, $white);
@@ -67,22 +80,231 @@
       color: $primary;
     }
   }
-  .contents {
-    @include mob-bd(16px, $white);
+  @media screen and (min-width: 1280px) {
+    .tit {
+      @include web-tit(48px, $white);
+    }
+  }
+  .contents-mob {
+    @include mob-bd(16px, rgba(255, 255, 255, 0.8));
     font-weight: 300;
     line-height: normal;
   }
-}
-@media screen and (min-width: 1280px) {
+  .contents-web {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    .contents-web {
+      position: static;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      @include web-bd(20px, rgba(255, 255, 255, 0.8));
+    }
+    .contents-mob {
+      display: none;
+    }
+  }
+  .btn-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 139px;
+    height: 44px;
+    padding: 10px 45px;
+    border-radius: 10px;
+    background-color: $secondary;
+    .txt-btn-sign {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 44px;
+      @include mob-bd(14px, $white);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .btn-sign {
+      width: 184px;
+      .txt-btn-sign {
+        @include web-bd(18px, $white);
+      }
+    }
+  }
+  .btn-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+  }
+  .swiper-btn {
+    position: absolute;
+    display: flex;
+    width: 268.375px;
+    height: 250px;
+    margin-top: 105px;
+    margin-left: 5.555vw;
+    // margin-top: -70px;
+    // margin-left: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    .swiper-btn {
+      width: 599px;
+      height: 305px;
+      margin-top: 132px;
+      margin-left: 16.666vw;
+    }
+  }
+  .swiper-button-next {
+    position: absolute;
+    top: 297px;
+    left: 40px;
+    transform: translateY(0%);
+    width: 40px;
+    height: 40px;
+    // margin: 198px 251px 0 0;
+    &:after {
+      // display: block;
+      content: "\f105";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 18px;
+      color: $white;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .swiper-button-next {
+      top: 290px;
+      left: 559px;
+    }
+  }
+  .swiper-button-prev {
+    position: absolute;
+    top: 297px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    // margin: 198px 0 0 12px;
+    &:after {
+      // display: block;
+      content: "\f104";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 18px;
+      color: $white;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .swiper-button-prev {
+      top: 290px;
+      left: 519px;
+    }
+  }
+  .progress-wrap {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .progress-wrap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+    }
+    .progress {
+      width: 599px;
+      height: 305px;
+      margin-left: 16.666vw;
+      margin-top: 139px;
+      padding-right: 95px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      z-index: 1;
+    }
+    .num {
+      display: block;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      @include web-bd(16px, $white);
+      text-align: center;
+    }
+    .fst-01 {
+      opacity: 0;
+    }
+    .fst-02 {
+      opacity: 0;
+    }
+    .bar {
+      position: relative;
+      height: 40px;
+      padding-top: 20px;
+    }
+    .bar-bottom {
+      width: 120px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    .bar-status {
+      position: absolute;
+      top: 20px;
+      width: 50px;
+      height: 1px;
+      background-color: $white;
+      z-index: 2;
+    }
+  }
+  .scrolldown-wrap {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .scrolldown-wrap {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 30px;
+      .txt-scroll {
+        display: block;
+        z-index: 1;
+        @include web-bd(16px, rgba(255, 255, 255, 0.5));
+        &:after {
+          display: block;
+          content: "\f103";
+          font-family: "Line Awesome Free";
+          font-weight: 900;
+          color: rgba(255, 255, 255, 0.5);
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 // main-activities
 .main-activities {
-  // background: url(../../images/main/mobile-ver2-mainSec1.png) no-repeat 50% 0;
-  // background-size: 360px auto;
-  background-color: #fff;
-  padding: 86px 20px 42px;
+  background-color: $white;
+  padding: 23.888vw 5.555vw 11.666vw;
   .tit {
     @include mob-tit(30px, $txtTit);
+  }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      @include web-tit(48px, $txtTit);
+    }
   }
   .swiper-main-activities {
     height: 163px;
@@ -98,8 +320,20 @@
       width: 100%;
       height: 100%;
       .txt {
-        @include mob-tit(14px, $white);
+        @include mob-bd(14px, $white);
         text-align: center;
+      }
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .swiper-main-activities {
+      width: 1100px;
+      height: 526px;
+      margin-left: 0;
+      .container {
+        .txt {
+          @include web-bd(40px, $white);
+        }
       }
     }
   }
@@ -108,10 +342,42 @@
     .tit {
       display: flex;
       align-items: flex-end;
-      @include mob-tit(16px, $primary);
+      @include mob-bd(16px, $txtTit-2);
+      font-weight: 700;
+      &:active,
+      &:hover {
+        color: $primary;
+        &:after {
+          display: block;
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #f76a00;
+          margin-bottom: 23px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .thumb-tit {
+      height: 101px;
+      .tit {
+        @include web-bd(26px, $txtTit);
+        font-weight: 700;
+        &:active,
+        &:hover {
+          &:after {
+            width: 12px;
+            height: 12px;
+            margin-bottom: 34px;
+          }
+        }
+      }
     }
   }
   .law-policy {
+    position: relative;
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.3) 0%,
@@ -119,6 +385,9 @@
       ),
       url(../../images/main/sect2-main-activities/01-lawPolicy.jpg) no-repeat
         50% 50% / cover;
+    &:after {
+      @include arrowMainAct;
+    }
   }
   .companion-animal {
     background: linear-gradient(
@@ -128,6 +397,9 @@
       ),
       url(../../images/main/sect2-main-activities/02-dog.png) no-repeat 50% 50% /
         cover;
+    &:after {
+      @include arrowMainAct;
+    }
   }
   .farm-animal {
     background: linear-gradient(
@@ -137,6 +409,9 @@
       ),
       url(../../images/main/sect2-main-activities/03-farm.png) no-repeat 50% 30% /
         cover;
+    &:after {
+      @include arrowMainAct;
+    }
   }
   .animal-experiment {
     background: linear-gradient(
@@ -146,6 +421,9 @@
       ),
       url(../../images/main/sect2-main-activities/04-experiment.png) no-repeat
         50% 50% / cover;
+    &:after {
+      @include arrowMainAct;
+    }
   }
   .exhibition-animal {
     background: linear-gradient(
@@ -155,6 +433,9 @@
       ),
       url(../../images/main/sect2-main-activities/05-exhibition.png) no-repeat
         50% 50% / cover;
+    &:after {
+      @include arrowMainAct;
+    }
   }
   .street-cat {
     background: linear-gradient(
@@ -164,6 +445,25 @@
       ),
       url(../../images/main/sect2-main-activities/06-cat.png) no-repeat 50% 50% /
         cover;
+    &:after {
+      @include arrowMainAct;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-activities {
+    padding: 10.416vw 16.666vw 13.541vw;
+    .law-policy,
+    .companion-animal,
+    .farm-animal,
+    .animal-experiment,
+    .exhibition-animal,
+    .street-cat {
+      &:after {
+        bottom: 30%;
+        background: url(../../images/comm/web-Vector.png) no-repeat 0 0 /100%;
+      }
+    }
   }
 }
 // oncenter
@@ -173,16 +473,37 @@
   padding: 169px 20px 60px;
   background: url(../../images/main/sect3-oncenter/bg-deco-mob.png) no-repeat 0
     0;
-
+  background-color: $white;
   .txt {
     margin-top: -3px;
+  }
+  @media screen and (min-width: 1280px) {
+    .txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 4.583vw;
+      width: 24.22vw;
+    }
   }
   .tit {
     @include mob-tit(30px, $txtTit);
   }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      @include web-tit(56px, $txtTit);
+    }
+  }
   .content {
     @include mob-bd(14px, $txtTit);
     line-height: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    .content {
+      @include web-bd(24px, $txtTit-2);
+      word-wrap: break-word;
+      word-break: keep-all;
+    }
   }
   .img-list {
     display: flex;
@@ -192,11 +513,27 @@
     height: 305px;
     padding-top: 50px;
   }
+  @media screen and (min-width: 1280px) {
+    .img-list {
+      align-content: flex-end;
+      width: 42.031vw;
+      height: 100%;
+      padding-top: 0;
+      gap: 0.625vw;
+    }
+  }
   .img {
     width: 155px;
     height: 146px;
     border: 1px solid $gray-300;
     border-radius: 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    .img {
+      // width: 20.677vw;
+      width: 19.531vw;
+      height: 19.531vw;
+    }
   }
   .dog {
     background: url(../../images/main/sect3-oncenter/01-dog.png) no-repeat 50%
@@ -231,21 +568,26 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .oncenter {
+    // height: 100vh !important;
+    padding: 9.166vw 0 9.791vw 16.666vw;
+    // padding: 9.166vw 7.968vw 9.791vw 16.666vw;
+    background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat
+      0 0;
+    .container {
+      display: flex;
+      // justify-content: space-between;
+      gap: 9.24vw;
+      height: 764px;
+    }
+  }
+}
 // oncenter-info
 .oncenter-info {
   // background: url(../../images/main/mobile-ver2-mainSec2-2.png) no-repeat 50% 0;
   padding: 120px 20px;
   background-color: $bgcBk;
-  .tit {
-    display: block;
-    @include mob-tit(20px, $white);
-    padding-top: 10px;
-    padding-right: 18px;
-  }
-  .content {
-    @include mob-bd(14px, $white);
-    opacity: 0.8;
-  }
   .container {
     position: relative;
     &:before {
@@ -260,6 +602,19 @@
       z-index: 0;
       content: "";
     }
+  }
+  .container-web {
+    display: none;
+  }
+  .tit {
+    display: block;
+    @include mob-tit(20px, $white);
+    padding-top: 10px;
+    padding-right: 18px;
+  }
+  .content {
+    @include mob-bd(14px, $white);
+    opacity: 0.8;
   }
   .rescue {
     display: flex;
@@ -298,6 +653,139 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .oncenter-info {
+    .container-mob {
+      display: none;
+    }
+    .container-web {
+      display: block;
+      padding: 11.51vw 16.666vw;
+      .container-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.166vw;
+        &:before {
+          position: absolute;
+          display: block;
+          height: 18.75vw;
+          width: 23.697vw;
+          content: "";
+          background: url(../../images/main/sect4-oncenter-info/CLICK\ ON\ ME.png)
+            no-repeat 50% 50% / 100%;
+        }
+        .row-1,
+        .row-2 {
+          display: flex;
+          gap: 23.697vw;
+        }
+      }
+      // .btn-wrap을 클릭했을 때의 디자인
+      .btn-wrap {
+        &:active {
+          background-color: $white;
+          .circle {
+            transform: translateX(286px);
+          }
+          .on {
+            display: block;
+          }
+          .off {
+            display: none;
+          }
+        }
+      }
+      .btn-wrap {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 416px;
+        height: 130px;
+        // padding-right: 103px;
+        align-items: flex-start;
+        border-radius: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        // .off이 active될 때 속성
+        background-color: $bgcBk;
+        transition: background-color 0.3s;
+      }
+      .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: $secondary;
+        transition: transform 0.3s;
+      }
+
+      .on {
+        display: none;
+        height: 130px;
+        width: 286px;
+        text-align: center;
+        transition: display 0.3s;
+        .content {
+          @include web-bd(24px, $txtTit);
+          transform: translate(7.5%, 60%);
+        }
+      }
+      .off {
+        // display: none;
+        display: block;
+        height: 130px;
+        width: 286px;
+        margin-left: 130px;
+        transition: display 0.3s;
+        .tit {
+          @include web-tit(36px, $white);
+          transform: translate(30%, 60%);
+        }
+      }
+      .rescue-web {
+        .circle {
+          &:before {
+            background: url(../../images/main/sect4-oncenter-info/01-rescue-web.png)
+              no-repeat 0 0 / cover;
+            @include iconBeforeWeb;
+          }
+        }
+      }
+      .affiliate-web {
+        .circle {
+          &:before {
+            background: url(../../images/main/sect4-oncenter-info/02-affiliate-web.png)
+              no-repeat 0 0 / cover;
+            @include iconBeforeWeb;
+          }
+        }
+      }
+      .protect-web {
+        .circle {
+          &:before {
+            background: url(../../images/main/sect4-oncenter-info/03-protect-web.png)
+              no-repeat 0 0 / cover;
+            @include iconBeforeWeb;
+          }
+        }
+      }
+      .adopt-web {
+        .circle {
+          &:before {
+            background: url(../../images/main/sect4-oncenter-info/04-adopt-web.png)
+              no-repeat 0 0 / cover;
+            @include iconBeforeWeb;
+          }
+        }
+      }
+      .click-on-me {
+        width: 23.697vw;
+      }
+    }
+  }
+}
 // campaign
 .campaign {
   // background: url(../../images/main/mobile-ver2-mainSec3.png) no-repeat 50% 0 /
@@ -311,14 +799,19 @@
       position: absolute;
       top: 0;
       left: 0;
-      display: block;
       width: 100%;
       height: 500px;
       background: url(../../images/main/sect5-campaign/bg-deco-mob.png)
-          no-repeat 50% 50% / 40%,
+          no-repeat 50% 0 / 40%,
         $bgcBk;
       background-blend-mode: color-dodge;
-      background-attachment: fixed;
+      // background-attachment: fixed;
+    }
+    @media screen and (min-width: 1280px) {
+      .bg-deco {
+        height: 1000px;
+        background-size: 21.718vw 36.562vw;
+      }
     }
     .txt-style {
       position: absolute;
@@ -327,13 +820,17 @@
       width: 100%;
       height: 100%;
       padding: 80px 0;
-
       .tit {
+        height: 46px;
         background: url(../../images/main/sect5-campaign/CAMPAIGN-tit-mob.png)
-          no-repeat 50% 0 / 86%;
-        height: 220px;
+          no-repeat 50% 50% / 85%;
       }
-
+      @media screen and (min-width: 1280px) {
+        .tit {
+          height: 180px;
+          background-size: 47.291vw 6.643vw;
+        }
+      }
       .below-1 {
         @include camp-txtDs;
         background: url(../../images/main/sect5-campaign/CAMPAIGN-1-mob.png)
@@ -348,6 +845,26 @@
         @include camp-txtDs(314px);
         background: url(../../images/main/sect5-campaign/CAMPAIGN-3-mob.png)
           no-repeat 50% 0 / 100%;
+      }
+      @media screen and (min-width: 1280px) {
+        .below-wrap {
+          display: flex;
+          flex-direction: column;
+          height: 1000px;
+          margin-top: 18.402vw;
+        }
+        .below-1,
+        .below-2,
+        .below-3 {
+          position: static;
+          height: 9.322vw;
+          background-size: 66.302vw 9.314vw;
+        }
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      .txt-style {
+        padding-top: 14.583vw;
       }
     }
   }
@@ -384,6 +901,11 @@
     .content {
       @include mob-bd(14px, $white);
       margin-top: 7px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .carousel-campaign {
+      margin-top: 67.604vw;
     }
   }
   .pig {
@@ -491,6 +1013,12 @@
     opacity: 1;
   }
 }
+@media screen and (min-width: 1280px) {
+  .campaign {
+    padding: 21.875vw 0;
+    // 10.416vw
+  }
+}
 //notice
 .notice {
   // background: url(../../images/main/mobile-ver2-mainSec4.png) no-repeat 50% 0 /
@@ -503,13 +1031,28 @@
     @include mob-tit(30px, $txtTit);
     text-align: center;
   }
+  @media screen and (min-width: 1280px) {
+    .tit-notice {
+      @include web-tit(48px, $txtTit);
+    }
+  }
   .list-notice {
     padding-top: 31px;
+  }
+  @media screen and (min-width: 1280px) {
+    .list-notice {
+      padding-top: 3.489vw;
+    }
   }
   .list {
     height: 98px;
     word-break: keep-all;
     border-top: 1px solid #eee;
+  }
+  @media screen and (min-width: 1280px) {
+    .list {
+      height: 58px;
+    }
   }
   .border-bm {
     border-bottom: 1px solid #eee;
@@ -526,6 +1069,17 @@
     height: 100%;
     margin-left: 21px;
   }
+  @media screen and (min-width: 1280px) {
+    .list-1,
+    .list-2,
+    .list-3,
+    .list-4,
+    .list-5 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
   .tit {
     @include mob-tit(14px, $txtTit);
     display: flex;
@@ -533,10 +1087,22 @@
     height: 44px;
     width: 279px;
   }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      width: 544px;
+      @include web-bd(20px, $txtTit);
+    }
+  }
   .date {
     @include mob-bd(14px, $txtCont-2);
     display: block;
     height: 21px;
+  }
+  @media screen and (min-width: 1280px) {
+    .date {
+      @include web-bd(20px, $txtCont-2);
+      font-weight: 400;
+    }
   }
   .btn-more {
     position: absolute;
@@ -550,6 +1116,15 @@
       display: block;
       height: 100%;
     }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .notice {
+    height: 100vh;
+    padding: 10.416vw 16.666vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 //subscribe
@@ -571,6 +1146,13 @@
     left: 0;
     bottom: 1px;
   }
+  @media screen and (min-width: 1280px) {
+    &:after {
+      background: url(../../images/main/sect7-newsletter/bg-deco-web.png)
+        no-repeat 50% 0 / cover;
+      height: 5.208vw;
+    }
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -581,12 +1163,54 @@
     @include mob-tit(30px, $white);
     letter-spacing: normal;
   }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      @include web-tit(48px, $white);
+      text-align: center;
+    }
+  }
   .content {
     @include mob-bd(16px, rgba(255, 255, 255, 0.7));
     line-height: 24px;
     padding-top: 10px;
     letter-spacing: normal;
     text-align: center;
+  }
+  .content-web {
+    display: none;
+  }
+  .inp {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .content {
+      display: none;
+    }
+    .content-web {
+      display: block;
+      margin-top: 0.625vw;
+      @include web-bd(24px, rgba(255, 255, 255, 0.7));
+    }
+    .inp-wrap {
+      display: flex;
+      gap: 1.406vw;
+      margin-top: 1vw;
+    }
+    .inp {
+      display: block;
+      height: 44px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      @include web-bd(14px, $gray-700);
+    }
+    .inp-name {
+      width: 12.5vw;
+    }
+    .inp-emailAddr {
+      width: 18.75vw;
+    }
   }
   .btn {
     display: flex;
@@ -602,6 +1226,24 @@
       @include mob-bd(14px, $white);
     }
   }
+  @media screen and (min-width: 1280px) {
+    .btn {
+      margin-top: 1.083vw;
+      height: 44px;
+      .txt-btn {
+        @include web-bd(18px, $white);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .subscribe {
+    padding: 21.614vw 16.666vw 6.77vw;
+    // height: 100vh;
+    background-color: $white;
+    background: url(../../images/main/sect7-newsletter/bg-letter-web.png) 50% 0
+      no-repeat;
+  }
 }
 //donation
 .donation {
@@ -615,15 +1257,39 @@
     gap: 54px;
     padding-top: 3px;
   }
+  @media screen and (min-width: 1280px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
   .regular-donation,
   .associated-donation {
     display: flex;
     width: 100%;
-    gap: 19px;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1280px) {
+    .regular-donation,
+    .associated-donation {
+      width: 26.041vw;
+      gap: 2.604vw;
+    }
+    .regular-donation {
+      justify-content: flex-start;
+    }
+    .associated-donation {
+      justify-content: flex-end;
+    }
   }
   .txt {
     width: 162px;
     word-break: keep-all;
+  }
+  @media screen and (min-width: 1280px) {
+    .txt {
+      width: 12.625vw;
+    }
   }
   .tit {
     @include mob-tit(26px, $txtTit);
@@ -640,10 +1306,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 139px;
     height: 41px;
     padding: 10px 45px;
-    flex-grow: 1;
     border-radius: 10px;
     background-color: $secondary;
     @include mob-bd(14px, $white);
@@ -651,5 +1315,10 @@
   }
   .btn-rd {
     margin-top: 33px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .donation {
+    padding: 10.416vw 16.666vw;
   }
 }

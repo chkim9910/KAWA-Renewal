@@ -3,68 +3,32 @@
 // swiper style
 .swiper {
   // height: 100vh;
-  .swiper-button-next {
-    width: 40px;
-    height: 40px;
-    margin: 198px 251px 0 0;
-    &:after {
-      display: block;
-      content: "\f105";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      font-size: 18px;
-      color: $white;
-    }
+  overflow: visible;
+  .swiper-slide {
+    cursor: pointer;
   }
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    margin: 198px 0 0 12px;
-    &:after {
-      display: block;
-      content: "\f104";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      font-size: 18px;
-      color: $white;
-    }
-  }
+
   .swiper-button-next.swiper-button-disabled,
   .swiper-button-prev.swiper-button-disabled {
     opacity: 1;
   }
 }
 
-// btn style
-.btn-sign {
-  display: block;
-  height: 44px;
-  width: 139px;
-  border-radius: 10px;
-  background-color: $primary;
-  .txt-btn-sign {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 44px;
-    @include mob-bd(14px, $white);
-  }
-}
-
 // layout
 .wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
-
+// header
 #header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  // width: 100%;
+  width: 100vw;
   height: $hdH;
   padding: 17px 20px 0;
   box-sizing: border-box;
@@ -76,10 +40,42 @@
     justify-content: space-between;
     align-items: center;
   }
-  .logo {
-    height: 30px;
-    img {
+  #logo {
+    &:before {
       display: block;
+      height: 30px;
+      width: 110px;
+      margin-top: 4px;
+      content: "";
+      background: url(../../images/comm/logo-white-mob.png) no-repeat 0 0 /
+        cover;
+    }
+    @media screen and (min-width: 1280px) {
+      &:before {
+        width: 213px;
+        height: 63px;
+        background-size: 100%;
+      }
+    }
+  }
+  .depth1-web-wrap {
+    display: none;
+    width: 100%;
+  }
+  @media screen and (min-width: 1280px) {
+    .depth1-web-wrap {
+      display: block;
+    }
+    .depth1-web {
+      display: flex;
+      justify-content: center;
+      gap: 3.906vw;
+      .txt-dep1-web {
+        @include web-bd(18px, $white);
+      }
+    }
+    .depth2-web {
+      display: none;
     }
   }
   .nav {
@@ -87,22 +83,33 @@
     gap: 16px;
     width: 77px;
   }
+  @media screen and (min-width: 1280px) {
+    .nav {
+      width: 176px;
+      gap: 28px;
+      justify-content: flex-end;
+    }
+  }
   .btn-search {
     transform: rotate(270deg);
-
-    &::before {
+    &:before {
       content: "\f002";
       font-family: "Line Awesome Free";
       font-weight: 900;
       font-size: 30px;
       color: #fff;
     }
+    @media screen and (min-width: 1280px) {
+      &:before {
+        font-size: 40px;
+      }
+    }
   }
   .btn-menu {
     width: 35px;
     height: 36px;
 
-    &::before {
+    &:before {
       content: "\f0c9";
       font-family: "Line Awesome Free";
       font-weight: 900;
@@ -110,17 +117,55 @@
       color: #fff;
     }
   }
+  @media screen and (min-width: 1280px) {
+    .btn-menu {
+      display: none;
+    }
+  }
+  .btn-lang-web {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .btn-lang-web {
+      display: block;
+      .lang-icon {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 300;
+      }
+    }
+  }
+  .btn-login-web {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .btn-login-web {
+      display: block;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+      color: $white;
+      font-size: 40px;
+    }
+
+    // .icon-login {
+    //   color: $white;
+    //   font-size: 32px;
+    // }
+  }
   // gnb
   #gnb {
     display: none;
-    background: url(../../images/main/sidebar_mob.png) no-repeat 50% 0;
-    background-size: 360px auto;
+    // background: url(../../images/main/sidebar_mob.png) no-repeat 50% 0;
+    // background-size: 360px auto;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 100vh;
     background-color: #222;
+    overflow-y: scroll;
   }
   .top {
     height: 60px;
@@ -226,9 +271,9 @@
     .li-dep1 {
       display: flex;
       justify-content: flex-end;
-      padding: 12px 28px;
+      padding: 12px 54px;
       @include mob-bd(16px, $white);
-      .oncenter {
+      .oncenter-dep1 {
         width: 173px;
       }
     }
@@ -264,13 +309,20 @@
     display: block;
   }
 }
+@media screen and (min-width: 1280px) {
+  #header {
+    height: 100px;
+    padding: 35px 23px 0;
+  }
+}
+// main
 #main {
   flex-grow: 1;
   .sect {
     height: 100vh;
-    display: block;
   }
 }
+// footer
 #footer {
   // background: url(../../images/main/mobile-ver2-foooter.png) no-repeat 50% 0 /
   //   cover;
@@ -286,9 +338,24 @@
       display: block;
       height: 45px;
     }
+    @media screen and (min-width: 1280px) {
+      &:before {
+        width: 16.406vw;
+        height: 5vw;
+        background-size: 100%;
+        transform: translateY(15%);
+      }
+    }
   }
   .info {
     margin-top: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      width: 45.625vw;
+    }
   }
   .item {
     @include mob-bd(12px, #999);
@@ -296,9 +363,22 @@
     height: 16px;
     word-break: keep-all;
     margin-bottom: 2px;
+    margin-right: 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    .item {
+      @include web-bd(16px, $gray-700);
+      font-weight: 400;
+    }
   }
   .terms {
     @include mob-bd(12px, $txtCont);
+  }
+  @media screen and (min-width: 1280px) {
+    .terms {
+      @include web-bd(16px, $gray-700);
+      font-weight: 400;
+    }
   }
   .bw-bar {
     &:after {
@@ -307,6 +387,11 @@
   }
   .sns {
     display: flex;
+  }
+  @media screen and (min-width: 1280px) {
+    .sns {
+      gap: 10px;
+    }
   }
   .link {
     display: block;
@@ -320,12 +405,10 @@
       background: url(../../images/comm/twitter-icon.png) no-repeat 50% 0 /
         cover;
     }
-  }
-  .link_twitter {
-    &:before {
-      @include footerIconBefore;
-      background: url(../../images/comm/twitter-icon.png) no-repeat 50% 0 /
-        cover;
+    @media screen and (min-width: 1280px) {
+      &:before {
+        @include footerIconBeforeWeb;
+      }
     }
   }
   .link_facebook {
@@ -334,11 +417,21 @@
       background: url(../../images/comm/facebook-icon.png) no-repeat 50% 0 /
         cover;
     }
+    @media screen and (min-width: 1280px) {
+      &:before {
+        @include footerIconBeforeWeb;
+      }
+    }
   }
   .link_instagram {
     &:before {
       @include footerIconBefore;
       background: url(../../images/comm/insta-icon.png) no-repeat 50% 0 / cover;
+    }
+    @media screen and (min-width: 1280px) {
+      &:before {
+        @include footerIconBeforeWeb;
+      }
     }
   }
   .link_youtube {
@@ -347,12 +440,160 @@
       background: url(../../images/comm/youtube-icon.png) no-repeat 50% 0 /
         cover;
     }
+    @media screen and (min-width: 1280px) {
+      &:before {
+        @include footerIconBeforeWeb;
+      }
+    }
   }
   .copyright {
     @include mob-tit(12px, #999);
     margin-top: 10px;
   }
+  @media screen and (min-width: 1280px) {
+    .copyright {
+      display: none;
+    }
+  }
+  .copyright-web {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .copyright-web {
+      display: block;
+      @include web-bd(16px, $gray-700);
+      font-weight: 400;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .content-wrap {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5.468vw;
+      gap: 2px;
+    }
+  }
 }
+@media screen and (min-width: 1280px) {
+  #footer {
+    padding: 9.062vw 9.895vw 8.593vw 8.593vw;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+// search-layer
+.search-layer {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // display: block;
+  // background: url(../../images/main/search_mob.png) no-repeat 50% 0 / cover;
+  // background-size: 360px auto;
+  z-index: 1000;
+  background-color: $bgcBk;
+  .layer-head {
+    padding: 17px 20px 0;
+  }
+  #logo {
+    &:before {
+      display: block;
+      height: 30px;
+      width: 110px;
+      margin-top: 4px;
+      content: "";
+      background: url(../../images/comm/logo-white-mob.png) no-repeat 0 0 /
+        cover;
+    }
+  }
+  .layer-body {
+    margin-top: 70px;
+  }
+  .area-search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 319px;
+    padding: 72px 0px;
+  }
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 70px;
+    width: 320px;
+  }
+  .search {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 33px;
+      width: 257px;
+      height: 45px;
+      background: url(../../images/comm/search.png) no-repeat 0 0 /100%;
+    }
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: 45px;
+      content: "\f002";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 30px;
+      color: $primary;
+      transform: rotate(270deg);
+      z-index: 10;
+    }
+  }
+  #inpSearch {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 33px;
+    width: 253px;
+    height: 45px;
+    border-radius: 33px;
+    border: 1px solid $white;
+    background: $white;
+    z-index: 1;
+    // opacity: 0;
+  }
+  .tag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  .link-tag {
+    display: block;
+    background: $secondary;
+    border-radius: 33px;
+    padding: 8px 30px;
+    @include mob-bd(13px, $white);
+  }
+  .btn-close {
+    position: absolute;
+    top: 21px;
+    right: 17px;
+    &:before {
+      content: "\f00d";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+}
+
 /* -------------------------bg 참고------------------------------ */
 body {
   z-index: -100;
