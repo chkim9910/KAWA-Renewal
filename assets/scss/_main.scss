@@ -236,6 +236,7 @@
       line-height: 40px;
       @include web-bd(16px, $white);
       text-align: center;
+      padding-top: 10px;
     }
     .fst-01 {
       opacity: 0;
@@ -313,6 +314,40 @@
       border-radius: 10px;
       width: 316px;
     }
+    @media screen and (min-width: 1280px) {
+      .swiper-slide {
+        width: 224px !important;
+        transition: all 0.5s;
+        &:after {
+          bottom: 30%;
+          background: url(../../images/comm/web-Vector.png) no-repeat 0 0 /100%;
+          content: "";
+          display: none;
+        }
+        .txt {
+          display: none;
+        }
+      }
+      .swiper-slide-active {
+        width: 1100px !important;
+        .txt {
+          display: block;
+
+          &::after {
+            position: absolute;
+            bottom: 30%;
+            background: url(../../images/comm/web-Vector.png) no-repeat 0 0 /100%;
+            content: "";
+            // display: none;
+          }
+        }
+      }
+
+      // &:after {
+      //   display: block !important;
+      // }
+    }
+
     .container {
       display: flex;
       justify-content: center;
@@ -333,6 +368,7 @@
       .container {
         .txt {
           @include web-bd(40px, $white);
+          // transform: translateY(calc(526px / 2.5));
         }
       }
     }
@@ -452,23 +488,13 @@
 }
 @media screen and (min-width: 1280px) {
   .main-activities {
+    height: 100vh;
     padding: 10.416vw 16.666vw 13.541vw;
-    .law-policy,
-    .companion-animal,
-    .farm-animal,
-    .animal-experiment,
-    .exhibition-animal,
-    .street-cat {
-      &:after {
-        bottom: 30%;
-        background: url(../../images/comm/web-Vector.png) no-repeat 0 0 /100%;
-      }
-    }
   }
 }
 // oncenter
 .oncenter {
-  height: 120vh !important;
+  // height: 120vh !important;
   // background: url(../../images/main/mobile-ver2-mainSec2.png) no-repeat 50% 0;
   padding: 169px 20px 60px;
   background: url(../../images/main/sect3-oncenter/bg-deco-mob.png) no-repeat 0
@@ -503,6 +529,7 @@
       @include web-bd(24px, $txtTit-2);
       word-wrap: break-word;
       word-break: keep-all;
+      margin-top: 20px;
     }
   }
   .img-list {
@@ -570,11 +597,11 @@
 }
 @media screen and (min-width: 1280px) {
   .oncenter {
-    // height: 100vh !important;
+    height: 120vh !important;
     padding: 9.166vw 0 9.791vw 16.666vw;
     // padding: 9.166vw 7.968vw 9.791vw 16.666vw;
-    background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat
-      0 0;
+    background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat -0.313vw
+      0;
     .container {
       display: flex;
       // justify-content: space-between;
@@ -853,13 +880,23 @@
           height: 1000px;
           margin-top: 18.402vw;
         }
-        .below-1,
+        .below-1 {
+          background: url(../../images/main/sect5-campaign/CAMPAIGN-WEB.png)
+            no-repeat 50% 0 / 80% !important;
+          height: 800px;
+          transform: translateY(28.646vw);
+        }
         .below-2,
         .below-3 {
-          position: static;
-          height: 9.322vw;
-          background-size: 66.302vw 9.314vw;
+          background: none;
         }
+        // .below-1,
+        // .below-2,
+        // .below-3 {
+        //   position: static;
+        //   height: 9.322vw;
+        //   background-size: 66.302vw 9.314vw;
+        // }
       }
     }
     @media screen and (min-width: 1280px) {
@@ -1260,7 +1297,7 @@
   @media screen and (min-width: 1280px) {
     .container {
       flex-direction: row;
-      justify-content: space-evenly;
+      gap: 6.354vw;
     }
   }
   .regular-donation,
@@ -1272,14 +1309,15 @@
   @media screen and (min-width: 1280px) {
     .regular-donation,
     .associated-donation {
-      width: 26.041vw;
+      // width: 29.040999999999997vw;
+      width: 37.041vw;
       gap: 2.604vw;
     }
     .regular-donation {
-      justify-content: flex-start;
+      justify-content: flex-end;
     }
     .associated-donation {
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
   .txt {
@@ -1288,7 +1326,7 @@
   }
   @media screen and (min-width: 1280px) {
     .txt {
-      width: 12.625vw;
+      width: 339px;
     }
   }
   .tit {
@@ -1296,10 +1334,21 @@
     letter-spacing: normal;
     line-height: 39px;
   }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      @include web-tit(48px, $txtTit);
+    }
+  }
   .content {
     @include mob-bd(14px, $txtCont);
     margin-top: 9px;
     letter-spacing: normal;
+  }
+  @media screen and (min-width: 1280px) {
+    .content {
+      @include web-bd(24px, $txtCont);
+      margin-top: 20px;
+    }
   }
   .btn-rd,
   .btn-ad {
@@ -1311,14 +1360,24 @@
     border-radius: 10px;
     background-color: $secondary;
     @include mob-bd(14px, $white);
-    margin-top: 22px;
-  }
-  .btn-rd {
     margin-top: 33px;
+  }
+  @media screen and (min-width: 1280px) {
+    .btn-rd,
+    .btn-ad {
+      height: 44px;
+      width: 153px;
+      padding: 10px 45px;
+      margin-top: 65px;
+      @include web-bd(18px, $white);
+    }
   }
 }
 @media screen and (min-width: 1280px) {
   .donation {
-    padding: 10.416vw 16.666vw;
+    // padding: 10.416vw 16.666vw;
+    padding: 10.416vw 0;
+    display: flex;
+    justify-content: center;
   }
 }

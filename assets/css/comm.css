@@ -1171,6 +1171,7 @@ body {
     line-height: 19.2px;
     color: #ffffff;
     text-align: center;
+    padding-top: 10px;
   }
   .main-visual .fst-01 {
     opacity: 0;
@@ -1265,6 +1266,33 @@ body {
 .main-activities .swiper-main-activities .swiper-slide {
   border-radius: 10px;
   width: 316px;
+}
+@media screen and (min-width: 1280px) {
+  .main-activities .swiper-main-activities .swiper-slide {
+    width: 224px !important;
+    transition: all 0.5s;
+  }
+  .main-activities .swiper-main-activities .swiper-slide:after {
+    bottom: 30%;
+    background: url(../../images/comm/web-Vector.png) no-repeat 0 0/100%;
+    content: "";
+    display: none;
+  }
+  .main-activities .swiper-main-activities .swiper-slide .txt {
+    display: none;
+  }
+  .main-activities .swiper-main-activities .swiper-slide-active {
+    width: 1100px !important;
+  }
+  .main-activities .swiper-main-activities .swiper-slide-active .txt {
+    display: block;
+  }
+  .main-activities .swiper-main-activities .swiper-slide-active .txt::after {
+    position: absolute;
+    bottom: 30%;
+    background: url(../../images/comm/web-Vector.png) no-repeat 0 0/100%;
+    content: "";
+  }
 }
 .main-activities .swiper-main-activities .container {
   display: flex;
@@ -1428,20 +1456,11 @@ body {
 
 @media screen and (min-width: 1280px) {
   .main-activities {
+    height: 100vh;
     padding: 10.416vw 16.666vw 13.541vw;
-  }
-  .main-activities .law-policy:after,
-  .main-activities .companion-animal:after,
-  .main-activities .farm-animal:after,
-  .main-activities .animal-experiment:after,
-  .main-activities .exhibition-animal:after,
-  .main-activities .street-cat:after {
-    bottom: 30%;
-    background: url(../../images/comm/web-Vector.png) no-repeat 0 0/100%;
   }
 }
 .oncenter {
-  height: 120vh !important;
   padding: 169px 20px 60px;
   background: url(../../images/main/sect3-oncenter/bg-deco-mob.png) no-repeat 0 0;
   background-color: #ffffff;
@@ -1496,6 +1515,7 @@ body {
     color: #4c4c4c;
     word-wrap: break-word;
     word-break: keep-all;
+    margin-top: 20px;
   }
 }
 .oncenter .img-list {
@@ -1558,8 +1578,9 @@ body {
 
 @media screen and (min-width: 1280px) {
   .oncenter {
+    height: 120vh !important;
     padding: 9.166vw 0 9.791vw 16.666vw;
-    background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat 0 0;
+    background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat -0.313vw 0;
   }
   .oncenter .container {
     display: flex;
@@ -1870,12 +1891,14 @@ body {
     height: 1000px;
     margin-top: 18.402vw;
   }
-  .campaign .container .txt-style .below-1,
+  .campaign .container .txt-style .below-1 {
+    background: url(../../images/main/sect5-campaign/CAMPAIGN-WEB.png) no-repeat 50% 0/80% !important;
+    height: 800px;
+    transform: translateY(28.646vw);
+  }
   .campaign .container .txt-style .below-2,
   .campaign .container .txt-style .below-3 {
-    position: static;
-    height: 9.322vw;
-    background-size: 66.302vw 9.314vw;
+    background: none;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -2303,7 +2326,7 @@ body {
 @media screen and (min-width: 1280px) {
   .donation .container {
     flex-direction: row;
-    justify-content: space-evenly;
+    gap: 6.354vw;
   }
 }
 .donation .regular-donation,
@@ -2315,14 +2338,14 @@ body {
 @media screen and (min-width: 1280px) {
   .donation .regular-donation,
   .donation .associated-donation {
-    width: 26.041vw;
+    width: 37.041vw;
     gap: 2.604vw;
   }
   .donation .regular-donation {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   .donation .associated-donation {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 .donation .txt {
@@ -2331,7 +2354,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .donation .txt {
-    width: 12.625vw;
+    width: 339px;
   }
 }
 .donation .tit {
@@ -2346,6 +2369,16 @@ body {
   letter-spacing: normal;
   line-height: 39px;
 }
+@media screen and (min-width: 1280px) {
+  .donation .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #222222;
+  }
+}
 .donation .content {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
@@ -2354,6 +2387,17 @@ body {
   color: #666666;
   margin-top: 9px;
   letter-spacing: normal;
+}
+@media screen and (min-width: 1280px) {
+  .donation .content {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0%;
+    line-height: 28.8px;
+    color: #666666;
+    margin-top: 20px;
+  }
 }
 .donation .btn-rd,
 .donation .btn-ad {
@@ -2369,14 +2413,28 @@ body {
   font-size: 14px;
   letter-spacing: -0.42px;
   color: #ffffff;
-  margin-top: 22px;
-}
-.donation .btn-rd {
   margin-top: 33px;
+}
+@media screen and (min-width: 1280px) {
+  .donation .btn-rd,
+  .donation .btn-ad {
+    height: 44px;
+    width: 153px;
+    padding: 10px 45px;
+    margin-top: 65px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0%;
+    line-height: 21.6px;
+    color: #ffffff;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .donation {
-    padding: 10.416vw 16.666vw;
+    padding: 10.416vw 0;
+    display: flex;
+    justify-content: center;
   }
 }/*# sourceMappingURL=comm.css.map */
