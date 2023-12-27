@@ -610,6 +610,7 @@ legend {
 }
 
 #footer {
+  display: none !important;
   height: 440px;
   padding: 60px 20px;
   display: flex;
@@ -2442,4 +2443,95 @@ body {
     display: flex;
     justify-content: center;
   }
+}
+.sub2-main-visual {
+  background: url(../../images/sub2-donation-page/sect1-main-visual/bg-mob.png) no-repeat 100% 0/cover;
+  width: 360px;
+  height: 465px;
+}
+.sub2-main-visual .txt {
+  height: 425px;
+  padding: 200px 20px 97px;
+}
+.sub2-main-visual .tit {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 45.5px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+.sub2-main-visual .content {
+  width: 295px;
+  margin-top: 12px;
+  word-break: keep-all;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.48px;
+  color: #ffffff;
+}
+.sub2-main-visual .sidebar {
+  height: 40px;
+  background: linear-gradient(to right, #bcd8de, #dfddd7);
+}
+.sub2-main-visual .sidebar .outer-content {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+}
+.sub2-main-visual .sidebar .outer-content .outer-content-txt {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: #222222;
+  font-weight: 600;
+}
+.sub2-main-visual .sidebar .outer-content .outer-content-txt:after {
+  content: "";
+}
+.sub2-main-visual .sidebar .btn-primary {
+  background-color: linear-gradient(to right, #bcd8de, #dfddd7) !important;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgba(13, 110, 253, 0);
+  --bs-btn-border-color: rgba(13, 110, 253, 0);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgba(11, 94, 215, 0);
+  --bs-btn-hover-border-color: rgba(10, 88, 202, 0);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgba(10, 88, 205, 0);
+  --bs-btn-active-border-color: rgba(10, 83, 190, 0);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgba(13, 110, 253, 0);
+  --bs-btn-disabled-border-color: rgba(13, 110, 253, 0);
+}
+.sub2-main-visual .sidebar .btn:hover {
+  background-color: linear-gradient(to right, #bcd8de, #dfddd7) !important;
+}
+.sub2-main-visual .sidebar .inner-content-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-reasons {
+  display: none;
+}
+
+.donation-usage {
+  display: none;
+}
+
+.q-and-a {
+  display: none;
+}
+
+.financial-report {
+  display: none;
 }/*# sourceMappingURL=comm.css.map */

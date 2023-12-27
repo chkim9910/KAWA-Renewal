@@ -324,6 +324,7 @@
 }
 // footer
 #footer {
+  display: none !important;
   // background: url(../../images/main/mobile-ver2-foooter.png) no-repeat 50% 0 /
   //   cover;
   height: $ftH;
@@ -601,4 +602,4 @@ body {
   // background-size: 360px auto;
 }
 
-@import "main", "sub1", "sub2";
+@import "main", "sub1_mission_vision_page", "sub2_donation_page";
