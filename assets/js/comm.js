@@ -30,10 +30,10 @@ var swiper = new Swiper(".thumb-tit", {
   },
 });
 var swiper2 = new Swiper(".swiper-main-activities", {
-  loop: true,
+  // loop: true,
   spaceBetween: 10,
-  // slidesPerView: "auto",
-  centeredSlides: true,
+  slidesPerView: "auto",
+  // centeredSlides: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
