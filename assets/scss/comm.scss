@@ -35,8 +35,8 @@
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  // container
-  .container {
+  // wrapper
+  .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +83,7 @@
     display: flex;
     gap: 16px;
     width: 77px;
+    flex-wrap: nowrap;
   }
   @media screen and (min-width: 1280px) {
     .nav {
@@ -265,7 +266,7 @@
     margin-top: 60px;
     text-align: center;
 
-    .container-dep1 {
+    .wrapper-dep1 {
       height: 47px;
     }
     .li-dep1 {
@@ -295,7 +296,7 @@
     padding: 15px 0;
     background: rgba(51, 51, 51, 0.5);
 
-    .container-dep2 {
+    .wrapper-dep2 {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -324,7 +325,6 @@
 }
 // footer
 #footer {
-  display: none !important;
   // background: url(../../images/main/mobile-ver2-foooter.png) no-repeat 50% 0 /
   //   cover;
   height: $ftH;
@@ -332,6 +332,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  z-index: -1;
   .logo {
     &:before {
       content: "";

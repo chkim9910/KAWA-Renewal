@@ -86,6 +86,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.table {
+  --bs-tabCle-border-color: #eee;
+  background-color: $black;
+}
+.table > :not(caption) > * > * {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0.5rem;
+}
+.mt-3 {
+  padding-bottom: 1rem !important;
+  background-color: white;
+}
 
 body {
   -webkit-text-size-adjust: none;
@@ -112,6 +125,7 @@ input {
 button {
   -webkit-appearance: button;
   border-radius: 0;
+  line-height: normal;
 }
 
 input {

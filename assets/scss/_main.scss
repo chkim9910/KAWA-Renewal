@@ -37,7 +37,7 @@
       ),
       url(../../images/main/sect1-main-visual/dog.png) no-repeat 50% 50% / cover;
   }
-  .container {
+  .wrapper {
     display: flex;
     flex-direction: column;
     height: 250px;
@@ -45,10 +45,10 @@
     margin-top: 66px;
   }
   @media screen and (min-width: 1280px) {
-    .container {
+    .wrapper {
       margin-left: 16.666vw;
     }
-    .dog-container {
+    .dog-wrapper {
       margin-top: 180px;
     }
   }
@@ -348,7 +348,7 @@
       }
     }
 
-    .container {
+    .wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -365,7 +365,7 @@
       width: 125%;
       height: 526px;
       margin-left: 0;
-      .container {
+      .wrapper {
         .txt {
           @include web-bd(40px, $white);
           // transform: translateY(calc(526px / 2.5));
@@ -602,7 +602,7 @@
     // padding: 9.166vw 7.968vw 9.791vw 16.666vw;
     background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat -0.313vw
       0;
-    .container {
+    .wrapper {
       display: flex;
       // justify-content: space-between;
       gap: 9.24vw;
@@ -615,7 +615,7 @@
   // background: url(../../images/main/mobile-ver2-mainSec2-2.png) no-repeat 50% 0;
   padding: 120px 20px;
   background-color: $bgcBk;
-  .container {
+  .wrapper {
     position: relative;
     &:before {
       position: absolute;
@@ -630,7 +630,7 @@
       content: "";
     }
   }
-  .container-web {
+  .wrapper-web {
     display: none;
   }
   .tit {
@@ -682,13 +682,13 @@
 }
 @media screen and (min-width: 1280px) {
   .oncenter-info {
-    .container-mob {
+    .wrapper-mob {
       display: none;
     }
-    .container-web {
+    .wrapper-web {
       display: block;
       padding: 11.51vw 16.666vw;
-      .container-wrap {
+      .wrapper-wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -820,7 +820,7 @@
   // background-size: 360px auto;
   padding: 60px 20px;
   background-color: $bgcBk;
-  .container {
+  .wrapper {
     position: relative;
     .bg-deco {
       position: absolute;
@@ -1061,7 +1061,7 @@
   // background: url(../../images/main/mobile-ver2-mainSec4.png) no-repeat 50% 0 /
   //   cover;
   padding: 60px 20px;
-  .container {
+  .wrapper {
     position: relative;
   }
   .tit-notice {
@@ -1190,7 +1190,7 @@
       height: 5.208vw;
     }
   }
-  .container {
+  .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1288,14 +1288,14 @@
   //   cover;
   // background-size: 360px auto;
   padding: 60px 20px;
-  .container {
+  .wrapper {
     display: flex;
     flex-direction: column;
     gap: 54px;
     padding-top: 3px;
   }
   @media screen and (min-width: 1280px) {
-    .container {
+    .wrapper {
       flex-direction: row;
       gap: 6.354vw;
     }

@@ -86,6 +86,22 @@ table {
   border-spacing: 0;
 }
 
+.table {
+  --bs-tabCle-border-color: #eee;
+  background-color: #000;
+}
+
+.table > :not(caption) > * > * {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0.5rem;
+}
+
+.mt-3 {
+  padding-bottom: 1rem !important;
+  background-color: white;
+}
+
 body {
   -webkit-text-size-adjust: none;
 }
@@ -104,6 +120,7 @@ input:checked[type=checkbox] {
 button {
   -webkit-appearance: button;
   border-radius: 0;
+  line-height: normal;
 }
 
 input[type=button], input[type=submit], input[type=reset], input[type=file] {
@@ -321,7 +338,7 @@ legend {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
-#header .container {
+#header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -370,6 +387,7 @@ legend {
   display: flex;
   gap: 16px;
   width: 77px;
+  flex-wrap: nowrap;
 }
 @media screen and (min-width: 1280px) {
   #header .nav {
@@ -546,7 +564,7 @@ legend {
   margin-top: 60px;
   text-align: center;
 }
-#header .depth1 .container-dep1 {
+#header .depth1 .wrapper-dep1 {
   height: 47px;
 }
 #header .depth1 .li-dep1 {
@@ -579,7 +597,7 @@ legend {
   padding: 15px 0;
   background: rgba(51, 51, 51, 0.5);
 }
-#header .depth2 .container-dep2 {
+#header .depth2 .wrapper-dep2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,12 +628,12 @@ legend {
 }
 
 #footer {
-  display: none !important;
   height: 440px;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  z-index: -1;
 }
 #footer .logo:before {
   content: "";
@@ -935,7 +953,7 @@ body {
   height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(../../images/main/sect1-main-visual/dog.png) no-repeat 50% 50%/cover;
 }
-.main-visual .container {
+.main-visual .wrapper {
   display: flex;
   flex-direction: column;
   height: 250px;
@@ -943,10 +961,10 @@ body {
   margin-top: 66px;
 }
 @media screen and (min-width: 1280px) {
-  .main-visual .container {
+  .main-visual .wrapper {
     margin-left: 16.666vw;
   }
-  .main-visual .dog-container {
+  .main-visual .dog-wrapper {
     margin-top: 180px;
   }
 }
@@ -1300,14 +1318,14 @@ body {
     content: "";
   }
 }
-.main-activities .swiper-main-activities .container {
+.main-activities .swiper-main-activities .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.main-activities .swiper-main-activities .container .txt {
+.main-activities .swiper-main-activities .wrapper .txt {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -1321,7 +1339,7 @@ body {
     height: 526px;
     margin-left: 0;
   }
-  .main-activities .swiper-main-activities .container .txt {
+  .main-activities .swiper-main-activities .wrapper .txt {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
     font-size: 40px;
@@ -1588,7 +1606,7 @@ body {
     padding: 9.166vw 0 9.791vw 16.666vw;
     background: url(../../images/main/sect3-oncenter/bg-deco-web.png) no-repeat -0.313vw 0;
   }
-  .oncenter .container {
+  .oncenter .wrapper {
     display: flex;
     gap: 9.24vw;
     height: 764px;
@@ -1598,10 +1616,10 @@ body {
   padding: 120px 20px;
   background-color: #222222;
 }
-.oncenter-info .container {
+.oncenter-info .wrapper {
   position: relative;
 }
-.oncenter-info .container:before {
+.oncenter-info .wrapper:before {
   position: absolute;
   top: 0;
   left: -182px;
@@ -1613,7 +1631,7 @@ body {
   z-index: 0;
   content: "";
 }
-.oncenter-info .container-web {
+.oncenter-info .wrapper-web {
   display: none;
 }
 .oncenter-info .tit {
@@ -1699,20 +1717,20 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
-  .oncenter-info .container-mob {
+  .oncenter-info .wrapper-mob {
     display: none;
   }
-  .oncenter-info .container-web {
+  .oncenter-info .wrapper-web {
     display: block;
     padding: 11.51vw 16.666vw;
   }
-  .oncenter-info .container-web .container-wrap {
+  .oncenter-info .wrapper-web .wrapper-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4.166vw;
   }
-  .oncenter-info .container-web .container-wrap:before {
+  .oncenter-info .wrapper-web .wrapper-wrap:before {
     position: absolute;
     display: block;
     height: 18.75vw;
@@ -1720,24 +1738,24 @@ body {
     content: "";
     background: url(../../images/main/sect4-oncenter-info/CLICK\ ON\ ME.png) no-repeat 50% 50%/100%;
   }
-  .oncenter-info .container-web .container-wrap .row-1,
-  .oncenter-info .container-web .container-wrap .row-2 {
+  .oncenter-info .wrapper-web .wrapper-wrap .row-1,
+  .oncenter-info .wrapper-web .wrapper-wrap .row-2 {
     display: flex;
     gap: 23.697vw;
   }
-  .oncenter-info .container-web .btn-wrap:active {
+  .oncenter-info .wrapper-web .btn-wrap:active {
     background-color: #ffffff;
   }
-  .oncenter-info .container-web .btn-wrap:active .circle {
+  .oncenter-info .wrapper-web .btn-wrap:active .circle {
     transform: translateX(286px);
   }
-  .oncenter-info .container-web .btn-wrap:active .on {
+  .oncenter-info .wrapper-web .btn-wrap:active .on {
     display: block;
   }
-  .oncenter-info .container-web .btn-wrap:active .off {
+  .oncenter-info .wrapper-web .btn-wrap:active .off {
     display: none;
   }
-  .oncenter-info .container-web .btn-wrap {
+  .oncenter-info .wrapper-web .btn-wrap {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -1749,7 +1767,7 @@ body {
     background-color: #222222;
     transition: background-color 0.3s;
   }
-  .oncenter-info .container-web .circle {
+  .oncenter-info .wrapper-web .circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -1759,14 +1777,14 @@ body {
     background-color: #ff862b;
     transition: transform 0.3s;
   }
-  .oncenter-info .container-web .on {
+  .oncenter-info .wrapper-web .on {
     display: none;
     height: 130px;
     width: 286px;
     text-align: center;
     transition: display 0.3s;
   }
-  .oncenter-info .container-web .on .content {
+  .oncenter-info .wrapper-web .on .content {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -1775,14 +1793,14 @@ body {
     color: #222222;
     transform: translate(7.5%, 60%);
   }
-  .oncenter-info .container-web .off {
+  .oncenter-info .wrapper-web .off {
     display: block;
     height: 130px;
     width: 286px;
     margin-left: 130px;
     transition: display 0.3s;
   }
-  .oncenter-info .container-web .off .tit {
+  .oncenter-info .wrapper-web .off .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
     font-size: 36px;
@@ -1791,35 +1809,35 @@ body {
     color: #ffffff;
     transform: translate(30%, 60%);
   }
-  .oncenter-info .container-web .rescue-web .circle:before {
+  .oncenter-info .wrapper-web .rescue-web .circle:before {
     background: url(../../images/main/sect4-oncenter-info/01-rescue-web.png) no-repeat 0 0/cover;
     content: "";
     display: block;
     height: 130px;
     width: 130px;
   }
-  .oncenter-info .container-web .affiliate-web .circle:before {
+  .oncenter-info .wrapper-web .affiliate-web .circle:before {
     background: url(../../images/main/sect4-oncenter-info/02-affiliate-web.png) no-repeat 0 0/cover;
     content: "";
     display: block;
     height: 130px;
     width: 130px;
   }
-  .oncenter-info .container-web .protect-web .circle:before {
+  .oncenter-info .wrapper-web .protect-web .circle:before {
     background: url(../../images/main/sect4-oncenter-info/03-protect-web.png) no-repeat 0 0/cover;
     content: "";
     display: block;
     height: 130px;
     width: 130px;
   }
-  .oncenter-info .container-web .adopt-web .circle:before {
+  .oncenter-info .wrapper-web .adopt-web .circle:before {
     background: url(../../images/main/sect4-oncenter-info/04-adopt-web.png) no-repeat 0 0/cover;
     content: "";
     display: block;
     height: 130px;
     width: 130px;
   }
-  .oncenter-info .container-web .click-on-me {
+  .oncenter-info .wrapper-web .click-on-me {
     width: 23.697vw;
   }
 }
@@ -1827,10 +1845,10 @@ body {
   padding: 60px 20px;
   background-color: #222222;
 }
-.campaign .container {
+.campaign .wrapper {
   position: relative;
 }
-.campaign .container .bg-deco {
+.campaign .wrapper .bg-deco {
   position: absolute;
   top: 0;
   left: 0;
@@ -1840,12 +1858,12 @@ body {
   background-blend-mode: color-dodge;
 }
 @media screen and (min-width: 1280px) {
-  .campaign .container .bg-deco {
+  .campaign .wrapper .bg-deco {
     height: 1000px;
     background-size: 21.718vw 36.562vw;
   }
 }
-.campaign .container .txt-style {
+.campaign .wrapper .txt-style {
   position: absolute;
   top: 0;
   left: 0;
@@ -1853,17 +1871,17 @@ body {
   height: 100%;
   padding: 80px 0;
 }
-.campaign .container .txt-style .tit {
+.campaign .wrapper .txt-style .tit {
   height: 46px;
   background: url(../../images/main/sect5-campaign/CAMPAIGN-tit-mob.png) no-repeat 50% 50%/85%;
 }
 @media screen and (min-width: 1280px) {
-  .campaign .container .txt-style .tit {
+  .campaign .wrapper .txt-style .tit {
     height: 180px;
     background-size: 47.291vw 6.643vw;
   }
 }
-.campaign .container .txt-style .below-1 {
+.campaign .wrapper .txt-style .below-1 {
   display: block;
   position: absolute;
   top: 228px;
@@ -1872,7 +1890,7 @@ body {
   height: 200px;
   background: url(../../images/main/sect5-campaign/CAMPAIGN-1-mob.png) no-repeat 50% 0/100%;
 }
-.campaign .container .txt-style .below-2 {
+.campaign .wrapper .txt-style .below-2 {
   display: block;
   position: absolute;
   top: 271px;
@@ -1881,7 +1899,7 @@ body {
   height: 200px;
   background: url(../../images/main/sect5-campaign/CAMPAIGN-2-mob.png) no-repeat 50% 0/100%;
 }
-.campaign .container .txt-style .below-3 {
+.campaign .wrapper .txt-style .below-3 {
   display: block;
   position: absolute;
   top: 314px;
@@ -1891,24 +1909,24 @@ body {
   background: url(../../images/main/sect5-campaign/CAMPAIGN-3-mob.png) no-repeat 50% 0/100%;
 }
 @media screen and (min-width: 1280px) {
-  .campaign .container .txt-style .below-wrap {
+  .campaign .wrapper .txt-style .below-wrap {
     display: flex;
     flex-direction: column;
     height: 1000px;
     margin-top: 18.402vw;
   }
-  .campaign .container .txt-style .below-1 {
+  .campaign .wrapper .txt-style .below-1 {
     background: url(../../images/main/sect5-campaign/CAMPAIGN-WEB.png) no-repeat 50% 0/80% !important;
     height: 800px;
     transform: translateY(28.646vw);
   }
-  .campaign .container .txt-style .below-2,
-  .campaign .container .txt-style .below-3 {
+  .campaign .wrapper .txt-style .below-2,
+  .campaign .wrapper .txt-style .below-3 {
     background: none;
   }
 }
 @media screen and (min-width: 1280px) {
-  .campaign .container .txt-style {
+  .campaign .wrapper .txt-style {
     padding-top: 14.583vw;
   }
 }
@@ -2037,7 +2055,7 @@ body {
 .notice {
   padding: 60px 20px;
 }
-.notice .container {
+.notice .wrapper {
   position: relative;
 }
 .notice .tit-notice {
@@ -2195,7 +2213,7 @@ body {
     height: 5.208vw;
   }
 }
-.subscribe .container {
+.subscribe .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2323,14 +2341,14 @@ body {
 .donation {
   padding: 60px 20px;
 }
-.donation .container {
+.donation .wrapper {
   display: flex;
   flex-direction: column;
   gap: 54px;
   padding-top: 3px;
 }
 @media screen and (min-width: 1280px) {
-  .donation .container {
+  .donation .wrapper {
     flex-direction: row;
     gap: 6.354vw;
   }
@@ -2482,6 +2500,7 @@ body {
   height: 40px;
   width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 .sub2-main-visual .sidebar .outer-content .outer-content-txt {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -2493,6 +2512,9 @@ body {
 }
 .sub2-main-visual .sidebar .outer-content .outer-content-txt:after {
   content: "";
+}
+.sub2-main-visual .sidebar .outer-content .expand-more {
+  color: #222222;
 }
 .sub2-main-visual .sidebar .btn-primary {
   background-color: linear-gradient(to right, #bcd8de, #dfddd7) !important;
@@ -2514,12 +2536,18 @@ body {
 .sub2-main-visual .sidebar .btn:hover {
   background-color: linear-gradient(to right, #bcd8de, #dfddd7) !important;
 }
-.sub2-main-visual .sidebar .inner-content-sidebar {
+.sub2-main-visual .sidebar .inner-content-txt {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: #8e8e8e;
 }
+
 .about-reasons {
   display: none;
 }

@@ -121,7 +121,7 @@ var swiper = new Swiper(".carousel-campaign", {
 
 // ScrollTrigger.create({
 //   trigger: ".campaign",
-//   pin: ".container",
+//   pin: ".wrapper",
 //   start: "top top",
 //   end: "bottom bottom",
 //   markers: false,
