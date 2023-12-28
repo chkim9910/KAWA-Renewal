@@ -99,7 +99,6 @@ table {
 
 .mt-3 {
   padding-bottom: 1rem !important;
-  background-color: white;
 }
 
 body {
@@ -246,6 +245,12 @@ legend {
 
 .f_r {
   float: right;
+}
+
+.collapse {
+  position: relative;
+  z-index: 10;
+  background-color: #ffffff;
 }
 
 .show {
@@ -2464,12 +2469,22 @@ body {
 }
 .sub2-main-visual {
   background: url(../../images/sub2-donation-page/sect1-main-visual/bg-mob.png) no-repeat 100% 0/cover;
-  width: 360px;
+  width: 100%;
   height: 465px;
+}
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual .sub2-main-visual {
+    height: 34.271vw;
+  }
 }
 .sub2-main-visual .txt {
   height: 425px;
   padding: 200px 20px 97px;
+}
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual .txt {
+    padding: 15.417vw 54.583vw 11.51vw 7.396vw;
+  }
 }
 .sub2-main-visual .tit {
   font-family: "Noto Sans KR", sans-serif;
@@ -2484,12 +2499,19 @@ body {
 .sub2-main-visual .content {
   width: 295px;
   margin-top: 12px;
+  word-wrap: normal;
   word-break: keep-all;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.48px;
   color: #ffffff;
+}
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual .content {
+    width: 28.75vw;
+    height: 2.708vw;
+  }
 }
 .sub2-main-visual .sidebar {
   height: 40px;
@@ -2549,17 +2571,314 @@ body {
 }
 
 .about-reasons {
-  display: none;
+  height: 210vh;
+  padding: 95px 0 50px;
+}
+.about-reasons .container-about-reason {
+  height: 100%;
+}
+.about-reasons .tit {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33.8px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #222222;
+  line-height: 30px;
+  letter-spacing: -2px;
+  padding: 0 20px;
+}
+.about-reasons .tit .highlight {
+  color: #f76a00;
+}
+.about-reasons .cont {
+  height: 438px;
+}
+.about-reasons .cont-txt {
+  padding: 0 20px;
+}
+.about-reasons .cont-tit {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #f76a00;
+  letter-spacing: -1px;
+}
+.about-reasons .cont-desc {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: #666666;
+  margin-top: 17px;
+  letter-spacing: normal;
+}
+.about-reasons .cont-1 {
+  margin-top: 25px;
+}
+.about-reasons .cont-2,
+.about-reasons .cont-3 {
+  margin-top: 100px;
+}
+.about-reasons .pic {
+  height: 288px;
+  margin-top: 55px;
+}
+.about-reasons .pic-cont-1 {
+  background: url(../../images/sub2-donation-page/sect2-about-reasons/1-fst-pic.png) no-repeat 50% 100%/cover;
+}
+.about-reasons .pic-cont-2 {
+  background: url(../../images/sub2-donation-page/sect2-about-reasons/2-snd-pic.png) no-repeat 50% 0/cover;
+}
+.about-reasons .pic-cont-3 {
+  background: url(../../images/sub2-donation-page/sect2-about-reasons/3-trd-pic.jpg) no-repeat 30% 0/cover;
 }
 
 .donation-usage {
-  display: none;
+  padding: 50px 20px;
+}
+.donation-usage .tit {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33.8px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #222222;
+  line-height: 31px;
+  margin-bottom: 55px;
+}
+.donation-usage .tit .highlight {
+  color: #f76a00;
+}
+.donation-usage .swiper-donation-usage {
+  padding-bottom: 40px;
+}
+.donation-usage .cont-tit {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #f76a00;
+  margin-bottom: 14px;
+}
+.donation-usage .cont-desc {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: #666666;
+  letter-spacing: normal;
+}
+.donation-usage .cont-img {
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+.donation-usage .content-1 .cont-img {
+  height: 350px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/1-dog.png) no-repeat 50% 0/cover;
+}
+.donation-usage .content-2 .cont-img {
+  height: 350px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/2-oncenter.png) no-repeat 50% 0/cover;
+}
+.donation-usage .content-3 .cont-img {
+  height: 350px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/3-bear.png) no-repeat 50% 50%/cover;
+}
+.donation-usage .content-4 .cont-img {
+  height: 350px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/4-chicken.jpg) no-repeat 50% 50%/cover;
+}
+.donation-usage .content-5 .cont-img {
+  height: 350px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/5-protect.png) no-repeat 50% 50%/cover;
+}
+.donation-usage .swiper-pagination {
+  bottom: 5px !important;
+  position: absolute;
+}
+.donation-usage .swiper-pagination-bullet-active {
+  background: #f76a00;
 }
 
 .q-and-a {
-  display: none;
+  padding: 50px 20px;
+}
+.q-and-a .tit {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #222222;
+  letter-spacing: -0.9px;
+  padding-bottom: 39px;
+}
+.q-and-a .glide {
+  height: auto;
+  overflow: hidden;
+}
+.q-and-a .glide__slides {
+  display: flex;
+}
+.q-and-a .card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background-color: #0f6dcd;
+  border: none;
+  border-radius: 10px;
+}
+.q-and-a .card-txt {
+  height: auto;
+  padding: 0 24px;
+}
+.q-and-a .card-tit {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.9px;
+  line-height: normal;
+  padding-top: 92px;
+  padding-left: 9px;
+}
+.q-and-a .card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: #ffffff;
+  padding-top: 23px;
+  letter-spacing: normal;
+}
+.q-and-a .card-tag {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 56px;
+  height: 91px;
+  display: flex;
+  justify-content: center;
+  background: url(../../images/sub2-donation-page/sect4-q&a/tag.png) no-repeat 50% 0/cover;
+}
+.q-and-a .card-illust {
+  position: absolute;
+  bottom: 16px;
+  height: 110px;
+  transform: translateX(calc(160px - 50%));
+}
+.q-and-a .card-1-illust,
+.q-and-a .card-2-illust,
+.q-and-a .card-3-illust,
+.q-and-a .card-4-illust,
+.q-and-a .card-5-illust {
+  width: 100%;
+  height: 100%;
+}
+.q-and-a .tag-txt {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #4c4c4c;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  height: auto;
+}
+.q-and-a .glide__bullets {
+  display: flex;
+  gap: 7px;
+  padding-top: 25px;
+  padding-left: 114px;
+}
+.q-and-a .glide__bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  transition: all 0.3s;
+}
+.q-and-a .glide__bullet--active {
+  width: 30px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #222222;
 }
 
 .financial-report {
+  background: url(../../images/sub2-donation-page/sect5-financial-report/bg-deco.png) no-repeat 50% 50%/cover, #ad5700;
+  height: 333px;
+  padding: 71px 20px 54px;
+}
+.financial-report .cont-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.financial-report .cont-tit {
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33.8px;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 33.5px;
+}
+.financial-report .cont-desc {
+  text-align: center;
+  padding-top: 15px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: normal;
+}
+.financial-report .cont-desc-web {
   display: none;
+}
+.financial-report .btn-more {
+  display: flex;
+  width: 179px;
+  height: 37px;
+  margin-top: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 37px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  color: #4c4c4c;
 }/*# sourceMappingURL=comm.css.map */

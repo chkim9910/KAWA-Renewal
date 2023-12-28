@@ -1,4 +1,4 @@
-// swiper
+// swiper-main-page
 var swiper = new Swiper(".main-visual", {
   slidesPerView: 1, // 보여질 슬라이드 수
   centeredSlides: true, // 가운데 정렬된 슬라이드
@@ -47,6 +47,44 @@ var swiper2 = new Swiper(".swiper-main-activities", {
       spaceBetween: 12,
     },
   },
+});
+
+// swiper-sub2-page
+var swiper = new Swiper(".swiper-donation-usage", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    // dynamicBullets: true,
+  },
+});
+
+//glide-sub2-page
+new Glide(".glide").mount();
+$(".glide").glide({
+  type: "slider",
+  autoplay: false,
+  paddings: "30px",
+  beforeTransition: beforeCardChange,
+});
+function beforeCardChange(args) {
+  var current = $(".glide__slide.active");
+  current.removeClass("active");
+
+  var left = args.swipe.distance > 0;
+  var direction = left ? args.index - 1 : args.index + 1;
+  var newIndex = parseInt(current.attr("data-slide-number")) + (left ? -1 : 1);
+  if (newIndex > args.length) {
+    newIndex = 1;
+  } else if (newIndex <= 0) {
+    newIndex = args.length;
+  }
+  $('[data-slide-number="' + newIndex + '"]').addClass("active");
+}
+$(".dot").click(function () {
+  $(".dot").removeClass("selected");
+  $(this).addClass("selected");
 });
 
 // // 기존 Swiper 초기화 코드

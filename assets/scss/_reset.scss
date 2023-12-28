@@ -97,7 +97,7 @@ table {
 }
 .mt-3 {
   padding-bottom: 1rem !important;
-  background-color: white;
+  // background-color: white;
 }
 
 body {
@@ -271,6 +271,14 @@ legend {
 
 .f_r {
   float: right;
+}
+
+.collapse {
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+  // transition: background-color 0.1s;
+  // @include transition($transition-fade);
 }
 
 .show {

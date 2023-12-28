@@ -5,12 +5,22 @@
   //   background-size: 360px auto;
   background: url(../../images/sub2-donation-page/sect1-main-visual/bg-mob.png)
     no-repeat 100% 0 / cover;
-  width: 360px;
+  width: 100%;
   height: 465px;
-  //   padding: 200px 20px 136px;
+
+  @media screen and (min-width: 1280px) {
+    .sub2-main-visual {
+      height: 34.271vw;
+    }
+  }
   .txt {
     height: 425px;
     padding: 200px 20px 97px;
+  }
+  @media screen and (min-width: 1280px) {
+    .txt {
+      padding: 15.417vw 54.583vw 11.51vw 7.396vw;
+    }
   }
   .tit {
     @include mob-tit(35px, $white);
@@ -18,8 +28,15 @@
   .content {
     width: 295px;
     margin-top: 12px;
+    word-wrap: normal;
     word-break: keep-all;
     @include mob-bd(16px, $white);
+  }
+  @media screen and (min-width: 1280px) {
+    .content {
+      width: 28.75vw;
+      height: 2.708vw;
+    }
   }
   .sidebar {
     height: 40px;
@@ -80,17 +97,298 @@
 }
 // about-reasons
 .about-reasons {
-  display: none;
+  // background: url(../../images/sub2-donation-page/mainSec1-mob.png) no-repeat 0
+  //   0;
+  height: 210vh;
+  padding: 95px 0 50px;
+  .container-about-reason {
+    height: 100%;
+  }
+  .tit {
+    @include mob-tit(26px, $txtTit);
+    line-height: 30px;
+    letter-spacing: -2px;
+    padding: 0 20px;
+    .highlight {
+      color: $primary;
+    }
+  }
+  .cont {
+    height: 438px;
+  }
+  .cont-txt {
+    padding: 0 20px;
+  }
+  .cont-tit {
+    @include mob-tit(20px, $primary);
+    letter-spacing: -1px;
+  }
+  .cont-desc {
+    @include mob-bd(14px, $gray-600);
+    margin-top: 17px;
+    letter-spacing: normal;
+  }
+  .cont-1 {
+    margin-top: 25px;
+  }
+  .cont-2,
+  .cont-3 {
+    margin-top: 100px;
+  }
+  .pic {
+    height: 288px;
+    margin-top: 55px;
+  }
+
+  .pic-cont-1 {
+    background: url(../../images/sub2-donation-page/sect2-about-reasons/1-fst-pic.png)
+      no-repeat 50% 100% / cover;
+  }
+  .pic-cont-2 {
+    background: url(../../images/sub2-donation-page/sect2-about-reasons/2-snd-pic.png)
+      no-repeat 50% 0 / cover;
+  }
+  .pic-cont-3 {
+    background: url(../../images/sub2-donation-page/sect2-about-reasons/3-trd-pic.jpg)
+      no-repeat 30% 0 / cover;
+  }
 }
 // donation-usage
 .donation-usage {
-  display: none;
+  // background: url(../../images/sub2-donation-page/mainSec2-mob.png) no-repeat 0
+  //   0;
+  padding: 50px 20px;
+  .tit {
+    @include mob-tit(26px, $txtTit);
+    line-height: 31px;
+    margin-bottom: 55px;
+    .highlight {
+      color: $primary;
+    }
+  }
+  .swiper-donation-usage {
+    padding-bottom: 40px;
+  }
+  .cont-tit {
+    display: block;
+    @include mob-tit(20px, $primary);
+    margin-bottom: 14px;
+  }
+  .cont-desc {
+    @include mob-bd(14px, $gray-600);
+    letter-spacing: normal;
+  }
+  .cont-img {
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+  .content-1 {
+    .cont-img {
+      height: 350px;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        url(../../images/sub2-donation-page/sect3-sponsorship-usage/1-dog.png)
+          no-repeat 50% 0 / cover;
+    }
+  }
+  .content-2 {
+    .cont-img {
+      height: 350px;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        url(../../images/sub2-donation-page/sect3-sponsorship-usage/2-oncenter.png)
+          no-repeat 50% 0 / cover;
+    }
+  }
+  .content-3 {
+    .cont-img {
+      height: 350px;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        url(../../images/sub2-donation-page/sect3-sponsorship-usage/3-bear.png)
+          no-repeat 50% 50% / cover;
+    }
+  }
+  .content-4 {
+    .cont-img {
+      height: 350px;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        ),
+        url(../../images/sub2-donation-page/sect3-sponsorship-usage/4-chicken.jpg)
+          no-repeat 50% 50% / cover;
+    }
+  }
+  .content-5 {
+    .cont-img {
+      height: 350px;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        url(../../images/sub2-donation-page/sect3-sponsorship-usage/5-protect.png)
+          no-repeat 50% 50% / cover;
+    }
+  }
+  .swiper-pagination {
+    bottom: 5px !important;
+    position: absolute;
+    // top: 0;
+  }
+  .swiper-pagination-bullet-active {
+    background: $primary;
+  }
 }
 // q&a
 .q-and-a {
-  display: none;
+  // background: url(../../images/sub2-donation-page/mainSec3-mob.png) no-repeat
+  //   50% 0;
+  padding: 50px 20px;
+  .tit {
+    @include mob-tit(30px, $txtTit);
+    letter-spacing: -0.9px;
+    padding-bottom: 39px;
+  }
+  .glide {
+    height: auto;
+    overflow: hidden;
+  }
+  .glide__slides {
+    display: flex;
+    // gap: 12px;
+  }
+  .card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    // --bs-card-bg: rgba(rgb(15, 109, 205, 1))
+    background-color: $point;
+    border: none;
+    border-radius: 10px;
+  }
+  .card-txt {
+    height: auto;
+    padding: 0 24px;
+  }
+  .card-tit {
+    display: block;
+    @include mob-tit(20px, $white);
+    letter-spacing: -0.9px;
+    line-height: normal;
+    padding-top: 92px;
+    padding-left: 9px;
+  }
+  .card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mob-bd(14px, $white);
+    padding-top: 23px;
+    letter-spacing: normal;
+  }
+  .card-tag {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 56px;
+    height: 91px;
+    display: flex;
+    justify-content: center;
+    background: url(../../images/sub2-donation-page/sect4-q&a/tag.png) no-repeat
+      50% 0 / cover;
+  }
+  .card-illust {
+    position: absolute;
+    bottom: 16px;
+    height: 110px;
+    transform: translateX(calc(320px / 2 + -50%));
+  }
+  .card-1-illust,
+  .card-2-illust,
+  .card-3-illust,
+  .card-4-illust,
+  .card-5-illust {
+    width: 100%;
+    height: 100%;
+  }
+  .tag-txt {
+    @include mob-tit(30px, $gray-700);
+    font-family: $font-family-enNum;
+    padding-top: 10px;
+    height: auto;
+  }
+  .glide__bullets {
+    display: flex;
+    gap: 7px;
+    padding-top: 25px;
+    padding-left: 114px;
+  }
+  .glide__bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $gray-300;
+    transition: all 0.3s;
+  }
+  .glide__bullet--active {
+    width: 30px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: $gray-800;
+  }
 }
 // financial-report
 .financial-report {
-  display: none;
+  background: url(../../images/sub2-donation-page/sect5-financial-report/bg-deco.png)
+      no-repeat 50% 50% / cover,
+    #ad5700;
+  height: 333px;
+  padding: 71px 20px 54px;
+
+  .cont-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cont-tit {
+    text-align: center;
+    @include mob-tit(26px, $white);
+    letter-spacing: -1px;
+    line-height: 33.5px;
+  }
+  .cont-desc {
+    text-align: center;
+    padding-top: 15px;
+    @include mob-bd(14px, rgba(255, 255, 255, 0.7));
+    letter-spacing: normal;
+  }
+  .cont-desc-web {
+    display: none;
+  }
+  .btn-more {
+    display: flex;
+    width: 179px;
+    height: 37px;
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+    // text-align: center;
+    // padding-top: calc(37px / 2);
+    background-color: $white;
+    border-radius: 37px;
+
+    @include mob-bd(14px, $gray-700);
+  }
 }
