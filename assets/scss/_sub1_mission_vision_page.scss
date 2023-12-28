@@ -1,7 +1,94 @@
 // sub1-main-visual
-
+.sub1-main-visual {
+  display: none;
+}
 // mission-vision
+.mission-vision {
+  //   background: url(../../images/sub1-mission-vision-page/mainSec1-mob.png)
+  //     no-repeat 50% 0;
+  padding: 95px 0 50px 20px;
+  .wrapper-mission-vision {
+    position: relative;
+  }
+  .bg-deco {
+    width: 100%;
+    height: 82px;
+    margin-left: 59px;
+    margin-bottom: 46px;
+    background-color: rgba(255, 101, 0, 0.7);
+    .logo-bg-deco {
+      display: block;
+      width: auto;
+      height: 84.647px;
+      padding-left: 17px;
+    }
+  }
+  .cont-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @include mob-bd(14px, $txtCont-2);
+    .highlight {
+      display: block;
+      @include mob-tit(20px, $txtTit);
+      padding-bottom: 3px;
+      letter-spacing: normal;
+    }
+  }
+  .cont-txt-web {
+    display: none;
+  }
+}
 
 // core-value
-
+.core-value {
+  //   background: url(../../images/sub1-mission-vision-page/mainSec2-mob.png)
+  //     no-repeat 50% 0;
+  padding: 56px 20px;
+  .wrapper {
+    height: 100%;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -30px;
+      left: -20px;
+      height: 313.889vw;
+      width: 49%;
+      background: url(../../images/sub1-mission-vision-page/sect2-core-value/bg.jpg)
+        no-repeat 50% 50% / cover;
+      z-index: -1;
+    }
+  }
+  .sub-tit {
+    @include mob-bd(14px, $gray-600);
+    font-family: $font-family-enNum;
+    font-weight: 400;
+    letter-spacing: 2.66px;
+  }
+  .tit {
+    @include mob-tit(30px, $txtTit);
+    letter-spacing: normal;
+    line-height: 35px;
+  }
+  .content {
+    display: flex;
+    height: 159px;
+    width: 100%;
+    padding-left: 51%;
+    margin-bottom: 6.7%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content-tit {
+    @include mob-tit(16px, $gray-700);
+  }
+  .content-tit-web {
+    display: none;
+  }
+  .content-desc {
+    @include mob-bd(12px, $gray-600);
+  }
+}
 // project-initiative
