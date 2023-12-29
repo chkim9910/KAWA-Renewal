@@ -1,12 +1,97 @@
 // sub1-main-visual
 .sub1-main-visual {
-  display: none;
+  // background: url(../../images/sub1-mission-vision-page/mainVisual-mob.png)
+  //   no-repeat 0 0;
+  // background-size: 360px auto;
+  background: url(../../images/sub1-mission-vision-page/main-visual/bg-mob.png)
+    no-repeat 100% 0 / cover;
+  width: 100%;
+  height: 465px;
+  @media screen and (min-width: 1280px) {
+    .sub1-main-visual {
+      height: 34.271vw;
+    }
+  }
+  .wrapper {
+    height: 425px;
+    padding: 200px 20px 97px;
+  }
+  @media screen and (min-width: 1280px) {
+    .wrapper {
+      padding: 15.417vw 54.583vw 11.51vw 7.396vw;
+    }
+  }
+  .tit {
+    display: block;
+    @include mob-tit(35px, $white);
+    width: 182px;
+    padding-top: 16px;
+    word-wrap: normal;
+    word-break: keep-all;
+  }
+  .sidebar {
+    height: 40px;
+    background: linear-gradient(to right, #bcd8de, #dfddd7);
+    .outer-content {
+      display: flex;
+      height: 40px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      .outer-content-txt {
+        @include mob-bd(14px, $txtTit);
+        font-weight: 600;
+        &:after {
+          content: "";
+        }
+      }
+      .expand-more {
+        color: $txtTit;
+      }
+    }
+
+    .btn-primary {
+      background-color: linear-gradient(to right, #bcd8de, #dfddd7) !important;
+      --bs-btn-color: #fff;
+      --bs-btn-bg: rgba(13, 110, 253, 0);
+      --bs-btn-border-color: rgba(13, 110, 253, 0);
+      --bs-btn-hover-color: #fff;
+      --bs-btn-hover-bg: rgba(11, 94, 215, 0);
+      --bs-btn-hover-border-color: rgba(10, 88, 202, 0);
+      --bs-btn-focus-shadow-rgb: 49, 132, 253;
+      --bs-btn-active-color: #fff;
+      --bs-btn-active-bg: rgba(10, 88, 205, 0);
+      --bs-btn-active-border-color: rgba(10, 83, 190, 0);
+      --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      --bs-btn-disabled-color: #fff;
+      --bs-btn-disabled-bg: rgba(13, 110, 253, 0);
+      --bs-btn-disabled-border-color: rgba(13, 110, 253, 0);
+    }
+    .btn {
+      &:hover {
+        background-color: linear-gradient(
+          to right,
+          #bcd8de,
+          #dfddd7
+        ) !important;
+      }
+    }
+    .inner-content-txt {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      @include mob-bd(14px, $txtCont-2);
+    }
+  }
 }
 // mission-vision
 .mission-vision {
   //   background: url(../../images/sub1-mission-vision-page/mainSec1-mob.png)
   //     no-repeat 50% 0;
   padding: 95px 0 50px 20px;
+  overflow: hidden;
   .wrapper-mission-vision {
     position: relative;
   }
@@ -39,12 +124,11 @@
     display: none;
   }
 }
-
 // core-value
 .core-value {
   //   background: url(../../images/sub1-mission-vision-page/mainSec2-mob.png)
   //     no-repeat 50% 0;
-  padding: 56px 20px;
+  padding: 56px 20px 0;
   .wrapper {
     height: 100%;
     position: relative;
@@ -92,3 +176,83 @@
   }
 }
 // project-initiative
+.project-initiative {
+  // background: url(../../images/sub1-mission-vision-page/mainSec3-mob.png)
+  //   no-repeat 0 0;
+  padding: 60px 20px 0;
+  .cont {
+    position: relative;
+    height: 594px;
+    padding: 0 1px;
+    // padding: 60px 20px;
+  }
+  .cont-tit {
+    @include mob-tit(30px, $txtTit);
+  }
+  .cont-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include mob-bd(12px, $txtCont-2);
+    margin-top: 30px;
+    word-break: keep-all;
+  }
+  .bg-deco {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .bg-deco-1 {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 134px;
+  }
+  .bg-deco-2 {
+    position: absolute;
+    top: 232px;
+    left: 0;
+    width: 50px;
+  }
+  .bg-deco-2-web {
+    display: none;
+  }
+  .bg-deco-3 {
+    position: absolute;
+    top: 323px;
+    left: -20px;
+    width: 140px;
+  }
+  .bg-deco-4 {
+    position: absolute;
+    top: 232px;
+    right: 10px;
+    width: 50px;
+  }
+  .bg-deco-5 {
+    position: absolute;
+    top: 232px;
+    right: -20px;
+    width: 176px;
+  }
+  .bg-deco-6 {
+    position: absolute;
+    top: 174px;
+    right: -20px;
+    width: 60px;
+  }
+  .bg-deco-7 {
+    position: absolute;
+    top: 264px;
+    right: -5px;
+    width: 115px;
+  }
+  .bg-deco-8 {
+    position: absolute;
+    top: 242px;
+    left: -20px;
+    width: 163px;
+  }
+}

@@ -34,12 +34,16 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/comm.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -419,14 +423,14 @@
       <!-- main -->
       <main id="main">
         <!-- sub1-main-visual -->
-        <section class="sect sub1-main-visual">
+        <section class="sect-exp sub1-main-visual">
           <div class="wrapper">
             <strong class="tit">MISSION & VISION</strong>
           </div>
-          <div class="sidebar">
-            <div class="wrapper">
+          <!-- <div class="sidebar">
+            <div class="container">
               <ul class="list-sidebar">
-                <li class="outer-content"><a href="#">인사말</a></li>
+                <li class="outer-content "><a href="#">인사말</a></li>
                 <ul class="inner-content-sidebar">
                   <li class="inner-content"><a href="#">인사말</a></li>
                   <li class="inner-content"><a href="#">미션•비전</a></li>
@@ -435,6 +439,54 @@
                   <li class="inner-content"><a href="#">공지사항</a></li>
                 </ul>
               </ul>
+            </div>
+          </div> -->
+          <div class="sidebar">
+            <div class="container">
+              <button
+                type="button"
+                class="btn btn-primary outer-content"
+                data-bs-toggle="collapse"
+                data-bs-target="#demo"
+              >
+                <span class="outer-content-txt">인사말</span>
+                <span class="material-symbols-outlined expand-more">
+                  expand_more
+                </span>
+              </button>
+              <div id="demo" class="collapse">
+                <div class="container mt-3">
+                  <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#" class="inner-content-txt">인사말</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="inner-content-txt">미션•비전</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="inner-content-txt">연력</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="inner-content-txt">조직도</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="inner-content-txt">공지사항</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -589,14 +641,14 @@
           </div>
         </section>
         <!-- project-initiative -->
-        <section class="sect project-initiative">
+        <section class="sect-exp project-initiative">
           <div class="wrapper">
-            <div class="cont-project-initiative cont-1-wrap">
-              <h2 class="cont-1-tit">
+            <div class="cont cont-1-wrap">
+              <h2 class="cont-tit cont-1-tit">
                 반려동물복지 <br />
                 프로그램
               </h2>
-              <ul class="cont-1-desc">
+              <ul class="cont-desc cont-1-desc">
                 <li>
                   * 반려동물의 복지와 사회적 지위 제고를 위한 입법 및 정책
                   제안을 지속적으로 전개합니다.
@@ -626,13 +678,60 @@
                   변화시키고, 지속적인 법과 정책 개선활동을 하겠습니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 477.54 561.84"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-1-cls-1 {
+                        fill: none;
+                        stroke: #e5c299;
+                      }
+                      .bg-deco-1-cls-1,
+                      .bg-deco-1-cls-2 {
+                        stroke-miterlimit: 10;
+                      }
+                      .bg-deco-1-cls-2 {
+                        fill: #f7baba;
+                        stroke: #f7baba;
+                      }
+                      .bg-deco-1-cls-3 {
+                        fill: #d9dad9;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <path
+                        class="bg-deco-1-cls-1"
+                        d="M142.78,270.35l17.05,21.91a11.16,11.16,0,0,0,15,2.4l23-15.51a11.16,11.16,0,0,1,17.28,7.72l3.81,27.5A11.15,11.15,0,0,0,230.8,324l27.7-1.91a11.15,11.15,0,0,1,11.1,15.32l-10.45,25.72a11.16,11.16,0,0,0,5.44,14.22l25,12.19a11.15,11.15,0,0,1,1.95,18.82l-21.91,17.06a11.16,11.16,0,0,0-2.4,15l15.51,23A11.15,11.15,0,0,1,275,480.71l-27.5,3.82a11.14,11.14,0,0,0-9.59,11.82L239.79,524a11.16,11.16,0,0,1-15.32,11.11L198.75,524.7a11.16,11.16,0,0,0-14.22,5.44l-12.19,24.94a11.16,11.16,0,0,1-18.82,2l-17.06-21.91a11.14,11.14,0,0,0-15-2.4l-23,15.51a11.15,11.15,0,0,1-17.27-7.72L77.31,513a11.16,11.16,0,0,0-11.82-9.6L37.8,505.34A11.16,11.16,0,0,1,26.69,490l10.45-25.73a11.15,11.15,0,0,0-5.44-14.21L6.76,437.89a11.16,11.16,0,0,1-2-18.83L26.71,402a11.14,11.14,0,0,0,2.4-15L13.6,364a11.16,11.16,0,0,1,7.72-17.28l27.5-3.81A11.16,11.16,0,0,0,58.42,331l-1.92-27.7a11.15,11.15,0,0,1,15.32-11.1l25.73,10.45a11.15,11.15,0,0,0,14.21-5.44L124,272.3A11.16,11.16,0,0,1,142.78,270.35Z"
+                      />
+                      <circle
+                        class="bg-deco-1-cls-2"
+                        cx="350.15"
+                        cy="127.39"
+                        r="126.89"
+                      />
+                      <circle
+                        class="bg-deco-1-cls-3"
+                        cx="410.47"
+                        cy="300.71"
+                        r="34.66"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-2-wrap">
-              <h2 class="cont-2-tit">
+            <div class="cont cont-2-wrap">
+              <h2 class="cont-tit cont-2-tit">
                 길고양이 <br />
                 프로그램
               </h2>
-              <ul class="cont-2-desc">
+              <ul class="cont-desc cont-2-desc">
                 <li>
                   * 길고양이에 대한 지역 사회의 이해를 돕고 TNR을 정착시켜
                   나갑니다.
@@ -646,13 +745,175 @@
                   정책 개발을 지속적으로 모색합니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 190.51 746.73"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-2-cls-1 {
+                        fill: none;
+                        stroke: #8e9094;
+                        stroke-miterlimit: 10;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="55.26"
+                        y1="272.73"
+                        x2="55.26"
+                        y2="746.73"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="16.43"
+                        y1="652.15"
+                        x2="94.93"
+                        y2="730.65"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        y1="690.98"
+                        x2="111.02"
+                        y2="690.98"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="16.16"
+                        y1="730.02"
+                        x2="94.71"
+                        y2="651.58"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="150.58"
+                        x2="150.58"
+                        y2="339.42"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="122.78"
+                        y1="271.7"
+                        x2="179"
+                        y2="327.91"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="111.02"
+                        y1="299.5"
+                        x2="190.51"
+                        y2="299.5"
+                      />
+                      <line
+                        class="bg-deco-2-cls-1"
+                        x1="122.58"
+                        y1="327.46"
+                        x2="178.84"
+                        y2="271.29"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                <svg
+                  class="bg-deco-2-web"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 634.17 608.5"
+                >
+                  <defs>
+                    <style>
+                      .cls-1,
+                      .cls-2,
+                      .cls-3 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                      }
+                      .cls-1,
+                      .cls-2 {
+                        stroke: #8e9094;
+                      }
+                      .cls-1 {
+                        stroke-width: 0.89px;
+                      }
+                      .cls-2 {
+                        stroke-width: 0.54px;
+                      }
+                      .cls-3 {
+                        stroke: #b0b2b6;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <line
+                        class="cls-1"
+                        x1="392.75"
+                        y1="25.74"
+                        x2="392.75"
+                        y2="448.76"
+                      />
+                      <line
+                        class="cls-1"
+                        x1="358.11"
+                        y1="364.36"
+                        x2="428.16"
+                        y2="434.42"
+                      />
+                      <line
+                        class="cls-1"
+                        x1="343.44"
+                        y1="399.01"
+                        x2="442.51"
+                        y2="399.01"
+                      />
+                      <line
+                        class="cls-1"
+                        x1="357.86"
+                        y1="433.85"
+                        x2="427.96"
+                        y2="363.85"
+                      />
+                      <line class="cls-2" x1="266.73" x2="266.73" y2="182.48" />
+                      <line
+                        class="cls-2"
+                        x1="251.78"
+                        y1="146.07"
+                        x2="282"
+                        y2="176.29"
+                      />
+                      <line
+                        class="cls-2"
+                        x1="245.45"
+                        y1="161.01"
+                        x2="288.19"
+                        y2="161.01"
+                      />
+                      <line
+                        class="cls-2"
+                        x1="251.67"
+                        y1="176.04"
+                        x2="281.92"
+                        y2="145.85"
+                      />
+                      <path
+                        class="cls-3"
+                        d="M448.87,608.47c-4.22-73.91,39.85-143.64,106.37-174.5,19.21-8.91,40.45-13,61.29-7.73,4.48,1.14,9.12,2.84,12,6.46,20.05,25.36-23.84,58.77-40.24,73C538.46,548.9,476.46,569.05,411,557.64c-59.69-10.41-117.24-35.06-159.85-79.12C210,436,177.6,374.17,185.82,313.64c9.53-70.31,46.38-65.69,47.05-65.6,16.86,2.27,23.37,18.55,21.57,34.21-3.11,27-26.05,45.35-51.78,50.14-50.34,9.39-82.58-34.09-103.46-73.05C63.91,193.51,0,189.23,0,189.23"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-3-wrap">
-              <h2 class="cont-3-tit">
+            <div class="cont cont-3-wrap">
+              <h2 class="cont-tit cont-3-tit">
                 개ㆍ고양이 도살 금지 <br />
                 프로그램
               </h2>
-              <ul class="cont-3-desc">
+              <ul class="cont-desc cont-3-desc">
                 <li>
                   * 개ㆍ고양이 도살 금지 캠페인을 전개하여 다양한 지지층을
                   구축하며 인식의 저변을 확대합니다.
@@ -671,13 +932,57 @@
                   이어지는 토대를 만들어 나갑니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 407.66 591.66"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-3-cls-1 {
+                        fill: none;
+                        stroke: #e5c299;
+                        stroke-miterlimit: 10;
+                        stroke-width: 0.85px;
+                      }
+                      .bg-deco-3-cls-2 {
+                        fill: #246ab2;
+                      }
+                      .bg-deco-3-cls-3 {
+                        fill: #fddec0;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <path
+                        class="bg-deco-3-cls-1"
+                        d="M189,248.06l14.52-18.64a9.48,9.48,0,0,1,12.79-2l19.6,13.19a9.49,9.49,0,0,0,14.7-6.57l3.25-23.4a9.48,9.48,0,0,1,10.05-8.16l23.58,1.63A9.49,9.49,0,0,0,297,191l-8.89-21.89A9.5,9.5,0,0,1,292.7,157l21.23-10.38a9.48,9.48,0,0,0,1.66-16L297,116.13a9.48,9.48,0,0,1-2-12.79l13.19-19.6A9.49,9.49,0,0,0,301.54,69l-23.41-3.25A9.48,9.48,0,0,1,270,55.74l1.63-23.58a9.49,9.49,0,0,0-13-9.44l-21.89,8.89A9.5,9.5,0,0,1,224.57,27L214.19,5.75a9.48,9.48,0,0,0-16-1.66L183.66,22.73a9.48,9.48,0,0,1-12.79,2l-19.6-13.19a9.49,9.49,0,0,0-14.7,6.57l-3.25,23.4a9.48,9.48,0,0,1-10,8.16L99.7,48.08a9.49,9.49,0,0,0-9.45,13L99.14,83a9.5,9.5,0,0,1-4.63,12.1L73.28,105.49a9.48,9.48,0,0,0-1.66,16L90.26,136a9.48,9.48,0,0,1,2,12.79l-13.19,19.6a9.49,9.49,0,0,0,6.57,14.7l23.4,3.25a9.48,9.48,0,0,1,8.16,10L115.61,220a9.49,9.49,0,0,0,13,9.44l21.89-8.89a9.5,9.5,0,0,1,12.1,4.63L173,246.4A9.48,9.48,0,0,0,189,248.06Z"
+                      />
+                      <circle
+                        class="bg-deco-3-cls-2"
+                        cx="154.26"
+                        cy="437.4"
+                        r="154.26"
+                      />
+                      <circle
+                        class="bg-deco-3-cls-3"
+                        cx="357.31"
+                        cy="325.65"
+                        r="50.36"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-4-wrap">
-              <h2 class="cont-4-tit">
+            <div class="cont cont-4-wrap">
+              <h2 class="cont-tit cont-4-tit">
                 농장동물복지 <br />
                 프로그램
               </h2>
-              <ul class="cont-4-desc">
+              <ul class="cont-desc cont-4-desc">
                 <li>
                   * 농장동물의 사육과 운송, 도축에서 동물들이 받는 고통을
                   최소화하기 위한 캠페인과 입법을 추진합니다.
@@ -696,13 +1001,88 @@
                   동물복지형 축산에 대한 생산자와 소비자들의 인식을 강화합니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 190.51 746.73"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-4-cls-1 {
+                        fill: none;
+                        stroke: #8e9094;
+                        stroke-miterlimit: 10;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="55.26"
+                        y1="272.73"
+                        x2="55.26"
+                        y2="746.73"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="16.43"
+                        y1="652.15"
+                        x2="94.93"
+                        y2="730.65"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        y1="690.98"
+                        x2="111.02"
+                        y2="690.98"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="16.16"
+                        y1="730.02"
+                        x2="94.71"
+                        y2="651.58"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="150.58"
+                        x2="150.58"
+                        y2="339.42"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="122.78"
+                        y1="271.7"
+                        x2="179"
+                        y2="327.91"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="111.02"
+                        y1="299.5"
+                        x2="190.51"
+                        y2="299.5"
+                      />
+                      <line
+                        class="bg-deco-4-cls-1"
+                        x1="122.58"
+                        y1="327.46"
+                        x2="178.84"
+                        y2="271.29"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-5-wrap">
-              <h2 class="cont-5-tit">
+            <div class="cont cont-5-wrap">
+              <h2 class="cont-tit cont-5-tit">
                 동물 실험 금지 <br />
                 프로그램
               </h2>
-              <ul class="cont-5-desc">
+              <ul class="cont-desc cont-5-desc">
                 <li>
                   * 화장품의 동물실험의 완전 금지를 이루기 위해 캠페인과 입법
                   활동을 이어갑니다.
@@ -720,13 +1100,93 @@
                   있도록 하겠습니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 511.51 570.7"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-5-cls-1 {
+                        fill: none;
+                        stroke: #dadbdc;
+                        stroke-width: 3px;
+                      }
+                      .bg-deco-5-cls-1,
+                      .bg-deco-5-cls-2 {
+                        stroke-miterlimit: 10;
+                      }
+                      .bg-deco-5-cls-2 {
+                        fill: #f7baba;
+                        stroke: #f7baba;
+                        stroke-width: 1.19px;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,185.77c-78,0-137.52,64.8-137.52,145.57V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,166c-90.86,0-156,68.09-156,155.66v196.2"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,142.62C403.86,151,336.89,226.44,333.24,310.35V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,123.47C394.54,123,311.14,220.29,311.14,317.08V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,101.8C373.87,101.8,291,221.56,291,318V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,80.41C343.93,87.54,269.23,228.88,269.23,318V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,59.74c-192.56,5-263,169.14-263,258.25V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,37.64C294.74,49,226.73,228.88,226.73,319.62V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M511.39,16C266.23,31.93,204.92,228.88,204.92,318V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M458.7,1.48C244.84,37.64,184.11,228.88,184.11,318V517.81"
+                      />
+                      <path
+                        class="bg-deco-5-cls-1"
+                        d="M379.9,1.48C214.9,66.87,163.39,228.88,163.39,318V517.81"
+                      />
+                      <circle
+                        class="bg-deco-5-cls-2"
+                        cx="151.49"
+                        cy="419.21"
+                        r="150.89"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-6-wrap">
-              <h2 class="cont-6-tit">
+            <div class="cont cont-6-wrap">
+              <h2 class="cont-tit cont-6-tit">
                 전시동물ㆍ동물쇼 금지 <br />
                 프로그램
               </h2>
-              <ul class="cont-6-desc">
+              <ul class="cont-desc cont-6-desc">
                 <li>
                   * 제돌이 등 일곱 마리의 쇼장 남방큰돌고래를 해방시킨 것에
                   이어서 돌고래 전시 금지를 이루겠습니다.
@@ -746,10 +1206,79 @@
                   입법을 이루는 데에 최선을 다하겠습니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 130.57 607.11"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-6-cls-1 {
+                        fill: #fddec0;
+                      }
+                      .bg-deco-6-cls-2,
+                      .bg-deco-6-cls-3 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                      }
+                      .bg-deco-6-cls-2 {
+                        stroke: #fddec0;
+                      }
+                      .bg-deco-6-cls-3 {
+                        stroke: #8e9094;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <polygon
+                        class="bg-deco-6-cls-1"
+                        points="59.07 303.38 88.18 353.79 117.28 404.2 59.07 404.2 0.87 404.2 29.97 353.79 59.07 303.38"
+                      />
+                      <polygon
+                        class="bg-deco-6-cls-1"
+                        points="59.07 404.2 88.18 454.61 117.28 505.02 59.07 505.02 0.87 505.02 29.97 454.61 59.07 404.2"
+                      />
+                      <polygon
+                        class="bg-deco-6-cls-2"
+                        points="59.07 505.79 88.18 556.2 117.28 606.61 59.07 606.61 0.87 606.61 29.97 556.2 59.07 505.79"
+                      />
+                      <line
+                        class="bg-deco-6-cls-3"
+                        x1="82.89"
+                        x2="82.89"
+                        y2="405.34"
+                      />
+                      <line
+                        class="bg-deco-6-cls-3"
+                        x1="49.69"
+                        y1="324.46"
+                        x2="116.82"
+                        y2="391.59"
+                      />
+                      <line
+                        class="bg-deco-6-cls-3"
+                        x1="35.64"
+                        y1="357.66"
+                        x2="130.57"
+                        y2="357.66"
+                      />
+                      <line
+                        class="bg-deco-6-cls-3"
+                        x1="49.45"
+                        y1="391.05"
+                        x2="116.63"
+                        y2="323.97"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-7-wrap">
-              <h2 class="cont-7-tit">동물보호교육</h2>
-              <ul class="cont-7-desc">
+            <div class="cont cont-7-wrap">
+              <h2 class="cont-tit cont-7-tit">동물보호교육</h2>
+              <ul class="cont-desc cont-7-desc">
                 <li>
                   * 동물의 생명 가치에 대한 시민들의 인식 전환에 기여하고자
                   다양한 교육 사업을 진행하고 있습니다.
@@ -759,10 +1288,83 @@
                 <li>* 올바른 반려 동물 문화 정착을 위한 동물 보호/복지 교육</li>
                 <li>* 교재 컨텐츠, 동물 보호/복지 교육 자문</li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 313.41 512.25"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-7-cls-1 {
+                        fill: #c3b64b;
+                      }
+                      .bg-deco-7-cls-2 {
+                        fill: none;
+                        stroke: #dadbdc;
+                        stroke-miterlimit: 10;
+                        stroke-width: 2.64px;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <path
+                        class="bg-deco-7-cls-1"
+                        d="M259.78,492.12l-1,20.13-1-20.13a35.28,35.28,0,0,0-33.45-33.51l-20.13-1,20.13-1a35.3,35.3,0,0,0,33.5-33.46l1-20.13,1,20.13a35.3,35.3,0,0,0,33.45,33.51l20.13,1-20.13,1A35.3,35.3,0,0,0,259.78,492.12Z"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,292.41c68.72,0,121.11-57.06,121.11-128.19V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,309.87c80,0,137.43-60,137.43-137.08V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,330.42C94.8,323.05,153.78,256.6,157,182.71V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,347.29C103,347.72,176.46,262,176.46,176.78V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,366.37c121.11,0,194.06-105.47,194.06-190.39V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,385.2C147.58,378.93,213.37,254.45,213.37,176V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,403.41C169.68,399,231.69,254.45,231.69,176V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,422.87c190.8-10,250.69-168.42,250.69-248.33V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M.1,441.94C216,427.89,270,254.45,270,176V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M2.75,461.62C240.89,434.84,288.33,254.45,288.33,176V0"
+                      />
+                      <path
+                        class="bg-deco-7-cls-2"
+                        d="M6.09,479c244.7-25.36,300.48-211.19,300.48-303V0"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="cont-project-initiative cont-8-wrap">
-              <h2 class="cont-8-tit">반려동물복지센터</h2>
-              <ul class="cont-8-desc">
+            <div class="cont cont-8-wrap">
+              <h2 class="cont-tit cont-8-tit">반려동물복지센터</h2>
+              <ul class="cont-desc cont-8-desc">
                 <li>
                   * 동물자유연대 반려동물복지센터는 대부분의 동물은 학대나
                   사고로 심신이 손상되어 많은 관심과 치료가 필요한 동물들을
@@ -775,6 +1377,92 @@
                   보살핍니다.
                 </li>
               </ul>
+              <div class="bg-deco">
+                <svg
+                  class="bg-deco-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 389.84 745.17"
+                >
+                  <defs>
+                    <style>
+                      .bg-deco-8-cls-1 {
+                        fill: #8e9094;
+                      }
+                      .bg-deco-8-cls-1,
+                      .bg-deco-8-cls-2 {
+                        stroke: #8e9094;
+                      }
+                      .bg-deco-8-cls-1,
+                      .bg-deco-8-cls-2,
+                      .bg-deco-8-cls-4 {
+                        stroke-miterlimit: 10;
+                      }
+                      .bg-deco-8-cls-2,
+                      .bg-deco-8-cls-4 {
+                        fill: none;
+                      }
+                      .bg-deco-8-cls-3 {
+                        fill: #f7baba;
+                      }
+                      .bg-deco-8-cls-4 {
+                        stroke: #fddec0;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_2-2" data-name="Layer 2">
+                      <circle
+                        class="bg-deco-8-cls-1"
+                        cx="76.85"
+                        cy="386.74"
+                        r="6.76"
+                      />
+                      <circle
+                        class="bg-deco-8-cls-1"
+                        cx="239.76"
+                        cy="100.4"
+                        r="7.37"
+                      />
+                      <path
+                        class="bg-deco-8-cls-2"
+                        d="M.25,375.13A193,193,0,0,0,68.44,387.5c106.87,0,193.5-86.63,193.5-193.5S175.31.5,68.44.5A193,193,0,0,0,.18,12.9"
+                      />
+                      <polygon
+                        class="bg-deco-8-cls-3"
+                        points="277.81 5.12 333.83 102.14 389.84 199.15 277.81 199.15 165.79 199.15 221.8 102.14 277.81 5.12"
+                      />
+                      <line
+                        class="bg-deco-8-ls-4"
+                        x1="143.59"
+                        y1="267.41"
+                        x2="143.59"
+                        y2="745.17"
+                      />
+                      <line
+                        class="bg-deco-8-cls-4"
+                        x1="104.46"
+                        y1="649.84"
+                        x2="183.58"
+                        y2="728.96"
+                      />
+                      <line
+                        class="bg-deco-8-cls-4"
+                        x1="87.89"
+                        y1="688.97"
+                        x2="199.79"
+                        y2="688.97"
+                      />
+                      <line
+                        class="bg-deco-8-cls-4"
+                        x1="104.18"
+                        y1="728.33"
+                        x2="183.36"
+                        y2="649.26"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </section>
