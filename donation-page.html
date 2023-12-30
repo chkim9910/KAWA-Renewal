@@ -38,22 +38,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
-    />
     <link rel="stylesheet" href="/assets/css/comm.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script defer src="/assets/js/comm.js"></script>
   </head>
   <body>
@@ -501,6 +492,45 @@
               </div>
             </div>
           </div>
+          <div class="sidebar-web">
+            <ul class="wrapper">
+              <li class="list-sidebar active">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">후원안내</span>
+                </a>
+              </li>
+              <li class="list-sidebar">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">후원신청</span>
+                </a>
+              </li>
+              <li class="list-sidebar">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">살림공개</span>
+                </a>
+              </li>
+              <li class="list-sidebar">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">이벤트 후원</span>
+                </a>
+              </li>
+              <li class="list-sidebar">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">기업후원</span>
+                </a>
+              </li>
+              <li class="list-sidebar">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">스타·팬클럽후원</span>
+                </a>
+              </li>
+              <li class="list-sidebar">
+                <a href="#" class="sidebar-cont">
+                  <span class="sidebar-txt">사랑곳간</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
         <!-- about-reasons -->
         <section class="sect-exp about-reasons">
@@ -510,108 +540,428 @@
               자유연대인가요?
             </h2>
             <div class="content-wrap">
-              <div class="cont cont-1">
-                <div class="cont-txt">
-                  <h3 class="cont-tit">대한민국 대표 동물단체</h3>
-                  <p class="cont-desc">
-                    회원수 최다로 이미 가장 많은 시민이 지지하는 <br />
-                    동물자유연대는 반려, 농장, 전시, 실험, 길고양이 등 <br />
-                    다양한 동물을 위해 폭넓게 활동합니다.
-                  </p>
+              <div class="cont-container cont-container-1">
+                <div class="cont cont-1">
+                  <div class="cont-txt cont-txt-1">
+                    <h3 class="cont-tit cont-tit-1">대한민국 대표 동물단체</h3>
+                    <p class="cont-desc">
+                      회원수 최다로 이미 가장 많은 시민이 지지하는 <br />
+                      동물자유연대는 반려, 농장, 전시, 실험, 길고양이 등 <br />
+                      다양한 동물을 위해 폭넓게 활동합니다.
+                    </p>
+                  </div>
+                  <div class="pic pic-cont-1"></div>
+                  <div class="bg-deco bg-deco-1">
+                    <svg
+                      class="bg-deco-1-svg"
+                      width="595.96"
+                      height="1200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <style>
+                          .bg-deco-1-cls-1 {
+                            stroke: #f7baba;
+                            fill: none;
+                          }
+                          .cls-1,
+                          .bg-deco-1-cls-2 {
+                            stroke: #f7baba;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2.5px;
+                          }
+                          .bg-deco-1-cls-2 {
+                            fill: #f7baba;
+                          }
+                        </style>
+                        <symbol
+                          id="svg_7"
+                          viewBox="0 0 111.02 474"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <style>
+                              .cls-1 {
+                                fill: none;
+                                stroke: #8e9094;
+                                opacity: 0.4;
+                                stroke-miterlimit: 10;
+                              }
+                            </style>
+                          </defs>
+                          <g data-name="Layer 2" id="svg_5">
+                            <g data-name="Layer 2" id="svg_6">
+                              <line
+                                class="cls-1"
+                                x1="55.26"
+                                x2="55.26"
+                                y2="474"
+                              />
+                              <line
+                                class="cls-1"
+                                x1="16.43"
+                                x2="94.93"
+                                y1="379.43"
+                                y2="457.93"
+                              />
+                              <line
+                                class="cls-1"
+                                x2="111.02"
+                                y1="418.25"
+                                y2="418.25"
+                              />
+                              <line
+                                class="cls-1"
+                                x1="16.16"
+                                x2="94.71"
+                                y1="457.29"
+                                y2="378.85"
+                              />
+                            </g>
+                          </g>
+                        </symbol>
+                      </defs>
+                      <g class="layer">
+                        <title>Layer 1</title>
+                        <g data-name="Layer 2" id="Layer_2">
+                          <g data-name="Layer 2" id="Layer_2-2">
+                            <path
+                              class="bg-deco-1-cls-1"
+                              d="m0.25,460.1c51.47,101.55 156.83,171.15 278.46,171.15c172.31,0 312,-139.69 312,-312s-139.69,-312 -312,-312a310.69,310.69 0 0 0 -190.58,65"
+                              id="svg_1"
+                            />
+                            <circle
+                              class="bg-deco-1-cls-2"
+                              cx="182.71"
+                              cy="25.25"
+                              id="svg_2"
+                              r="22"
+                            />
+                            <circle
+                              class="bg-deco-1-cls-2"
+                              cx="223.71"
+                              cy="622.25"
+                              id="svg_3"
+                              r="11"
+                            />
+                            <circle
+                              class="bg-deco-1-cls-2"
+                              cx="581.71"
+                              cy="234.25"
+                              id="svg_4"
+                              r="12"
+                            />
+                          </g>
+                        </g>
+                        <use
+                          id="svg_8"
+                          transform="matrix(0.369719 0 0 0.369719 321.823 492.82)"
+                          x="36.21"
+                          xlink:href="#svg_7"
+                          y="50.04"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
-                <div class="pic pic-cont-1"></div>
               </div>
-              <div class="cont cont-2">
-                <div class="cont-txt">
-                  <h3 class="cont-tit">No.1 동물구조, 입양 전문성</h3>
-                  <p class="cont-desc">
-                    최고의 동물구조 전문팀을 운영하고 있으며, <br />
-                    국내 최초 반려동물 복지시설을 설립하여 <br />
-                    구조동물에 새 삶을 찾아주고 있습니다.
-                  </p>
+              <div class="cont-container cont-container-2">
+                <div class="cont cont-2">
+                  <div class="cont-txt cont-txt-2">
+                    <h3 class="cont-tit cont-tit-2">
+                      No.1 동물구조, 입양 전문성
+                    </h3>
+                    <h3 class="cont-tit cont-tit-2-web">
+                      No.1 <br />
+                      동물구조&입양 <br />
+                      전문성
+                    </h3>
+                    <p class="cont-desc">
+                      최고의 동물구조 전문팀을 운영하고 있으며, <br />
+                      국내 최초 반려동물 복지시설을 설립하여 <br />
+                      구조동물에 새 삶을 찾아주고 있습니다.
+                    </p>
+                  </div>
+                  <div class="pic pic-cont-2"></div>
+                  <div class="bg-deco bg-deco-2">
+                    <svg
+                      class="bg-deco-2-svg"
+                      width="600"
+                      height="600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <symbol
+                          class="bg-deco-2"
+                          id="svg_16"
+                          viewBox="0 0 86.31 86.31"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <style>
+                              .bg-deco-2-cls-1 {
+                                fill: #c3b64b;
+                                stroke: none;
+                                transform: scale(0.8);
+                              }
+                            </style>
+                          </defs>
+                          <g data-name="Layer 2" id="svg_14">
+                            <g data-name="Layer 2" id="svg_15">
+                              <path
+                                class="bg-deco-2-cls-1"
+                                d="m43.93,70.4l-0.81,15.91l-0.79,-15.91a27.88,27.88 0 0 0 -26.43,-26.47l-15.9,-0.81l15.9,-0.79a27.88,27.88 0 0 0 26.47,-26.43l0.81,-15.9l0.82,15.9a27.89,27.89 0 0 0 26.4,26.47l15.91,0.81l-15.91,0.82a27.89,27.89 0 0 0 -26.47,26.4z"
+                              />
+                            </g>
+                          </g>
+                        </symbol>
+                        <symbol
+                          id="svg_25"
+                          viewBox="0 0 385.91 554.52"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <style>
+                              .cls-1 {
+                                fill: none;
+                                stroke: #8e9094;
+                                stroke-miterlimit: 10;
+                                opacity: 0.4;
+                              }
+                            </style>
+                          </defs>
+                          <g data-name="Layer 2" id="svg_23">
+                            <g data-name="Layer 2" id="svg_24">
+                              <path
+                                class="cls-1"
+                                d="m340.35,60.54l-33.87,-50.92a20.44,20.44 0 0 0 -33.16,-1.22l-37.52,48.29a20.42,20.42 0 0 1 -24.33,6.18l-56,-24.52a20.45,20.45 0 0 0 -28.55,16.9l-5.46,60.92a20.44,20.44 0 0 1 -17.12,18.35l-60.4,9.67a20.44,20.44 0 0 0 -14.94,29.65l28.38,54.16a20.44,20.44 0 0 1 -4.49,24.7l-45.58,40.81a20.44,20.44 0 0 0 3.51,33l53.18,30.26a20.45,20.45 0 0 1 9.55,23.23l-16.3,58.95a20.43,20.43 0 0 0 20.75,25.82l61.07,-3.26a20.44,20.44 0 0 1 20.61,14.34l18.16,58.4a20.43,20.43 0 0 0 31.46,10.51l49.7,-35.76a20.44,20.44 0 0 1 25.09,0.92l46.85,39.32a20.44,20.44 0 0 0 32.06,-8.18l22.4,-56.91"
+                              />
+                            </g>
+                          </g>
+                        </symbol>
+                      </defs>
+                      <g class="layer">
+                        <title>Layer 1</title>
+                        <use
+                          id="svg_18"
+                          transform="matrix(0.14806 0 0 0.14806 332.299 344.699)"
+                          x="819.48"
+                          xlink:href="#svg_16"
+                          y="481.92"
+                        />
+                        <use
+                          id="svg_26"
+                          transform="matrix(0.728277 0 0 0.728277 -53.2141 -5.32974)"
+                          x="215.04"
+                          xlink:href="#svg_25"
+                          y="22.97"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
-                <div class="pic pic-cont-2"></div>
               </div>
-              <div class="cont cont-3">
-                <div class="cont-txt">
-                  <h3 class="cont-tit">투명한 후원금 운용</h3>
-                  <p class="cont-desc">
-                    2013년부터 외부 회계법인 감사를 진행하고 <br />
-                    후원금 사용에 대한 투명성을 공증받고 있습니다.
-                  </p>
+              <div class="cont-container cont-container-3">
+                <div class="cont cont-3">
+                  <div class="cont-txt cont-txt-3">
+                    <h3 class="cont-tit cont-tit-3">투명한 후원금 운용</h3>
+                    <p class="cont-desc">
+                      2013년부터 외부 회계법인 감사를 진행하고 <br />
+                      후원금 사용에 대한 투명성을 공증받고 있습니다.
+                    </p>
+                  </div>
+                  <div class="pic pic-cont-3"></div>
+                  <div class="bg-deco bg-deco-3">
+                    <svg
+                      class="bg-deco-3-svg-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 349.62 545.43"
+                    >
+                      <defs>
+                        <style>
+                          .bg-deco-3-1-cls-1 {
+                            fill: none;
+                            stroke: #dadbdc;
+                            stroke-miterlimit: 10;
+                            stroke-width: 3px;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_2-2" data-name="Layer 2">
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,332c78,0,137.52-64.8,137.52-145.57V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,351.86c90.86,0,156-68.09,156-155.66V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,375.19c107.53-8.36,174.5-83.82,178.15-167.72V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,394.35c116.84.49,200.25-96.82,200.25-193.62V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,416c137.52,0,220.35-119.77,220.35-216.2V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,437.4c167.46-7.13,242.16-148.47,242.16-237.58V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,458.08c192.55-5,263-169.15,263-258.26V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,480.18c216.64-11.41,284.65-191.25,284.65-282V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M.12,501.82c245.16-15.94,306.47-212.89,306.47-302V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M3.12,524.18C273.53,493.76,327.4,288.93,327.4,199.82V0"
+                          />
+                          <path
+                            class="bg-deco-3-1-cls-1"
+                            d="M6.92,543.94c277.85-28.79,341.2-239.8,341.2-344.12V0"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                    <svg
+                      class="bg-deco-3-svg-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 86.31 86.31"
+                    >
+                      <defs>
+                        <style>
+                          .bg-deco-3-2-cls-1 {
+                            fill: #f7baba;
+                            stroke: none;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_2-2" data-name="Layer 2">
+                          <path
+                            class="bg-deco-3-2-cls-1"
+                            d="M43.93,70.4l-.81,15.91L42.33,70.4A27.88,27.88,0,0,0,15.9,43.93L0,43.12l15.9-.79A27.88,27.88,0,0,0,42.37,15.9L43.18,0,44,15.9A27.89,27.89,0,0,0,70.4,42.37l15.91.81L70.4,44A27.89,27.89,0,0,0,43.93,70.4Z"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                    <!-- <svg
+                      class="bg-deco-3-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 634.17 608.5"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1,
+                          .cls-2,
+                          .cls-3 {
+                            fill: none;
+                            stroke-miterlimit: 10;
+                          }
+                          .cls-1,
+                          .cls-2 {
+                            stroke: #8e9094;
+                          }
+                          .cls-1 {
+                            stroke-width: 0.89px;
+                          }
+                          .cls-2 {
+                            stroke-width: 0.54px;
+                          }
+                          .cls-3 {
+                            stroke: #b0b2b6;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_2-2" data-name="Layer 2">
+                          <line
+                            class="cls-1"
+                            x1="392.75"
+                            y1="25.74"
+                            x2="392.75"
+                            y2="448.76"
+                          />
+                          <line
+                            class="cls-1"
+                            x1="358.11"
+                            y1="364.36"
+                            x2="428.16"
+                            y2="434.42"
+                          />
+                          <line
+                            class="cls-1"
+                            x1="343.44"
+                            y1="399.01"
+                            x2="442.51"
+                            y2="399.01"
+                          />
+                          <line
+                            class="cls-1"
+                            x1="357.86"
+                            y1="433.85"
+                            x2="427.96"
+                            y2="363.85"
+                          />
+                          <line
+                            class="cls-2"
+                            x1="266.73"
+                            x2="266.73"
+                            y2="182.48"
+                          />
+                          <line
+                            class="cls-2"
+                            x1="251.78"
+                            y1="146.07"
+                            x2="282"
+                            y2="176.29"
+                          />
+                          <line
+                            class="cls-2"
+                            x1="245.45"
+                            y1="161.01"
+                            x2="288.19"
+                            y2="161.01"
+                          />
+                          <line
+                            class="cls-2"
+                            x1="251.67"
+                            y1="176.04"
+                            x2="281.92"
+                            y2="145.85"
+                          />
+                          <path
+                            class="cls-3"
+                            d="M448.87,608.47c-4.22-73.91,39.85-143.64,106.37-174.5,19.21-8.91,40.45-13,61.29-7.73,4.48,1.14,9.12,2.84,12,6.46,20.05,25.36-23.84,58.77-40.24,73C538.46,548.9,476.46,569.05,411,557.64c-59.69-10.41-117.24-35.06-159.85-79.12C210,436,177.6,374.17,185.82,313.64c9.53-70.31,46.38-65.69,47.05-65.6,16.86,2.27,23.37,18.55,21.57,34.21-3.11,27-26.05,45.35-51.78,50.14-50.34,9.39-82.58-34.09-103.46-73.05C63.91,193.51,0,189.23,0,189.23"
+                          />
+                        </g>
+                      </g>
+                    </svg> -->
+                  </div>
                 </div>
-                <div class="pic pic-cont-3"></div>
               </div>
             </div>
           </div>
         </section>
         <!-- donation-usage -->
-        <!-- <section class="sect donation-usage">
-          <div class="content-wrap">
-            <div class="content-1">
-              <div class="cont-img"></div>
-              <div class="cont-txt">
-                <strong class="cont-tit">반려동물</strong>
-                <ul class="cont-desc">
-                  <li>유기동물 및 학대예방 캠페인</li>
-                  <li>개식용 금지 캠페인</li>
-                  <li>길고양이와의 공존 모색 TNR제도 장착</li>
-                  <li>유기동물 치료비 예산 확보 캠페인</li>
-                  <li>신종펫숍 문제점 공론화 및 시민인식개선</li>
-                  <li>합법/불법 번식장 고발 및 공론화</li>
-                </ul>
-              </div>
-            </div>
-            <div class="content-2">
-              <div class="cont-img"></div>
-              <div class="cont-txt">
-                <strong class="cont-tit">온센터</strong>
-                <ul class="cont-desc">
-                  <li>동물구조</li>
-                  <li>입양 및 캠페인</li>
-                  <li>치료와 돌봄</li>
-                  <li>동물보호교육</li>
-                </ul>
-              </div>
-            </div>
-            <div class="content-3">
-              <div class="cont-img"></div>
-              <div class="cont-txt">
-                <strong class="cont-tit">위기동물</strong>
-                <ul class="cont-desc">
-                  <li>불법 번식장 대응 및 공물구조</li>
-                  <li>동물학대사건 감시</li>
-                  <li>고발 시민구조활동 지원</li>
-                  <li>위기동물 구조 및 지원 쓰담쓰담 지원사업</li>
-                </ul>
-              </div>
-            </div>
-            <div class="content-4">
-              <div class="cont-img"></div>
-              <div class="cont-txt">
-                <strong class="cont-tit">전시·야생동물</strong>
-                <ul class="cont-desc">
-                  <li>사육곰 구조 및 대책마련 캠페인</li>
-                  <li>전시 고래류 방류사업</li>
-                  <li>동물원 감시 및 환경개선 활동</li>
-                  <li>동물이용축제 반대 캠페인</li>
-                </ul>
-              </div>
-            </div>
-            <div class="content-5">
-              <div class="cont-img"></div>
-              <div class="cont-txt">
-                <strong class="cont-tit">농장동물</strong>
-                <ul class="cont-desc">
-                  <li>산란계 케이지 프리 활동</li>
-                  <li>살처분 반대 캠페인</li>
-                  <li>장거리 운송 금지 캠페인</li>
-                  <li>일리있는 달걀 캠페인</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section> -->
         <section class="sect-exp donation-usage">
           <h2 class="tit">
             <span class="highlight">
@@ -620,11 +970,15 @@
             </span>
             이렇게 사용됩니다.
           </h2>
-          <div class="swiper mySwiper swiper-donation-usage">
+          <h2 class="tit-web">
+            여러분의 소중한 후원금은 <br />
+            <span class="highlight">이렇게 사용됩니다.</span>
+          </h2>
+          <div class="swiper swiper-donation-usage">
             <div class="swiper-wrapper content-wrap">
               <div class="swiper-slide content-1">
-                <div class="cont-img"></div>
-                <div class="cont-txt">
+                <div class="cont-img cont-img-1"></div>
+                <div class="cont-txt cont-txt-1">
                   <strong class="cont-tit">반려동물</strong>
                   <ul class="cont-desc">
                     <li>유기동물 및 학대예방 캠페인</li>
@@ -637,8 +991,8 @@
                 </div>
               </div>
               <div class="swiper-slide content-2">
-                <div class="cont-img"></div>
-                <div class="cont-txt">
+                <div class="cont-img cont-img-2"></div>
+                <div class="cont-txt cont-txt-2">
                   <strong class="cont-tit">온센터</strong>
                   <ul class="cont-desc">
                     <li>동물구조</li>
@@ -649,20 +1003,8 @@
                 </div>
               </div>
               <div class="swiper-slide content-3">
-                <div class="cont-img"></div>
-                <div class="cont-txt">
-                  <strong class="cont-tit">위기동물</strong>
-                  <ul class="cont-desc">
-                    <li>불법 번식장 대응 및 공물구조</li>
-                    <li>동물학대사건 감시</li>
-                    <li>고발 시민구조활동 지원</li>
-                    <li>위기동물 구조 및 지원 쓰담쓰담 지원사업</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="swiper-slide content-4">
-                <div class="cont-img"></div>
-                <div class="cont-txt">
+                <div class="cont-img cont-img-3"></div>
+                <div class="cont-txt cont-txt-3">
                   <strong class="cont-tit">전시·야생동물</strong>
                   <ul class="cont-desc">
                     <li>사육곰 구조 및 대책마련 캠페인</li>
@@ -672,9 +1014,9 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide content-5">
-                <div class="cont-img"></div>
-                <div class="cont-txt">
+              <div class="swiper-slide content-4">
+                <div class="cont-img cont-img-4"></div>
+                <div class="cont-txt cont-txt-4">
                   <strong class="cont-tit">농장동물</strong>
                   <ul class="cont-desc">
                     <li>산란계 케이지 프리 활동</li>
@@ -684,8 +1026,100 @@
                   </ul>
                 </div>
               </div>
+              <div class="swiper-slide content-5">
+                <div class="cont-img cont-img-5"></div>
+                <div class="cont-txt cont-txt-5">
+                  <strong class="cont-tit">위기동물</strong>
+                  <ul class="cont-desc">
+                    <li>불법 번식장 대응 및 공물구조</li>
+                    <li>동물학대사건 감시</li>
+                    <li>고발 시민구조활동 지원</li>
+                    <li>위기동물 구조 및 지원 쓰담쓰담 지원사업</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="swiper-pagination"></div>
+            <div class="btn-wrap">
+              <div class="swiper-btn">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="glide glide-donation-usage-web">
+            <!-- ---------------  Slider  ---------------- -->
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide cont-img cont-img-1"></li>
+                <li class="glide__slide cont-img cont-img-2"></li>
+                <li class="glide__slide cont-img cont-img-3"></li>
+                <li class="glide__slide cont-img cont-img-4"></li>
+                <li class="glide__slide cont-img cont-img-5"></li>
+              </ul>
+            </div>
+            <!-- ---------------  Controls  ---------------- -->
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                id="btnPrev"
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              ></button>
+              <button
+                id="btnNext"
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              ></button>
+            </div>
+          </div>
+          <div id="txtWrap" class="cont-txt-wrap-web">
+            <div class="cont-txt cont-txt-1 active">
+              <strong class="cont-tit">반려동물</strong>
+              <ul class="cont-desc">
+                <li>유기동물 및 학대예방 캠페인</li>
+                <li>개식용 금지 캠페인</li>
+                <li>길고양이와의 공존 모색 TNR제도 장착</li>
+                <li>유기동물 치료비 예산 확보 캠페인</li>
+                <li>신종펫숍 문제점 공론화 및 시민인식개선</li>
+                <li>합법/불법 번식장 고발 및 공론화</li>
+              </ul>
+            </div>
+            <div class="cont-txt cont-txt-2">
+              <strong class="cont-tit">온센터</strong>
+              <ul class="cont-desc">
+                <li>동물구조</li>
+                <li>입양 및 캠페인</li>
+                <li>치료와 돌봄</li>
+                <li>동물보호교육</li>
+              </ul>
+            </div>
+            <div class="cont-txt cont-txt-3">
+              <strong class="cont-tit">전시·야생동물</strong>
+              <ul class="cont-desc">
+                <li>사육곰 구조 및 대책마련 캠페인</li>
+                <li>전시 고래류 방류사업</li>
+                <li>동물원 감시 및 환경개선 활동</li>
+                <li>동물이용축제 반대 캠페인</li>
+              </ul>
+            </div>
+            <div class="cont-txt cont-txt-4">
+              <strong class="cont-tit">농장동물</strong>
+              <ul class="cont-desc">
+                <li>산란계 케이지 프리 활동</li>
+                <li>살처분 반대 캠페인</li>
+                <li>장거리 운송 금지 캠페인</li>
+                <li>일리있는 달걀 캠페인</li>
+              </ul>
+            </div>
+            <div class="cont-txt cont-txt-5">
+              <strong class="cont-tit">위기동물</strong>
+              <ul class="cont-desc">
+                <li>불법 번식장 대응 및 공물구조</li>
+                <li>동물학대사건 감시</li>
+                <li>고발 시민구조활동 지원</li>
+                <li>위기동물 구조 및 지원 쓰담쓰담 지원사업</li>
+              </ul>
+            </div>
           </div>
         </section>
         <!-- q&a -->
@@ -869,10 +1303,10 @@
         </section> -->
         <section class="sect-exp q-and-a">
           <h2 class="tit">후원 Q&A</h2>
-          <div class="glide">
+          <div class="glide glide-q-and-a">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
-                <li data-slide-number="1" class="glide__slide">
+                <li data-slide-number="1" class="glide__slide list-card">
                   <div class="card card-1">
                     <div class="card-txt">
                       <strong class="card-tit">
@@ -1138,7 +1572,7 @@
                     </div>
                   </div>
                 </li>
-                <li data-slide-number="2" class="glide__slide">
+                <li data-slide-number="2" class="glide__slide list-card">
                   <div class="card card-2">
                     <div class="card-txt">
                       <strong class="card-tit">
@@ -1214,7 +1648,7 @@
                     </div>
                   </div>
                 </li>
-                <li data-slide-number="3" class="glide__slide">
+                <li data-slide-number="3" class="glide__slide list-card">
                   <div class="card card-3">
                     <div class="card-txt">
                       <strong class="card-tit">
@@ -1233,7 +1667,7 @@
                     <div class="card-tag">
                       <p class="tag-txt">Q3</p>
                     </div>
-                    <div class="card-illust">
+                    <div class="card-illust card-3-illust-box">
                       <svg
                         class="card-3-illust"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1405,7 +1839,7 @@
                     </div>
                   </div>
                 </li>
-                <li data-slide-number="4" class="glide__slide">
+                <li data-slide-number="4" class="glide__slide list-card">
                   <div class="card card-4">
                     <div class="card-txt">
                       <strong class="card-tit">
@@ -1425,7 +1859,7 @@
                     <div class="card-tag">
                       <p class="tag-txt">Q4</p>
                     </div>
-                    <div class="card-illust">
+                    <div class="card-illust card-4-illust-box">
                       <svg
                         class="card-4-illust"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1792,7 +2226,7 @@
                     </div>
                   </div>
                 </li>
-                <li data-slide-number="5" class="glide__slide">
+                <li data-slide-number="5" class="glide__slide list-card">
                   <div class="card card-5">
                     <div class="card-txt">
                       <strong class="card-tit">
@@ -1812,7 +2246,7 @@
                     <div class="card-tag">
                       <p class="tag-txt">Q5</p>
                     </div>
-                    <div class="card-illust">
+                    <div class="card-illust card-5-illust-box">
                       <svg
                         class="card-5-illust"
                         xmlns="http://www.w3.org/2000/svg"

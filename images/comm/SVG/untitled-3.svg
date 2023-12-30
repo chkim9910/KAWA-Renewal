@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style>.cls-1{fill:#f7baba;}</style>
+  <symbol id="svg_8" viewBox="0 0 349.62 545.43" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+    <style>.cls-1{fill:none;stroke:#dadbdc;stroke-miterlimit:10;stroke-width:3px;}</style>
+   </defs>
+   <g data-name="Layer 2" id="svg_6">
+    <g data-name="Layer 2" id="svg_7">
+     <path class="cls-1" d="m0.12,332c78,0 137.52,-64.8 137.52,-145.57l0,-186.43"/>
+     <path class="cls-1" d="m0.12,351.86c90.86,0 156,-68.09 156,-155.66l0,-196.2"/>
+     <path class="cls-1" d="m0.12,375.19c107.53,-8.36 174.5,-83.82 178.15,-167.72l0,-207.47"/>
+     <path class="cls-1" d="m0.12,394.35c116.84,0.49 200.25,-96.82 200.25,-193.62l0,-200.73"/>
+     <path class="cls-1" d="m0.12,416c137.52,0 220.35,-119.77 220.35,-216.2l0,-199.8"/>
+     <path class="cls-1" d="m0.12,437.4c167.46,-7.13 242.16,-148.47 242.16,-237.58l0,-199.82"/>
+     <path class="cls-1" d="m0.12,458.08c192.55,-5 263,-169.15 263,-258.26l0,-199.82"/>
+     <path class="cls-1" d="m0.12,480.18c216.64,-11.41 284.65,-191.25 284.65,-282l0,-198.18"/>
+     <path class="cls-1" d="m0.12,501.82c245.16,-15.94 306.47,-212.89 306.47,-302l0,-199.82"/>
+     <path class="cls-1" d="m3.12,524.18c270.41,-30.42 324.28,-235.25 324.28,-324.36l0,-199.82"/>
+     <path class="cls-1" d="m6.92,543.94c277.85,-28.79 341.2,-239.8 341.2,-344.12l0,-199.82"/>
+    </g>
+   </g>
+  </symbol>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g data-name="Layer 2" id="Layer_2">
+   <g data-name="Layer 2" id="Layer_2-2">
+    <path class="cls-1" d="m298.93,424.4l-0.81,15.91l-0.79,-15.91a27.88,27.88 0 0 0 -26.43,-26.47l-15.9,-0.81l15.9,-0.79a27.88,27.88 0 0 0 26.47,-26.43l0.81,-15.9l0.82,15.9a27.89,27.89 0 0 0 26.4,26.47l15.91,0.81l-15.91,0.82a27.89,27.89 0 0 0 -26.47,26.4z" id="svg_1"/>
+   </g>
+  </g>
+  <use id="svg_9" transform="matrix(1 0 0 1 0 0) matrix(0.882018 0 0 0.882018 0.138482 -0.850226)" x="-88.1" xlink:href="#svg_8" y="4.2"/>
+ </g>
+</svg>

@@ -2710,6 +2710,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 .project-initiative .bg-deco-1 {
   position: absolute;
@@ -2768,18 +2769,17 @@ body {
   width: 100%;
   height: 465px;
 }
-@media screen and (min-width: 1280px) {
-  .sub2-main-visual .sub2-main-visual {
-    height: 34.271vw;
-  }
-}
 .sub2-main-visual .txt {
   height: 425px;
   padding: 200px 20px 97px;
 }
 @media screen and (min-width: 1280px) {
   .sub2-main-visual .txt {
-    padding: 15.417vw 54.583vw 11.51vw 7.396vw;
+    height: 30.104vw;
+    padding: 15.417vw 54.583vw 7.396vw 16.667vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 .sub2-main-visual .tit {
@@ -2791,6 +2791,16 @@ body {
   padding: 0;
   margin: 0;
   color: #ffffff;
+}
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #ffffff;
+  }
 }
 .sub2-main-visual .content {
   width: 295px;
@@ -2807,6 +2817,12 @@ body {
   .sub2-main-visual .content {
     width: 28.75vw;
     height: 2.708vw;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0%;
+    line-height: 24px;
+    color: #ffffff;
   }
 }
 .sub2-main-visual .sidebar {
@@ -2865,9 +2881,65 @@ body {
   letter-spacing: -0.42px;
   color: #8e8e8e;
 }
+.sub2-main-visual .sidebar-web {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual .sidebar {
+    display: none;
+  }
+  .sub2-main-visual .sidebar-web {
+    display: block;
+    width: 100%;
+    height: 80px;
+    padding: 0 38.177vw 0 16.719vw;
+    background-color: #ffffff;
+  }
+  .sub2-main-visual .sidebar-web .wrapper {
+    width: 866px;
+    height: 100%;
+    display: flex;
+  }
+  .sub2-main-visual .sidebar-web .list-sidebar {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 18px 0;
+  }
+  .sub2-main-visual .sidebar-web .list-sidebar.active {
+    background-color: #222222;
+    border-radius: 50px;
+  }
+  .sub2-main-visual .sidebar-web .list-sidebar.active .sidebar-cont {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0%;
+    line-height: 19.2px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .sub2-main-visual .sidebar-web .sidebar-cont {
+    height: 100%;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0%;
+    line-height: 19.2px;
+    color: #8e8e8e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual {
+    height: 34.219vw;
+    background-position: 70% 30%;
+    background-size: 150%;
+  }
+}
 .about-reasons {
-  height: 210vh;
   padding: 95px 0 50px;
 }
 .about-reasons .container-about-reason {
@@ -2889,11 +2961,50 @@ body {
 .about-reasons .tit .highlight {
   color: #f76a00;
 }
+@media screen and (min-width: 1280px) {
+  .about-reasons .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #222222;
+  }
+}
 .about-reasons .cont {
   height: 438px;
 }
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .about-reasons .cont-container {
+    padding-bottom: 200px;
+  }
+}
 .about-reasons .cont-txt {
   padding: 0 20px;
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont-txt {
+    margin-top: 95px;
+    padding: 0;
+  }
+  .about-reasons .cont-txt-1 {
+    order: 2;
+  }
+  .about-reasons .pic-cont-1 {
+    order: 1;
+  }
+  .about-reasons .cont-txt-3 {
+    order: 2;
+  }
+  .about-reasons .pic-cont-3 {
+    order: 1;
+  }
 }
 .about-reasons .cont-tit {
   font-family: "Noto Sans KR", sans-serif;
@@ -2906,6 +3017,33 @@ body {
   color: #f76a00;
   letter-spacing: -1px;
 }
+.about-reasons .cont-tit-2-web {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont-tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #4c4c4c;
+  }
+  .about-reasons .cont-tit-1 {
+    width: 272px;
+  }
+  .about-reasons .cont-tit-2 {
+    display: none;
+  }
+  .about-reasons .cont-tit-2-web {
+    display: block;
+    width: 292px;
+  }
+  .about-reasons .cont-tit-3 {
+    width: 219px;
+    word-break: keep-all;
+  }
+}
 .about-reasons .cont-desc {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
@@ -2914,6 +3052,16 @@ body {
   color: #666666;
   margin-top: 17px;
   letter-spacing: normal;
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont-desc {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0%;
+    line-height: 21.6px;
+    color: #8e8e8e;
+  }
 }
 .about-reasons .cont-1 {
   margin-top: 25px;
@@ -2926,8 +3074,19 @@ body {
   height: 288px;
   margin-top: 55px;
 }
+@media screen and (min-width: 1280px) {
+  .about-reasons .pic {
+    width: 43.75vw;
+    height: 27.448vw;
+  }
+}
 .about-reasons .pic-cont-1 {
   background: url(../../images/sub2-donation-page/sect2-about-reasons/1-fst-pic.png) no-repeat 50% 100%/cover;
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .pic-cont-1 {
+    background-position: 50% 70%;
+  }
 }
 .about-reasons .pic-cont-2 {
   background: url(../../images/sub2-donation-page/sect2-about-reasons/2-snd-pic.png) no-repeat 50% 0/cover;
@@ -2935,7 +3094,41 @@ body {
 .about-reasons .pic-cont-3 {
   background: url(../../images/sub2-donation-page/sect2-about-reasons/3-trd-pic.jpg) no-repeat 30% 0/cover;
 }
+.about-reasons .bg-deco {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .bg-deco {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  .about-reasons .bg-deco-1 {
+    top: -73px;
+    right: -180px;
+  }
+  .about-reasons .bg-deco-2 {
+    top: 32px;
+    left: -335px;
+  }
+  .about-reasons .bg-deco-2-svg {
+    transform: scale(1.2);
+  }
+  .about-reasons .bg-deco-3 {
+    top: 66px;
+    right: -280px;
+    width: 300px;
+  }
+  .about-reasons .bg-deco-3-svg-2 {
+    width: 100px;
+  }
+}
 
+@media screen and (min-width: 1280px) {
+  .about-reasons {
+    padding: 10.417vw 16.667vw;
+  }
+}
 .donation-usage {
   padding: 50px 20px;
 }
@@ -2954,10 +3147,30 @@ body {
 .donation-usage .tit .highlight {
   color: #f76a00;
 }
+.donation-usage .tit-web {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .donation-usage .tit {
+    display: none;
+  }
+  .donation-usage .tit-web {
+    display: block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #222222;
+  }
+  .donation-usage .tit-web .highlight {
+    color: #f76a00;
+  }
+}
 .donation-usage .swiper-donation-usage {
   padding-bottom: 40px;
 }
-.donation-usage .cont-tit {
+.donation-usage .swiper-donation-usage .cont-tit {
   display: block;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
@@ -2969,7 +3182,7 @@ body {
   color: #f76a00;
   margin-bottom: 14px;
 }
-.donation-usage .cont-desc {
+.donation-usage .swiper-donation-usage .cont-desc {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -2977,38 +3190,167 @@ body {
   color: #666666;
   letter-spacing: normal;
 }
-.donation-usage .cont-img {
+.donation-usage .swiper-donation-usage .cont-img {
   border-radius: 10px;
   margin-bottom: 50px;
-}
-.donation-usage .content-1 .cont-img {
   height: 350px;
+}
+.donation-usage .swiper-donation-usage .cont-img-1 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/1-dog.png) no-repeat 50% 0/cover;
 }
-.donation-usage .content-2 .cont-img {
-  height: 350px;
+.donation-usage .swiper-donation-usage .cont-img-2 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/2-oncenter.png) no-repeat 50% 0/cover;
 }
-.donation-usage .content-3 .cont-img {
-  height: 350px;
+.donation-usage .swiper-donation-usage .cont-img-3 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/3-bear.png) no-repeat 50% 50%/cover;
 }
-.donation-usage .content-4 .cont-img {
-  height: 350px;
+.donation-usage .swiper-donation-usage .cont-img-4 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/4-chicken.jpg) no-repeat 50% 50%/cover;
 }
-.donation-usage .content-5 .cont-img {
-  height: 350px;
+.donation-usage .swiper-donation-usage .cont-img-5 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/5-protect.png) no-repeat 50% 50%/cover;
 }
-.donation-usage .swiper-pagination {
+.donation-usage .swiper-donation-usage .swiper-pagination {
   bottom: 5px !important;
   position: absolute;
 }
-.donation-usage .swiper-pagination-bullet-active {
+.donation-usage .swiper-donation-usage .swiper-btn {
+  display: none;
+}
+.donation-usage .swiper-donation-usage .swiper-pagination-bullet-active {
   background: #f76a00;
 }
+@media screen and (min-width: 1280px) {
+  .donation-usage .swiper-donation-usage {
+    display: none;
+  }
+}
+.donation-usage .glide-donation-usage-web {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .donation-usage .glide-donation-usage-web {
+    display: flex;
+    margin-top: 125px;
+    margin-left: 332px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track {
+    flex-grow: 1;
+    flex-basis: 1456px;
+    overflow: hidden;
+    order: 2;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .glide__slides {
+    display: flex;
+    width: 2800px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .glide__slides .glide__slide {
+    width: 516px !important;
+    height: 552px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .glide__slides .glide__slide--active {
+    opacity: 1;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .cont-img {
+    opacity: 0.3;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin: 0 10px !important;
+    transition: opacity 0.1s;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .cont-img-1 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/1-dog.png) no-repeat 10% 50%/cover;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .cont-img-2 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/2-oncenter.png) no-repeat 50% 0/cover;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .cont-img-3 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/3-bear.png) no-repeat 50% 50%/cover;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .cont-img-4 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/4-chicken.jpg) no-repeat 50% 50%/cover;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track .cont-img-5 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../../images/sub2-donation-page/sect3-sponsorship-usage/5-protect.png) no-repeat 50% 50%/cover;
+  }
+  .donation-usage .glide-donation-usage-web .glide__arrows {
+    flex-grow: 1;
+    flex-basis: 340px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--left {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--left:after {
+    content: "\f104";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #f76a00;
+  }
+  .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--right {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--right:after {
+    content: "\f105";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #f76a00;
+  }
+}
+.donation-usage .cont-txt-wrap-web {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .donation-usage .cont-txt-wrap-web {
+    display: block;
+    position: relative;
+    top: -465px;
+  }
+  .donation-usage .cont-txt-wrap-web .cont-txt {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .donation-usage .cont-txt-wrap-web .cont-txt.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .donation-usage .cont-txt-wrap-web .cont-tit {
+    display: block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    line-height: 48px;
+    color: #f76a00;
+    margin-bottom: 12px;
+  }
+  .donation-usage .cont-txt-wrap-web .cont-desc {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0%;
+    line-height: 21.6px;
+    color: #8e8e8e;
+    line-height: 1.5;
+  }
+}
 
+@media screen and (min-width: 1280px) {
+  .donation-usage {
+    padding: 10.417vw 0 10.417vw 16.667vw;
+  }
+}
 .q-and-a {
   padding: 50px 20px;
 }
@@ -3024,12 +3366,36 @@ body {
   letter-spacing: -0.9px;
   padding-bottom: 39px;
 }
-.q-and-a .glide {
+@media screen and (min-width: 1280px) {
+  .q-and-a .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #222222;
+  }
+}
+.q-and-a .glide-q-and-a {
   height: auto;
   overflow: hidden;
 }
+@media screen and (min-width: 1280px) {
+  .q-and-a .glide-q-and-a {
+    width: 1480px;
+  }
+}
 .q-and-a .glide__slides {
   display: flex;
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .glide__slides {
+    width: 1743.5px !important;
+  }
+  .q-and-a .glide__slide {
+    width: 420px !important;
+    margin: 0 30px 0 0 !important;
+  }
 }
 .q-and-a .card {
   position: relative;
@@ -3039,9 +3405,20 @@ body {
   border: none;
   border-radius: 10px;
 }
+@media screen and (min-width: 1280px) {
+  .q-and-a .card {
+    width: 420px;
+    height: 614px;
+  }
+}
 .q-and-a .card-txt {
   height: auto;
   padding: 0 24px;
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .card-txt {
+    padding: 2.604vw;
+  }
 }
 .q-and-a .card-tit {
   display: block;
@@ -3058,6 +3435,19 @@ body {
   padding-top: 92px;
   padding-left: 9px;
 }
+@media screen and (min-width: 1280px) {
+  .q-and-a .card-tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    line-height: 28.8px;
+    color: #ffffff;
+    line-height: 1.5;
+    padding-left: 0;
+    padding-top: 4.01vw;
+  }
+}
 .q-and-a .card-desc {
   display: flex;
   flex-direction: column;
@@ -3070,6 +3460,18 @@ body {
   padding-top: 23px;
   letter-spacing: normal;
 }
+@media screen and (min-width: 1280px) {
+  .q-and-a .card-desc {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0%;
+    line-height: 18px;
+    color: #ffffff;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
 .q-and-a .card-tag {
   position: absolute;
   top: 0;
@@ -3080,19 +3482,12 @@ body {
   justify-content: center;
   background: url(../../images/sub2-donation-page/sect4-q&a/tag.png) no-repeat 50% 0/cover;
 }
-.q-and-a .card-illust {
-  position: absolute;
-  bottom: 16px;
-  height: 110px;
-  transform: translateX(calc(160px - 50%));
-}
-.q-and-a .card-1-illust,
-.q-and-a .card-2-illust,
-.q-and-a .card-3-illust,
-.q-and-a .card-4-illust,
-.q-and-a .card-5-illust {
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 1280px) {
+  .q-and-a .card-tag {
+    right: 26px;
+    width: 64px;
+    height: 118px;
+  }
 }
 .q-and-a .tag-txt {
   font-family: "Noto Sans KR", sans-serif;
@@ -3107,26 +3502,93 @@ body {
   padding-top: 10px;
   height: auto;
 }
+.q-and-a .card-illust {
+  position: absolute;
+  bottom: 16px;
+  height: 110px;
+  transform: translateX(calc(160px - 50%));
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .card-illust {
+    width: 64px;
+    width: 176px;
+    height: auto;
+    transform: translateX(calc(210px - 50%));
+  }
+  .q-and-a .card-3-illust-box,
+  .q-and-a .card-4-illust-box,
+  .q-and-a .card-5-illust-box {
+    width: 225px;
+  }
+}
+.q-and-a .card-1-illust,
+.q-and-a .card-2-illust,
+.q-and-a .card-3-illust,
+.q-and-a .card-4-illust,
+.q-and-a .card-5-illust {
+  width: 100%;
+  height: 100%;
+}
 .q-and-a .glide__bullets {
   display: flex;
   gap: 7px;
   padding-top: 25px;
   padding-left: 114px;
 }
-.q-and-a .glide__bullet {
+.q-and-a .glide__bullets .glide__bullet {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #dddddd;
   transition: all 0.3s;
 }
-.q-and-a .glide__bullet--active {
+.q-and-a .glide__bullets .glide__bullet--active {
   width: 30px;
   height: 6px;
   border-radius: 6px;
   background-color: #222222;
 }
+.q-and-a .glide__arrows {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .glide__bullets {
+    display: none;
+  }
+  .q-and-a .glide__arrows {
+    display: block;
+  }
+  .q-and-a .glide__arrows .glide__arrow--left {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+  .q-and-a .glide__arrows .glide__arrow--left:after {
+    content: "\f104";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #f76a00;
+  }
+  .q-and-a .glide__arrows .glide__arrow--right {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+  .q-and-a .glide__arrows .glide__arrow--right:after {
+    content: "\f105";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #f76a00;
+  }
+}
 
+@media screen and (min-width: 1280px) {
+  .q-and-a {
+    padding: 10.417vw 16.667vw;
+  }
+}
 .financial-report {
   background: url(../../images/sub2-donation-page/sect5-financial-report/bg-deco.png) no-repeat 50% 50%/cover, #ad5700;
   height: 333px;

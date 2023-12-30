@@ -58,66 +58,48 @@ var swiper = new Swiper(".swiper-donation-usage", {
     clickable: true,
     // dynamicBullets: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 //glide-sub2-page
-new Glide(".glide").mount();
-$(".glide").glide({
-  type: "slider",
-  autoplay: false,
-  paddings: "30px",
-  beforeTransition: beforeCardChange,
-});
-function beforeCardChange(args) {
-  var current = $(".glide__slide.active");
-  current.removeClass("active");
+$(function () {
+  new Glide(".glide-q-and-a", {
+    type: "slider",
+    autoplay: false,
+    // rewind: true,
+    perView: 4,
+    // paddings: "30px",
+    breakpoints: {
+      780: { perView: 1 },
+      1280: { perView: 4 },
+    },
+    beforeTransition: beforeCardChange,
+  }).mount();
+  function beforeCardChange(args) {
+    var current = $(".list-card.active");
+    current.removeClass("active");
 
-  var left = args.swipe.distance > 0;
-  var direction = left ? args.index - 1 : args.index + 1;
-  var newIndex = parseInt(current.attr("data-slide-number")) + (left ? -1 : 1);
-  if (newIndex > args.length) {
-    newIndex = 1;
-  } else if (newIndex <= 0) {
-    newIndex = args.length;
+    var left = args.swipe.distance > 0;
+    var direction = left ? args.index - 1 : args.index + 1;
+    var newIndex =
+      parseInt(current.attr("data-slide-number")) + (left ? -1 : 1);
+    if (newIndex > args.length) {
+      newIndex = 1;
+    } else if (newIndex <= 0) {
+      newIndex = args.length;
+    }
+    $('[data-slide-number="' + newIndex + '"]').addClass("active");
   }
-  $('[data-slide-number="' + newIndex + '"]').addClass("active");
-}
-$(".dot").click(function () {
-  $(".dot").removeClass("selected");
-  $(this).addClass("selected");
+  $(".dot").click(function () {
+    $(".dot").removeClass("selected");
+    $(this).addClass("selected");
+  });
 });
 
-// // 기존 Swiper 초기화 코드
-// var swiper = new Swiper(".swiper-main-activities", {
-//   // Swiper 설정
-// });
-// // 스크린 사이즈에 따라 슬라이드 너비 변경
-// function handleSlideWidthChange(mediaQuery) {
-//   if (mediaQuery.matches) {
-//     swiper.on("slideChange", function () {
-//       var activeSlide = document.querySelector(
-//         ".swiper-slide.swiper-slide-active"
-//       );
-//       activeSlide.style.width = "60vw"; // 원하는 너비 값으로 변경
-//       var nextSlide = document.querySelector(".swiper-slide.swiper-slide-next");
-//       nextSlide.style.width = "20vw";
-//     });
-//   } else {
-//     // 1280px 미만의 경우에 대한 처리 (예: 다른 스타일 또는 너비)
-//     swiper.on("slideChange", function () {
-//       var activeSlide = document.querySelector(
-//         ".swiper-slide.swiper-slide-active"
-//       );
-//       activeSlide.style.width = ""; // 원래의 너비 또는 다른 스타일로 변경
-//     });
-//   }
-// }
-// // 1280px 이상일 때의 미디어 쿼리
-// var mediaQuery = window.matchMedia("(min-width: 1280px)");
-// handleSlideWidthChange(mediaQuery); // 페이지 로드 시 한번 호출
-// // 미디어 쿼리 변경 시 이벤트 핸들러
-// mediaQuery.addListener(handleSlideWidthChange);
-
+// swiper-campaign
 var swiper = new Swiper(".carousel-campaign", {
   slidesPerView: "auto",
   spaceBetween: 10,
@@ -127,6 +109,52 @@ var swiper = new Swiper(".carousel-campaign", {
   },
 });
 
+// glide-donation-usage-web
+new Glide(document.querySelector(".glide-donation-usage-web"), {
+  type: "sliders",
+  startAt: 0,
+  perView: 2,
+  focusAt: 0,
+  keyboard: true,
+  // bound: checkbox.checked,
+  gap: 10,
+}).mount();
+
+// donation-usage-web의 txt부분
+$(function () {
+  // 기본세팅
+  $("#txtWrap .cont-txt").removeClass("active");
+  $(".cont-txt:first-child").addClass("active");
+  const txtEls = $("#txtWrap").find(".cont-txt");
+  console.log(txtEls);
+
+  $("#btnNext").on("click", function () {
+    let activeNow = $("#txtWrap").find(".active");
+    // 현재 active 되어 있는 클래스 지우기
+    let present = activeNow.removeClass("active");
+    //현재 index 의 다음 index를 가진 클래스를 active 해주기
+    present = present.next().addClass("active");
+    // present 요소의 인덱스 구하기
+    let index = txtEls.index(present);
+    console.log(index);
+    if (index == -1) {
+      txtEls.removeClass("active");
+      txtEls.eq(0).addClass("active");
+    }
+  });
+
+  $("#btnPrev").on("click", function () {
+    let activeNow = $("#txtWrap").find(".active");
+    let present = activeNow.removeClass("active");
+    present = present.prev().addClass("active");
+    let index = txtEls.index(present);
+    console.log(index);
+    if (index == -1) {
+      txtEls.removeClass("active");
+      txtEls.eq(4).addClass("active");
+    }
+  });
+});
 // // gsap
 // gsap.registerPlugin(ScrollTrigger);
 

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<svg width="595.96" height="1200" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:#f7baba;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5px;}.cls-2{fill:#f7baba;}</style>
+  <symbol id="svg_7" viewBox="0 0 111.02 474" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+    <style>.cls-1{fill:none;stroke:#8e9094;stroke-miterlimit:10;}</style>
+   </defs>
+   <g data-name="Layer 2" id="svg_5">
+    <g data-name="Layer 2" id="svg_6">
+     <line class="cls-1" x1="55.26" x2="55.26" y2="474"/>
+     <line class="cls-1" x1="16.43" x2="94.93" y1="379.43" y2="457.93"/>
+     <line class="cls-1" x2="111.02" y1="418.25" y2="418.25"/>
+     <line class="cls-1" x1="16.16" x2="94.71" y1="457.29" y2="378.85"/>
+    </g>
+   </g>
+  </symbol>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g data-name="Layer 2" id="Layer_2">
+   <g data-name="Layer 2" id="Layer_2-2">
+    <path class="cls-1" d="m0.25,460.1c51.47,101.55 156.83,171.15 278.46,171.15c172.31,0 312,-139.69 312,-312s-139.69,-312 -312,-312a310.69,310.69 0 0 0 -190.58,65" id="svg_1"/>
+    <circle class="cls-2" cx="182.71" cy="25.25" id="svg_2" r="22"/>
+    <circle class="cls-2" cx="223.71" cy="622.25" id="svg_3" r="11"/>
+    <circle class="cls-2" cx="581.71" cy="234.25" id="svg_4" r="12"/>
+   </g>
+  </g>
+  <use id="svg_8" transform="matrix(0.369719 0 0 0.369719 321.823 492.82)" x="36.21" xlink:href="#svg_7" y="50.04"/>
+ </g>
+</svg>
