@@ -3104,22 +3104,60 @@ body {
     z-index: -1;
   }
   .about-reasons .bg-deco-1 {
-    top: -73px;
-    right: -180px;
+    height: 100%;
+    width: 100%;
+  }
+  .about-reasons .bg-deco-1-1 {
+    position: absolute;
+    top: -36px;
+    right: -146px;
+    width: 40%;
+    opacity: 0.6;
+  }
+  .about-reasons .bg-deco-1-2 {
+    display: none;
+    position: absolute;
+    top: 340px;
+    right: -103px;
+    width: 8%;
+    opacity: 0.6;
   }
   .about-reasons .bg-deco-2 {
-    top: 32px;
-    left: -335px;
+    height: 100%;
+    width: 100%;
+    top: 14px;
+    left: -225px;
   }
-  .about-reasons .bg-deco-2-svg {
-    transform: scale(1.2);
+  .about-reasons .bg-deco-2-1 {
+    display: none;
+    width: 30%;
+    opacity: 0.5;
+  }
+  .about-reasons .bg-deco-2-2 {
+    position: absolute;
+    width: 7%;
+    top: 335px;
+    left: 49px;
+  }
+  .about-reasons .bg-deco-2-3 {
+    position: absolute;
+    width: 25%;
+    top: 420px;
+    left: -156px;
   }
   .about-reasons .bg-deco-3 {
     top: 66px;
     right: -280px;
     width: 300px;
   }
-  .about-reasons .bg-deco-3-svg-2 {
+  .about-reasons .bg-deco-3-1 {
+    position: absolute;
+    width: 150%;
+    transform: rotate(170deg);
+    right: 17px;
+    top: 82px;
+  }
+  .about-reasons .bg-deco-3-2 {
     width: 100px;
   }
 }
@@ -3345,10 +3383,30 @@ body {
     line-height: 1.5;
   }
 }
+.donation-usage .bg-deco {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .donation-usage .bg-deco {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .donation-usage .bg-deco-1 {
+    position: absolute;
+    width: 6%;
+    top: -335px;
+    left: 153px;
+  }
+}
 
 @media screen and (min-width: 1280px) {
   .donation-usage {
     padding: 10.417vw 0 10.417vw 16.667vw;
+    position: relative;
   }
 }
 .q-and-a {
@@ -3374,6 +3432,7 @@ body {
     letter-spacing: -0.5px;
     line-height: 57.6px;
     color: #222222;
+    padding-bottom: 0;
   }
 }
 .q-and-a .glide-q-and-a {
@@ -3383,6 +3442,7 @@ body {
 @media screen and (min-width: 1280px) {
   .q-and-a .glide-q-and-a {
     width: 1480px;
+    margin-top: 2vw;
   }
 }
 .q-and-a .glide__slides {
@@ -3390,7 +3450,10 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .q-and-a .glide__slides {
-    width: 1743.5px !important;
+    width: 2300px !important;
+    height: 750px;
+    justify-content: center;
+    align-items: center;
   }
   .q-and-a .glide__slide {
     width: 420px !important;
@@ -3583,10 +3646,127 @@ body {
     color: #f76a00;
   }
 }
+.q-and-a .front-web {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .list-card {
+    position: relative;
+    width: 420px !important;
+    height: 614px;
+    perspective: 1000px;
+  }
+  .q-and-a .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  .q-and-a .back,
+  .q-and-a .front-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .q-and-a .front-web {
+    display: flex;
+    background-color: #ff862b;
+    border-radius: 10px;
+    padding-top: 4.063vw;
+  }
+  .q-and-a .front-web .card-txt-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .q-and-a .front-web .tag-txt-front {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-bottom: 2.865vw;
+  }
+  .q-and-a .front-web .card-tit-front {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0%;
+    line-height: 28.8px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .q-and-a .front-web .card-3-illust-box,
+  .q-and-a .front-web .card-4-illust-box,
+  .q-and-a .front-web .card-5-illust-box {
+    width: 225px;
+  }
+  .q-and-a .front-web:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    border: 1px solid #ad5700;
+  }
+  .q-and-a .back {
+    transform: rotateY(180deg);
+  }
+  .q-and-a .flipped {
+    transform: rotateY(180deg);
+  }
+}
+.q-and-a .bg-deco-box {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .bg-deco-box {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+  }
+  .q-and-a .bg-deco-el {
+    position: absolute;
+    top: -344px;
+    left: 11px;
+    width: 30%;
+    height: 100%;
+  }
+  .q-and-a .bg-deco-el-1 {
+    width: 5%;
+    top: -602px;
+    left: 255px;
+  }
+}
 
 @media screen and (min-width: 1280px) {
   .q-and-a {
     padding: 10.417vw 16.667vw;
+    position: relative;
+  }
+  .q-and-a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 452px;
+    left: 158px;
+    width: 90%;
+    height: 50%;
+    background: url(../../images/sub2-donation-page/sect4-q&a/bg-deco.png) no-repeat 50% 0/100%;
   }
 }
 .financial-report {
@@ -3598,6 +3778,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .financial-report .container-financial-report {
+    width: 100%;
+    height: 100%;
+  }
+  .financial-report .cont-txt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 .financial-report .cont-tit {
   text-align: center;
@@ -3612,6 +3804,17 @@ body {
   letter-spacing: -1px;
   line-height: 33.5px;
 }
+@media screen and (min-width: 1280px) {
+  .financial-report .cont-tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 57.6px;
+    color: #ffffff;
+    margin-bottom: 1.042vw;
+  }
+}
 .financial-report .cont-desc {
   text-align: center;
   padding-top: 15px;
@@ -3624,6 +3827,21 @@ body {
 }
 .financial-report .cont-desc-web {
   display: none;
+}
+@media screen and (min-width: 1280px) {
+  .financial-report .cont-desc {
+    display: none;
+  }
+  .financial-report .cont-desc-web {
+    display: block;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0%;
+    line-height: 28.8px;
+    color: #ffdfbf;
+    text-align: center;
+  }
 }
 .financial-report .btn-more {
   display: flex;
@@ -3639,4 +3857,25 @@ body {
   font-size: 14px;
   letter-spacing: -0.42px;
   color: #4c4c4c;
+}
+@media screen and (min-width: 1280px) {
+  .financial-report .btn-more {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0%;
+    line-height: 21.6px;
+    color: #4c4c4c;
+    margin-top: 2.083vw;
+    padding: 0.521vw 2.344vw;
+    height: auto;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .financial-report {
+    height: 30.885vw;
+    background: url(../../images/sub2-donation-page/sect5-financial-report/bg-deco-web.png) no-repeat 50% 50%/cover, #ad5700;
+  }
 }/*# sourceMappingURL=comm.css.map */

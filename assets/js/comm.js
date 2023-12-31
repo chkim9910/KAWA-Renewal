@@ -49,6 +49,16 @@ var swiper2 = new Swiper(".swiper-main-activities", {
   },
 });
 
+// swiper-campaign
+var swiper = new Swiper(".carousel-campaign", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 // swiper-sub2-page
 var swiper = new Swiper(".swiper-donation-usage", {
   slidesPerView: "auto",
@@ -99,16 +109,6 @@ $(function () {
   });
 });
 
-// swiper-campaign
-var swiper = new Swiper(".carousel-campaign", {
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
 // glide-donation-usage-web
 new Glide(document.querySelector(".glide-donation-usage-web"), {
   type: "sliders",
@@ -154,7 +154,25 @@ $(function () {
       txtEls.eq(4).addClass("active");
     }
   });
+
+  // q-and-a-web의 card flip 효과
+  $(".list-card").click(function () {
+    if ($(this).find(".card").hasClass("flipped")) {
+      $(this).find(".card").removeClass("flipped");
+    } else {
+      $(".card").removeClass("flipped");
+      $(this).find(".card").toggleClass("flipped");
+    }
+  });
+  // 일러 색상 변경
+  const circle = $(".front-web .card-illust").find(".colorChange");
+  // circle.css("fill", "");
+  circle.removeAttr("fill");
+  // circle.setAttribute("fill", "#ad5700");
+  circle.css("fill", "#ad5700");
+  console.log($(".colorChange"));
 });
+
 // // gsap
 // gsap.registerPlugin(ScrollTrigger);
 
