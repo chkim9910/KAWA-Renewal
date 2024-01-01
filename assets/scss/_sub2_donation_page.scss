@@ -459,6 +459,7 @@
       // margin-left: 460px;
       margin-top: 125px;
       margin-left: 332px;
+      overflow: hidden;
       .glide__track {
         flex-grow: 1;
         flex-basis: 1456px;
@@ -607,6 +608,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: -1;
     }
     .bg-deco-1 {
       position: absolute;
@@ -646,6 +648,7 @@
     .glide-q-and-a {
       width: 1480px;
       margin-top: 2vw;
+      overflow: hidden;
     }
   }
   .glide__slides {
@@ -658,6 +661,7 @@
       height: 750px;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
     .glide__slide {
       width: 420px !important;

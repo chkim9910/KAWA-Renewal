@@ -7,18 +7,16 @@
     no-repeat 100% 0 / cover;
   width: 100%;
   height: 465px;
-  @media screen and (min-width: 1280px) {
-    .sub1-main-visual {
-      height: 34.271vw;
-    }
-  }
-  .wrapper {
+  .txt-box {
     height: 425px;
     padding: 200px 20px 97px;
   }
   @media screen and (min-width: 1280px) {
-    .wrapper {
-      padding: 15.417vw 54.583vw 11.51vw 7.396vw;
+    .txt-box {
+      height: 30.104vw;
+      display: flex;
+      align-items: flex-end;
+      padding: 15.417vw 54.583vw 8.75vw 16.667vw;
     }
   }
   .tit {
@@ -28,6 +26,15 @@
     padding-top: 16px;
     word-wrap: normal;
     word-break: keep-all;
+  }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      display: block;
+      @include web-tit(48px, $white);
+      height: auto;
+      width: auto;
+      padding-top: 0;
+    }
   }
   .sidebar {
     height: 40px;
@@ -85,6 +92,56 @@
       @include mob-bd(14px, $txtCont-2);
     }
   }
+  .sidebar-web {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .sidebar {
+      display: none;
+    }
+    .sidebar-web {
+      display: block;
+      width: 100%;
+      height: 80px;
+      padding: 0 51.198vw 0 16.719vw;
+      background-color: $white;
+      .wrapper {
+        // width: 866px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+      }
+      .list-sidebar {
+        flex-grow: 1;
+        flex-basis: 0;
+        margin: 18px 0;
+        &.active {
+          background-color: $bgcBk;
+          border-radius: 50px;
+          .sidebar-cont {
+            @include web-bd(16px, $white);
+            font-weight: 700;
+          }
+        }
+      }
+      .sidebar-cont {
+        height: 100%;
+        @include web-bd(16px, $txtCont-2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .sub1-main-visual {
+    height: 34.219vw;
+    background: url(../../images/sub1-mission-vision-page/main-visual/bg-web.png)
+      no-repeat 0 100% / cover;
+  }
 }
 // mission-vision
 .mission-vision {
@@ -108,6 +165,19 @@
       padding-left: 17px;
     }
   }
+  @media screen and (min-width: 1280px) {
+    .bg-deco {
+      height: 12.448vw;
+      width: auto;
+      margin-left: 10.729vw;
+      margin-bottom: 4.688vw;
+      .logo-bg-deco {
+        height: 100%;
+        transform: translateY(0.417vw);
+        padding-left: 1.563vw;
+      }
+    }
+  }
   .cont-txt {
     display: flex;
     flex-direction: column;
@@ -123,6 +193,28 @@
   .cont-txt-web {
     display: none;
   }
+  @media screen and (min-width: 1280px) {
+    .cont-txt {
+      display: none;
+    }
+    .cont-txt-web {
+      display: flex;
+      align-items: center;
+      @include web-bd(18px, $txtCont-2);
+      line-height: 1.5;
+      .highlight {
+        display: block;
+        @include web-bd(48px, $txtTit);
+        font-weight: 700;
+        margin-right: 1.875vw;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .mission-vision {
+    padding: 15.625vw 0 11.302vw 16.667vw;
+  }
 }
 // core-value
 .core-value {
@@ -132,17 +224,39 @@
   .wrapper {
     height: 100%;
     position: relative;
-    &:after {
+    &:before {
       content: "";
       display: block;
       position: absolute;
       top: -30px;
       left: -20px;
-      height: 313.889vw;
+      height: 100%;
       width: 49%;
       background: url(../../images/sub1-mission-vision-page/sect2-core-value/bg.jpg)
         no-repeat 50% 50% / cover;
       z-index: -1;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      padding-top: 14.844vw;
+      //   position: relative;
+      &:before {
+        left: -16.667vw;
+        width: calc(56% + 16.667vw);
+        top: 0;
+      }
+    }
+    .wrapper-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      //   position: absolute;
+      //   top: 14.844vw;
+      //   left: 0;
     }
   }
   .sub-tit {
@@ -151,10 +265,31 @@
     font-weight: 400;
     letter-spacing: 2.66px;
   }
+  @media screen and (min-width: 1280px) {
+    .tit-box {
+      display: flex;
+      flex-direction: column;
+      width: 11.458vw;
+    }
+    .sub-tit {
+      //   display: block;
+      width: auto;
+      height: auto;
+      @include web-bd(32px, $txtCont-2);
+      font-family: $font-family-enNum;
+    }
+  }
   .tit {
     @include mob-tit(30px, $txtTit);
     letter-spacing: normal;
     line-height: 35px;
+  }
+  @media screen and (min-width: 1280px) {
+    .tit {
+      width: auto;
+      height: auto;
+      @include web-tit(60px, $txtTit);
+    }
   }
   .content {
     display: flex;
@@ -165,14 +300,50 @@
     flex-direction: column;
     justify-content: center;
   }
+  @media screen and (min-width: 1280px) {
+    .content {
+      display: none;
+      width: 21.51vw;
+      height: 18.594vw;
+      padding-left: 5.208vw;
+      margin-bottom: 0;
+      &.active {
+        display: block;
+      }
+    }
+  }
   .content-tit {
     @include mob-tit(16px, $gray-700);
   }
   .content-tit-web {
     display: none;
   }
+  @media screen and (min-width: 1280px) {
+    .content-tit {
+      display: none;
+    }
+    .content-tit-web {
+      display: block;
+      @include web-tit(40px, $txtTit-2);
+      line-height: 1.3;
+      margin-bottom: 0.521vw;
+    }
+  }
   .content-desc {
     @include mob-bd(12px, $gray-600);
+  }
+  @media screen and (min-width: 1280px) {
+    .content-desc {
+      @include web-bd(18px, $txtCont-2);
+      line-height: 1.5;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .core-value {
+    height: 200vh;
+    padding: 14.896vw 16.667vw;
+    // overflow: auto;
   }
 }
 // project-initiative
@@ -186,8 +357,20 @@
     padding: 0 1px;
     // padding: 60px 20px;
   }
+  @media screen and (min-width: 1280px) {
+    .cont {
+      height: 62.5vw;
+      padding: 10.417vw 16.667vw;
+    }
+  }
   .cont-tit {
     @include mob-tit(30px, $txtTit);
+  }
+  @media screen and (min-width: 1280px) {
+    .cont-tit {
+      @include web-tit(48px, $txtTit);
+      margin-bottom: 5.208vw;
+    }
   }
   .cont-desc {
     display: flex;
@@ -196,6 +379,12 @@
     @include mob-bd(12px, $txtCont-2);
     margin-top: 30px;
     word-break: keep-all;
+  }
+  @media screen and (min-width: 1280px) {
+    .cont-desc {
+      @include web-bd(18px, $txtCont-2);
+      line-height: 1.5;
+    }
   }
   .bg-deco {
     position: absolute;
@@ -211,14 +400,37 @@
     right: 20px;
     width: 134px;
   }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-1 {
+      width: 24.167vw;
+      top: 26.042vw;
+      right: 10.938vw;
+    }
+  }
   .bg-deco-2 {
     position: absolute;
     top: 232px;
     left: 0;
     width: 50px;
   }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-2 {
+      width: 5.99vw;
+      top: 19.042vw;
+      left: 4.938vw;
+    }
+  }
   .bg-deco-2-web {
     display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-2-web {
+      //   display: block;
+      position: absolute;
+      width: 28.552vw;
+      top: 9.042vw;
+      right: -1.667vw;
+    }
   }
   .bg-deco-3 {
     position: absolute;
@@ -226,11 +438,27 @@
     left: -20px;
     width: 140px;
   }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-3 {
+      //   display: block;
+      position: absolute;
+      width: 21.458vw;
+      top: 26.042vw;
+      left: -2.76vw;
+    }
+  }
   .bg-deco-4 {
     position: absolute;
     top: 232px;
     right: 10px;
     width: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-4 {
+      width: 5.99vw;
+      top: 19.042vw;
+      right: 4.938vw;
+    }
   }
   .bg-deco-5 {
     position: absolute;
@@ -238,11 +466,25 @@
     right: -20px;
     width: 176px;
   }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-5 {
+      width: 26.563vw;
+      top: 1.042vw;
+      right: 4.938vw;
+    }
+  }
   .bg-deco-6 {
     position: absolute;
     top: 174px;
     right: -20px;
     width: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-6 {
+      width: 7.448vw;
+      top: -9.958vw;
+      left: 2.938vw;
+    }
   }
   .bg-deco-7 {
     position: absolute;
@@ -250,10 +492,29 @@
     right: -5px;
     width: 115px;
   }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-7 {
+      width: 17.188vw;
+      top: -8.958vw;
+      right: 2.938vw;
+    }
+  }
   .bg-deco-8 {
     position: absolute;
     top: 242px;
     left: -20px;
     width: 163px;
+  }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-8 {
+      width: 22.521vw;
+      top: 25.958vw;
+      left: 0;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .project-initiative {
+    padding: 0;
   }
 }

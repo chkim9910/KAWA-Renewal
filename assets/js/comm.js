@@ -110,16 +110,17 @@ $(function () {
 });
 
 // glide-donation-usage-web
-new Glide(document.querySelector(".glide-donation-usage-web"), {
-  type: "sliders",
-  startAt: 0,
-  perView: 2,
-  focusAt: 0,
-  keyboard: true,
-  // bound: checkbox.checked,
-  gap: 10,
-}).mount();
-
+$(function () {
+  new Glide(document.querySelector(".glide-donation-usage-web"), {
+    type: "slider",
+    startAt: 0,
+    perView: 2,
+    focusAt: 0,
+    keyboard: true,
+    // bound: checkbox.checked,
+    gap: 10,
+  }).mount();
+});
 // donation-usage-web의 txt부분
 $(function () {
   // 기본세팅
@@ -172,6 +173,28 @@ $(function () {
   circle.css("fill", "#ad5700");
   console.log($(".colorChange"));
 });
+
+// gsap-sub-3-page
+gsap.registerPlugin(ScrollTrigger);
+
+if (window.innerWidth >= 1280) {
+  ScrollTrigger.create({
+    trigger: "#corevalue",
+    start: "top 20%",
+    end: "bottom bottom",
+    pin: "#corevalueContent",
+    scrub: 1,
+    markers: true,
+  });
+}
+// ScrollTrigger.create({
+//   trigger: "#corevalue",
+//   start: "top 20%",
+//   end: "bottom bottom",
+//   pin: "#corevalueContent",
+//   scrub: 1,
+//   markers: true,
+// });
 
 // // gsap
 // gsap.registerPlugin(ScrollTrigger);
