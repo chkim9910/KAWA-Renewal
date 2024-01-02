@@ -214,17 +214,19 @@
       @include web-tit(48px, $txtTit-2);
     }
     .cont-tit-1 {
-      width: 272px;
+      width: 14.583vw;
+      word-break: keep-all;
     }
     .cont-tit-2 {
       display: none;
     }
     .cont-tit-2-web {
       display: block;
-      width: 292px;
+      width: 15.625vw;
+      word-break: keep-all;
     }
     .cont-tit-3 {
-      width: 219px;
+      width: 12.5vw;
       word-break: keep-all;
     }
   }

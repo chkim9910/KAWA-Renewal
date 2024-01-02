@@ -2815,15 +2815,15 @@ body {
   justify-content: center;
 }
 @media screen and (min-width: 1280px) {
+  .core-value .content-wrap {
+    position: relative;
+  }
   .core-value .content {
-    display: none;
+    position: absolute;
     width: 21.51vw;
     height: 18.594vw;
     padding-left: 5.208vw;
     margin-bottom: 0;
-  }
-  .core-value .content.active {
-    display: block;
   }
 }
 .core-value .content-tit {
@@ -3334,17 +3334,19 @@ body {
     color: #4c4c4c;
   }
   .about-reasons .cont-tit-1 {
-    width: 272px;
+    width: 14.583vw;
+    word-break: keep-all;
   }
   .about-reasons .cont-tit-2 {
     display: none;
   }
   .about-reasons .cont-tit-2-web {
     display: block;
-    width: 292px;
+    width: 15.625vw;
+    word-break: keep-all;
   }
   .about-reasons .cont-tit-3 {
-    width: 219px;
+    width: 12.5vw;
     word-break: keep-all;
   }
 }

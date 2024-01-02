@@ -291,6 +291,7 @@
       @include web-tit(60px, $txtTit);
     }
   }
+
   .content {
     display: flex;
     height: 159px;
@@ -301,15 +302,19 @@
     justify-content: center;
   }
   @media screen and (min-width: 1280px) {
+    .content-wrap {
+      position: relative;
+    }
     .content {
-      display: none;
+      position: absolute;
+      // display: none;
       width: 21.51vw;
       height: 18.594vw;
       padding-left: 5.208vw;
       margin-bottom: 0;
-      &.active {
-        display: block;
-      }
+      // &.active {
+      //   display: block;
+      // }
     }
   }
   .content-tit {

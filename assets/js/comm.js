@@ -1,81 +1,82 @@
-// swiper-main-page
-var swiper = new Swiper(".main-visual", {
-  slidesPerView: 1, // 보여질 슬라이드 수
-  centeredSlides: true, // 가운데 정렬된 슬라이드
-  autoplay: {
-    delay: 500000, // 자동 재생 딜레이(ms)
-    disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
-  },
-  pagination: {
-    el: ".swiper-pagination", // 페이지 표시 요소
-    clickable: true, // 페이지 버튼 클릭 가능 여부
-  },
-  navigation: {
-    nextEl: ".swiper-button-next", // 다음 버튼 클래스
-    prevEl: ".swiper-button-prev", // 이전 버튼 클래스
-  },
-});
-
-var swiper = new Swiper(".thumb-tit", {
-  loop: false,
-  spaceBetween: 12,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    1280: {
-      spaceBetween: 0,
-      slidesPerView: 6,
-    },
-  },
-});
-var swiper2 = new Swiper(".swiper-main-activities", {
-  // loop: true,
-  spaceBetween: 10,
-  slidesPerView: "auto",
-  // centeredSlides: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-    swiper: swiper,
-  },
-  variableWidth: true,
-  breakpoints: {
-    1280: {
-      spaceBetween: 12,
-    },
-  },
-});
-
-// swiper-campaign
-var swiper = new Swiper(".carousel-campaign", {
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-// swiper-sub2-page
-var swiper = new Swiper(".swiper-donation-usage", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    // dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-//glide-sub2-page
 $(function () {
+  // swiper-main-page
+  var swiper = new Swiper(".main-visual", {
+    slidesPerView: 1, // 보여질 슬라이드 수
+    centeredSlides: true, // 가운데 정렬된 슬라이드
+    autoplay: {
+      delay: 500000, // 자동 재생 딜레이(ms)
+      disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
+    },
+    pagination: {
+      el: ".swiper-pagination", // 페이지 표시 요소
+      clickable: true, // 페이지 버튼 클릭 가능 여부
+    },
+    navigation: {
+      nextEl: ".swiper-button-next", // 다음 버튼 클래스
+      prevEl: ".swiper-button-prev", // 이전 버튼 클래스
+    },
+  });
+
+  var swiper = new Swiper(".thumb-tit", {
+    loop: false,
+    spaceBetween: 12,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      1280: {
+        spaceBetween: 0,
+        slidesPerView: 6,
+      },
+    },
+  });
+  var swiper2 = new Swiper(".swiper-main-activities", {
+    // loop: true,
+    spaceBetween: 10,
+    slidesPerView: "auto",
+    // centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+    variableWidth: true,
+    breakpoints: {
+      1280: {
+        spaceBetween: 12,
+      },
+    },
+  });
+
+  // swiper-campaign
+  var swiper = new Swiper(".carousel-campaign", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // sub-2-page
+  // swiper-sub2-page
+  var swiper = new Swiper(".swiper-donation-usage", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      // dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  //glide-sub2-page
   new Glide(".glide-q-and-a", {
     type: "slider",
     autoplay: false,
@@ -107,10 +108,7 @@ $(function () {
     $(".dot").removeClass("selected");
     $(this).addClass("selected");
   });
-});
-
-// glide-donation-usage-web
-$(function () {
+  // glide-donation-usage-web
   new Glide(document.querySelector(".glide-donation-usage-web"), {
     type: "slider",
     startAt: 0,
@@ -120,9 +118,8 @@ $(function () {
     // bound: checkbox.checked,
     gap: 10,
   }).mount();
-});
-// donation-usage-web의 txt부분
-$(function () {
+
+  // donation-usage-web의 txt부분
   // 기본세팅
   $("#txtWrap .cont-txt").removeClass("active");
   $(".cont-txt:first-child").addClass("active");
@@ -143,7 +140,6 @@ $(function () {
       txtEls.eq(0).addClass("active");
     }
   });
-
   $("#btnPrev").on("click", function () {
     let activeNow = $("#txtWrap").find(".active");
     let present = activeNow.removeClass("active");
@@ -165,28 +161,49 @@ $(function () {
       $(this).find(".card").toggleClass("flipped");
     }
   });
-  // 일러 색상 변경
-  const circle = $(".front-web .card-illust").find(".colorChange");
-  // circle.css("fill", "");
-  circle.removeAttr("fill");
-  // circle.setAttribute("fill", "#ad5700");
-  circle.css("fill", "#ad5700");
-  console.log($(".colorChange"));
+});
+// sub-1-page
+$(function () {
+  // gsap-sub-1-page
+  gsap.registerPlugin(ScrollTrigger);
+
+  var contents = gsap.utils.toArray(".content");
+  var sectionTl;
+
+  if (window.innerWidth >= 1280) {
+    sectionTl = ScrollTrigger.create({
+      trigger: "#corevalue",
+      start: "top 20%",
+      end: "+=120%",
+      pin: "#corevalueContent",
+      scrub: 0.5,
+      markers: true,
+    });
+  }
+
+  // 각각의 content 정의
+  contents.forEach(function (elem, i) {
+    const tlDelay = i;
+    var titles = elem.querySelectorAll("#text");
+    var contentTL = gsap.timeline();
+
+    gsap.set("#corevalue .content", {
+      zIndex: (i, target, targets) => targets.length - i,
+    });
+    contentTL
+      .to(elem, { autoAlpha: 1 }, tlDelay)
+      .from(titles, {
+        yPercent: 100,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.6,
+      })
+      .to(elem, { autoAlpha: 0 });
+
+    sectionTl.add(contentTL, tlDelay);
+  });
 });
 
-// gsap-sub-3-page
-gsap.registerPlugin(ScrollTrigger);
-
-if (window.innerWidth >= 1280) {
-  ScrollTrigger.create({
-    trigger: "#corevalue",
-    start: "top 20%",
-    end: "bottom bottom",
-    pin: "#corevalueContent",
-    scrub: 1,
-    markers: true,
-  });
-}
 // ScrollTrigger.create({
 //   trigger: "#corevalue",
 //   start: "top 20%",
