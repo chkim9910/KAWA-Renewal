@@ -146,7 +146,6 @@
         align-items: center;
         justify-content: center;
         @include web-bd(0.833vw, $txtCont-2);
-        background-color: $white;
         transition: color 0.4s;
       }
     }

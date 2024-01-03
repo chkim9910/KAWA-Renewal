@@ -184,32 +184,33 @@ $(function () {
   }
 
   // 각각의 content 정의
-  contents.forEach(function (elem, i) {
-    const tlDelay = i;
-    var titles = elem.querySelectorAll("#text");
-    var contentTL = gsap.timeline();
+  // contents.forEach(function (elem, i) {
+  //   const tlDelay = i;
+  //   var titles = elem.querySelectorAll("#text");
+  //   var contentTL = gsap.timeline();
 
-    gsap.set("#corevalueContent .content", {
-      zIndex: (i, target, targets) => targets.length - i,
-    });
-    contentTL
-      .to(elem, { autoAlpha: 1 }, tlDelay)
-      .from(titles, {
-        yPercent: 100,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.6,
-      })
-      .to(elem, { autoAlpha: 0 });
+  //   gsap.set("#corevalueContent .content", {
+  //     zIndex: (i, target, targets) => targets.length - i,
+  //   });
+  //   contentTL
+  //     .to(elem, { autoAlpha: 1 }, tlDelay)
+  //     .from(titles, {
+  //       yPercent: 100,
+  //       duration: 1,
+  //       ease: "power2.out",
+  //       stagger: 0.6,
+  //     })
+  //     .to(elem, { autoAlpha: 0 });
 
-    sectionTl.add(contentTL, tlDelay);
-  });
+  //   sectionTl.add(contentTL, tlDelay);
+  // });
 
   // -----------------------common-----------------------
   // sidebar
   // list에서 active 지우기
   $(".sidebar-web .list-sidebar").removeClass("active");
-  $(".list-sidebar:first-child").addClass("active");
+  $(".info-active").addClass("active");
+  $(".mission-vision-active").addClass("active");
 
   $(".sidebar-web .list-sidebar").click(function () {
     // list에서 active 지우기

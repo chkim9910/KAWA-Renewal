@@ -328,6 +328,7 @@ legend {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 #header {
@@ -2615,6 +2616,7 @@ body {
     letter-spacing: 0%;
     line-height: 0.9996vw;
     color: #8e8e8e;
+    transition: color 0.4s;
   }
 }
 
@@ -2717,33 +2719,29 @@ body {
   }
 }
 .core-value {
+  height: 140vh;
   padding: 56px 20px 0;
-}
-.core-value .wrapper {
-  height: 100%;
   position: relative;
 }
-.core-value .wrapper:before {
+.core-value:before {
   content: "";
   display: block;
   position: absolute;
-  top: -30px;
-  left: -20px;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 49%;
   background: url(../../images/sub1-mission-vision-page/sect2-core-value/bg.jpg) no-repeat 50% 50%/cover;
   z-index: -1;
+}
+.core-value .wrapper {
+  height: 100%;
 }
 @media screen and (min-width: 1280px) {
   .core-value .wrapper {
     height: 100%;
     width: 100%;
     padding-top: 14.844vw;
-  }
-  .core-value .wrapper:before {
-    left: -16.667vw;
-    width: calc(56% + 16.667vw);
-    top: 0;
   }
   .core-value .wrapper-inner {
     width: 100%;
@@ -2766,7 +2764,7 @@ body {
   .core-value .tit-box {
     display: flex;
     flex-direction: column;
-    width: 11.458vw;
+    width: 100%;
   }
   .core-value .sub-tit {
     width: auto;
@@ -2804,6 +2802,7 @@ body {
     letter-spacing: -0.5px;
     line-height: 3.75vw;
     color: #222222;
+    text-align: center;
   }
 }
 .core-value .content {
@@ -2818,13 +2817,13 @@ body {
 @media screen and (min-width: 1280px) {
   .core-value .content-wrap {
     position: relative;
+    width: 100%;
   }
   .core-value .content {
     position: absolute;
-    width: 21.51vw;
-    height: 18.594vw;
-    padding-left: 5.208vw;
+    height: 300vh;
     margin-bottom: 0;
+    justify-content: normal;
   }
 }
 .core-value .content-tit {
@@ -2877,8 +2876,15 @@ body {
 
 @media screen and (min-width: 1280px) {
   .core-value {
-    height: 200vh;
-    padding: 14.896vw 16.667vw;
+    height: 300vh;
+    padding: 0;
+  }
+  .core-value:before {
+    width: calc(56% + 16.667vw);
+    top: 0;
+    background-attachment: fixed;
+    background-size: contain;
+    height: 100%;
   }
 }
 .project-initiative {
@@ -3237,7 +3243,6 @@ body {
     letter-spacing: 0%;
     line-height: 0.9996vw;
     color: #8e8e8e;
-    background-color: #ffffff;
     transition: color 0.4s;
   }
 }

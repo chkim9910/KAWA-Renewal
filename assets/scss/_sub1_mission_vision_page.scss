@@ -139,6 +139,7 @@
         align-items: center;
         justify-content: center;
         @include web-bd(0.833vw, $txtCont-2);
+        transition: color 0.4s;
       }
     }
   }
@@ -227,22 +228,23 @@
 .core-value {
   //   background: url(../../images/sub1-mission-vision-page/mainSec2-mob.png)
   //     no-repeat 50% 0;
+  height: 140vh;
   padding: 56px 20px 0;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 49%;
+    background: url(../../images/sub1-mission-vision-page/sect2-core-value/bg.jpg)
+      no-repeat 50% 50% / cover;
+    z-index: -1;
+  }
   .wrapper {
     height: 100%;
-    position: relative;
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -30px;
-      left: -20px;
-      height: 100%;
-      width: 49%;
-      background: url(../../images/sub1-mission-vision-page/sect2-core-value/bg.jpg)
-        no-repeat 50% 50% / cover;
-      z-index: -1;
-    }
   }
   @media screen and (min-width: 1280px) {
     .wrapper {
@@ -250,11 +252,6 @@
       width: 100%;
       padding-top: 14.844vw;
       //   position: relative;
-      &:before {
-        left: -16.667vw;
-        width: calc(56% + 16.667vw);
-        top: 0;
-      }
     }
     .wrapper-inner {
       width: 100%;
@@ -276,7 +273,7 @@
     .tit-box {
       display: flex;
       flex-direction: column;
-      width: 11.458vw;
+      width: 100%;
     }
     .sub-tit {
       //   display: block;
@@ -298,6 +295,7 @@
       width: auto;
       height: auto;
       @include web-tit(3.125vw, $txtTit);
+      text-align: center;
     }
   }
 
@@ -313,14 +311,17 @@
   @media screen and (min-width: 1280px) {
     .content-wrap {
       position: relative;
+      width: 100%;
     }
     .content {
       position: absolute;
-      // display: none;
-      width: 21.51vw;
-      height: 18.594vw;
-      padding-left: 5.208vw;
+      height: 300vh;
       margin-bottom: 0;
+      justify-content: normal;
+      // display: none;
+      // width: 21.51vw;
+      // height: 18.594vw;
+      // padding-left: 5.208vw;
       // &.active {
       //   display: block;
       // }
@@ -355,9 +356,20 @@
 }
 @media screen and (min-width: 1280px) {
   .core-value {
-    height: 200vh;
-    padding: 14.896vw 16.667vw;
+    height: 300vh;
+    padding: 0;
+    // padding: 14.896vw 16.667vw;
     // overflow: auto;
+    &:before {
+      // left: -16.667vw;
+      // left: 0;
+      width: calc(56% + 16.667vw);
+      top: 0;
+      background-attachment: fixed;
+      background-size: contain;
+      height: 100%;
+      // width: 50%;
+    }
   }
 }
 // project-initiative
