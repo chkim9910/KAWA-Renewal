@@ -1,4 +1,5 @@
 $(function () {
+  // -----------------------main-page-----------------------
   // swiper-main-page
   var swiper = new Swiper(".main-visual", {
     slidesPerView: 1, // 보여질 슬라이드 수
@@ -60,7 +61,7 @@ $(function () {
     },
   });
 
-  // sub-2-page
+  // -----------------------sub-2-page-----------------------
   // swiper-sub2-page
   var swiper = new Swiper(".swiper-donation-usage", {
     slidesPerView: "auto",
@@ -162,7 +163,8 @@ $(function () {
     }
   });
 });
-// sub-1-page
+
+// -----------------------sub-1-page-----------------------
 $(function () {
   // gsap-sub-1-page
   gsap.registerPlugin(ScrollTrigger);
@@ -202,72 +204,17 @@ $(function () {
 
     sectionTl.add(contentTL, tlDelay);
   });
+
+  // -----------------------common-----------------------
+  // sidebar
+  // list에서 active 지우기
+  $(".sidebar-web .list-sidebar").removeClass("active");
+  $(".list-sidebar:first-child").addClass("active");
+
+  $(".sidebar-web .list-sidebar").click(function () {
+    // list에서 active 지우기
+    $(".list-sidebar").removeClass("active");
+    // this에 active 부여하기
+    $(this).addClass("active");
+  });
 });
-
-// ScrollTrigger.create({
-//   trigger: "#corevalue",
-//   start: "top 20%",
-//   end: "bottom bottom",
-//   pin: "#corevalueContent",
-//   scrub: 1,
-//   markers: true,
-// });
-
-// // gsap
-// gsap.registerPlugin(ScrollTrigger);
-
-// let coloredSections = gsap.utils.toArray("[data-color]");
-// coloredSections.forEach((section, i) => {
-//   // grab the colors from the attribute
-//   let [bgColor, color] = section.getAttribute("data-color").split(" ");
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: "400 bottom",
-//     end: "+=100%",
-//     onToggle: (self) => {
-//       // whenever we enter a section from either direction (scrolling up or down), animate to its color
-//       if (self.isActive) {
-//         gsap.to("body", {
-//           backgroundColor: bgColor,
-//         });
-//         // when we LEAVE the very first section scrolling in reverse -OR- when we scroll past the very last section (forward), return to the "normal" colors
-//       } else if (
-//         (i === 0 && self.direction < 0) ||
-//         (i === coloredSections.length - 1 && self.direction > 0)
-//       ) {
-//         gsap.to("body", {
-//           backgroundColor: "$white",
-//         });
-//       }
-//     },
-//   });
-// });
-
-// ScrollTrigger.create({
-//   trigger: ".campaign",
-//   pin: ".wrapper",
-//   start: "top top",
-//   end: "bottom bottom",
-//   markers: false,
-// });
-
-// let bg = gsap.utils.toArray(".bg-deco");
-// gsap.set(bg, { yPercent: 200, opacity: 0 });
-
-// headings.forEach((bg, i) => {
-//   let tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".trigger",
-//       start: () => `top+=${i * window.innerHeight} top`,
-//       end: () => `top+=${(i + 1) * window.innerHeight} top`,
-//       markers: true,
-//       scrub: true,
-//     },
-//   });
-
-//   tl.to(bg, { yPercent: 0, opacity: 1 }).to(
-//     bg,
-//     { yPercent: -200, opacity: 0 },
-//     "+=1"
-//   );
-// });

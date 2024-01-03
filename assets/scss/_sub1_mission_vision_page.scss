@@ -30,7 +30,7 @@
   @media screen and (min-width: 1280px) {
     .tit {
       display: block;
-      @include web-tit(48px, $white);
+      @include web-tit(2.5vw, $white);
       height: auto;
       width: auto;
       padding-top: 0;
@@ -102,36 +102,43 @@
     .sidebar-web {
       display: block;
       width: 100%;
-      height: 80px;
-      padding: 0 51.198vw 0 16.719vw;
+      max-height: 80px;
+      height: 4.168vw;
+      // padding: 0 51.198vw 0 16.719vw;
+      // padding: 0 38.177vw 0 16.719vw;
+      padding-left: 16.719vw;
       background-color: $white;
       .wrapper {
-        // width: 866px;
-        width: 100%;
+        // width: 100%;
+        // width: 45.104vw;
+        // max-width: 866px;
         height: 100%;
         display: flex;
         // justify-content: space-between;
         // align-items: center;
       }
       .list-sidebar {
-        flex-grow: 1;
-        flex-basis: 0;
-        margin: 18px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // flex-grow: 1;
         &.active {
-          background-color: $bgcBk;
-          border-radius: 50px;
           .sidebar-cont {
-            @include web-bd(16px, $white);
+            @include web-bd(0.833vw, $white);
             font-weight: 700;
+            border-radius: 2.604vw;
+            background-color: $bgcBk;
           }
         }
       }
       .sidebar-cont {
-        height: 100%;
-        @include web-bd(16px, $txtCont-2);
+        // height: 100%;
+        width: 7.344vw;
+        padding: 0.625vw 1.302vw;
         display: flex;
         align-items: center;
         justify-content: center;
+        @include web-bd(0.833vw, $txtCont-2);
       }
     }
   }
@@ -200,11 +207,11 @@
     .cont-txt-web {
       display: flex;
       align-items: center;
-      @include web-bd(18px, $txtCont-2);
+      @include web-bd(0.938vw, $txtCont-2);
       line-height: 1.5;
       .highlight {
         display: block;
-        @include web-bd(48px, $txtTit);
+        @include web-bd(2.5vw, $txtTit);
         font-weight: 700;
         margin-right: 1.875vw;
       }
@@ -275,8 +282,10 @@
       //   display: block;
       width: auto;
       height: auto;
-      @include web-bd(32px, $txtCont-2);
+      @include web-bd(1.667vw, $txtCont-2);
       font-family: $font-family-enNum;
+      letter-spacing: normal;
+      text-align: center;
     }
   }
   .tit {
@@ -288,7 +297,7 @@
     .tit {
       width: auto;
       height: auto;
-      @include web-tit(60px, $txtTit);
+      @include web-tit(3.125vw, $txtTit);
     }
   }
 
@@ -329,7 +338,7 @@
     }
     .content-tit-web {
       display: block;
-      @include web-tit(40px, $txtTit-2);
+      @include web-tit(2.083vw, $txtTit-2);
       line-height: 1.3;
       margin-bottom: 0.521vw;
     }
@@ -339,7 +348,7 @@
   }
   @media screen and (min-width: 1280px) {
     .content-desc {
-      @include web-bd(18px, $txtCont-2);
+      @include web-bd(0.938vw, $txtCont-2);
       line-height: 1.5;
     }
   }
@@ -373,7 +382,7 @@
   }
   @media screen and (min-width: 1280px) {
     .cont-tit {
-      @include web-tit(48px, $txtTit);
+      @include web-tit(2.5vw, $txtTit);
       margin-bottom: 5.208vw;
     }
   }
@@ -387,7 +396,7 @@
   }
   @media screen and (min-width: 1280px) {
     .cont-desc {
-      @include web-bd(18px, $txtCont-2);
+      @include web-bd(0.938vw, $txtCont-2);
       line-height: 1.5;
     }
   }
@@ -486,7 +495,7 @@
   }
   @media screen and (min-width: 1280px) {
     .bg-deco-6 {
-      width: 7.448vw;
+      width: 6.5vw;
       top: -9.958vw;
       left: 2.938vw;
     }
@@ -499,7 +508,7 @@
   }
   @media screen and (min-width: 1280px) {
     .bg-deco-7 {
-      width: 17.188vw;
+      width: 15.187vw;
       top: -8.958vw;
       right: 2.938vw;
     }
@@ -512,7 +521,7 @@
   }
   @media screen and (min-width: 1280px) {
     .bg-deco-8 {
-      width: 22.521vw;
+      width: 18.521vw;
       top: 25.958vw;
       left: 0;
     }

@@ -109,12 +109,14 @@
       display: block;
       width: 100%;
       max-height: 80px;
-      height: 4.167vw;
-      padding: 0 38.177vw 0 16.719vw;
+      height: 4.18vw;
+      padding-left: 16.719vw;
       background-color: $white;
       .wrapper {
-        width: 45.104vw;
-        max-width: 866px;
+        // width: 45.104vw;
+        // max-width: 866px;
+        width: 55.227vw;
+        max-width: 1060.36px;
         height: 100%;
         display: flex;
         // justify-content: space-between;
@@ -138,11 +140,14 @@
       }
       .sidebar-cont {
         // height: 100%;
+        width: 7.89vw;
         padding: 0.625vw 1.302vw;
         display: flex;
         align-items: center;
         justify-content: center;
         @include web-bd(0.833vw, $txtCont-2);
+        background-color: $white;
+        transition: color 0.4s;
       }
     }
   }
