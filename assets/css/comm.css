@@ -3079,7 +3079,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .sub2-main-visual .txt {
-    height: 30.104vw;
+    height: 30.105vw;
     padding: 15.417vw 54.583vw 7.396vw 16.667vw;
     display: flex;
     flex-direction: column;
@@ -3100,9 +3100,9 @@ body {
   .sub2-main-visual .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #ffffff;
   }
 }
@@ -3123,10 +3123,11 @@ body {
     height: 2.708vw;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.042vw;
     letter-spacing: 0%;
-    line-height: 24px;
+    line-height: 1.2504vw;
     color: #ffffff;
+    line-height: 1.4;
   }
 }
 .sub2-main-visual .sidebar {
@@ -3195,50 +3196,52 @@ body {
   .sub2-main-visual .sidebar-web {
     display: block;
     width: 100%;
-    height: 80px;
+    max-height: 80px;
+    height: 4.167vw;
     padding: 0 38.177vw 0 16.719vw;
     background-color: #ffffff;
   }
   .sub2-main-visual .sidebar-web .wrapper {
-    width: 866px;
+    width: 45.104vw;
+    max-width: 866px;
     height: 100%;
     display: flex;
   }
   .sub2-main-visual .sidebar-web .list-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1;
-    flex-basis: 0;
-    margin: 18px 0;
-  }
-  .sub2-main-visual .sidebar-web .list-sidebar.active {
-    background-color: #222222;
-    border-radius: 50px;
   }
   .sub2-main-visual .sidebar-web .list-sidebar.active .sidebar-cont {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 0.833vw;
     letter-spacing: 0%;
-    line-height: 19.2px;
+    line-height: 0.9996vw;
     color: #ffffff;
     font-weight: 700;
+    background-color: #222222;
+    border-radius: 2.604vw;
   }
   .sub2-main-visual .sidebar-web .sidebar-cont {
-    height: 100%;
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 0%;
-    line-height: 19.2px;
-    color: #8e8e8e;
+    padding: 0.625vw 1.302vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 0.833vw;
+    letter-spacing: 0%;
+    line-height: 0.9996vw;
+    color: #8e8e8e;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .sub2-main-visual {
     height: 34.219vw;
+    max-height: 578px;
     background-position: 70% 30%;
     background-size: 150%;
   }
@@ -3269,9 +3272,9 @@ body {
   .about-reasons .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #222222;
   }
 }
@@ -3294,7 +3297,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .about-reasons .cont-txt {
-    margin-top: 95px;
+    margin-top: 6.719vw;
     padding: 0;
   }
   .about-reasons .cont-txt-1 {
@@ -3328,9 +3331,9 @@ body {
   .about-reasons .cont-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #4c4c4c;
   }
   .about-reasons .cont-tit-1 {
@@ -3363,14 +3366,19 @@ body {
   .about-reasons .cont-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 21.6px;
+    line-height: 1.1256vw;
     color: #8e8e8e;
   }
 }
 .about-reasons .cont-1 {
   margin-top: 25px;
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont-1 {
+    margin-top: 0;
+  }
 }
 .about-reasons .cont-2,
 .about-reasons .cont-3 {
@@ -3384,6 +3392,8 @@ body {
   .about-reasons .pic {
     width: 43.75vw;
     height: 27.448vw;
+    margin-top: 4.271vw;
+    border-radius: 10px;
   }
 }
 .about-reasons .pic-cont-1 {
@@ -3415,8 +3425,7 @@ body {
   }
   .about-reasons .bg-deco-1-1 {
     position: absolute;
-    top: -36px;
-    right: -146px;
+    right: -7.604vw;
     width: 40%;
     opacity: 0.6;
   }
@@ -3431,8 +3440,8 @@ body {
   .about-reasons .bg-deco-2 {
     height: 100%;
     width: 100%;
-    top: 14px;
-    left: -225px;
+    top: 0.729vw;
+    left: -11.719vw;
   }
   .about-reasons .bg-deco-2-1 {
     display: none;
@@ -3441,30 +3450,35 @@ body {
   }
   .about-reasons .bg-deco-2-2 {
     position: absolute;
-    width: 7%;
-    top: 335px;
-    left: 49px;
+    width: 4.5%;
+    top: 4vw;
+    left: 16.552vw;
   }
   .about-reasons .bg-deco-2-3 {
     position: absolute;
-    width: 25%;
-    top: 420px;
-    left: -156px;
+    width: 45%;
+    top: 21.875vw;
+    left: -10.125vw;
+    transform: rotate(175deg);
+    opacity: 0.7;
   }
   .about-reasons .bg-deco-3 {
-    top: 66px;
-    right: -280px;
-    width: 300px;
+    top: 3.438vw;
+    right: -53.698vw;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   .about-reasons .bg-deco-3-1 {
+    display: none;
     position: absolute;
-    width: 150%;
+    width: 130%;
     transform: rotate(170deg);
     right: 17px;
     top: 82px;
   }
   .about-reasons .bg-deco-3-2 {
-    width: 100px;
+    width: 3.646vw;
   }
 }
 
@@ -3502,9 +3516,9 @@ body {
     display: block;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #222222;
   }
   .donation-usage .tit-web .highlight {
@@ -3575,23 +3589,24 @@ body {
 @media screen and (min-width: 1280px) {
   .donation-usage .glide-donation-usage-web {
     display: flex;
-    margin-top: 125px;
-    margin-left: 332px;
+    margin-top: 6.51vw;
+    margin-left: 17.292vw;
     overflow: hidden;
   }
   .donation-usage .glide-donation-usage-web .glide__track {
     flex-grow: 1;
-    flex-basis: 1456px;
+    flex-basis: 61.833vw;
     overflow: hidden;
     order: 2;
   }
   .donation-usage .glide-donation-usage-web .glide__track .glide__slides {
     display: flex;
-    width: 2800px;
+    width: 145.833vw !important;
+    overflow: hidden;
   }
   .donation-usage .glide-donation-usage-web .glide__track .glide__slides .glide__slide {
-    width: 516px !important;
-    height: 552px;
+    width: 26.875vw !important;
+    height: 28.75vw;
   }
   .donation-usage .glide-donation-usage-web .glide__track .glide__slides .glide__slide--active {
     opacity: 1;
@@ -3599,8 +3614,8 @@ body {
   .donation-usage .glide-donation-usage-web .glide__track .cont-img {
     opacity: 0.3;
     border-radius: 10px;
-    margin-bottom: 50px;
-    margin: 0 10px !important;
+    margin-bottom: 2.604vw;
+    margin: 0 0.521vw !important;
     transition: opacity 0.1s;
   }
   .donation-usage .glide-donation-usage-web .glide__track .cont-img-1 {
@@ -3658,7 +3673,7 @@ body {
   .donation-usage .cont-txt-wrap-web {
     display: block;
     position: relative;
-    top: -465px;
+    top: -24.219vw;
   }
   .donation-usage .cont-txt-wrap-web .cont-txt {
     position: absolute;
@@ -3674,18 +3689,18 @@ body {
     display: block;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.083vw;
     letter-spacing: -0.5px;
-    line-height: 48px;
+    line-height: 2.4996vw;
     color: #f76a00;
-    margin-bottom: 12px;
+    margin-bottom: 0.625vw;
   }
   .donation-usage .cont-txt-wrap-web .cont-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 21.6px;
+    line-height: 1.1256vw;
     color: #8e8e8e;
     line-height: 1.5;
   }
@@ -3705,9 +3720,9 @@ body {
   }
   .donation-usage .bg-deco-1 {
     position: absolute;
-    width: 6%;
-    top: -335px;
-    left: 153px;
+    width: 5%;
+    top: -17.448vw;
+    left: 7.969vw;
   }
 }
 
@@ -3736,9 +3751,9 @@ body {
   .q-and-a .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #222222;
     padding-bottom: 0;
   }
@@ -3749,9 +3764,10 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .q-and-a .glide-q-and-a {
-    width: 1480px;
+    width: 77.083vw;
     margin-top: 2vw;
     overflow: hidden;
+    overflow-x: hidden;
   }
 }
 .q-and-a .glide__slides {
@@ -3759,15 +3775,16 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .q-and-a .glide__slides {
-    width: 2300px !important;
-    height: 750px;
+    width: 119.792vw !important;
+    height: 39.063vw;
     justify-content: center;
     align-items: center;
     overflow: hidden;
   }
   .q-and-a .glide__slide {
-    width: 420px !important;
+    width: 21.875vw !important;
     margin: 0 30px 0 0 !important;
+    overflow: hidden;
   }
 }
 .q-and-a .card {
@@ -3780,8 +3797,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .q-and-a .card {
-    width: 420px;
-    height: 614px;
+    width: 21.875vw;
+    height: 31.979vw;
   }
 }
 .q-and-a .card-txt {
@@ -3812,9 +3829,9 @@ body {
   .q-and-a .card-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.25vw;
     letter-spacing: -0.5px;
-    line-height: 28.8px;
+    line-height: 1.5vw;
     color: #ffffff;
     line-height: 1.5;
     padding-left: 0;
@@ -3837,9 +3854,9 @@ body {
   .q-and-a .card-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 0.781vw;
     letter-spacing: 0%;
-    line-height: 18px;
+    line-height: 0.9372vw;
     color: #ffffff;
     line-height: 1.5;
     font-weight: 400;
@@ -3857,9 +3874,9 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .q-and-a .card-tag {
-    right: 26px;
-    width: 64px;
-    height: 118px;
+    right: 1.354vw;
+    width: 3.333vw;
+    height: 6.146vw;
   }
 }
 .q-and-a .tag-txt {
@@ -3875,6 +3892,16 @@ body {
   padding-top: 10px;
   height: auto;
 }
+@media screen and (min-width: 1280px) {
+  .q-and-a .tag-txt {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 1.563vw;
+    letter-spacing: -0.5px;
+    line-height: 1.8756vw;
+    color: #4c4c4c;
+  }
+}
 .q-and-a .card-illust {
   position: absolute;
   bottom: 16px;
@@ -3883,15 +3910,15 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .q-and-a .card-illust {
-    width: 64px;
-    width: 176px;
+    width: 3.333vw;
+    width: 9.167vw;
     height: auto;
-    transform: translateX(calc(210px - 50%));
+    transform: translateX(calc(10.9375vw - 50%));
   }
   .q-and-a .card-3-illust-box,
   .q-and-a .card-4-illust-box,
   .q-and-a .card-5-illust-box {
-    width: 225px;
+    width: 11.719vw;
   }
 }
 .q-and-a .card-1-illust,
@@ -3962,14 +3989,15 @@ body {
 @media screen and (min-width: 1280px) {
   .q-and-a .list-card {
     position: relative;
-    width: 420px !important;
-    height: 614px;
-    perspective: 1000px;
+    width: 21.875vw !important;
+    height: 38.49vw;
+    perspective: 1500px;
+    display: flex;
+    align-items: center;
   }
   .q-and-a .card {
     position: relative;
     width: 100%;
-    height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.9s;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -3997,9 +4025,9 @@ body {
   .q-and-a .front-web .tag-txt-front {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -4008,25 +4036,25 @@ body {
   .q-and-a .front-web .card-tit-front {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 28.8px;
+    line-height: 1.5vw;
     color: #ffffff;
     font-weight: 700;
   }
   .q-and-a .front-web .card-3-illust-box,
   .q-and-a .front-web .card-4-illust-box,
   .q-and-a .front-web .card-5-illust-box {
-    width: 225px;
+    width: 11.719vw;
   }
   .q-and-a .front-web:before {
     content: "";
     display: block;
     position: absolute;
-    top: 12px;
-    left: 12px;
-    width: calc(100% - 24px);
-    height: calc(100% - 24px);
+    top: 0.625vw;
+    left: 0.625vw;
+    width: calc(100% - 1.25vw);
+    height: calc(100% - 1.25vw);
     border: 1px solid #ad5700;
   }
   .q-and-a .back {
@@ -4072,8 +4100,8 @@ body {
     content: "";
     display: block;
     position: absolute;
-    top: 452px;
-    left: 158px;
+    top: 23.542vw;
+    left: 8.229vw;
     width: 90%;
     height: 50%;
     background: url(../../images/sub2-donation-page/sect4-q&a/bg-deco.png) no-repeat 50% 0/100%;
@@ -4118,9 +4146,9 @@ body {
   .financial-report .cont-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
+    line-height: 3vw;
     color: #ffffff;
     margin-bottom: 1.042vw;
   }
@@ -4146,9 +4174,9 @@ body {
     display: block;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 28.8px;
+    line-height: 1.5vw;
     color: #ffdfbf;
     text-align: center;
   }
@@ -4172,9 +4200,9 @@ body {
   .financial-report .btn-more {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 21.6px;
+    line-height: 1.1256vw;
     color: #4c4c4c;
     margin-top: 2.083vw;
     padding: 0.521vw 2.344vw;

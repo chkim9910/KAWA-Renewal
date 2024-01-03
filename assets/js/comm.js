@@ -167,7 +167,7 @@ $(function () {
   // gsap-sub-1-page
   gsap.registerPlugin(ScrollTrigger);
 
-  var contents = gsap.utils.toArray(".content");
+  var contents = gsap.utils.toArray("#corevalueContent .content");
   var sectionTl;
 
   if (window.innerWidth >= 1280) {
@@ -177,7 +177,7 @@ $(function () {
       end: "+=120%",
       pin: "#corevalueContent",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     });
   }
 
@@ -187,7 +187,7 @@ $(function () {
     var titles = elem.querySelectorAll("#text");
     var contentTL = gsap.timeline();
 
-    gsap.set("#corevalue .content", {
+    gsap.set("#corevalueContent .content", {
       zIndex: (i, target, targets) => targets.length - i,
     });
     contentTL
