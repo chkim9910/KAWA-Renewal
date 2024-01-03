@@ -312,12 +312,22 @@
     .content-wrap {
       position: relative;
       width: 100%;
+      height: 100vh;
+      // height: 300px;
+      // height: 100%;
     }
     .content {
+      width: 100%;
       position: absolute;
-      height: 300vh;
       margin-bottom: 0;
+      padding-left: 0;
+      transform: translateX(calc(960px / 2 + -50%));
       justify-content: normal;
+      overflow: hidden;
+      height: 500px;
+      // height: auto;
+      // height: 100vh;
+      // height: 300vh;
       // display: none;
       // width: 21.51vw;
       // height: 18.594vw;
@@ -325,6 +335,16 @@
       // &.active {
       //   display: block;
       // }
+    }
+    #text {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 300px;
+      // top: -124px;
+      // left: calc(50% - 215px / 2);
+      // overflow: hidden;
     }
   }
   .content-tit {
@@ -356,7 +376,7 @@
 }
 @media screen and (min-width: 1280px) {
   .core-value {
-    height: 300vh;
+    height: 100vh;
     padding: 0;
     // padding: 14.896vw 16.667vw;
     // overflow: auto;
@@ -368,6 +388,8 @@
       background-attachment: fixed;
       background-size: contain;
       height: 100%;
+      transform: scale(1) translateX(-190px);
+      background-size: contain;
       // width: 50%;
     }
   }

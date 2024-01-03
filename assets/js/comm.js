@@ -165,46 +165,82 @@ $(function () {
 });
 
 // -----------------------sub-1-page-----------------------
-$(function () {
-  // gsap-sub-1-page
-  gsap.registerPlugin(ScrollTrigger);
 
-  var contents = gsap.utils.toArray("#corevalueContent .content");
-  var sectionTl;
+// gsap-sub-1-page
+gsap.registerPlugin(ScrollTrigger);
 
-  if (window.innerWidth >= 1280) {
-    sectionTl = ScrollTrigger.create({
+// section css 세팅
+// gsap.set("#corevalue", { autoAlpha: 0 });
+
+// content css 세팅
+gsap.set(".content", { autoAlpha: 0 });
+
+// content 배열
+var contents = gsap.utils.toArray("#corevalue .content");
+
+if (window.innerWidth >= 1280) {
+  sectionTl = gsap.timeline({
+    scrollTrigger: {
       trigger: "#corevalue",
-      start: "top 20%",
-      end: "+=120%",
-      pin: "#corevalueContent",
+      pin: "#corevalue",
+      start: "top top",
+      end: "+=140%",
       scrub: 0.5,
       // markers: true,
-    });
-  }
-
-  // 각각의 content 정의
-  // contents.forEach(function (elem, i) {
-  //   const tlDelay = i;
-  //   var titles = elem.querySelectorAll("#text");
-  //   var contentTL = gsap.timeline();
-
-  //   gsap.set("#corevalueContent .content", {
-  //     zIndex: (i, target, targets) => targets.length - i,
-  //   });
-  //   contentTL
-  //     .to(elem, { autoAlpha: 1 }, tlDelay)
-  //     .from(titles, {
-  //       yPercent: 100,
-  //       duration: 1,
-  //       ease: "power2.out",
-  //       stagger: 0.6,
-  //     })
-  //     .to(elem, { autoAlpha: 0 });
-
-  //   sectionTl.add(contentTL, tlDelay);
+    },
+  });
+  // sectionSt = ScrollTrigger.create({
+  //   trigger: "#corevalue",
+  //   pin: "#corevalue",
+  //   start: "top top",
+  //   end: "+=140%",
+  //   scrub: 0.5,
+  //   // markers: true,
   // });
 
+  // 각각의 content 정의
+  contents.forEach(function (elem, i) {
+    const tlDelay = i;
+    var titles = elem.querySelectorAll("#text");
+    var contentTl = gsap.timeline(); // 애니메이션은 일단 정지된 상태로 시작합니다.
+    // var contentTl = gsap.timeline({ paused: true }); // 애니메이션은 일단 정지된 상태로 시작합니다.
+    // console.log(tlDelay);
+
+    gsap.set("#corevalue .content", {
+      zIndex: (i, target, targets) => targets.length - i,
+    });
+
+    contentTl
+      .to(elem, { autoAlpha: 1 }, tlDelay)
+      .from(titles, {
+        yPercent: 200,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.6,
+      })
+      .to(elem, { autoAlpha: 0 });
+
+    sectionTl.add(contentTl, tlDelay);
+
+    // 각 content 요소에 ScrollTrigger 생성
+    let contentSt = ScrollTrigger.create({
+      trigger: elem,
+      scrub: true,
+      start: "top top", // 트리거가 시작되는 위치
+      end: "+=120%", // 트리거가 끝나는 위치
+      toggleActions: "play none none reverse", // 트리거 동작 설정
+      onEnter: function () {
+        contentTl.restart(); // 트리거에 진입하면 애니메이션 재생
+      },
+      onLeaveBack: function () {
+        contentTl.reverse(); // 트리거를 떠날 때 애니메이션 되돌리기
+      },
+      // markers: true, // 디버깅을 위한 마커 표시
+    });
+  });
+}
+
+$(function () {
   // -----------------------common-----------------------
   // sidebar
   // list에서 active 지우기
