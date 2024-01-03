@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ScrollTrigger</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <style>
+            body,
+            html {
+                font-family: Lato;
+            }
+            .pin-spacer {
+                background: black;
+            }
+            .section {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: black;
+            }
+            /*.section-blue {
+	 background: #245758;
+}
+ .section-red {
+	 background: #c40343;
+}
+*/
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                width: 800px;
+                min-height: 600px;
+            }
+            .circle-content {
+                padding: 1rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+            }
+            .circle h1 {
+                font-size: 200px;
+                font-family: sans-serif;
+                color: white;
+                margin: 0;
+            }
+            .circle h2,
+            .circle h3 {
+                position: relative;
+                font-family: sans-serif;
+                margin: 0;
+                color: white;
+            }
+            .circle h2 {
+                font-size: 32px;
+                font-weight: 800;
+            }
+            .circle h3 {
+                font-size: 26px;
+                font-weight: 300;
+            }
+            /**/
+            .section-next,
+            .section-previous {
+                background: black;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                color: white;
+                position: relative;
+            }
+            .section-next h1,
+            .section-previous h1 {
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                left: 50%;
+                font-size: 50px;
+                transform: translate(-50%, -50%);
+            }
+            .section-next h1 span,
+            .section-previous h1 span {
+                display: block;
+                font-size: 16px;
+                font-weight: 200;
+                letter-spacing: 2px;
+                padding-top: 0.2rem;
+                padding-bottom: 0.2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-previous">
+            <h1>Previous section <span>Scroll</span></h1>
+        </div>
+
+        <div class="section-about" id="section-gsap">
+            <section class="section section-first">
+                <div class="circle center">
+                    <div class="circle-content">
+                        <h1>01</h1>
+                        <h2 class="lines text">There are many variations of passages of Lorem</h2>
+                        <h3 class="lines text">Subtitle of the section</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-blue">
+                <div class="circle center">
+                    <div class="circle-content">
+                        <h1>02</h1>
+                        <h2 class="lines text">Default model variations variations</h2>
+                        <h3 class="lines text">Subtitle of the section</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-red">
+                <div class="circle center">
+                    <div class="circle-content">
+                        <h1>03</h1>
+                        <h2 class="lines text">Lorem Ipsum as their default model</h2>
+                        <h3 class="lines text">Subtitle of the section</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="section-next">
+            <h1>Next section</h1>
+        </div>
+
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            // section에 대한 css 세팅
+            gsap.set('.section', { autoAlpha: 0 });
+
+            // section 배열
+            var sections = gsap.utils.toArray('.section');
+
+            // 부모요소에 scrollTrigtger timeline 설정
+            var sectionTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#section-gsap',
+                    pin: '#section-gsap',
+                    scrub: 0.5,
+                    start: 'top top',
+                    end: '+=950%',
+                    markers: true,
+                },
+            });
+
+            // 각각의 section 정의
+            sections.forEach(function (elem, i) {
+                const tlDelay = i;
+                var titles = elem.querySelectorAll('.text');
+                var contentTL = gsap.timeline();
+
+                gsap.set('.section', { zIndex: (i, target, targets) => targets.length - i });
+
+                contentTL
+                    .to(elem, { autoAlpha: 1 }, tlDelay)
+                    .from(titles, { xPercent: -100, duration: 1, ease: 'power2.out', stagger: 0.6 })
+                    .to(elem, { autoAlpha: 0 });
+
+                sectionTl.add(contentTL, tlDelay);
+            });
+        </script>
+    </body>
+</html>

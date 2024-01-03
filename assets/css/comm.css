@@ -2718,6 +2718,8 @@ body {
   }
 }
 .core-value {
+  background: url(../../images/sub1-mission-vision-page/bg-sec2.jpg) no-repeat 100% 0/auto 100%;
+  background-attachment: fixed;
   padding: 56px 20px 0;
 }
 .core-value .wrapper {
@@ -2739,7 +2741,7 @@ body {
   .core-value .wrapper {
     height: 100%;
     width: 100%;
-    padding-top: 14.844vw;
+    padding-top: 0;
   }
   .core-value .wrapper:before {
     left: -16.667vw;
@@ -2765,6 +2767,10 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .core-value .tit-box {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-500px);
     display: flex;
     flex-direction: column;
     width: 11.458vw;
@@ -2817,13 +2823,26 @@ body {
 @media screen and (min-width: 1280px) {
   .core-value .content-wrap {
     position: relative;
+    width: 100%;
   }
   .core-value .content {
     position: absolute;
-    width: 21.51vw;
-    height: 18.594vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     padding-left: 5.208vw;
     margin-bottom: 0;
+  }
+  .core-value .content .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
   }
 }
 .core-value .content-tit {
@@ -2876,8 +2895,9 @@ body {
 
 @media screen and (min-width: 1280px) {
   .core-value {
-    height: 200vh;
-    padding: 14.896vw 16.667vw;
+    position: relative;
+    margin: 14.896vw 0;
+    padding: 0;
   }
 }
 .project-initiative {
@@ -3068,6 +3088,86 @@ body {
     padding: 0;
   }
 }
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 800px;
+  min-height: 270px;
+}
+.circle-content {
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.circle h1 {
+  font-size: 50px;
+  font-family: sans-serif;
+  color: #000;
+  margin: 0;
+  margin-bottom: 70px;
+}
+.circle h2,
+.circle h3 {
+  position: relative;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.circle h2 {
+  font-size: 32px;
+  font-weight: 800;
+}
+.circle h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+/**/
+.section-next,
+.section-previous {
+  background: black;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.section-next h1,
+.section-previous h1 {
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+}
+.section-next h1 span,
+.section-previous h1 span {
+  display: block;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
 .sub2-main-visual {
   background: url(../../images/sub2-donation-page/sect1-main-visual/bg-mob.png) no-repeat 100% 0/cover;
   width: 100%;
