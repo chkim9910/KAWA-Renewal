@@ -347,6 +347,7 @@ legend {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 #header #logo:before {
   display: block;
@@ -2892,13 +2893,11 @@ body {
     padding: 0;
   }
   .core-value:before {
-    width: calc(56% + 16.667vw);
     top: 0;
+    left: 0;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: cover;
     height: 100%;
-    transform: scale(1) translateX(-190px);
-    background-size: contain;
   }
 }
 .project-initiative {
@@ -2910,7 +2909,16 @@ body {
   padding: 0 1px;
 }
 @media screen and (min-width: 1280px) {
+  .project-initiative .wrapper {
+    width: 800vw !important;
+    max-width: 800vw !important;
+    height: 62.5vw !important;
+    display: flex;
+    flex-wrap: nowrap;
+    overscroll-behavior: none;
+  }
   .project-initiative .cont {
+    width: 100vw;
     height: 62.5vw;
     padding: 10.417vw 16.667vw;
   }
@@ -3087,6 +3095,7 @@ body {
 @media screen and (min-width: 1280px) {
   .project-initiative {
     padding: 0;
+    margin-top: 100px;
   }
 }
 .sub2-main-visual {

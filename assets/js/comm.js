@@ -62,7 +62,7 @@ $(function () {
   });
 
   // -----------------------sub-2-page-----------------------
-  // swiper-sub2-page
+  // ****************swiper-sub2-page****************
   var swiper = new Swiper(".swiper-donation-usage", {
     slidesPerView: "auto",
     spaceBetween: 30,
@@ -77,7 +77,7 @@ $(function () {
     },
   });
 
-  //glide-sub2-page
+  //****************glide-sub2-page****************
   new Glide(".glide-q-and-a", {
     type: "slider",
     autoplay: false,
@@ -109,7 +109,7 @@ $(function () {
     $(".dot").removeClass("selected");
     $(this).addClass("selected");
   });
-  // glide-donation-usage-web
+  //****************glide-donation-usage-web****************
   new Glide(document.querySelector(".glide-donation-usage-web"), {
     type: "slider",
     startAt: 0,
@@ -120,7 +120,7 @@ $(function () {
     gap: 10,
   }).mount();
 
-  // donation-usage-web의 txt부분
+  // ****************donation-usage-web의 txt****************
   // 기본세팅
   $("#txtWrap .cont-txt").removeClass("active");
   $(".cont-txt:first-child").addClass("active");
@@ -153,7 +153,7 @@ $(function () {
     }
   });
 
-  // q-and-a-web의 card flip 효과
+  // ****************q-and-a-web의 card flip****************
   $(".list-card").click(function () {
     if ($(this).find(".card").hasClass("flipped")) {
       $(this).find(".card").removeClass("flipped");
@@ -165,93 +165,177 @@ $(function () {
 });
 
 // -----------------------sub-1-page-----------------------
-
-// gsap-sub-1-page
+// ****************mission-vision-gsap****************
 gsap.registerPlugin(ScrollTrigger);
+const missionvision = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".bg-from-left",
+    // pin: ".bg-from-left",
+    start: "top center",
+    end: "center 30%",
+    scrub: 2,
+    // markers: true,
+  },
+});
 
-// section css 세팅
-// gsap.set("#corevalue", { autoAlpha: 0 });
+const content = ".mission-vision .mv-content";
 
-// content css 세팅
-gsap.set(".content", { autoAlpha: 0 });
+missionvision
+  .from(".bg-from-left", {
+    duration: 1,
+    x: 100,
+    stagger: 1,
+    opacity: 0,
+    ease: "power2.out",
+  })
+  .from(content, {
+    duration: 1,
+    y: 100,
+    stagger: 0.6,
+    opacity: 0,
+    ease: "power2.out",
+  })
+  .from(".from-left", {
+    duration: 1,
+    x: 100,
+    stagger: 0.3,
+    opacity: 0,
+    ease: "power2.out",
+  });
+
+// ****************core-value-gsap****************
+gsap.registerPlugin(ScrollTrigger);
 
 // content 배열
 var contents = gsap.utils.toArray("#corevalue .content");
 
 if (window.innerWidth >= 1280) {
-  sectionTl = gsap.timeline({
+  const sectionTl = gsap.timeline({
     scrollTrigger: {
       trigger: "#corevalue",
       pin: "#corevalue",
-      start: "top top",
+      start: "-10% top",
       end: "+=140%",
       scrub: 0.5,
-      // markers: true,
     },
   });
-  // sectionSt = ScrollTrigger.create({
-  //   trigger: "#corevalue",
-  //   pin: "#corevalue",
-  //   start: "top top",
-  //   end: "+=140%",
-  //   scrub: 0.5,
-  //   // markers: true,
-  // });
+  // #corevalue에 효과 부여
+  sectionTl
+    .from("#corevalue", {
+      duration: 1,
+      x: -100,
+      opacity: 0,
+    })
+    .to("#corevalue", {
+      duration: 0.8,
+      yPercent: -10,
+      opacity: 1,
+      ease: "power2.out", // ease 효과 추가
+    })
+    .from(".tit-box", {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+    })
+    .from("#contentWrap", {
+      opacity: 0,
+      // duration: 1,
+      // yPercent: 50,
+      // y: 100,
+    });
 
-  // 각각의 content 정의
+  // 각각의 content에 대한 애니메이션
   contents.forEach(function (elem, i) {
     const tlDelay = i;
     var titles = elem.querySelectorAll("#text");
-    var contentTl = gsap.timeline(); // 애니메이션은 일단 정지된 상태로 시작합니다.
-    // var contentTl = gsap.timeline({ paused: true }); // 애니메이션은 일단 정지된 상태로 시작합니다.
-    // console.log(tlDelay);
+    var contentTl = gsap.timeline();
 
-    gsap.set("#corevalue .content", {
+    gsap.set(".content", {
       zIndex: (i, target, targets) => targets.length - i,
+      autoAlpha: 0, // 초기에는 모든 .content를 숨김
     });
 
     contentTl
-      .to(elem, { autoAlpha: 1 }, tlDelay)
+      .to(elem, { autoAlpha: 1 }, tlDelay + 2)
       .from(titles, {
         yPercent: 200,
-        duration: 1,
-        ease: "power2.out",
+        duration: 2,
+        // delay: 3,
         stagger: 0.6,
+        ease: "power2.out",
       })
       .to(elem, { autoAlpha: 0 });
 
     sectionTl.add(contentTl, tlDelay);
 
     // 각 content 요소에 ScrollTrigger 생성
-    let contentSt = ScrollTrigger.create({
+    ScrollTrigger.create({
       trigger: elem,
+      pin: elem,
+      start: "top 25%", // 트리거가 시작되는 위치
+      end: "+=200%", // 트리거가 끝나는 위치
+      // end: "bottom 40%",
       scrub: true,
-      start: "top top", // 트리거가 시작되는 위치
-      end: "+=120%", // 트리거가 끝나는 위치
       toggleActions: "play none none reverse", // 트리거 동작 설정
       onEnter: function () {
-        contentTl.restart(); // 트리거에 진입하면 애니메이션 재생
+        contentTl.play(); // 트리거에 진입하면 애니메이션 재생
       },
-      onLeaveBack: function () {
-        contentTl.reverse(); // 트리거를 떠날 때 애니메이션 되돌리기
-      },
+      // onLeaveBack: function () {
+      //   contentTl.reverse(); // 트리거를 떠날 때 애니메이션 되돌리기
+      // },
       // markers: true, // 디버깅을 위한 마커 표시
     });
   });
 }
 
-$(function () {
-  // -----------------------common-----------------------
-  // sidebar
-  // list에서 active 지우기
-  $(".sidebar-web .list-sidebar").removeClass("active");
-  $(".info-active").addClass("active");
-  $(".mission-vision-active").addClass("active");
-
-  $(".sidebar-web .list-sidebar").click(function () {
-    // list에서 active 지우기
-    $(".list-sidebar").removeClass("active");
-    // this에 active 부여하기
-    $(this).addClass("active");
+// ****************project-initiative-gsap****************
+gsap.registerPlugin(ScrollTrigger);
+if (window.innerWidth >= 1280) {
+  // cont 배열
+  const conts = gsap.utils.toArray("#projectInitiative .cont");
+  const projectIni = document.querySelector("#projectInitiative");
+  const initiativeTxts = projectIni.querySelectorAll(".text");
+  // conts에 timeline 할당
+  const contsTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#projectInitiative .wrapper",
+      start: "center 60%",
+      // scrub: 1,
+      markers: true,
+    },
   });
+
+  contsTl.from(initiativeTxts, {
+    duration: 0.5,
+    y: 100,
+    opacity: 0,
+    // delay: 1,
+  });
+
+  gsap.to(conts, {
+    xPercent: -100 * (conts.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#projectInitiative .wrapper",
+      pin: true,
+      start: "center 60%",
+      // end: "+=300%",
+      scrub: 1,
+      markers: true,
+    },
+  });
+}
+
+// -----------------------common-sub1-and-sub2-----------------------
+// sidebar
+// list에서 active 지우기
+$(".sidebar-web .list-sidebar").removeClass("active");
+$(".info-active").addClass("active");
+$(".mission-vision-active").addClass("active");
+
+$(".sidebar-web .list-sidebar").click(function () {
+  // list에서 active 지우기
+  $(".list-sidebar").removeClass("active");
+  // this에 active 부여하기
+  $(this).addClass("active");
 });
