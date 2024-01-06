@@ -341,6 +341,15 @@
       width: 4.5%;
       top: 4vw;
       left: 16.552vw;
+      animation: bg-deco-2-2-animation infinite ease-in-out;
+    }
+    @keyframes bg-deco-2-2-animation {
+      0% {
+        transform: rotate(-360deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
     .bg-deco-2-3 {
       position: absolute;
@@ -352,7 +361,7 @@
     }
     .bg-deco-3 {
       top: 3.438vw;
-      right: -53.698vw;
+      right: -54.698vw;
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -642,7 +651,7 @@
     .bg-deco-1 {
       position: absolute;
       width: 5%;
-      top: -17.448vw;
+      top: -10.448vw;
       left: 7.969vw;
     }
   }
@@ -960,7 +969,7 @@
       width: 30%;
       height: 100%;
     }
-    .bg-deco-el-1 {
+    .bg-deco-1 {
       width: 5%;
       top: -602px;
       left: 255px;

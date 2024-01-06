@@ -2998,7 +2998,7 @@ body {
   .project-initiative .bg-deco-2 {
     width: 5.99vw;
     top: 19.042vw;
-    left: 4.938vw;
+    left: 68.938vw;
   }
 }
 .project-initiative .bg-deco-2-web {
@@ -3048,7 +3048,7 @@ body {
 @media screen and (min-width: 1280px) {
   .project-initiative .bg-deco-5 {
     width: 26.563vw;
-    top: 1.042vw;
+    top: 15.042vw;
     right: 4.938vw;
   }
 }
@@ -3061,7 +3061,7 @@ body {
 @media screen and (min-width: 1280px) {
   .project-initiative .bg-deco-6 {
     width: 6.5vw;
-    top: -9.958vw;
+    top: 0;
     left: 2.938vw;
   }
 }
@@ -3074,8 +3074,8 @@ body {
 @media screen and (min-width: 1280px) {
   .project-initiative .bg-deco-7 {
     width: 15.187vw;
-    top: -8.958vw;
-    right: 2.938vw;
+    top: 20.042vw;
+    right: 13.938vw;
   }
 }
 .project-initiative .bg-deco-8 {
@@ -3088,7 +3088,7 @@ body {
   .project-initiative .bg-deco-8 {
     width: 18.521vw;
     top: 25.958vw;
-    left: 0;
+    left: 1vw;
   }
 }
 
@@ -3485,6 +3485,15 @@ body {
     width: 4.5%;
     top: 4vw;
     left: 16.552vw;
+    animation: bg-deco-2-2-animation infinite ease-in-out;
+  }
+  @keyframes bg-deco-2-2-animation {
+    0% {
+      transform: rotate(-360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   .about-reasons .bg-deco-2-3 {
     position: absolute;
@@ -3496,7 +3505,7 @@ body {
   }
   .about-reasons .bg-deco-3 {
     top: 3.438vw;
-    right: -53.698vw;
+    right: -54.698vw;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -3753,7 +3762,7 @@ body {
   .donation-usage .bg-deco-1 {
     position: absolute;
     width: 5%;
-    top: -17.448vw;
+    top: -10.448vw;
     left: 7.969vw;
   }
 }
@@ -4116,7 +4125,7 @@ body {
     width: 30%;
     height: 100%;
   }
-  .q-and-a .bg-deco-el-1 {
+  .q-and-a .bg-deco-1 {
     width: 5%;
     top: -602px;
     left: 255px;

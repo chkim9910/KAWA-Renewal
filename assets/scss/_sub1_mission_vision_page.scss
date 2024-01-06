@@ -419,6 +419,7 @@
       width: 100vw;
       height: 62.5vw;
       padding: 10.417vw 16.667vw;
+      // position: sticky;
     }
   }
   .cont-tit {
@@ -475,7 +476,7 @@
     .bg-deco-2 {
       width: 5.99vw;
       top: 19.042vw;
-      left: 4.938vw;
+      left: 68.938vw;
     }
   }
   .bg-deco-2-web {
@@ -527,7 +528,7 @@
   @media screen and (min-width: 1280px) {
     .bg-deco-5 {
       width: 26.563vw;
-      top: 1.042vw;
+      top: 15.042vw;
       right: 4.938vw;
     }
   }
@@ -540,7 +541,7 @@
   @media screen and (min-width: 1280px) {
     .bg-deco-6 {
       width: 6.5vw;
-      top: -9.958vw;
+      top: 0;
       left: 2.938vw;
     }
   }
@@ -553,8 +554,8 @@
   @media screen and (min-width: 1280px) {
     .bg-deco-7 {
       width: 15.187vw;
-      top: -8.958vw;
-      right: 2.938vw;
+      top: 20.042vw;
+      right: 13.938vw;
     }
   }
   .bg-deco-8 {
@@ -567,7 +568,7 @@
     .bg-deco-8 {
       width: 18.521vw;
       top: 25.958vw;
-      left: 0;
+      left: 1vw;
     }
   }
 }
