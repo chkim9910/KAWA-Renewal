@@ -1,23 +1,56 @@
 $(function () {
   // -----------------------main-page-----------------------
-  // swiper-main-page
+  // ****************main-visual****************
+  // ****************swiper-main-visual****************
+  var leftNumber = document.querySelector(".fst-num .fst-01"); // 첫 번째 슬라이드 번호로 초기 설정
   var swiper = new Swiper(".main-visual", {
     slidesPerView: 1, // 보여질 슬라이드 수
     centeredSlides: true, // 가운데 정렬된 슬라이드
     autoplay: {
-      delay: 500000, // 자동 재생 딜레이(ms)
+      delay: 5000, // 자동 재생 딜레이(ms)
       disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
     },
     pagination: {
-      el: ".swiper-pagination", // 페이지 표시 요소
-      clickable: true, // 페이지 버튼 클릭 가능 여부
+      el: ".swiper-progress-bar", // 페이지 표시 요소
+      type: "progressbar", // 진행 표시 막대 타입
+      // clickable: true, // 페이지 버튼 클릭 가능 여부
     },
     navigation: {
       nextEl: ".swiper-button-next", // 다음 버튼 클래스
       prevEl: ".swiper-button-prev", // 이전 버튼 클래스
     },
+    on: {
+      init: function () {
+        // 슬라이드가 초기화될 때 첫 번째 슬라이드 번호로 leftNumber 설정
+        var activeIndex = this.activeIndex;
+        var leftNumber = document.querySelector(
+          ".fst-num .fst-0" + (activeIndex + 1)
+        );
+        leftNumber.classList.add("active");
+      },
+      slideChange: function () {
+        // 슬라이드가 변경될 때마다 leftNumber 업데이트
+        var activeIndex = this.activeIndex;
+        console.log(activeIndex); // 슬라이드 변경 시 인덱스 확인
+
+        var leftNumbers = document.querySelectorAll(".fst-num .num");
+        leftNumbers.forEach(function (number) {
+          number.classList.remove("active");
+        });
+
+        var leftNumber = document.querySelector(
+          ".fst-num .fst-0" + (activeIndex + 1)
+        );
+        leftNumber.classList.add("active");
+
+        var rightNumber = document.querySelector(".lst-num");
+        rightNumber.innerText = "03";
+      },
+    },
   });
 
+  // ****************main-activities****************
+  // ****************swiper-main-activities****************
   var swiper = new Swiper(".thumb-tit", {
     loop: false,
     spaceBetween: 12,
@@ -31,10 +64,11 @@ $(function () {
       },
     },
   });
+
   var swiper2 = new Swiper(".swiper-main-activities", {
     // loop: true,
     spaceBetween: 10,
-    slidesPerView: "auto",
+    // slidesPerView: 3,
     // centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -47,8 +81,32 @@ $(function () {
     breakpoints: {
       1280: {
         spaceBetween: 12,
+        slidesPerView: 1,
       },
     },
+  });
+  // 모든 슬라이드에 대해 active 클래스를 설정하는 함수 정의
+  function setActiveSlide() {
+    var swiperSlides = document.querySelectorAll(
+      ".swiper-main-activities .swiper-slide"
+    );
+    swiperSlides.forEach(function (slide) {
+      slide.classList.remove("active");
+    });
+    var activeSlide = document.querySelector(
+      ".swiper-main-activities .swiper-slide-active"
+    );
+    activeSlide.classList.add("active");
+  }
+
+  // Swiper 초기화 후 active 클래스 설정 함수 호출
+  swiper2.on("init", function () {
+    setActiveSlide();
+  });
+
+  // 슬라이드 변경 시 active 클래스 설정 함수 호출
+  swiper2.on("slideChange", function () {
+    setActiveSlide();
   });
 
   // swiper-campaign
