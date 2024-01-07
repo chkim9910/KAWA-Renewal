@@ -109,14 +109,86 @@ $(function () {
     setActiveSlide();
   });
 
+  // ****************oncenter****************
+  // ****************swiper-oncenter****************
+  var swiper = new Swiper(".img-list-web", {
+    loop: false,
+    spaceBetween: 20,
+    centeredSlides: true,
+    mousewheel: true,
+    // autoplay: {
+    //   delay: 2500,
+    //   slidesPerView: 2,
+    //   disableOnInteraction: false,
+    // },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: false,
+    },
+  });
+
   // swiper-campaign
   var swiper = new Swiper(".carousel-campaign", {
     slidesPerView: "auto",
-    spaceBetween: 10,
+    spaceBetween: 20,
+    effect: "coverflow",
+    grabCursor: true,
+    slidesPerView: "auto",
+    keyboard: {
+      enabled: true,
+    },
+    mousewheel: {
+      thresholdDelta: 70,
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: true,
+    },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".carousel-campaign .swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      1280: {
+        centeredSlides: true,
+        spaceBetween: 60,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      },
+    },
+
+    // breakpoints: {
+    //   1280: {
+    //     effect: "coverflow",
+    //     grabCursor: true,
+    //     centeredSlides: true,
+    //     loop: true,
+    //     spaceBetween: 60,
+    //     slidesPerView: "auto",
+    //     coverflowEffect: {
+    //       rotate: 0,
+    //       stretch: 0,
+    //       depth: 100,
+    //       modifier: 2,
+    //       slideShadows: true,
+    //     },
+    //     keyboard: {
+    //       enabled: true,
+    //     },
+    //     mousewheel: {
+    //       thresholdDelta: 70,
+    //     },
+    //   },
+    // },
   });
 
   // -----------------------common-sub1-and-sub2-----------------------
@@ -142,7 +214,9 @@ $(function () {
     scrollTrigger: {
       trigger: ".about-reasons",
       start: "top center",
-      end: "center 30%",
+      end: "+=100%",
+      // end: "center 30%",
+      // end: "+=200%",
       // scrub: 2,
       // markers: true,
     },
@@ -150,7 +224,7 @@ $(function () {
 
   const cont1 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".cont-container-1",
+      trigger: ".about-reasons .cont-container-1",
       start: "-10% center",
       end: "center center",
       scrub: 2,
@@ -161,7 +235,7 @@ $(function () {
     .from(".about-reasons .tit", {
       duration: 0.6,
       x: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
@@ -169,28 +243,28 @@ $(function () {
       delay: 0.1,
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".cont-container-1 .cont-txt", {
       duration: 1,
       x: -100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".cont-container-1 .bg-deco", {
       duration: 1,
       x: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     });
 
   const cont2 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".cont-container-2",
+      trigger: ".about-reasons .cont-container-2",
       start: "-10% center",
       end: "center center",
       scrub: 2,
@@ -201,14 +275,14 @@ $(function () {
     .from(".cont-container-2 .pic", {
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".cont-container-2 .cont-txt", {
       duration: 1,
       x: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
@@ -231,7 +305,7 @@ $(function () {
 
   const cont3 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".cont-container-3",
+      trigger: ".about-reasons .cont-container-3",
       start: "-10% center",
       end: "center center",
       scrub: 2,
@@ -243,14 +317,14 @@ $(function () {
     .from(".cont-container-3 .pic", {
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".cont-container-3 .cont-txt", {
       duration: 1,
       x: -100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
@@ -276,28 +350,28 @@ $(function () {
     .from(".donation-usage .bg-deco-1", {
       duration: 0.3,
       y: -200,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".donation-usage .tit-web", {
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".donation-usage .tit", {
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".donation-usage .swiper-donation-usage", {
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
@@ -305,7 +379,7 @@ $(function () {
       delay: 0.1,
       duration: 0.6,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
     });
@@ -397,15 +471,15 @@ $(function () {
     .from(".q-and-a .tit", {
       duration: 0.6,
       y: 100,
-      stagger: 1,
+      // stagger: 1,
       opacity: 0,
       ease: "power2.out",
     })
-    .from(".glide-q-and-a", {
+    .from(".q-and-a .glide-q-and-a", {
       delay: 0.1,
       duration: 0.6,
       x: 200,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
     });
@@ -414,15 +488,16 @@ $(function () {
   new Glide(".glide-q-and-a", {
     type: "slider",
     autoplay: false,
-    // rewind: true,
     perView: 4,
-    // paddings: "30px",
     breakpoints: {
+      // rewind: true,
+      // paddings: "30px",
       780: { perView: 1 },
       1280: { perView: 4 },
     },
     beforeTransition: beforeCardChange,
   }).mount();
+
   function beforeCardChange(args) {
     var current = $(".list-card.active");
     current.removeClass("active");
@@ -465,13 +540,13 @@ const financialReport = gsap.timeline({
 });
 
 financialReport
-  .from(".container-financial-report", {
+  .from(".financial-report .container-financial-report", {
     duration: 0.6,
     y: 100,
     opacity: 0,
     ease: "power2.out",
   })
-  .from(".btn-more", {
+  .from(".financial-report .btn-more", {
     duration: 0.6,
     y: 100,
     opacity: 0,
@@ -483,36 +558,34 @@ financialReport
 gsap.registerPlugin(ScrollTrigger);
 const missionvision = gsap.timeline({
   scrollTrigger: {
-    trigger: ".bg-from-left",
+    trigger: ".mission-vision",
     // pin: ".bg-from-left",
-    start: "top center",
+    start: "20% center",
     end: "center 30%",
     scrub: 2,
-    // markers: true,
+    markers: true,
   },
 });
 
-const content = ".mission-vision .mv-content";
-
 missionvision
-  .from(".bg-from-left", {
+  .from(".mission-vision .bg-deco", {
     duration: 1,
     x: 100,
-    stagger: 1,
+    // stagger: 1,
     opacity: 0,
     ease: "power2.out",
   })
-  .from(content, {
+  .from(".mission-vision .mv-content", {
     duration: 1,
     y: 100,
-    stagger: 0.6,
+    // stagger: 0.6,
     opacity: 0,
     ease: "power2.out",
   })
-  .from(".from-left", {
+  .from(".mission-vision .from-left", {
     duration: 1,
     x: 100,
-    stagger: 0.3,
+    // stagger: 0.3,
     opacity: 0,
     ease: "power2.out",
   });
@@ -567,10 +640,10 @@ if (window.innerWidth >= 1280) {
   // 각각의 content에 대한 애니메이션
   contents.forEach(function (elem, i) {
     const tlDelay = i;
-    var titles = elem.querySelectorAll("#text");
+    var titles = elem.querySelectorAll("#corevalue #text");
     var contentTl = gsap.timeline();
 
-    gsap.set(".content", {
+    gsap.set("#corevalue .content", {
       zIndex: (i, target, targets) => targets.length - i,
       autoAlpha: 0, // 초기에는 모든 .content를 숨김
     });
@@ -591,9 +664,9 @@ if (window.innerWidth >= 1280) {
     // 각 content 요소에 ScrollTrigger 생성
     ScrollTrigger.create({
       trigger: elem,
-      pin: elem,
       start: "top 25%", // 트리거가 시작되는 위치
       end: "+=200%", // 트리거가 끝나는 위치
+      pin: elem,
       // end: "bottom 40%",
       scrub: true,
       toggleActions: "play none none reverse", // 트리거 동작 설정
@@ -620,14 +693,14 @@ if (window.innerWidth >= 1280) {
     ease: "none",
     scrollTrigger: {
       trigger: "#projectInitiative .wrapper",
-      pin: true,
       start: "40% center",
+      end: "+=300%",
       // end: "center bottom",
-      // end: "+=300%",
+      pin: true,
       scrub: 1,
       // stagger: 5,
       delay: 2,
-      snap: 1 / (conts.length - 1),
+      // snap: 1 / (conts.length - 1),
       // markers: true,
     },
   });
@@ -638,8 +711,9 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .wrapper",
       start: "top center",
+      end: "bottom top",
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -655,12 +729,12 @@ if (window.innerWidth >= 1280) {
       duration: 0.3,
       y: 100,
       opacity: 0,
-      stagger: 0.3,
+      // stagger: 0.3,
     })
     .from([".cont-1-wrap .bg-deco-1-cls-2", ".bg-deco-1-cls-3"], {
       duration: 0.8,
       scale: 0,
-      stagger: 0.2,
+      // stagger: 0.2,
       delay: 0.5,
       // y: 100,
       // opacity: 0,
@@ -678,8 +752,9 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-2-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont2
@@ -692,7 +767,7 @@ if (window.innerWidth >= 1280) {
       {
         duration: 0.5,
         y: 100,
-        stagger: 0.1,
+        // stagger: 0.1,
         opacity: 0,
         ease: "power2.out",
         // delay: 0.5,
@@ -706,15 +781,16 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-3-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont3
     .from([".cont-3-wrap .cont-3-tit", ".cont-3-wrap .cont-3-desc"], {
       duration: 0.5,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
       delay: 0.5,
@@ -727,15 +803,16 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-4-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont4
     .from([".cont-4-wrap .cont-4-tit", ".cont-4-wrap .cont-4-desc"], {
       duration: 0.5,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
       delay: 1.3,
@@ -748,15 +825,16 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-5-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont5
     .from([".cont-5-wrap .cont-5-tit", ".cont-5-wrap .cont-5-desc"], {
       duration: 0.5,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
       delay: 2.5,
@@ -769,15 +847,16 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-6-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont6
     .from([".cont-6-wrap .cont-6-tit", ".cont-6-wrap .cont-6-desc"], {
       duration: 0.5,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
       delay: 4.8,
@@ -790,15 +869,16 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-7-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont7
     .from([".cont-7-wrap .cont-7-tit", ".cont-7-wrap .cont-7-desc"], {
       duration: 1,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
       delay: 11,
@@ -811,15 +891,16 @@ if (window.innerWidth >= 1280) {
     scrollTrigger: {
       trigger: "#projectInitiative .cont-8-wrap",
       start: "top top",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   proCont8
     .from([".cont-8-wrap .cont-8-tit", ".cont-8-wrap .cont-8-desc"], {
       duration: 2,
       y: 100,
-      stagger: 0.1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
       delay: 35,
