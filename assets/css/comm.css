@@ -328,6 +328,7 @@ legend {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -1268,6 +1269,8 @@ body {
     padding-bottom: 30px;
   }
   .main-visual .scrolldown-wrap .txt-scroll {
+    position: absolute;
+    bottom: 10%;
     display: block;
     z-index: 1;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -1277,14 +1280,45 @@ body {
     line-height: 19.2px;
     color: rgba(255, 255, 255, 0.5);
   }
-  .main-visual .scrolldown-wrap .txt-scroll:after {
-    display: block;
-    content: "\f103";
-    font-family: "Line Awesome Free";
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    font-size: 20px;
+  .main-visual .scrolldown-wrap .scroll-downs {
+    position: absolute;
+    right: 0;
+    bottom: 4%;
+    left: 0;
+    margin: auto;
+    width: 1.771vw;
+    height: 2.865vw;
+    z-index: 2;
+  }
+  .main-visual .scrolldown-wrap .mousey {
+    padding: 0.417vw 0.729vw;
+    height: 1.667vw;
+    border: 2px solid #fff;
+    border-radius: 1.302vw;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+  .main-visual .scrolldown-wrap .scroller {
+    height: 0.729vw;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-iteration-count: infinite;
+  }
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(15px);
+      opacity: 0;
+    }
   }
 }
 
@@ -1377,9 +1411,9 @@ body {
   .main-activities .wrapper .txt {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 2.083vw;
+    font-size: 1.875vw;
     letter-spacing: 0%;
-    line-height: 2.4996vw;
+    line-height: 2.25vw;
     color: #ffffff;
   }
 }
@@ -1396,10 +1430,10 @@ body {
   color: #4c4c4c;
   font-weight: 700;
 }
-.main-activities .thumb-tit .tit:active, .main-activities .thumb-tit .tit:hover {
+.main-activities .thumb-tit .tit.swiper-slide-thumb-active {
   color: #f76a00;
 }
-.main-activities .thumb-tit .tit:active:after, .main-activities .thumb-tit .tit:hover:after {
+.main-activities .thumb-tit .tit.swiper-slide-thumb-active:after {
   display: block;
   content: "";
   width: 8px;
@@ -1421,7 +1455,7 @@ body {
     color: #222222;
     font-weight: 700;
   }
-  .main-activities .thumb-tit .tit:active:after, .main-activities .thumb-tit .tit:hover:after {
+  .main-activities .thumb-tit .tit.active:after {
     width: 0.625vw;
     height: 0.625vw;
     margin-bottom: 1.771vw;
@@ -1579,8 +1613,7 @@ body {
 .oncenter .img-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  width: 322px;
+  gap: 5px;
   padding-top: 50px;
 }
 @media screen and (min-width: 1280px) {
@@ -1595,6 +1628,7 @@ body {
 .oncenter .img {
   width: 155px;
   height: 146px;
+  flex-grow: 1;
   border: 0.5px solid #dddddd;
   border-radius: 10px;
 }
@@ -1688,7 +1722,6 @@ body {
   }
   .oncenter .swiper-scrollbar {
     bottom: -0.781vw;
-    background: rgba(255, 255, 255, 0.5);
   }
   .oncenter .swiper-scrollbar-drag {
     background: #ff862b;
@@ -1723,6 +1756,11 @@ body {
   border-radius: 50%;
   z-index: 0;
   content: "";
+}
+@media screen and (min-width: 1280px) {
+  .oncenter-info .wrapper {
+    display: none;
+  }
 }
 .oncenter-info .wrapper-web {
   display: none;
@@ -1812,9 +1850,6 @@ body {
 @media screen and (min-width: 1280px) {
   .oncenter-info {
     padding: 25.365vw 18.021vw;
-  }
-  .oncenter-info .wrapper-mob {
-    display: none;
   }
   .oncenter-info .wrapper-web {
     display: flex;
@@ -1991,7 +2026,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .campaign .carousel-campaign {
-    margin-top: 8.604vw;
+    margin-top: 5vw;
     height: 35.042vw;
     border: none;
   }
@@ -2512,9 +2547,9 @@ body {
   .donation .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 2.083vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
+    line-height: 2.4996vw;
     color: #222222;
   }
 }
@@ -3916,8 +3951,7 @@ body {
   .q-and-a .glide-q-and-a {
     width: 77.083vw;
     margin-top: 2vw;
-    overflow: hidden;
-    overflow-x: hidden;
+    overflow: visible;
   }
 }
 .q-and-a .glide__slides {

@@ -315,17 +315,63 @@
       justify-content: center;
       padding-bottom: 30px;
       .txt-scroll {
+        position: absolute;
+        bottom: 10%;
         display: block;
         z-index: 1;
         @include web-bd(16px, rgba(255, 255, 255, 0.5));
-        &:after {
-          display: block;
-          content: "\f103";
-          font-family: "Line Awesome Free";
-          font-weight: 900;
-          color: rgba(255, 255, 255, 0.5);
-          text-align: center;
-          font-size: 20px;
+        // &:after {
+        //   display: block;
+        //   // content: "\f103";
+        //   content: "";
+        //   font-family: "Line Awesome Free";
+        //   font-weight: 900;
+        //   color: rgba(255, 255, 255, 0.5);
+        //   text-align: center;
+        //   font-size: 20px;
+        // }
+      }
+      .scroll-downs {
+        position: absolute;
+        // top: 0;
+        right: 0;
+        bottom: 4%;
+        left: 0;
+        margin: auto;
+        width: 1.771vw;
+        height: 2.865vw;
+        z-index: 2;
+      }
+      .mousey {
+        // width: 3px;
+        padding: 0.417vw 0.729vw;
+        height: 1.667vw;
+        border: 2px solid #fff;
+        border-radius: 1.302vw;
+        opacity: 0.75;
+        box-sizing: content-box;
+      }
+      .scroller {
+        // width: 3px;
+        height: 0.729vw;
+        border-radius: 25%;
+        background-color: #fff;
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+        animation-iteration-count: infinite;
+      }
+      @keyframes scroll {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(15px);
+          opacity: 0;
         }
       }
     }
@@ -410,7 +456,7 @@
   @media screen and (min-width: 1280px) {
     .wrapper {
       .txt {
-        @include web-bd(2.083vw, $white);
+        @include web-bd(1.875vw, $white);
         // transform: translateY(calc(526px / 2.5));
       }
     }
@@ -422,8 +468,8 @@
       align-items: flex-end;
       @include mob-bd(16px, $txtTit-2);
       font-weight: 700;
-      &:active,
-      &:hover {
+
+      &.swiper-slide-thumb-active {
         color: $primary;
         &:after {
           display: block;
@@ -443,8 +489,7 @@
       .tit {
         @include web-bd(1.354vw, $txtTit);
         font-weight: 700;
-        &:active,
-        &:hover {
+        &.active {
           &:after {
             width: 0.625vw;
             height: 0.625vw;
@@ -577,8 +622,8 @@
   .img-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    width: 322px;
+    gap: 5px;
+    // width: 322px;
     padding-top: 50px;
   }
   @media screen and (min-width: 1280px) {
@@ -593,6 +638,7 @@
   .img {
     width: 155px;
     height: 146px;
+    flex-grow: 1;
     border: 0.5px solid $gray-300;
     border-radius: 10px;
   }
@@ -698,7 +744,7 @@
     }
     .swiper-scrollbar {
       bottom: -0.781vw;
-      background: rgba(255, 255, 255, 0.5);
+      // background: rgba(255, 255, 255, 0.5);
     }
     .swiper-scrollbar-drag {
       background: $secondary;
@@ -739,6 +785,11 @@
       border-radius: 50%;
       z-index: 0;
       content: "";
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .wrapper {
+      display: none;
     }
   }
   .wrapper-web {
@@ -794,9 +845,6 @@
 @media screen and (min-width: 1280px) {
   .oncenter-info {
     padding: 25.365vw 18.021vw;
-    .wrapper-mob {
-      display: none;
-    }
     .wrapper-web {
       display: flex;
       justify-content: flex-start;
@@ -1067,7 +1115,7 @@
   }
   @media screen and (min-width: 1280px) {
     .carousel-campaign {
-      margin-top: 8.604vw;
+      margin-top: 5vw;
       height: 35.042vw;
       border: none;
       .txt {
@@ -1104,9 +1152,6 @@
     .swiper-slide {
       height: 34.375vw !important;
       width: 23.646vw !important;
-    }
-    .swiper-slide-active {
-      // transform: scale(1.5);
     }
   }
   .pig {
@@ -1556,7 +1601,7 @@
   }
   @media screen and (min-width: 1280px) {
     .tit {
-      @include web-tit(2.5vw, $txtTit);
+      @include web-tit(2.083vw, $txtTit);
     }
   }
   .content {
