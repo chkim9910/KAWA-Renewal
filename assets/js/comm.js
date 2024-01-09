@@ -7,7 +7,7 @@ $(function () {
     slidesPerView: 1, // 보여질 슬라이드 수
     centeredSlides: true, // 가운데 정렬된 슬라이드
     autoplay: {
-      delay: 5000, // 자동 재생 딜레이(ms)
+      delay: 3000, // 자동 재생 딜레이(ms)
       disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
     },
     pagination: {
@@ -53,8 +53,8 @@ $(function () {
   const mainActivities = gsap.timeline({
     scrollTrigger: {
       trigger: ".main-activities",
-      pin: ".main-activities",
-      start: "top top",
+      // pin: ".main-activities",
+      start: "top center",
       end: "bottom top",
       scrub: 2,
       markers: true,
@@ -161,28 +161,22 @@ $(function () {
   const onCenter = gsap.timeline({
     scrollTrigger: {
       trigger: ".oncenter",
-      pin: ".oncenter",
+      // pin: ".oncenter",
       pinSpacing: true,
-      start: "top top",
-      end: "bottom top",
+      start: "top center",
+      end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   onCenter
     .from([".oncenter .tit", ".oncenter .content"], {
-      duration: 0.8,
-      x: 100,
+      duration: 0.6,
+      x: -100,
       stagger: 0.2,
       opacity: 0,
       ease: "power2.out",
       // delay: 1,
-    })
-    .from(".oncenter .img-list", {
-      duration: 0.6,
-      y: 100,
-      opacity: 0,
-      ease: "power2.out",
     })
     .from(".oncenter .img-list-web", {
       duration: 0.6,
@@ -190,10 +184,16 @@ $(function () {
       // stagger: 1,
       opacity: 0,
       ease: "power2.out",
-      delay: 0.5,
+      // delay: 0.5,
     })
     .to(".oncenter .img-list-web", {
-      duration: 2,
+      duration: 0.6,
+    })
+    .from(".oncenter .img-list", {
+      duration: 0.6,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
     });
 
   // ****************swiper-oncenter****************
@@ -220,15 +220,15 @@ $(function () {
         trigger: ".oncenter-info",
         pin: ".oncenter-info",
         pinSpacing: true,
-        start: "10% top",
+        start: "top top",
         end: "bottom top",
         scrub: 2,
-        markers: true,
+        // markers: true,
       },
     });
     oncenterInfo
       .from(".oncenter-info", {
-        duration: 0.6,
+        duration: 1,
         // y: 100,
         // stagger: 0.6,
         background: "#ffffff",
@@ -293,7 +293,7 @@ $(function () {
         start: "top top",
         end: "center top",
         scrub: 2,
-        markers: true,
+        // markers: true,
       },
     });
     campaign
@@ -337,6 +337,8 @@ $(function () {
     },
     mousewheel: {
       thresholdDelta: 70,
+      invert: true,
+      sensitivity: 0.5,
     },
     coverflowEffect: {
       rotate: 0,
@@ -349,14 +351,14 @@ $(function () {
       el: ".carousel-campaign .swiper-pagination",
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     breakpoints: {
       1280: {
         spaceBetween: 60,
         loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -369,23 +371,22 @@ $(function () {
   });
 
   // ****************notice****************
-
   const notice = gsap.timeline({
     scrollTrigger: {
       trigger: ".notice",
       // pin: ".notice",
       pinSpacing: true,
-      start: "top 60%",
+      start: "-5% 60%",
       end: "center 60%",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
 
   if (window.innerWidth >= 1280) {
     notice.from(".notice", {
-      duration: 0.8,
-      background: "#222222",
+      duration: 1,
+      // background: "#222222",
       opacity: 1,
       ease: "power2.out",
     });
@@ -409,7 +410,7 @@ $(function () {
       start: "top 40%",
       end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   subscribe.from(
@@ -417,8 +418,8 @@ $(function () {
       ".subscribe .tit",
       ".subscribe .content",
       ".subscribe .content-web",
-      ".inp-wrap",
-      ".btn",
+      ".subscribe .inp-wrap",
+      ".subscribe .btn",
     ],
     {
       duration: 2,
@@ -439,7 +440,7 @@ $(function () {
       start: "top 40%",
       end: "center center",
       scrub: 2,
-      markers: true,
+      // markers: true,
     },
   });
   donation.from(
@@ -469,16 +470,18 @@ $(function () {
   // sidebar
   // list에서 active 지우기
   $(function () {
-    $(".sidebar-web .list-sidebar").removeClass("active");
-    $(".info-active").addClass("active");
-    $(".mission-vision-active").addClass("active");
+    if (window.innerWidth >= 1280) {
+      $(".sidebar-web .list-sidebar").removeClass("active");
+      $(".info-active").addClass("active");
+      $(".mission-vision-active").addClass("active");
 
-    $(".sidebar-web .list-sidebar").click(function () {
-      // list에서 active 지우기
-      $(".list-sidebar").removeClass("active");
-      // this에 active 부여하기
-      $(this).addClass("active");
-    });
+      $(".sidebar-web .list-sidebar").click(function () {
+        // list에서 active 지우기
+        $(".list-sidebar").removeClass("active");
+        // this에 active 부여하기
+        $(this).addClass("active");
+      });
+    }
   });
 
   // -----------------------sub-2-page-----------------------
@@ -487,7 +490,7 @@ $(function () {
   const aboutReasons = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-reasons",
-      start: "top center",
+      start: "center center",
       end: "+=100%",
       // end: "center 30%",
       // end: "+=200%",
@@ -508,7 +511,14 @@ $(function () {
   cont1
     .from(".about-reasons .tit", {
       duration: 0.6,
-      x: 100,
+      y: 100,
+      // stagger: 1,
+      opacity: 0,
+      ease: "power2.out",
+    })
+    .from(".cont-container-1 .cont-txt", {
+      duration: 1,
+      y: 100,
       // stagger: 1,
       opacity: 0,
       ease: "power2.out",
@@ -520,21 +530,39 @@ $(function () {
       // stagger: 1,
       opacity: 0,
       ease: "power2.out",
-    })
-    .from(".cont-container-1 .cont-txt", {
-      duration: 1,
-      x: -100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-1 .bg-deco", {
-      duration: 1,
-      x: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
     });
+  if (window.innerWidth >= 1280) {
+    cont1
+      .from(".about-reasons .tit", {
+        duration: 0.6,
+        x: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-1 .pic", {
+        delay: 0.1,
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-1 .cont-txt", {
+        duration: 1,
+        x: -100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-1 .bg-deco", {
+        duration: 1,
+        x: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  }
 
   const cont2 = gsap.timeline({
     scrollTrigger: {
@@ -546,36 +574,53 @@ $(function () {
     },
   });
   cont2
+    .from(".cont-container-2 .cont-txt", {
+      duration: 1,
+      y: 100,
+      // stagger: 1,
+      opacity: 0,
+      ease: "power2.out",
+    })
     .from(".cont-container-2 .pic", {
       duration: 0.6,
       y: 100,
       // stagger: 1,
       opacity: 0,
       ease: "power2.out",
-    })
-    .from(".cont-container-2 .cont-txt", {
-      duration: 1,
-      x: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-2 .bg-deco-2-2", {
-      duration: 0.2,
-      x: -100,
-      scale: 2,
-      rotation: 720,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-2 .bg-deco-2-3", {
-      duration: 0.2,
-      x: -100,
-      y: 100,
-      // rotation: 720,
-      opacity: 0,
-      ease: "power2.out",
     });
+  if (window.innerWidth >= 1280) {
+    cont2
+      .from(".cont-container-2 .pic", {
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-2 .cont-txt", {
+        duration: 1,
+        x: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-2 .bg-deco-2-2", {
+        duration: 0.2,
+        x: -100,
+        scale: 2,
+        rotation: 720,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-2 .bg-deco-2-3", {
+        duration: 0.2,
+        x: -100,
+        y: 100,
+        // rotation: 720,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  }
 
   const cont3 = gsap.timeline({
     scrollTrigger: {
@@ -586,30 +631,45 @@ $(function () {
       // markers: true,
     },
   });
-
   cont3
+    .from(".cont-container-3 .cont-txt", {
+      duration: 1,
+      y: 100,
+      // stagger: 1,
+      opacity: 0,
+      ease: "power2.out",
+    })
     .from(".cont-container-3 .pic", {
       duration: 0.6,
       y: 100,
       // stagger: 1,
       opacity: 0,
       ease: "power2.out",
-    })
-    .from(".cont-container-3 .cont-txt", {
-      duration: 1,
-      x: -100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-3 .bg-deco-3-2", {
-      duration: 0.2,
-      x: -100,
-      rotation: 720,
-      opacity: 0,
-      ease: "power2.out",
     });
-
+  if (window.innerWidth >= 1280) {
+    cont3
+      .from(".cont-container-3 .pic", {
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-3 .cont-txt", {
+        duration: 1,
+        x: -100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-3 .bg-deco-3-2", {
+        duration: 0.2,
+        x: -100,
+        rotation: 720,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  }
   // ****************donation-usage****************
   const donationUsage = gsap.timeline({
     scrollTrigger: {
@@ -717,7 +777,7 @@ $(function () {
   });
 
   //****************q-and-a****************
-  const fqa = gsap.timeline({
+  const fqaMob = gsap.timeline({
     scrollTrigger: {
       trigger: ".q-and-a",
       start: "top center",
@@ -726,38 +786,68 @@ $(function () {
       // markers: true,
     },
   });
-
-  fqa
-    .from(".q-and-a .bg-deco-1", {
-      duration: 0.2,
-      x: -100,
-      rotation: 520,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".q-and-a .bg-deco-2", {
-      duration: 0.2,
-      x: -100,
-      y: 100,
-      opacity: 0,
-      ease: "power2.out",
-    })
+  fqaMob
     .from(".q-and-a .tit", {
-      duration: 0.6,
+      duration: 0.5,
       y: 100,
-      // stagger: 1,
+      // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
     })
     .from(".q-and-a .glide-q-and-a", {
-      delay: 0.1,
-      duration: 0.6,
-      x: 200,
+      duration: 0.5,
+      y: 100,
       // stagger: 0.1,
       opacity: 0,
       ease: "power2.out",
     });
 
+  if (window.innerWidth >= 1280) {
+    const fqa = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".q-and-a",
+        pin: ".q-and-a",
+        start: "-15% top",
+        end: "bottom top",
+        scrub: 2,
+        // markers: true,
+      },
+    });
+
+    fqa
+      .from(".q-and-a .bg-deco-1", {
+        duration: 0.2,
+        x: -100,
+        rotation: 520,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".q-and-a .bg-deco-2", {
+        duration: 0.2,
+        x: -100,
+        y: 100,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".q-and-a .tit", {
+        duration: 0.4,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".q-and-a .glide-q-and-a", {
+        // delay: 0.1,
+        duration: 0.2,
+        x: 1200,
+        // stagger: 0.1,
+        opacity: 1,
+        ease: "power2.out",
+      })
+      .to(".q-and-a .glide-q-and-a", {
+        duration: 1.5,
+      });
+  }
   //****************glide-q-and-a****************
   const glide = new Glide(".glide-q-and-a", {
     type: "slider",
@@ -776,11 +866,11 @@ $(function () {
   window.addEventListener("scroll", function () {
     // 스크롤 위치 확인
     const scrollPosition = document.documentElement.scrollTop;
-
+    console.log(scrollPosition);
     // Glide.js 슬라이더의 인스턴스가 올바르게 할당되었는지 확인
     if (glide) {
       // 스크롤 위치에 따라 슬라이드 변경
-      if (scrollPosition > 5000) {
+      if (scrollPosition > 4450) {
         glide.go(">>");
       } else {
         glide.go("<<");
@@ -805,23 +895,19 @@ $(function () {
     }
     $('[data-slide-number="' + newIndex + '"]').addClass("active");
   }
-  $(".dot").click(function () {
-    $(".dot").removeClass("selected");
-    $(this).addClass("selected");
-  });
 
   // ****************q-and-a-web의 card flip****************
-  $(".list-card").click(function () {
-    if ($(this).find(".card").hasClass("flipped")) {
-      $(this).find(".card").removeClass("flipped");
-    } else {
-      $(".card").removeClass("flipped");
-      $(this).find(".card").toggleClass("flipped");
-    }
+  $(".list-card").mouseenter(function () {
+    $(this).find(".card").addClass("flipped");
+  });
+
+  $(".list-card").mouseleave(function () {
+    $(this).find(".card").removeClass("flipped");
   });
 });
+
 // ****************financial-report****************
-const financialReport = gsap.timeline({
+const financialReportMob = gsap.timeline({
   scrollTrigger: {
     trigger: ".financial-report",
     start: "top center",
@@ -830,8 +916,7 @@ const financialReport = gsap.timeline({
     // markers: true,
   },
 });
-
-financialReport
+financialReportMob
   .from(".financial-report .container-financial-report", {
     duration: 0.6,
     y: 100,
@@ -844,9 +929,32 @@ financialReport
     opacity: 0,
     ease: "power2.out",
   });
-
+if (window.innerWidth >= 1280) {
+  const financialReport = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".financial-report",
+      start: "bottom top",
+      end: "center center",
+      scrub: 2,
+      // markers: true,
+    },
+  });
+  financialReport
+    .from(".financial-report .container-financial-report", {
+      duration: 0.6,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+    })
+    .from(".financial-report .btn-more", {
+      duration: 0.6,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+    });
+}
 // -----------------------sub-1-page-----------------------
-// ****************mission-vision-gsap****************
+// ****************mission-vision****************
 gsap.registerPlugin(ScrollTrigger);
 const missionvision = gsap.timeline({
   scrollTrigger: {
@@ -882,18 +990,42 @@ missionvision
     ease: "power2.out",
   });
 
-// ****************core-value-gsap****************
+// ****************core-value****************
 gsap.registerPlugin(ScrollTrigger);
-
+if (window.innerWidth < 1280) {
+  const coreValueMob = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#corevalue",
+      start: "top center",
+      end: "center center",
+      scrub: 2,
+      // markers: true,
+    },
+  });
+  coreValueMob
+    .from("#corevalue", {
+      duration: 0.6,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+    })
+    .from("#corevalue .content", {
+      duration: 0.6,
+      y: 100,
+      stagger: 0.2,
+      opacity: 0,
+      ease: "power2.out",
+    });
+}
 // content 배열
 var contents = gsap.utils.toArray("#corevalue .content");
-
 if (window.innerWidth >= 1280) {
   const sectionTl = gsap.timeline({
     onComplete: function () {
       gsap.to("#corevalue", {
-        opacity: 0,
-        duration: 1,
+        y: -200,
+        // opacity: 0,
+        duration: 0.5,
       }); // 모든 애니메이션이 완료된 후 #corevalue의 opacity를 0으로 설정
     },
     scrollTrigger: {
@@ -973,233 +1105,80 @@ if (window.innerWidth >= 1280) {
   });
 }
 
-// ****************project-initiative-gsap****************
-gsap.registerPlugin(ScrollTrigger);
-if (window.innerWidth >= 1280) {
-  // cont 배열
-  const conts = gsap.utils.toArray("#projectInitiative .cont");
+// ****************project-initiative****************
+// cont 배열
+const conts = gsap.utils.toArray("#projectInitiative .cont");
 
+if (window.innerWidth < 1280) {
+  conts.forEach((cont) => {
+    gsap.from(cont, {
+      duration: 0.6,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: cont,
+        start: "40% center",
+        end: "center center",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+  });
+} else {
   // horizontal 애니메이션
   gsap.to(conts, {
     xPercent: -100 * (conts.length - 1),
     ease: "none",
     scrollTrigger: {
       trigger: "#projectInitiative .wrapper",
-      start: "40% center",
+      start: "top top",
       end: "+=300%",
-      // end: "bottom top",
       pin: true,
+      ease: "power2.inOut",
       scrub: 1,
-      // stagger: 5,
       delay: 2,
+      // end: "bottom top",
+      // stagger: 5,
       // snap: 1 / (conts.length - 1),
       // markers: true,
     },
   });
 
-  // conts에 timeline 할당
-  // 글씨 애니메이션
-  const contsTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .wrapper",
-      start: "top center",
-      end: "bottom top",
-      scrub: 1,
-      markers: true,
-    },
-  });
+  // // cont에 timeline 할당
+  conts.forEach((cont) => {
+    const contTit = cont.querySelector(".cont-tit");
+    const contDesc = cont.querySelector(".cont-desc");
+    const contDeco = cont.querySelector(".bg-deco");
 
-  contsTl
-    .from(".cont-1-wrap .cont-1-tit", {
-      duration: 0.3,
-      x: -100,
-      opacity: 0,
-      // stagger: 0.3,
-      // delay: 1,
-    })
-    .from(".cont-1-wrap .cont-1-desc", {
-      duration: 0.3,
-      y: 100,
-      opacity: 0,
-      // stagger: 0.3,
-    })
-    .from([".cont-1-wrap .bg-deco-1-cls-2", ".bg-deco-1-cls-3"], {
-      duration: 0.8,
-      scale: 0,
-      // stagger: 0.2,
-      delay: 0.5,
-      // y: 100,
-      // opacity: 0,
-    })
-    .from(".cont-1-wrap .bg-deco-1-cls-1", {
-      duration: 0.8,
-      scale: 0,
-      rotate: 180,
-    })
-    .to(".cont-1-wrap .cont-1-desc", {
-      duration: 12,
+    const contTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: cont,
+        start: "top center",
+        end: "center center",
+        scrub: 1,
+        markers: true,
+      },
     });
 
-  const proCont2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-2-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  proCont2
-    .from(
-      [
-        ".cont-2-wrap .cont-2-tit",
-        ".cont-2-wrap .cont-2-desc",
-        ".cont-1-wrap .bg-deco-2",
-      ],
-      {
-        duration: 0.5,
+    contTl
+      .from(contTit, {
+        duration: 0.3,
         y: 100,
-        // stagger: 0.1,
+        stagger: 1,
         opacity: 0,
-        ease: "power2.out",
-        // delay: 0.5,
-      }
-    )
-    .to([".cont-2-wrap .cont-2-tit", ".cont-2-wrap .cont-2-desc"], {
-      duration: 10,
-    });
-
-  const proCont3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-3-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
+      })
+      .from(contDesc, {
+        duration: 0.3,
+        y: 100,
+        stagger: 1,
+        opacity: 0,
+      })
+      .from(contDeco, {
+        duration: 0.3,
+        y: 100,
+        stagger: 1,
+        opacity: 0,
+      });
   });
-  proCont3
-    .from([".cont-3-wrap .cont-3-tit", ".cont-3-wrap .cont-3-desc"], {
-      duration: 0.5,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 0.5,
-    })
-    .to([".cont-3-wrap .cont-3-tit", ".cont-3-wrap .cont-3-desc"], {
-      duration: 3,
-    });
-
-  const proCont4 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-4-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  proCont4
-    .from([".cont-4-wrap .cont-4-tit", ".cont-4-wrap .cont-4-desc"], {
-      duration: 0.5,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 1.3,
-    })
-    .to([".cont-4-wrap .cont-4-tit", ".cont-4-wrap .cont-4-desc"], {
-      duration: 3,
-    });
-
-  const proCont5 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-5-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  proCont5
-    .from([".cont-5-wrap .cont-5-tit", ".cont-5-wrap .cont-5-desc"], {
-      duration: 0.5,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 2.5,
-    })
-    .to([".cont-5-wrap .cont-5-tit", ".cont-5-wrap .cont-5-desc"], {
-      duration: 3,
-    });
-
-  const proCont6 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-6-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  proCont6
-    .from([".cont-6-wrap .cont-6-tit", ".cont-6-wrap .cont-6-desc"], {
-      duration: 0.5,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 4.8,
-    })
-    .to([".cont-6-wrap .cont-6-tit", ".cont-6-wrap .cont-6-desc"], {
-      duration: 3,
-    });
-
-  const proCont7 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-7-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  proCont7
-    .from([".cont-7-wrap .cont-7-tit", ".cont-7-wrap .cont-7-desc"], {
-      duration: 1,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 11,
-    })
-    .to([".cont-7-wrap .cont-7-tit", ".cont-7-wrap .cont-7-desc"], {
-      duration: 3,
-    });
-
-  const proCont8 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#projectInitiative .cont-8-wrap",
-      start: "top top",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  proCont8
-    .from([".cont-8-wrap .cont-8-tit", ".cont-8-wrap .cont-8-desc"], {
-      duration: 2,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 35,
-    })
-    .to([".cont-8-wrap .cont-8-tit", ".cont-8-wrap .cont-8-desc"], {
-      duration: 3,
-    });
-
-  // conts.seek(Math.floor(scrollTrigger.progress * 100));
 }
