@@ -197,16 +197,36 @@
     }
   }
   .btn-menu {
-    width: 35px;
-    height: 36px;
-
-    &:before {
-      content: "\f0c9";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      font-size: 35px;
-      color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1000;
+    // &:before {
+    //   content: "\f0c9";
+    //   font-family: "Line Awesome Free";
+    //   font-weight: 900;
+    //   font-size: 35px;
+    //   color: #fff;
+    // }
+    &.click {
+      .btn-line-middle {
+        display: none;
+      }
+      .btn-line-top {
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+      .btn-line-bottom {
+        transform: rotate(-45deg) translate(5px, -7px);
+      }
     }
+  }
+  .btn-line {
+    width: 100%;
+    border: 1px solid $white;
+    border-radius: 1px;
+    transition: all 0.2s;
   }
   @media screen and (min-width: 1280px) {
     .btn-menu {
@@ -241,12 +261,12 @@
   }
   // gnb
   #gnb {
-    display: none;
+    // display: none;
     // background: url(../../images/main/sidebar_mob.png) no-repeat 50% 0;
     // background-size: 360px auto;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100vw;
     width: 100%;
     min-height: 100vh;
     background-color: #222;
@@ -264,10 +284,17 @@
       display: flex;
       align-items: center;
       gap: 19px;
-      width: 76px;
+      width: 32px;
+      height: 32px;
+      transform: translate(-150%, 1px);
     }
     .lang-items {
-      width: 30px;
+      width: 100%;
+      height: 100%;
+    }
+    .lang {
+      width: 100%;
+      height: 100%;
     }
     .lang-icon {
       color: #fff;
@@ -303,13 +330,13 @@
         font-family: $font-family-enNum;
       }
     }
-    .close::before {
-      content: "\f00d";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      font-size: 30px;
-      color: #fff;
-    }
+    // .close::before {
+    //   content: "\f00d";
+    //   font-family: "Line Awesome Free";
+    //   font-weight: 900;
+    //   font-size: 30px;
+    //   color: #fff;
+    // }
   }
   .inner-items {
     display: flex;
@@ -352,34 +379,47 @@
 
     .wrapper-dep1 {
       height: 47px;
-    }
-    .li-dep1 {
       display: flex;
-      justify-content: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
       padding: 12px 54px;
-      @include mob-bd(16px, $white);
-      .oncenter-dep1 {
-        width: 173px;
-      }
     }
-    .txt-dep1 {
+
+    .li-dep1 {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 166px;
-      &:after {
-        content: "\f107";
-        font-family: "Line Awesome Free";
-        font-weight: 900;
+      width: 50%;
+      @include mob-bd(16px, $white);
+      text-align: center;
+    }
+    .txt-dep1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-50%);
+      #text {
+        display: block;
+        width: 50px;
+      }
+      .arr-down {
         font-size: 14px;
       }
     }
   }
   .depth2 {
-    display: none;
+    // display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
     padding: 15px 0;
+    // overflow: hidden;
     background: rgba(51, 51, 51, 0.5);
-
+    transition: all 0.3s;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
     .wrapper-dep2 {
       display: flex;
       justify-content: center;
@@ -389,9 +429,6 @@
     .li-dep2 {
       @include mob-bd(14px);
     }
-  }
-  .dep2-oncenter {
-    display: block;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -416,7 +453,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  z-index: -1;
+  z-index: 9;
   .logo {
     &:before {
       display: block;
@@ -560,6 +597,31 @@
       margin-left: 5.468vw;
       gap: 2px;
     }
+  }
+  #top_btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    line-height: 46px;
+    border: 0px solid rgb(173 87 0 / 50%);
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    z-index: 9;
+    background: rgb(173 87 0 / 50%);
+    cursor: pointer;
+    /* background: rgba(255, 255, 255, 0.5); */
+    /* backdrop-filter: blur(20px); */
+  }
+  #top_btn:hover {
+    border-color: #ff862b;
+    /* border-color: #3059c7; */
+    background: #ff862b;
+    /* background: #3059c7; */
+    color: #fff;
   }
 }
 @media screen and (min-width: 1280px) {

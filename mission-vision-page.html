@@ -244,6 +244,9 @@
             </button>
             <button type="button" class="btn-menu">
               <span class="blind">메뉴</span>
+              <div class="btn-line btn-line-top"></div>
+              <div class="btn-line btn-line-middle"></div>
+              <div class="btn-line btn-line-bottom"></div>
             </button>
             <button type="button" class="btn-lang-web">
               <span class="lang-icon material-symbols-outlined">
@@ -293,6 +296,7 @@
             <li class="wrapper-dep1">
               <a href="#" class="li-dep1">
                 <span class="txt-dep1">소개</span>
+                <i class="las la-angle-down arr-down"></i>
               </a>
               <ul class="depth2">
                 <li class="wrapper-dep2">
@@ -315,6 +319,7 @@
             <li class="wrapper-dep1">
               <a href="#" class="li-dep1">
                 <span class="txt-dep1">활동</span>
+                <i class="las la-angle-down arr-down"></i>
               </a>
               <ul class="depth2">
                 <li class="wrapper-dep2">
@@ -346,6 +351,7 @@
             <li class="wrapper-dep1">
               <a href="#" class="li-dep1">
                 <span class="txt-dep1">참여</span>
+                <i class="las la-angle-down arr-down"></i>
               </a>
               <ul class="depth2">
                 <li class="wrapper-dep2">
@@ -368,6 +374,7 @@
             <li class="wrapper-dep1">
               <a href="#" class="li-dep1">
                 <span class="txt-dep1">자료</span>
+                <i class="las la-angle-down arr-down"></i>
               </a>
               <ul class="depth2">
                 <li class="wrapper-dep2">
@@ -390,6 +397,7 @@
             <li class="wrapper-dep1">
               <a href="#" class="li-dep1">
                 <span class="txt-dep1">후원</span>
+                <i class="las la-angle-down arr-down"></i>
               </a>
               <ul class="depth2">
                 <li class="wrapper-dep2">
@@ -415,6 +423,7 @@
             <li class="wrapper-dep1">
               <a href="#" class="li-dep1">
                 <span class="txt-dep1 oncenter-dep1">온센터</span>
+                <i class="las la-angle-down arr-down"></i>
               </a>
               <ul class="depth2 dep2-oncenter">
                 <li class="wrapper-dep2">
@@ -1584,6 +1593,19 @@
         <div class="copyright">
           <span>Copyright © 2022 동물자유연대. All rights reserved.</span>
         </div>
+        <button type="button" id="top_btn">
+          <!-- <i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span> -->
+          <i class="fa-solid fa-angle-up"></i
+          ><span class="blind">상단으로</span>
+        </button>
+        <script>
+          $(function () {
+            $("#top_btn").on("click", function () {
+              $("html, body").animate({ scrollTop: 0 }, "500");
+              return false;
+            });
+          });
+        </script>
       </footer>
     </div>
   </body>

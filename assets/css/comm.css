@@ -509,15 +509,27 @@ legend {
   }
 }
 #header .btn-menu {
-  width: 35px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1000;
 }
-#header .btn-menu:before {
-  content: "\f0c9";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 35px;
-  color: #fff;
+#header .btn-menu.click .btn-line-middle {
+  display: none;
+}
+#header .btn-menu.click .btn-line-top {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+#header .btn-menu.click .btn-line-bottom {
+  transform: rotate(-45deg) translate(5px, -7px);
+}
+#header .btn-line {
+  width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  transition: all 0.2s;
 }
 @media screen and (min-width: 1280px) {
   #header .btn-menu {
@@ -551,10 +563,9 @@ legend {
   }
 }
 #header #gnb {
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100vw;
   width: 100%;
   min-height: 100vh;
   background-color: #222;
@@ -572,10 +583,17 @@ legend {
   display: flex;
   align-items: center;
   gap: 19px;
-  width: 76px;
+  width: 32px;
+  height: 32px;
+  transform: translate(-150%, 1px);
 }
 #header .top .lang-items {
-  width: 30px;
+  width: 100%;
+  height: 100%;
+}
+#header .top .lang {
+  width: 100%;
+  height: 100%;
 }
 #header .top .lang-icon {
   color: #fff;
@@ -611,13 +629,6 @@ legend {
   border-radius: 0 0 10px 10px;
   color: #666666;
   font-family: "Roboto", sans-serif;
-}
-#header .top .close::before {
-  content: "\f00d";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 30px;
-  color: #fff;
 }
 #header .inner-items {
   display: flex;
@@ -663,36 +674,47 @@ legend {
 }
 #header .depth1 .wrapper-dep1 {
   height: 47px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 12px 54px;
 }
 #header .depth1 .li-dep1 {
   display: flex;
-  justify-content: flex-end;
-  padding: 12px 54px;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.48px;
   color: #ffffff;
-}
-#header .depth1 .li-dep1 .oncenter-dep1 {
-  width: 173px;
+  text-align: center;
 }
 #header .depth1 .txt-dep1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 166px;
+  transform: translateX(-50%);
 }
-#header .depth1 .txt-dep1:after {
-  content: "\f107";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
+#header .depth1 .txt-dep1 #text {
+  display: block;
+  width: 50px;
+}
+#header .depth1 .txt-dep1 .arr-down {
   font-size: 14px;
 }
 #header .depth2 {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
   padding: 15px 0;
   background: rgba(51, 51, 51, 0.5);
+  transition: all 0.3s;
+}
+#header .depth2.active {
+  visibility: visible;
+  opacity: 1;
 }
 #header .depth2 .wrapper-dep2 {
   display: flex;
@@ -706,9 +728,6 @@ legend {
   font-size: 14px;
   letter-spacing: -0.42px;
   color: #666666;
-}
-#header .dep2-oncenter {
-  display: block;
 }
 
 @media screen and (min-width: 1280px) {
@@ -730,7 +749,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  z-index: -1;
+  z-index: 9;
 }
 #footer .logo:before {
   display: block;
@@ -906,6 +925,31 @@ legend {
     margin-left: 5.468vw;
     gap: 2px;
   }
+}
+#footer #top_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  line-height: 46px;
+  border: 0px solid rgba(173, 87, 0, 0.5);
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  z-index: 9;
+  background: rgba(173, 87, 0, 0.5);
+  cursor: pointer;
+  /* background: rgba(255, 255, 255, 0.5); */
+  /* backdrop-filter: blur(20px); */
+}
+#footer #top_btn:hover {
+  border-color: #ff862b;
+  /* border-color: #3059c7; */
+  background: #ff862b;
+  /* background: #3059c7; */
+  color: #fff;
 }
 
 @media screen and (min-width: 1280px) {

@@ -1,6 +1,7 @@
 $(function () {
   // -----------------------header-----------------------
   const $header = $("#header");
+  const $topBtn = $("#footer #top_btn");
   const $window = $(window);
 
   $window.on(
@@ -14,28 +15,75 @@ $(function () {
             y: -60,
             opacity: 0,
           });
+          gsap.to($topBtn, 0.3, {
+            right: "20px",
+            // opacity: 0,
+          });
         } else {
           gsap.to($header, 0.2, {
             y: 0,
             opacity: 1,
           });
+          gsap.to($topBtn, 0.3, {
+            right: "-100px",
+            // opacity: 0,
+          });
         }
       } else {
-        if (windowScrolled >= 50) {
+        if (windowScrolled >= 60) {
           gsap.to($header, 0.3, {
             y: -60,
             opacity: 0,
+          });
+          gsap.to($topBtn, 0.3, {
+            right: "20px",
+            // opacity: 0,
           });
         } else {
           gsap.to($header, 0.3, {
             y: 0,
             opacity: 1,
           });
+          gsap.to($topBtn, 0.3, {
+            right: "-100px",
+            // opacity: 0,
+          });
         }
       }
     })
   );
+  // -----------------------header-gnb-mob-----------------------
+  const $gnbMenuMob = $(".btn-menu");
+  const $gnbMob = $("#gnb");
+  const $gnbDep1Mob = $(".wrapper-dep1");
+  // const $gnbDep1Mob = $(".wrapper-dep1").toArray();
+  // const $gnbDep2Mob = $(".wrapper-dep1 .depth2");
+  $gnbMenuMob.on("click", () => {
+    if ($gnbMenuMob.hasClass("click")) {
+      $gnbMenuMob.removeClass("click");
+      $gnbMob.css({
+        left: "100%",
+        transition: "all .3s",
+      });
+    } else {
+      $gnbMenuMob.addClass("click");
+      $gnbMob.css({
+        left: "0",
+        transition: "all .3s",
+      });
+    }
+  });
 
+  $gnbDep1Mob.on("click", function () {
+    const $depth2 = $(this).children(".depth2");
+
+    if ($depth2.hasClass("active")) {
+      $depth2.removeClass("active");
+    } else {
+      $(".depth2").removeClass("active"); // 모든 .depth2 요소에서 active 클래스를 제거합니다.
+      $depth2.addClass("active"); // 클릭한 요소의 하위 .depth2에 active 클래스를 추가합니다.
+    }
+  });
   // -----------------------header-gnb-web-----------------------
   const $headerDepth1 = $("#header .depth1-web");
   const $headerDepth2 = $("#header .depth2-web-wrap");
