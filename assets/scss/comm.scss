@@ -333,10 +333,12 @@
   z-index: -1;
   .logo {
     &:before {
-      content: "";
-      background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0 / 45%;
       display: block;
-      height: 45px;
+      height: 30px;
+      width: 110px;
+      margin-top: 4px;
+      content: "";
+      background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0 / cover;
     }
     @media screen and (min-width: 1280px) {
       &:before {

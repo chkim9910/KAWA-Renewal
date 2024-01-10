@@ -3,35 +3,38 @@ $(function () {
   const $header = $("#header");
   const $window = $(window);
 
-  $window.on("scroll", () => {
-    const windowScrolled = $window.scrollTop();
-    console.log(windowScrolled);
-    if ($window.innerWidth() < 1280) {
-      if (windowScrolled >= 60) {
-        gsap.to($header, 0.3, {
-          y: -60,
-          opacity: 0,
-        });
+  $window.on(
+    "scroll",
+    _.throttle(() => {
+      const windowScrolled = $window.scrollTop();
+      console.log(windowScrolled);
+      if ($window.innerWidth() < 1280) {
+        if (windowScrolled > 60) {
+          gsap.to($header, 0.3, {
+            y: -60,
+            opacity: 0,
+          });
+        } else {
+          gsap.to($header, 0.2, {
+            y: 0,
+            opacity: 1,
+          });
+        }
       } else {
-        gsap.to($header, 0.2, {
-          y: 0,
-          opacity: 1,
-        });
+        if (windowScrolled >= 80) {
+          gsap.to($header, 0.3, {
+            y: -60,
+            opacity: 0,
+          });
+        } else {
+          gsap.to($header, 0.3, {
+            y: 0,
+            opacity: 1,
+          });
+        }
       }
-    } else {
-      if (windowScrolled >= 80) {
-        gsap.to($header, 0.3, {
-          y: -60,
-          opacity: 0,
-        });
-      } else {
-        gsap.to($header, 0.3, {
-          y: 0,
-          opacity: 1,
-        });
-      }
-    }
-  });
+    })
+  );
 
   // -----------------------main-page-----------------------
   // ****************main-visual****************
