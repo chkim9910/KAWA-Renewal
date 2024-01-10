@@ -1,4 +1,38 @@
 $(function () {
+  // -----------------------header-----------------------
+  const $header = $("#header");
+  const $window = $(window);
+
+  $window.on("scroll", () => {
+    const windowScrolled = $window.scrollTop();
+    console.log(windowScrolled);
+    if ($window.innerWidth() < 1280) {
+      if (windowScrolled >= 60) {
+        gsap.to($header, 0.3, {
+          y: -60,
+          opacity: 0,
+        });
+      } else {
+        gsap.to($header, 0.2, {
+          y: 0,
+          opacity: 1,
+        });
+      }
+    } else {
+      if (windowScrolled >= 80) {
+        gsap.to($header, 0.3, {
+          y: -60,
+          opacity: 0,
+        });
+      } else {
+        gsap.to($header, 0.3, {
+          y: 0,
+          opacity: 1,
+        });
+      }
+    }
+  });
+
   // -----------------------main-page-----------------------
   // ****************main-visual****************
   // ****************swiper-main-visual****************
@@ -31,7 +65,7 @@ $(function () {
       slideChange: function () {
         // 슬라이드가 변경될 때마다 leftNumber 업데이트
         var activeIndex = this.activeIndex;
-        console.log(activeIndex); // 슬라이드 변경 시 인덱스 확인
+        // console.log(activeIndex); // 슬라이드 변경 시 인덱스 확인
 
         var leftNumbers = document.querySelectorAll(".fst-num .num");
         leftNumbers.forEach(function (number) {

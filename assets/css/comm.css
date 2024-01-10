@@ -337,11 +337,10 @@ legend {
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
   height: 60px;
   padding: 17px 20px 0;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 1000;
 }
 #header .wrapper {
