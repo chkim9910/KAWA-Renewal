@@ -2873,7 +2873,7 @@ body {
   }
 }
 .core-value {
-  height: 180vh;
+  height: 200%;
   padding: 56px 20px 0;
   position: relative;
 }
@@ -4163,7 +4163,7 @@ body {
   }
   .q-and-a .prev-icon,
   .q-and-a .next-icon {
-    font-size: 55px;
+    font-size: 3.819vw;
     color: #ff862b;
   }
   .q-and-a .prev {
@@ -4264,20 +4264,20 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1000px;
+    height: 52.083vw;
     z-index: -1;
   }
   .q-and-a .bg-deco-el {
     position: absolute;
-    top: -344px;
-    left: 11px;
+    top: -17.917vw;
+    left: 0.573vw;
     width: 30%;
     height: 100%;
   }
   .q-and-a .bg-deco-1 {
     width: 5%;
-    top: -602px;
-    left: 255px;
+    top: -31.354vw;
+    left: 13.281vw;
   }
 }
 

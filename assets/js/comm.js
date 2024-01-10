@@ -508,30 +508,31 @@ $(function () {
       // markers: true,
     },
   });
-  cont1
-    .from(".about-reasons .tit", {
-      duration: 0.6,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-1 .cont-txt", {
-      duration: 1,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-1 .pic", {
-      delay: 0.1,
-      duration: 0.6,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    });
-  if (window.innerWidth >= 1280) {
+  if (window.innerWidth < 1280) {
+    cont1
+      .from(".about-reasons .tit", {
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-1 .cont-txt", {
+        duration: 1,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-1 .pic", {
+        delay: 0.1,
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  } else {
     cont1
       .from(".about-reasons .tit", {
         duration: 0.6,
@@ -573,22 +574,23 @@ $(function () {
       // markers: true,
     },
   });
-  cont2
-    .from(".cont-container-2 .cont-txt", {
-      duration: 1,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-2 .pic", {
-      duration: 0.6,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    });
-  if (window.innerWidth >= 1280) {
+  if (window.innerWidth < 1280) {
+    cont2
+      .from(".cont-container-2 .cont-txt", {
+        duration: 1,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-2 .pic", {
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  } else {
     cont2
       .from(".cont-container-2 .pic", {
         duration: 0.6,
@@ -631,22 +633,23 @@ $(function () {
       // markers: true,
     },
   });
-  cont3
-    .from(".cont-container-3 .cont-txt", {
-      duration: 1,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".cont-container-3 .pic", {
-      duration: 0.6,
-      y: 100,
-      // stagger: 1,
-      opacity: 0,
-      ease: "power2.out",
-    });
-  if (window.innerWidth >= 1280) {
+  if (window.innerWidth < 1280) {
+    cont3
+      .from(".cont-container-3 .cont-txt", {
+        duration: 1,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".cont-container-3 .pic", {
+        duration: 0.6,
+        y: 100,
+        // stagger: 1,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  } else {
     cont3
       .from(".cont-container-3 .pic", {
         duration: 0.6,
@@ -777,38 +780,38 @@ $(function () {
   });
 
   //****************q-and-a****************
-  const fqaMob = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".q-and-a",
-      start: "top center",
-      end: "center center",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  fqaMob
-    .from(".q-and-a .tit", {
-      duration: 0.5,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".q-and-a .glide-q-and-a", {
-      duration: 0.5,
-      y: 100,
-      // stagger: 0.1,
-      opacity: 0,
-      ease: "power2.out",
+  if (window.innerWidth < 1280) {
+    const fqaMob = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".q-and-a",
+        start: "top center",
+        end: "center center",
+        scrub: 2,
+        // markers: true,
+      },
     });
-
-  if (window.innerWidth >= 1280) {
+    fqaMob
+      .from(".q-and-a .tit", {
+        duration: 0.5,
+        y: 100,
+        // stagger: 0.1,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".q-and-a .glide-q-and-a", {
+        duration: 0.5,
+        y: 100,
+        // stagger: 0.1,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  } else {
     const fqa = gsap.timeline({
       scrollTrigger: {
         trigger: ".q-and-a",
-        pin: ".q-and-a",
-        start: "-15% top",
-        end: "bottom top",
+        // pin: ".q-and-a",
+        start: "top center",
+        end: "center center",
         scrub: 2,
         // markers: true,
       },
@@ -837,15 +840,14 @@ $(function () {
         ease: "power2.out",
       })
       .from(".q-and-a .glide-q-and-a", {
-        // delay: 0.1,
-        duration: 0.2,
-        x: 1200,
+        duration: 0.3,
+        x: 1500,
         // stagger: 0.1,
-        opacity: 1,
+        opacity: 0,
         ease: "power2.out",
       })
       .to(".q-and-a .glide-q-and-a", {
-        duration: 1.5,
+        // duration: 1.5,
       });
   }
   //****************glide-q-and-a****************
@@ -863,22 +865,22 @@ $(function () {
   }).mount();
 
   // 스크롤 이벤트 리스너 등록
-  window.addEventListener("scroll", function () {
-    // 스크롤 위치 확인
-    const scrollPosition = document.documentElement.scrollTop;
-    console.log(scrollPosition);
-    // Glide.js 슬라이더의 인스턴스가 올바르게 할당되었는지 확인
-    if (glide) {
-      // 스크롤 위치에 따라 슬라이드 변경
-      if (scrollPosition > 4450) {
-        glide.go(">>");
-      } else {
-        glide.go("<<");
-      }
-    } else {
-      console.error("Glide.js 슬라이더의 인스턴스를 찾을 수 없습니다.");
-    }
-  });
+  // window.addEventListener("scroll", function () {
+  //   // 스크롤 위치 확인
+  //   const scrollPosition = document.documentElement.scrollTop;
+  //   console.log(scrollPosition);
+  //   // Glide.js 슬라이더의 인스턴스가 올바르게 할당되었는지 확인
+  //   if (glide) {
+  //     // 스크롤 위치에 따라 슬라이드 변경
+  //     if (scrollPosition > 3800) {
+  //       glide.go(">>");
+  //     } else {
+  //       glide.go("<<");
+  //     }
+  //   } else {
+  //     console.error("Glide.js 슬라이더의 인스턴스를 찾을 수 없습니다.");
+  //   }
+  // });
 
   function beforeCardChange(args) {
     var current = $(".list-card.active");
@@ -1016,18 +1018,17 @@ if (window.innerWidth < 1280) {
       opacity: 0,
       ease: "power2.out",
     });
-}
-// content 배열
-var contents = gsap.utils.toArray("#corevalue .content");
-if (window.innerWidth >= 1280) {
+} else {
+  // content 배열
+  var contents = gsap.utils.toArray("#corevalue .content");
   const sectionTl = gsap.timeline({
-    onComplete: function () {
-      gsap.to("#corevalue", {
-        y: -200,
-        // opacity: 0,
-        duration: 0.5,
-      }); // 모든 애니메이션이 완료된 후 #corevalue의 opacity를 0으로 설정
-    },
+    // onComplete: function () {
+    //   gsap.to("#corevalue", {
+    //     y: -200,
+    //     // opacity: 0,
+    //     duration: 0.5,
+    //   }); // 모든 애니메이션이 완료된 후 #corevalue의 opacity를 0으로 설정
+    // },
     scrollTrigger: {
       trigger: "#corevalue",
       pin: "#corevalue",
@@ -1118,8 +1119,8 @@ if (window.innerWidth < 1280) {
       ease: "power2.out",
       scrollTrigger: {
         trigger: cont,
-        start: "40% center",
-        end: "center center",
+        start: "-10% center",
+        end: "center 40%",
         scrub: 1,
         // markers: true,
       },
