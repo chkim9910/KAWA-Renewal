@@ -44,7 +44,13 @@
     align-items: center;
     height: 100%;
   }
+  @media screen and (min-width: 1280px) {
+    .wrapper {
+      position: relative;
+    }
+  }
   #logo {
+    cursor: pointer;
     &:before {
       display: block;
       height: 30px;
@@ -68,18 +74,98 @@
   }
   @media screen and (min-width: 1280px) {
     .depth1-web-wrap {
-      display: block;
-    }
-    .depth1-web {
       display: flex;
       justify-content: center;
-      gap: 3.906vw;
-      .txt-dep1-web {
-        @include web-bd(18px, $white);
-      }
+      height: 100%;
     }
-    .depth2-web {
-      display: none;
+    .depth1-web {
+      height: 100%;
+      width: 585px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+    .wrapper-dep1-web {
+      flex-grow: 1;
+      flex-basis: 0;
+      height: 100%;
+    }
+    .li-dep1-web {
+      height: 100%;
+    }
+    .txt-dep1-web {
+      display: block;
+      height: 100%;
+      @include web-bd(18px, $white);
+      line-height: 65px;
+      text-align: center;
+    }
+  }
+  .depth2-web-wrap {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    .depth2-web-wrap {
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      position: absolute;
+      top: 65px;
+      margin: 0;
+      left: -23px;
+      right: -23px;
+      height: 455px;
+      padding: 0 120px;
+      backdrop-filter: blur(10px);
+      background: rgb(255, 255, 255, 1);
+      // border-top: 1px solid rgba(255, 255, 255, 0.2);
+      // background-image: linear-gradient(
+      //   to bottom,
+      //   rgb(255, 255, 255, 0.7),
+      //   rgb(255, 255, 255, 1)
+      // );
+
+      z-index: 1000;
+    }
+    .depth2-web-el {
+      flex-grow: 1;
+      flex-basis: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      // border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .border-none {
+      border: none;
+    }
+    .wrapper-dep2-web {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .tit-dep2-web-box {
+      width: 100%;
+      height: 31px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .tit-dep2-web {
+      display: block;
+      @include web-bd(20px, $txtTit);
+    }
+    .li-dep2-web {
+      display: block;
+      width: 100%;
+      height: 28px;
+      @include web-bd(16px, $txtCont);
+      font-weight: 300;
+      line-height: 28px;
+      &:hover {
+        color: $primary;
+        font-weight: 700;
+      }
     }
   }
   .nav {
@@ -311,7 +397,7 @@
 @media screen and (min-width: 1280px) {
   #header {
     height: 100px;
-    padding: 35px 23px 0;
+    padding: 1.823vw 23px 0;
   }
 }
 // main

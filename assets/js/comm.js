@@ -21,7 +21,7 @@ $(function () {
           });
         }
       } else {
-        if (windowScrolled >= 80) {
+        if (windowScrolled >= 50) {
           gsap.to($header, 0.3, {
             y: -60,
             opacity: 0,
@@ -35,6 +35,32 @@ $(function () {
       }
     })
   );
+
+  // -----------------------header-gnb-web-----------------------
+  const $headerDepth1 = $("#header .depth1-web");
+  const $headerDepth2 = $("#header .depth2-web-wrap");
+  $headerDepth1.on("mouseenter", () => {
+    $header.css({
+      "backdrop-filter": "blur(20px)",
+      transition: "all 0.3s ease-in-out", // transition 속성 추가
+    });
+    $headerDepth2.css({
+      visibility: "visible",
+      opacity: "1",
+      transition: "all 0.3s ease-in-out", // transition 속성 추가
+    });
+  });
+  $headerDepth2.on("mouseleave", () => {
+    $header.css({
+      "backdrop-filter": "blur(0px)",
+      transition: "all 0.3s ease-in-out", // transition 속성 추가
+    });
+    $headerDepth2.css({
+      visibility: "hidden",
+      opacity: "0",
+      transition: "all 0.3s ease-in-out", // transition 속성 추가
+    });
+  });
 
   // -----------------------main-page-----------------------
   // ****************main-visual****************
