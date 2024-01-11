@@ -521,9 +521,11 @@ legend {
 }
 #header .btn-menu.click .btn-line-top {
   transform: rotate(45deg) translate(5px, 6px);
+  border-color: #222;
 }
 #header .btn-menu.click .btn-line-bottom {
   transform: rotate(-45deg) translate(5px, -7px);
+  border-color: #222;
 }
 #header .btn-line {
   width: 100%;
@@ -568,15 +570,23 @@ legend {
   left: 100vw;
   width: 100%;
   min-height: 100vh;
-  background-color: #222;
-  overflow-y: scroll;
+  background-color: #ffffff;
+  overflow: auto;
 }
 #header .top {
   height: 60px;
-  padding: 13px 20px 0;
+  padding: 17px 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#header .top .logo:before {
+  display: block;
+  height: 30px;
+  width: 110px;
+  margin-top: 4px;
+  content: "";
+  background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0/cover;
 }
 #header .top .menu {
   position: relative;
@@ -585,7 +595,8 @@ legend {
   gap: 19px;
   width: 32px;
   height: 32px;
-  transform: translate(-150%, 1px);
+  transform: translate(-150%, 0px);
+  z-index: 10;
 }
 #header .top .lang-items {
   width: 100%;
@@ -596,9 +607,12 @@ legend {
   height: 100%;
 }
 #header .top .lang-icon {
-  color: #fff;
+  color: #222;
   font-size: 32px;
   font-weight: 300;
+}
+#header .top .lang-icon:hover {
+  color: #f76a00;
 }
 #header .top .select-lang {
   display: none;
@@ -612,18 +626,26 @@ legend {
   letter-spacing: -0.42px;
   color: #666666;
 }
+#header .top .select-lang.active {
+  display: block;
+}
 #header .top .select-lang .ko,
 #header .top .select-lang .en {
   display: block;
   width: 76px;
   height: 41px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
+}
+#header .top .select-lang .ko:hover,
+#header .top .select-lang .en:hover {
+  background-color: #0f6dcd;
+  color: #ffffff;
 }
 #header .top .select-lang .ko {
   border-radius: 10px 10px 0 0;
-  color: #ffffff;
-  background-color: #0f6dcd;
+  font-weight: 700;
+  color: #666666;
 }
 #header .top .select-lang .en {
   border-radius: 0 0 10px 10px;
@@ -635,7 +657,7 @@ legend {
   justify-content: center;
   height: 84px;
   padding: 12px 20px;
-  background: rgba(51, 51, 51, 0.5);
+  background: #f76a00;
   margin-top: 20px;
 }
 #header .inner-items .icons {
@@ -654,17 +676,41 @@ legend {
   color: #ffffff;
   text-align: center;
 }
+#header .inner-items .my-page-icon:hover,
+#header .inner-items .sponsor-icon:hover,
+#header .inner-items .faq-icon:hover {
+  color: #222222;
+  font-weight: 700;
+}
 #header .inner-items .my-page-icon::before {
   display: block;
-  content: url(../../images/comm/my-page.png);
+  height: 35px;
+  width: 35px;
+  content: "";
+  background: url(../../images/comm/my-page.png) no-repeat 50% 50%/100%;
+  transform: translateX(25%);
+  margin-bottom: 5px;
+}
+#header .inner-items .my-page-icon::before:hover {
+  box-shadow: 2px 2px 10px #ffffff;
 }
 #header .inner-items .sponsor-icon::before {
   display: block;
-  content: url(../../images/comm/sponsorship.png);
+  height: 35px;
+  width: 35px;
+  content: "";
+  background: url(../../images/comm/sponsorship.png) no-repeat 50% 50%/100%;
+  transform: translateX(25%);
+  margin-bottom: 5px;
 }
 #header .inner-items .faq-icon::before {
   display: block;
-  content: url(../../images/comm/faq.png);
+  height: 35px;
+  width: 35px;
+  content: "";
+  background: url(../../images/comm/faq.png) no-repeat 50% 50%/100%;
+  transform: translateX(25%);
+  margin-bottom: 5px;
 }
 #header .depth1 {
   width: 100%;
@@ -673,7 +719,6 @@ legend {
   text-align: center;
 }
 #header .depth1 .wrapper-dep1 {
-  height: 47px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -688,7 +733,7 @@ legend {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.48px;
-  color: #ffffff;
+  color: #222222;
   text-align: center;
 }
 #header .depth1 .txt-dep1 {
@@ -705,16 +750,17 @@ legend {
   font-size: 14px;
 }
 #header .depth2 {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+  margin-top: 10px;
   width: 100%;
   padding: 15px 0;
-  background: rgba(51, 51, 51, 0.5);
-  transition: all 0.3s;
+  border-top: 1px solid rgba(255, 134, 43, 0.5);
 }
 #header .depth2.active {
-  visibility: visible;
-  opacity: 1;
+  display: block;
+}
+#header .depth2.active .txt-dep1 {
+  color: #f76a00;
 }
 #header .depth2 .wrapper-dep2 {
   display: flex;
@@ -722,12 +768,18 @@ legend {
   align-items: center;
   height: 38px;
 }
+#header .depth2 .wrapper-dep2:hover {
+  background-color: #ff862b;
+}
+#header .depth2 .wrapper-dep2:hover .li-dep2 {
+  color: #ffffff;
+}
 #header .depth2 .li-dep2 {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.42px;
-  color: #666666;
+  color: #222222;
 }
 
 @media screen and (min-width: 1280px) {

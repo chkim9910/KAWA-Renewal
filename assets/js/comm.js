@@ -78,12 +78,31 @@ $(function () {
     const $depth2 = $(this).children(".depth2");
 
     if ($depth2.hasClass("active")) {
+      $depth2.stop().slideUp(400);
       $depth2.removeClass("active");
+      $(this)
+        .find(".txt-dep1")
+        .css({ color: "#222222", transition: "color 0.4s" });
     } else {
       $(".depth2").removeClass("active"); // 모든 .depth2 요소에서 active 클래스를 제거합니다.
+      $(this).find(".txt-dep1").css({ color: "#f76a00", "font-weight": "700" });
+      $depth2.stop().slideDown(300);
       $depth2.addClass("active"); // 클릭한 요소의 하위 .depth2에 active 클래스를 추가합니다.
     }
   });
+
+  const $langMob = $(".lang");
+  const $selectLangMOb = $(".select-lang");
+  $langMob.on("click", () => {
+    $selectLangMOb.toggleClass("active");
+    // 클래스가 추가되었는지 여부에 따라 color 속성 변경
+    if ($selectLangMOb.hasClass("active")) {
+      $(this).css("color", "#f76a00");
+    } else {
+      $(this).css("color", ""); // 클래스가 제거되면 기본 색상으로 변경 (빈 문자열)
+    }
+  });
+
   // -----------------------header-gnb-web-----------------------
   const $headerDepth1 = $("#header .depth1-web");
   const $headerDepth2 = $("#header .depth2-web-wrap");
