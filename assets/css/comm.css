@@ -740,6 +740,7 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
   transform: translateX(-50%);
 }
 #header .depth1 .txt-dep1 #text {
