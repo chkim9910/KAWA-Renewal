@@ -108,25 +108,33 @@ $(function () {
   const $headerDepth2 = $("#header .depth2-web-wrap");
   $headerDepth1.on("mouseenter", () => {
     $header.css({
-      "backdrop-filter": "blur(20px)",
       transition: "all 0.3s ease-in-out", // transition 속성 추가
     });
-    $headerDepth2.css({
-      visibility: "visible",
-      opacity: "1",
-      transition: "all 0.3s ease-in-out", // transition 속성 추가
+    $headerDepth2.slideDown(300);
+    $(".li-dep1-web .txt-dep1-web").css({
+      color: "#222",
+      transition: "all 0.3s",
     });
+    $("#header .material-symbols-outlined").css({
+      color: "#222",
+      transition: "all 0.3s",
+    });
+    $("#header .logo-link").addClass("active");
   });
   $headerDepth2.on("mouseleave", () => {
     $header.css({
-      "backdrop-filter": "blur(0px)",
       transition: "all 0.3s ease-in-out", // transition 속성 추가
     });
-    $headerDepth2.css({
-      visibility: "hidden",
-      opacity: "0",
-      transition: "all 0.3s ease-in-out", // transition 속성 추가
+    $headerDepth2.slideUp(300);
+    $(".li-dep1-web .txt-dep1-web").css({
+      color: "#fff",
+      transition: "all 0.5s",
     });
+    $("#header .material-symbols-outlined").css({
+      color: "#fff",
+      transition: "all 0.5s",
+    });
+    $("#header .logo-link").removeClass("active");
   });
 
   // -----------------------main-page-----------------------

@@ -349,27 +349,26 @@ legend {
   align-items: center;
   height: 100%;
 }
-@media screen and (min-width: 1280px) {
-  #header .wrapper {
-    position: relative;
-  }
-}
 #header #logo {
   cursor: pointer;
 }
-#header #logo:before {
+#header #logo .logo-link {
   display: block;
   height: 30px;
   width: 110px;
   margin-top: 4px;
-  content: "";
   background: url(../../images/comm/logo-white-mob.png) no-repeat 0 0/cover;
 }
 @media screen and (min-width: 1280px) {
-  #header #logo:before {
+  #header #logo .logo-link {
     width: 11.093vw;
     height: 3.281vw;
     background-size: 100%;
+  }
+  #header #logo .logo-link.active {
+    background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0;
+    transform: translateY(1.5px);
+    background-size: cover;
   }
 }
 #header .depth1-web-wrap {
@@ -415,20 +414,18 @@ legend {
 }
 @media screen and (min-width: 1280px) {
   #header .depth2-web-wrap {
-    visibility: hidden;
-    opacity: 0;
     display: flex;
     position: absolute;
-    top: 65px;
+    top: 0;
     margin: 0;
     left: -23px;
     right: -23px;
-    height: 455px;
-    padding: 0 120px;
+    height: 555px;
+    padding: 100px 120px 0;
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
     background: rgb(255, 255, 255);
-    z-index: 1000;
+    z-index: -1;
   }
   #header .depth2-web-el {
     flex-grow: 1;
@@ -493,19 +490,17 @@ legend {
     justify-content: flex-end;
   }
 }
-#header .btn-search {
-  transform: rotate(270deg);
-}
-#header .btn-search:before {
-  content: "\f002";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
+#header .btn-search-icon {
+  width: 30px;
+  height: 30px;
   font-size: 30px;
-  color: #fff;
+  font-weight: 300;
+  z-index: 1000;
 }
 @media screen and (min-width: 1280px) {
-  #header .btn-search:before {
-    font-size: 2.083vw;
+  #header .btn-search-icon .btn-search-icon {
+    font-size: 32px !important;
+    font-weight: normal !important;
   }
 }
 #header .btn-menu {

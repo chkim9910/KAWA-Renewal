@@ -44,27 +44,33 @@
     align-items: center;
     height: 100%;
   }
-  @media screen and (min-width: 1280px) {
-    .wrapper {
-      position: relative;
-    }
-  }
+  // @media screen and (min-width: 1280px) {
+  //   .wrapper {
+  //     position: relative;
+  //   }
+  // }
   #logo {
     cursor: pointer;
-    &:before {
+    .logo-link {
       display: block;
       height: 30px;
       width: 110px;
       margin-top: 4px;
-      content: "";
       background: url(../../images/comm/logo-white-mob.png) no-repeat 0 0 /
         cover;
     }
     @media screen and (min-width: 1280px) {
-      &:before {
+      .logo-link {
         width: 11.093vw;
         height: 3.281vw;
         background-size: 100%;
+        // transition: all 0.5s;
+        &.active {
+          background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0;
+          // background-size: contain;
+          transform: translateY(1.5px);
+          background-size: cover;
+        }
       }
     }
   }
@@ -106,26 +112,27 @@
   }
   @media screen and (min-width: 1280px) {
     .depth2-web-wrap {
-      visibility: hidden;
-      opacity: 0;
+      // visibility: hidden;
+      // opacity: 0;
       display: flex;
       position: absolute;
-      top: 65px;
+      // top: 100px;
+      top: 0;
       margin: 0;
       left: -23px;
       right: -23px;
-      height: 455px;
-      padding: 0 120px;
+      height: 555px;
+      padding: 100px 120px 0;
       backdrop-filter: blur(10px);
       background: rgb(255, 255, 255, 1);
+      z-index: -1;
+      // z-index: 900;
       // border-top: 1px solid rgba(255, 255, 255, 0.2);
       // background-image: linear-gradient(
       //   to bottom,
       //   rgb(255, 255, 255, 0.7),
       //   rgb(255, 255, 255, 1)
       // );
-
-      z-index: 1000;
     }
     .depth2-web-el {
       flex-grow: 1;
@@ -181,19 +188,29 @@
       justify-content: flex-end;
     }
   }
-  .btn-search {
-    transform: rotate(270deg);
-    &:before {
-      content: "\f002";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      font-size: 30px;
-      color: #fff;
-    }
+  .btn-search-icon {
+    // transform: rotate(270deg);
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 300;
+    z-index: 1000;
+
+    // &:before {
+    //   content: "\f002";
+    //   font-family: "Line Awesome Free";
+    //   font-weight: 900;
+    //   font-size: 30px;
+    //   color: #fff;
+    // }
     @media screen and (min-width: 1280px) {
-      &:before {
-        font-size: 2.083vw;
+      .btn-search-icon {
+        font-size: 32px !important;
+        font-weight: normal !important;
       }
+      // &:before {
+      //   font-size: 2.083vw;
+      // }
     }
   }
   .btn-menu {
@@ -497,6 +514,8 @@
   #header {
     height: 100px;
     padding: 1.823vw 23px 0;
+    // position: relative;
+    // background: rgb(34, 34, 34, 0);
   }
 }
 // main
