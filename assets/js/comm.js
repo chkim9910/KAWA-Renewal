@@ -426,7 +426,7 @@ $(function () {
     const campaign = gsap.timeline({
       scrollTrigger: {
         trigger: ".campaign",
-        pin: ".campaign",
+        // pin: ".campaign",
         // pinSpacing: true,
         start: "top top",
         end: "center center",
