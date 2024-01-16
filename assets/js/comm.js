@@ -357,8 +357,8 @@ $(function () {
       scrollTrigger: {
         trigger: ".oncenter-info",
         pin: ".oncenter-info",
-        pinSpacing: true,
-        start: "top top",
+        // pinSpacing: true,
+        start: "5% top",
         end: "bottom top",
         scrub: 2,
         // markers: true,
@@ -427,9 +427,9 @@ $(function () {
       scrollTrigger: {
         trigger: ".campaign",
         pin: ".campaign",
-        pinSpacing: true,
+        // pinSpacing: true,
         start: "top top",
-        end: "center top",
+        end: "center center",
         scrub: 2,
         // markers: true,
       },

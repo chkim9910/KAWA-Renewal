@@ -496,6 +496,7 @@ legend {
   font-size: 30px;
   font-weight: 300;
   z-index: 1000;
+  color: #ffffff;
 }
 @media screen and (min-width: 1280px) {
   #header .btn-search-icon .btn-search-icon {
