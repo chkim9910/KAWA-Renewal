@@ -403,7 +403,6 @@ legend {
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 0%;
-    line-height: 21.6px;
     color: #ffffff;
     line-height: 65px;
     text-align: center;
@@ -434,9 +433,15 @@ legend {
     flex-direction: column;
     align-items: center;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    transition: border-top 0.3s;
+  }
+  #header .depth2-web-el:hover {
+    border-top: 1px solid #f76a00;
   }
   #header .border-none {
     border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
   #header .wrapper-dep2-web {
     width: 100%;
@@ -456,7 +461,6 @@ legend {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 0%;
-    line-height: 24px;
     color: #222222;
   }
   #header .li-dep2-web {
@@ -467,7 +471,6 @@ legend {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0%;
-    line-height: 19.2px;
     color: #666666;
     font-weight: 300;
     line-height: 28px;
@@ -488,6 +491,7 @@ legend {
     width: 9.166vw;
     gap: 1.458vw;
     justify-content: flex-end;
+    position: relative;
   }
 }
 #header .btn-search-icon {
@@ -537,6 +541,9 @@ legend {
 #header .btn-lang-web {
   display: none;
 }
+#header .select-lang-web {
+  display: none;
+}
 @media screen and (min-width: 1280px) {
   #header .btn-lang-web {
     display: block;
@@ -545,6 +552,38 @@ legend {
     color: #fff;
     font-size: 2.083vw;
     font-weight: 300;
+  }
+  #header .select-lang-web {
+    display: none;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+  }
+  #header .select-lang-web.active {
+    display: block;
+  }
+  #header .ko,
+  #header .en {
+    width: 100%;
+    height: 50px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: #222222;
+    letter-spacing: 0%;
+    color: #666666;
+    background: #ffffff;
+  }
+  #header .ko:hover,
+  #header .en:hover {
+    background: #0f6dcd;
+    color: #ffffff;
+  }
+  #header .ko {
+    border-radius: 10px 10px 0 0;
+  }
+  #header .en {
+    border-radius: 0 0 10px 10px;
   }
 }
 #header .btn-login-web {
@@ -736,7 +775,7 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 500;
   transform: translateX(-50%);
 }
 #header .depth1 .txt-dep1 #text {
@@ -844,7 +883,6 @@ legend {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0%;
-    line-height: 19.2px;
     color: #4c4c4c;
     font-weight: 400;
   }
@@ -862,7 +900,6 @@ legend {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0%;
-    line-height: 19.2px;
     color: #4c4c4c;
     font-weight: 400;
   }
@@ -962,7 +999,6 @@ legend {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0%;
-    line-height: 19.2px;
     color: #4c4c4c;
     font-weight: 400;
   }
@@ -1185,7 +1221,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: rgba(255, 255, 255, 0.6);
   }
 }
@@ -1239,7 +1274,6 @@ body {
     font-weight: 500;
     font-size: 1.042vw;
     letter-spacing: 0%;
-    line-height: 1.2504vw;
     color: rgba(255, 255, 255, 0.8);
   }
   .main-visual .contents-mob {
@@ -1277,7 +1311,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #ffffff;
   }
 }
@@ -1382,7 +1415,6 @@ body {
     font-weight: 500;
     font-size: 0.833vw;
     letter-spacing: 0%;
-    line-height: 0.9996vw;
     color: #ffffff;
     text-align: center;
     padding-top: 0.521vw;
@@ -1463,7 +1495,6 @@ body {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0%;
-    line-height: 19.2px;
     color: rgba(255, 255, 255, 0.5);
     animation: scrolldown 2s infinite alternate-reverse;
   }
@@ -1608,7 +1639,6 @@ body {
     font-weight: 500;
     font-size: 1.875vw;
     letter-spacing: 0%;
-    line-height: 2.25vw;
     color: #ffffff;
   }
 }
@@ -1646,7 +1676,6 @@ body {
     font-weight: 500;
     font-size: 1.354vw;
     letter-spacing: 0%;
-    line-height: 1.6248vw;
     color: #222222;
     font-weight: 700;
   }
@@ -1798,7 +1827,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: #4c4c4c;
     word-wrap: break-word;
     word-break: keep-all;
@@ -2067,7 +2095,6 @@ body {
     font-weight: 500;
     font-size: 2.083vw;
     letter-spacing: 0%;
-    line-height: 2.4996vw;
     color: #ffffff;
   }
   .oncenter-info .content {
@@ -2076,7 +2103,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: #ffffff;
   }
   .oncenter-info .bg-deco {
@@ -2163,7 +2189,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: #ffffff;
     word-wrap: break-word;
     word-break: keep-all;
@@ -2244,7 +2269,6 @@ body {
     font-weight: 500;
     font-size: 0.729vw;
     letter-spacing: 0%;
-    line-height: 0.8748vw;
     color: rgba(255, 255, 255, 0.7);
   }
   .campaign .carousel-campaign .tit {
@@ -2261,7 +2285,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #ffffff;
     margin-top: 0.365vw;
   }
@@ -2489,7 +2512,6 @@ body {
     font-weight: 500;
     font-size: 1.042vw;
     letter-spacing: 0%;
-    line-height: 1.2504vw;
     color: #222222;
   }
 }
@@ -2508,7 +2530,6 @@ body {
     font-weight: 500;
     font-size: 1.042vw;
     letter-spacing: 0%;
-    line-height: 1.2504vw;
     color: #8e8e8e;
     font-weight: 400;
   }
@@ -2614,7 +2635,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: rgba(255, 255, 255, 0.7);
   }
   .subscribe .inp-wrap {
@@ -2633,7 +2653,6 @@ body {
     font-weight: 500;
     font-size: 0.729vw;
     letter-spacing: 0%;
-    line-height: 0.8748vw;
     color: #4c4c4c;
   }
   .subscribe .inp-name {
@@ -2671,7 +2690,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #ffffff;
   }
 }
@@ -2763,7 +2781,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: #666666;
     margin-top: 1.042vw;
   }
@@ -2795,7 +2812,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #ffffff;
   }
 }
@@ -2938,7 +2954,6 @@ body {
     font-weight: 500;
     font-size: 0.833vw;
     letter-spacing: 0%;
-    line-height: 0.9996vw;
     color: #ffffff;
     font-weight: 700;
     border-radius: 2.604vw;
@@ -2954,7 +2969,6 @@ body {
     font-weight: 500;
     font-size: 0.833vw;
     letter-spacing: 0%;
-    line-height: 0.9996vw;
     color: #8e8e8e;
     transition: color 0.4s;
   }
@@ -3036,7 +3050,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #8e8e8e;
     line-height: 1.5;
   }
@@ -3046,7 +3059,6 @@ body {
     font-weight: 500;
     font-size: 2.5vw;
     letter-spacing: 0%;
-    line-height: 3vw;
     color: #222222;
     font-weight: 700;
     margin-right: 1.875vw;
@@ -3113,7 +3125,6 @@ body {
     font-weight: 500;
     font-size: 1.667vw;
     letter-spacing: 0%;
-    line-height: 2.0004vw;
     color: #8e8e8e;
     font-family: "Roboto", sans-serif;
     letter-spacing: normal;
@@ -3229,7 +3240,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #8e8e8e;
     line-height: 1.5;
   }
@@ -3310,7 +3320,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #8e8e8e;
     line-height: 1.5;
   }
@@ -3503,7 +3512,6 @@ body {
     font-weight: 500;
     font-size: 1.042vw;
     letter-spacing: 0%;
-    line-height: 1.2504vw;
     color: #ffffff;
     line-height: 1.4;
   }
@@ -3596,7 +3604,6 @@ body {
     font-weight: 500;
     font-size: 0.833vw;
     letter-spacing: 0%;
-    line-height: 0.9996vw;
     color: #ffffff;
     font-weight: 700;
     background-color: #222222;
@@ -3612,7 +3619,6 @@ body {
     font-weight: 500;
     font-size: 0.833vw;
     letter-spacing: 0%;
-    line-height: 0.9996vw;
     color: #8e8e8e;
     transition: color 0.4s;
   }
@@ -3748,7 +3754,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #8e8e8e;
   }
 }
@@ -4089,7 +4094,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #8e8e8e;
     line-height: 1.5;
   }
@@ -4244,7 +4248,6 @@ body {
     font-weight: 500;
     font-size: 0.781vw;
     letter-spacing: 0%;
-    line-height: 0.9372vw;
     color: #ffffff;
     line-height: 1.5;
     font-weight: 400;
@@ -4414,7 +4417,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: #ffffff;
     font-weight: 700;
   }
@@ -4552,7 +4554,6 @@ body {
     font-weight: 500;
     font-size: 1.25vw;
     letter-spacing: 0%;
-    line-height: 1.5vw;
     color: #ffdfbf;
     text-align: center;
   }
@@ -4578,7 +4579,6 @@ body {
     font-weight: 500;
     font-size: 0.938vw;
     letter-spacing: 0%;
-    line-height: 1.1256vw;
     color: #4c4c4c;
     margin-top: 2.083vw;
     padding: 0.521vw 2.344vw;

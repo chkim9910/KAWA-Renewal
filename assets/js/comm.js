@@ -136,7 +136,11 @@ $(function () {
     });
     $("#header .logo-link").removeClass("active");
   });
-
+  const $langWeb = $(".btn-lang-web");
+  const $selectLangWeb = $(".select-lang-web");
+  $langWeb.on("click", () => {
+    $selectLangWeb.toggleClass("active");
+  });
   // -----------------------main-page-----------------------
   // ****************main-visual****************
   // ****************swiper-main-visual****************
@@ -428,7 +432,7 @@ $(function () {
         trigger: ".campaign",
         // pin: ".campaign",
         // pinSpacing: true,
-        start: "top top",
+        start: "top center",
         end: "center center",
         scrub: 2,
         // markers: true,
@@ -600,7 +604,7 @@ $(function () {
       opacity: 0,
       stagger: 0.2,
       ease: "power2.out",
-      // delay: 1,
+      delay: 0.3,
     }
   );
 

@@ -141,10 +141,16 @@
       flex-direction: column;
       align-items: center;
       border-right: 1px solid rgba(0, 0, 0, 0.05);
-      // border-right: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      transition: border-top 0.3s;
+      // clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+      &:hover {
+        border-top: 1px solid $primary;
+      }
     }
     .border-none {
       border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
     .wrapper-dep2-web {
       width: 100%;
@@ -186,6 +192,7 @@
       width: 9.166vw;
       gap: 1.458vw;
       justify-content: flex-end;
+      position: relative;
     }
   }
   .btn-search-icon {
@@ -256,6 +263,9 @@
   .btn-lang-web {
     display: none;
   }
+  .select-lang-web {
+    display: none;
+  }
   @media screen and (min-width: 1280px) {
     .btn-lang-web {
       display: block;
@@ -264,6 +274,33 @@
         font-size: 2.083vw;
         font-weight: 300;
       }
+    }
+    .select-lang-web {
+      display: none;
+      width: 80%;
+      position: absolute;
+      top: 100%;
+      left: 10%;
+      &.active {
+        display: block;
+      }
+    }
+    .ko,
+    .en {
+      width: 100%;
+      height: 50px;
+      @include web-bd($txtTit);
+      background: $white;
+      &:hover {
+        background: $point;
+        color: $white;
+      }
+    }
+    .ko {
+      border-radius: 10px 10px 0 0;
+    }
+    .en {
+      border-radius: 0 0 10px 10px;
     }
   }
   .btn-login-web {
@@ -464,7 +501,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: 700;
+      font-weight: 500;
       transform: translateX(-50%);
       #text {
         display: block;
