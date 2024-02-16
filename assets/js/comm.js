@@ -199,7 +199,7 @@ $(function () {
       start: "top center",
       end: "bottom top",
       scrub: 2,
-      markers: true,
+      //markers: true,
     },
   });
   mainActivities
