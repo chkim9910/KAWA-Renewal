@@ -149,7 +149,7 @@ $(function () {
     slidesPerView: 1, // 보여질 슬라이드 수
     centeredSlides: true, // 가운데 정렬된 슬라이드
     autoplay: {
-      delay: 3000, // 자동 재생 딜레이(ms)
+      delay: 300000, // 자동 재생 딜레이(ms)
       disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
     },
     pagination: {

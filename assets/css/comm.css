@@ -332,6 +332,11 @@ legend {
   overflow: hidden;
 }
 
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -828,7 +833,7 @@ legend {
   flex-grow: 1;
 }
 #main .sect {
-  height: 100vh;
+  min-height: 100svh;
 }
 
 #footer {
@@ -1181,16 +1186,14 @@ body {
   height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(../../images/main/sect1-main-visual/dog.png) no-repeat 50% 50%/cover;
 }
-.main-visual .wrapper {
+.main-visual .cont-wrap {
+  min-width: 320px;
   display: flex;
   flex-direction: column;
-  height: 250px;
-  margin-left: 5.555vw;
-  margin-top: 66px;
 }
 @media screen and (min-width: 1280px) {
-  .main-visual .wrapper {
-    margin-left: 16.666vw;
+  .main-visual .cont-wrap {
+    min-width: 1280px;
   }
   .main-visual .dog-wrapper {
     margin-top: 9.375vw;
@@ -1203,9 +1206,11 @@ body {
   padding: 26px 0 24px;
 }
 @media screen and (min-width: 1280px) {
+  .main-visual .txt-wrap {
+    padding: 26px 0;
+  }
   .main-visual .txt {
-    padding: 1.354vw 0 2.916vw;
-    gap: 0.781vw;
+    padding: 0;
   }
 }
 .main-visual .sub-tit {
@@ -1217,9 +1222,10 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .main-visual .sub-tit {
+    margin-bottom: 5px;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.938vw;
+    font-size: 15px;
     letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -1243,9 +1249,9 @@ body {
   .main-visual .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 46px;
     letter-spacing: -0.5px;
-    line-height: 3vw;
+    line-height: 55.2px;
     color: #ffffff;
   }
 }
@@ -1270,9 +1276,10 @@ body {
     width: 100%;
     height: 100%;
     opacity: 1;
+    margin-top: 0px;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.042vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.8);
   }
@@ -1303,25 +1310,34 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .main-visual .btn-sign {
-    width: 9.583vw;
-    padding: 0.521vw 2.344vw;
+    width: 150px;
+    padding: 10px 45px;
   }
   .main-visual .btn-sign .txt-btn-sign {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.938vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #ffffff;
   }
 }
 .main-visual .btn-wrap {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  left: 10%;
+  top: 62%;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .main-visual .btn-inner {
+    width: 100%;
+    height: 292px;
+    position: absolute;
+    top: 30%;
+  }
+  .main-visual .btn-wrap {
+    top: 105%;
+  }
 }
 .main-visual .swiper-btn {
   position: absolute;
@@ -1333,9 +1349,14 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .main-visual .swiper-btn {
+    width: 100%;
+    height: 100%;
+    margin: 0;
     width: 31.198vw;
     height: 15.885vw;
+    margin-top: 132px;
     margin-top: 6.875vw;
+    margin-left: 320px;
     margin-left: 16.666vw;
   }
 }
@@ -1356,8 +1377,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .main-visual .swiper-button-next {
-    top: 15.104vw;
-    left: 29.115vw;
+    top: 50%;
+    left: 110%;
   }
 }
 .main-visual .swiper-button-prev {
@@ -1376,8 +1397,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .main-visual .swiper-button-prev {
-    top: 15.104vw;
-    left: 27.031vw;
+    top: 50%;
+    left: 105%;
   }
 }
 .main-visual .progress-wrap {
@@ -1394,11 +1415,7 @@ body {
     align-items: center;
   }
   .main-visual .progress {
-    width: 31.198vw;
-    height: 15.885vw;
-    margin-left: 16.666vw;
-    margin-top: 7.24vw;
-    padding-right: 4.948vw;
+    width: 600px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -1408,23 +1425,18 @@ body {
   }
   .main-visual .num {
     display: inline-block;
-    height: 2.083vw;
-    width: 2.083vw;
-    line-height: 2.083vw;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.833vw;
+    font-size: 15px;
     letter-spacing: 0%;
     color: #ffffff;
     text-align: center;
-    padding-top: 0.521vw;
+    margin-bottom: 6px;
   }
   .main-visual .fst-num {
-    width: 2.083vw;
-    height: 2.083vw;
     position: absolute;
-    left: 15.365vw;
-    bottom: 0;
+    left: 385px;
+    bottom: -1px;
   }
   .main-visual .fst-num-el {
     display: none;
@@ -1461,9 +1473,11 @@ body {
     display: block;
     width: 20%;
     height: var(--swiper-pagination-progressbar-size, 4px);
-    left: 17.76vw;
-    top: 14.7vw;
+    left: 433px;
+    top: 9px;
     border-radius: 10px;
+    position: absolute;
+    margin-bottom: 6px;
     z-index: 10;
   }
   .main-visual .swiper-pagination-progressbar-fill {
