@@ -3,7 +3,10 @@ $(function () {
   const $header = $("#header");
   const $topBtn = $("#footer #top_btn");
   const $window = $(window);
-
+  window.onload = function () {
+    window.scrollTo(0, 0);
+    // $headerDepth2.slideUp();
+  };
   $window.on(
     "scroll",
     _.throttle(() => {
@@ -110,7 +113,12 @@ $(function () {
     $header.css({
       transition: "all 0.3s ease-in-out", // transition 속성 추가
     });
-    $headerDepth2.slideDown(300);
+    $headerDepth2.css({
+      visibility: "visible",
+      opacity: 1,
+      transition: "all, 0.3s",
+    });
+    // $headerDepth2.slideDown(300);
     $(".li-dep1-web .txt-dep1-web").css({
       color: "#222",
       transition: "all 0.3s",
@@ -125,7 +133,12 @@ $(function () {
     $header.css({
       transition: "all 0.3s ease-in-out", // transition 속성 추가
     });
-    $headerDepth2.slideUp(300);
+    // $headerDepth2.slideUp(300);
+    $headerDepth2.css({
+      visibility: "hidden",
+      opacity: 0,
+      transition: "all, 0.3s",
+    });
     $(".li-dep1-web .txt-dep1-web").css({
       color: "#fff",
       transition: "all 0.5s",
@@ -161,6 +174,8 @@ $(function () {
       nextEl: ".swiper-button-next", // 다음 버튼 클래스
       prevEl: ".swiper-button-prev", // 이전 버튼 클래스
     },
+    observer: true,
+    observeParents: true,
     on: {
       init: function () {
         // 슬라이드가 초기화될 때 첫 번째 슬라이드 번호로 leftNumber 설정
@@ -188,8 +203,22 @@ $(function () {
         var rightNumber = document.querySelector(".lst-num");
         rightNumber.innerText = "03";
       },
+
+      // function () {
+      //   if ($(".dog").hasClass("swiper-slide-active")) {
+      //     $(".btn-wrap").css("top", "103%");
+      //   } else {
+      //     $(".btn-wrap").css("top", "112%");
+      //   }
+      // },
     },
   });
+
+  // if ($(".dog").hasClass("swiper-slide-active")) {
+  //   $(".btn-wrap").css("top", "103%");
+  // } else {
+  //   $(".btn-wrap").css("top", "112%");
+  // }
 
   // ****************main-activities****************
   const mainActivities = gsap.timeline({
@@ -243,9 +272,17 @@ $(function () {
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      1280: {
+      1024: {
         spaceBetween: 0,
         slidesPerView: 6,
+      },
+      768: {
+        spaceBetween: 0,
+        slidesPerView: 6,
+      },
+      480: {
+        spaceBetween: 0,
+        slidesPerView: 4,
       },
     },
   });
@@ -253,6 +290,7 @@ $(function () {
   var swiper2 = new Swiper(".swiper-main-activities", {
     // loop: true,
     spaceBetween: 10,
+    slidesPerView: 1,
     mousewheel: true,
     // slidesPerView: 3,
     // centeredSlides: true,
@@ -265,7 +303,7 @@ $(function () {
     },
     variableWidth: true,
     breakpoints: {
-      1280: {
+      1024: {
         spaceBetween: 12,
         slidesPerView: 1,
       },

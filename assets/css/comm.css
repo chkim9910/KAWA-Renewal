@@ -333,10 +333,53 @@ legend {
 }
 
 .inner {
-  max-width: 1280px;
+  min-width: 320px;
+  max-width: 320px;
+  flex: 1;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 480px) {
+  .inner {
+    max-width: 480px;
+    margin: 0 auto;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: 768px;
+    margin: 0 auto;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+.sect-exp {
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .sect-exp {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sect-exp {
+    padding: 160px 0;
+  }
+}
 #header {
   position: fixed;
   top: 0;
@@ -418,6 +461,8 @@ legend {
 }
 @media screen and (min-width: 1280px) {
   #header .depth2-web-wrap {
+    visibility: hidden;
+    opacity: 0;
     display: flex;
     position: absolute;
     top: 0;
@@ -1187,11 +1232,10 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(../../images/main/sect1-main-visual/dog.png) no-repeat 50% 50%/cover;
 }
 .main-visual .cont-wrap {
-  min-width: 320px;
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .cont-wrap {
     min-width: 1280px;
   }
@@ -1205,7 +1249,7 @@ body {
   gap: 17px;
   padding: 26px 0 24px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .txt-wrap {
     padding: 26px 0;
   }
@@ -1220,7 +1264,7 @@ body {
   letter-spacing: -0.42px;
   color: rgba(255, 255, 255, 0.7);
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .sub-tit {
     margin-bottom: 5px;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -1245,7 +1289,7 @@ body {
 .main-visual .tit .color-pr {
   color: #f76a00;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -1270,7 +1314,7 @@ body {
   height: 0;
   width: 0;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .contents-web {
     position: static;
     width: 100%;
@@ -1308,7 +1352,7 @@ body {
   letter-spacing: -0.42px;
   color: #ffffff;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .btn-sign {
     width: 150px;
     padding: 10px 45px;
@@ -1321,38 +1365,63 @@ body {
     color: #ffffff;
   }
 }
-.main-visual .btn-wrap {
+.main-visual .btn-inner {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: 10%;
-  top: 62%;
+  top: 0;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 1280px) {
+.main-visual .btn-inner .inner {
+  position: relative;
+  height: 270px;
+  width: 320px;
+}
+.main-visual .btn-wrap {
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  top: 110%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
   .main-visual .btn-inner {
     width: 100%;
-    height: 292px;
+    height: 100%;
     position: absolute;
-    top: 30%;
+    top: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
   }
   .main-visual .btn-inner .inner {
     position: relative;
-    height: 100%;
+    height: 248px;
+    width: 100%;
   }
   .main-visual .btn-wrap {
-    top: 112%;
+    width: 200px;
+    top: 95%;
+    left: 18%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-visual .btn-wrap {
     left: 15%;
   }
 }
 .main-visual .swiper-btn {
-  position: absolute;
   display: flex;
-  width: 268.375px;
-  height: 250px;
-  margin-top: 105px;
-  margin-left: 5.555vw;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .swiper-btn {
     width: 100%;
     height: 100%;
@@ -1361,7 +1430,6 @@ body {
 }
 .main-visual .swiper-button-next {
   position: absolute;
-  top: 297px;
   left: 40px;
   transform: translateY(0%);
   width: 40px;
@@ -1373,8 +1441,9 @@ body {
   font-weight: 900;
   font-size: 18px;
   color: #ffffff;
+  transform: translateY(10%);
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .swiper-button-next {
     top: 50%;
     left: 120%;
@@ -1382,7 +1451,6 @@ body {
 }
 .main-visual .swiper-button-prev {
   position: absolute;
-  top: 297px;
   left: 0;
   width: 40px;
   height: 40px;
@@ -1393,26 +1461,18 @@ body {
   font-weight: 900;
   font-size: 18px;
   color: #ffffff;
+  transform: translateY(10%);
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .swiper-button-prev {
     top: 50%;
     left: 105%;
   }
 }
-.main-visual .progress-wrap {
+.main-visual .progress {
   display: none;
 }
-@media screen and (min-width: 1280px) {
-  .main-visual .progress-wrap {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-  }
+@media screen and (min-width: 1024px) {
   .main-visual .progress {
     width: 200px;
     display: flex;
@@ -1449,7 +1509,7 @@ body {
 .main-visual .swiper-progress-box {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .swiper-progress-box {
     position: absolute;
     top: 16.771vw;
@@ -1466,7 +1526,7 @@ body {
 .main-visual .swiper-progress-bar {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .swiper-progress-bar {
     display: block;
     width: 140px;
@@ -1485,7 +1545,7 @@ body {
 .main-visual .scrolldown-wrap {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-visual .scrolldown-wrap {
     display: block;
     position: absolute;
@@ -1562,7 +1622,6 @@ body {
 
 .main-activities {
   background-color: #ffffff;
-  padding: 23.888vw 5.555vw 11.666vw;
 }
 .main-activities .tit {
   font-family: "Noto Sans KR", sans-serif;
@@ -1574,25 +1633,25 @@ body {
   margin: 0;
   color: #222222;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-activities .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 48px;
     letter-spacing: -0.5px;
-    line-height: 3vw;
+    line-height: 57.6px;
     color: #222222;
   }
 }
 .main-activities .swiper-main-activities {
   height: 163px;
-  margin-top: 45px;
+  margin-top: 20px;
 }
 .main-activities .swiper-main-activities .swiper-slide {
   border-radius: 10px;
   width: 316px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .main-activities .swiper-main-activities .swiper-slide {
     transition: all 0.5s;
   }
@@ -1620,9 +1679,40 @@ body {
     content: "";
   }
 }
+@media screen and (min-width: 480px) {
+  .main-activities .swiper-main-activities {
+    height: 226px;
+    margin-left: 0;
+    overflow: visible;
+  }
+  .main-activities .swiper-wrapper {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-activities .swiper-main-activities {
+    height: 326px;
+    margin-left: 0;
+    overflow: visible;
+  }
+  .main-activities .swiper-wrapper {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-activities .swiper-main-activities {
+    height: 426px;
+    margin-left: 0;
+    overflow: visible;
+    margin-top: 45px;
+  }
+  .main-activities .swiper-wrapper {
+    margin-right: 0;
+  }
+}
 @media screen and (min-width: 1280px) {
   .main-activities .swiper-main-activities {
-    height: 27.396vw;
+    height: 526px;
     margin-left: 0;
     overflow: visible;
   }
@@ -1645,11 +1735,20 @@ body {
   color: #ffffff;
   text-align: center;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .main-activities .wrapper .txt {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.875vw;
+    font-size: 25px;
+    letter-spacing: 0%;
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-activities .wrapper .txt {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
     letter-spacing: 0%;
     color: #ffffff;
   }
@@ -1678,18 +1777,25 @@ body {
   border-radius: 50%;
   background-color: #f76a00;
   margin-bottom: 23px;
+  line-height: 24px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
+  .main-activities .thumb-tit .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
   .main-activities .thumb-tit {
-    height: 5.26vw;
+    height: 100px;
   }
   .main-activities .thumb-tit .tit {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.354vw;
+    font-size: 26px;
     letter-spacing: 0%;
     color: #222222;
     font-weight: 700;
+    line-height: 24px;
   }
   .main-activities .thumb-tit .tit.active:after {
     width: 0.625vw;
@@ -1783,12 +1889,6 @@ body {
   background: url(../../images/main/sect5-campaign/arrow.png) no-repeat 0 0/70%;
 }
 
-@media screen and (min-width: 1280px) {
-  .main-activities {
-    height: 100vh;
-    padding: 10.416vw 16.666vw 13.541vw;
-  }
-}
 .oncenter {
   padding: 100px 20px;
   background-color: #ffffff;
