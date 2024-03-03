@@ -152,9 +152,15 @@
       height: 292px;
       position: absolute;
       top: 30%;
+      .inner {
+        position: relative;
+        height: 100%;
+      }
     }
     .btn-wrap {
-      top: 105%;
+      top: 112%;
+      left: 15%;
+      // top: 105%;
     }
   }
   // .btn-wrap-web {
@@ -175,12 +181,10 @@
       width: 100%;
       height: 100%;
       margin: 0;
-      width: 31.198vw;
-      height: 15.885vw;
-      margin-top: 132px;
-      margin-top: 6.875vw;
-      margin-left: 320px;
-      margin-left: 16.666vw;
+      // width: 31.198vw;
+      // height: 15.885vw;
+      // margin-top: 132px;
+      // margin-left: 320px;
     }
   }
   .swiper-button-next {
@@ -203,7 +207,7 @@
   @media screen and (min-width: 1280px) {
     .swiper-button-next {
       top: 50%;
-      left: 110%;
+      left: 120%;
     }
   }
   .swiper-button-prev {
@@ -242,13 +246,14 @@
       align-items: center;
     }
     .progress {
-      width: 600px;
+      width: 200px;
+      // width: 600px;
       // height: 15.885vw;
       // margin-left: 16.666vw;
       // margin-top: 7.24vw;
       // padding-right: 4.948vw;
       display: flex;
-      align-items: flex-end;
+      // align-items: flex-end;
       justify-content: flex-end;
       z-index: 1;
       position: relative;
@@ -268,7 +273,8 @@
       // width: 2.083vw;
       // height: 2.083vw;
       position: absolute;
-      left: 385px;
+      left: 0;
+      // left: 200px;
       bottom: -1px;
       // left: 15.365vw;
       // padding-top: 0.521vw;
@@ -308,9 +314,9 @@
   @media screen and (min-width: 1280px) {
     .swiper-progress-bar {
       display: block;
-      width: 20%;
+      width: 140px;
       height: var(--swiper-pagination-progressbar-size, 4px);
-      left: 433px;
+      left: 30px;
       // left: 17.76vw;
       top: 9px;
       // top: 14.25vw;
