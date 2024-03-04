@@ -902,7 +902,12 @@ $(function () {
     perView: 2,
     focusAt: 0,
     keyboard: true,
-    // bound: checkbox.checked,
+    breakpoints: {
+      // rewind: true,
+      // paddings: "30px",
+      780: { perView: 2 },
+      1024: { perView: 2 },
+    },
     gap: 10,
   }).mount();
 
@@ -1014,33 +1019,16 @@ $(function () {
   const glide = new Glide(".glide-q-and-a", {
     type: "slider",
     autoplay: false,
-    perView: 4,
+    perView: 3,
     breakpoints: {
       // rewind: true,
       // paddings: "30px",
-      780: { perView: 3 },
-      1024: { perView: 4 },
+      500: { perView: 1, gap: 20 },
+      780: { perView: 2, gap: 200 },
+      1024: { perView: 2.5, gap: 100 },
     },
     beforeTransition: beforeCardChange,
   }).mount();
-
-  // 스크롤 이벤트 리스너 등록
-  // window.addEventListener("scroll", function () {
-  //   // 스크롤 위치 확인
-  //   const scrollPosition = document.documentElement.scrollTop;
-  //   console.log(scrollPosition);
-  //   // Glide.js 슬라이더의 인스턴스가 올바르게 할당되었는지 확인
-  //   if (glide) {
-  //     // 스크롤 위치에 따라 슬라이드 변경
-  //     if (scrollPosition > 3800) {
-  //       glide.go(">>");
-  //     } else {
-  //       glide.go("<<");
-  //     }
-  //   } else {
-  //     console.error("Glide.js 슬라이더의 인스턴스를 찾을 수 없습니다.");
-  //   }
-  // });
 
   function beforeCardChange(args) {
     var current = $(".list-card.active");
@@ -1072,8 +1060,8 @@ $(function () {
 const financialReportMob = gsap.timeline({
   scrollTrigger: {
     trigger: ".financial-report",
-    start: "top center",
-    end: "center center",
+    start: "top 70%",
+    end: "top 50%",
     scrub: 2,
     // markers: true,
   },

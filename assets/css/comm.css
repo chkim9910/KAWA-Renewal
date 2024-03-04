@@ -4243,6 +4243,7 @@ body {
     display: none;
   }
   .donation-usage .tit-web {
+    margin-bottom: 50px;
     display: block;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -4256,6 +4257,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .donation-usage .tit-web {
+    margin-bottom: 0;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
     font-size: 40px;
@@ -4335,7 +4337,7 @@ body {
   }
   .donation-usage .glide-donation-usage-web .glide__track {
     flex-grow: 1;
-    flex-basis: 91.833vw;
+    flex-basis: 100.833vw;
     overflow: hidden;
     order: 2;
   }
@@ -4409,6 +4411,9 @@ body {
   .donation-usage .glide-donation-usage-web {
     max-width: 1024px;
   }
+  .donation-usage .glide-donation-usage-web .glide__track {
+    flex-basis: 76.833vw;
+  }
   .donation-usage .glide__arrows {
     margin-bottom: 20px;
   }
@@ -4424,6 +4429,14 @@ body {
 @media screen and (min-width: 1280px) {
   .donation-usage .glide-donation-usage-web {
     max-width: 1280px;
+  }
+  .donation-usage .glide-donation-usage-web .glide__track {
+    flex-basis: 59.833vw;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .donation-usage .glide-donation-usage-web .glide__track {
+    flex-basis: 81.833vw;
   }
 }
 .donation-usage .cont-txt-wrap-web {
@@ -4524,12 +4537,27 @@ body {
   color: #222222;
   letter-spacing: -0.9px;
   padding-bottom: 39px;
+  line-height: normal;
 }
 @media screen and (min-width: 768px) {
   .q-and-a .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    color: #222222;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .q-and-a .tit {
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .q-and-a .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
     letter-spacing: -0.5px;
     color: #222222;
     padding-bottom: 0;
@@ -4537,19 +4565,17 @@ body {
 }
 .q-and-a .glide-q-and-a {
   height: auto;
-  overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .glide-q-and-a {
     width: 77.083vw;
-    margin-top: 2vw;
     overflow: visible;
   }
 }
 .q-and-a .glide__slides {
   display: flex;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .glide__slides {
     width: 119.792vw !important;
     height: 39.063vw;
@@ -4571,7 +4597,7 @@ body {
   border: none;
   border-radius: 10px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .card {
     width: 21.875vw;
     height: 31.979vw;
@@ -4581,7 +4607,7 @@ body {
   height: auto;
   padding: 0 24px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .card-txt {
     padding: 2.604vw;
   }
@@ -4601,7 +4627,7 @@ body {
   padding-top: 92px;
   padding-left: 9px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .card-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -4625,7 +4651,7 @@ body {
   padding-top: 23px;
   letter-spacing: normal;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .card-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
@@ -4646,7 +4672,7 @@ body {
   justify-content: center;
   background: url(../../images/sub2-donation-page/sect4-q&a/tag.png) no-repeat 50% 0/cover;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .card-tag {
     right: 1.354vw;
     width: 3.333vw;
@@ -4666,7 +4692,7 @@ body {
   padding-top: 10px;
   height: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .tag-txt {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -4681,7 +4707,7 @@ body {
   height: 110px;
   transform: translateX(calc(160px - 50%));
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .card-illust {
     width: 3.333vw;
     width: 9.167vw;
@@ -4704,9 +4730,9 @@ body {
 }
 .q-and-a .glide__bullets {
   display: flex;
+  justify-content: center;
   gap: 7px;
   padding-top: 25px;
-  padding-left: 114px;
 }
 .q-and-a .glide__bullets .glide__bullet {
   width: 6px;
@@ -4724,7 +4750,7 @@ body {
 .q-and-a .glide__button {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .glide__bullets {
     display: none;
   }
@@ -4747,7 +4773,7 @@ body {
 .q-and-a .front-web {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .list-card {
     position: relative;
     width: 21.875vw !important;
@@ -4826,7 +4852,7 @@ body {
 .q-and-a .bg-deco-box {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a .bg-deco-box {
     display: block;
     position: absolute;
@@ -4850,7 +4876,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .q-and-a {
     position: relative;
   }
@@ -4900,11 +4926,21 @@ body {
   letter-spacing: -1px;
   line-height: 33.5px;
 }
+@media screen and (min-width: 768px) {
+  .financial-report .cont-tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+}
 @media screen and (min-width: 1280px) {
   .financial-report .cont-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 40px;
     letter-spacing: -0.5px;
     color: #ffffff;
     margin-bottom: 1.042vw;
@@ -4932,7 +4968,7 @@ body {
     display: block;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.25vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #ffdfbf;
     text-align: center;
