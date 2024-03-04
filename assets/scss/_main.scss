@@ -597,7 +597,7 @@
       height: 100px;
       .tit {
         @include web-bd(26px, $txtTit);
-        font-weight: 700;
+        // font-weight: 700;
         line-height: 24px;
         &.active {
           &:after {
@@ -1109,7 +1109,7 @@
     .tit {
       @include mob-tit(30px, $white);
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1024px) {
       .txt {
         position: relative;
         z-index: 10;
@@ -1122,7 +1122,7 @@
     .content {
       @include mob-bd(14px, $white);
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1024px) {
       .content {
         @include web-bd(16px, $white);
         word-wrap: break-word;
@@ -1536,9 +1536,9 @@
     @include mob-tit(30px, $white);
     letter-spacing: normal;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .tit {
-      @include web-tit(2.5vw, $white);
+      @include web-tit(40px, $white);
       text-align: center;
     }
   }
@@ -1555,28 +1555,28 @@
   .inp {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .content {
       display: none;
     }
     .content-web {
       display: block;
       margin-top: 0.625vw;
-      @include web-bd(1.25vw, rgba(255, 255, 255, 0.7));
+      @include web-bd(16px, rgba(255, 255, 255, 0.7));
     }
     .inp-wrap {
       display: flex;
       gap: 1.406vw;
-      margin-top: 1vw;
+      // margin-top: 1vw;
     }
     .inp {
       display: block;
-      height: 2.292vw;
+      height: 40px;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       background-color: rgba(255, 255, 255, 0.9);
-      @include web-bd(0.729vw, $gray-700);
+      @include web-bd(14px, $gray-700);
     }
     .inp-name {
       width: 12.5vw;
@@ -1602,7 +1602,7 @@
   @media screen and (min-width: 1280px) {
     .btn {
       margin-top: 1.083vw;
-      height: 2.292vw;
+      height: 48px;
       .txt-btn {
         @include web-bd(0.938vw, $white);
       }
@@ -1637,12 +1637,13 @@
   .associated-donation {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   .txt {
     width: 162px;
     word-break: keep-all;
+    flex: 1;
   }
   @media screen and (min-width: 1280px) {
     .txt {
@@ -1655,9 +1656,9 @@
     letter-spacing: normal;
     line-height: 39px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .tit {
-      @include web-tit(2.083vw, $txtTit);
+      @include web-tit(38px, $txtTit);
     }
   }
   .content {
@@ -1665,9 +1666,9 @@
     margin-top: 9px;
     letter-spacing: normal;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .content {
-      @include web-bd(1.25vw, $txtCont);
+      @include web-bd(16px, $txtCont);
       margin-top: 1.042vw;
     }
   }
@@ -1686,7 +1687,7 @@
   @media screen and (min-width: 1280px) {
     .btn-rd,
     .btn-ad {
-      height: 2.292vw;
+      height: 48px;
       width: 7.969vw;
       padding: 0.521vw 2.344vw;
       margin-top: 3.385vw;

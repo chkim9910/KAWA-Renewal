@@ -569,7 +569,7 @@ $(function () {
       // pin: ".subscribe",
       pinSpacing: true,
       start: "top 70%",
-      end: "center center",
+      end: "top 50%",
       scrub: 2,
       // markers: true,
     },
@@ -1103,6 +1103,7 @@ if (window.innerWidth >= 1280) {
       ease: "power2.out",
     });
 }
+
 // -----------------------sub-1-page-----------------------
 // ****************mission-vision****************
 gsap.registerPlugin(ScrollTrigger);

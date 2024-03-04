@@ -1809,7 +1809,6 @@ body {
     font-size: 26px;
     letter-spacing: 0%;
     color: #222222;
-    font-weight: 700;
     line-height: 24px;
   }
   .main-activities .thumb-tit .tit.active:after {
@@ -2374,7 +2373,7 @@ body {
   margin: 0;
   color: #ffffff;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .campaign .wrapper .txt {
     position: relative;
     z-index: 10;
@@ -2395,7 +2394,7 @@ body {
   letter-spacing: -0.42px;
   color: #ffffff;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .campaign .wrapper .content {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
@@ -2820,11 +2819,11 @@ body {
   color: #ffffff;
   letter-spacing: normal;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .subscribe .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 40px;
     letter-spacing: -0.5px;
     color: #ffffff;
     text-align: center;
@@ -2847,7 +2846,7 @@ body {
 .subscribe .inp {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .subscribe .content {
     display: none;
   }
@@ -2856,25 +2855,24 @@ body {
     margin-top: 0.625vw;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.25vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.7);
   }
   .subscribe .inp-wrap {
     display: flex;
     gap: 1.406vw;
-    margin-top: 1vw;
   }
   .subscribe .inp {
     display: block;
-    height: 2.292vw;
+    height: 40px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.9);
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.729vw;
+    font-size: 14px;
     letter-spacing: 0%;
     color: #4c4c4c;
   }
@@ -2906,7 +2904,7 @@ body {
 @media screen and (min-width: 1280px) {
   .subscribe .btn {
     margin-top: 1.083vw;
-    height: 2.292vw;
+    height: 48px;
   }
   .subscribe .btn .txt-btn {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -2941,11 +2939,11 @@ body {
 .donation .associated-donation {
   display: flex;
   width: 100%;
-  justify-content: space-between;
 }
 .donation .txt {
   width: 162px;
   word-break: keep-all;
+  flex: 1;
 }
 @media screen and (min-width: 1280px) {
   .donation .txt {
@@ -2965,11 +2963,11 @@ body {
   letter-spacing: normal;
   line-height: 39px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .donation .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.083vw;
+    font-size: 38px;
     letter-spacing: -0.5px;
     color: #222222;
   }
@@ -2983,11 +2981,11 @@ body {
   margin-top: 9px;
   letter-spacing: normal;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .donation .content {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.25vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #666666;
     margin-top: 1.042vw;
@@ -3012,7 +3010,7 @@ body {
 @media screen and (min-width: 1280px) {
   .donation .btn-rd,
   .donation .btn-ad {
-    height: 2.292vw;
+    height: 48px;
     width: 7.969vw;
     padding: 0.521vw 2.344vw;
     margin-top: 3.385vw;
