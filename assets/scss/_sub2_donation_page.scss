@@ -534,6 +534,7 @@
       display: none;
     }
     .tit-web {
+      margin-bottom: 50px;
       display: block;
       @include web-tit(38px, $txtTit);
       .highlight {
@@ -543,6 +544,7 @@
   }
   @media screen and (min-width: 1280px) {
     .tit-web {
+      margin-bottom: 0;
       @include web-tit(40px, $txtTit);
     }
   }
