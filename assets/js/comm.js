@@ -655,10 +655,6 @@ $(function () {
       trigger: ".about-reasons",
       start: "center center",
       end: "+=100%",
-      // end: "center 30%",
-      // end: "+=200%",
-      // scrub: 2,
-      // markers: true,
     },
   });
 
@@ -666,7 +662,7 @@ $(function () {
     scrollTrigger: {
       trigger: ".about-reasons .cont-container-1",
       start: "-10% center",
-      end: "center center",
+      end: "top 10%",
       scrub: 2,
       // markers: true,
     },
@@ -732,7 +728,7 @@ $(function () {
     scrollTrigger: {
       trigger: ".about-reasons .cont-container-2",
       start: "-10% center",
-      end: "center center",
+      end: "top 40%",
       scrub: 2,
       // markers: true,
     },
@@ -770,10 +766,10 @@ $(function () {
         ease: "power2.out",
       })
       .from(".cont-container-2 .bg-deco-2-2", {
-        duration: 0.2,
-        x: -100,
+        duration: 0.5,
+        x: 50,
         scale: 2,
-        rotation: 720,
+        rotation: 240,
         opacity: 0,
         ease: "power2.out",
       })
@@ -791,7 +787,7 @@ $(function () {
     scrollTrigger: {
       trigger: ".about-reasons .cont-container-3",
       start: "-10% center",
-      end: "center center",
+      end: "top 40%",
       scrub: 2,
       // markers: true,
     },
@@ -947,8 +943,8 @@ $(function () {
     const fqaMob = gsap.timeline({
       scrollTrigger: {
         trigger: ".q-and-a",
-        start: "top center",
-        end: "center center",
+        start: "top 80%",
+        end: "top 40%",
         scrub: 2,
         // markers: true,
       },
@@ -1013,6 +1009,7 @@ $(function () {
         // duration: 1.5,
       });
   }
+
   //****************glide-q-and-a****************
   const glide = new Glide(".glide-q-and-a", {
     type: "slider",
@@ -1021,8 +1018,8 @@ $(function () {
     breakpoints: {
       // rewind: true,
       // paddings: "30px",
-      780: { perView: 1 },
-      1280: { perView: 4 },
+      780: { perView: 3 },
+      1024: { perView: 4 },
     },
     beforeTransition: beforeCardChange,
   }).mount();

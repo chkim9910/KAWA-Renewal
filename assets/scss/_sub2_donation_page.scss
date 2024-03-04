@@ -11,21 +11,42 @@
     height: 425px;
     padding: 200px 20px 97px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .txt {
+      flex: 1;
       height: 30.105vw;
-      padding: 15.417vw 54.583vw 7.396vw 16.667vw;
+      padding: 0;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
+      .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 100px;
+        flex: 1;
+      }
     }
   }
+  @media screen and (min-width: 1280px) {
+    .txt {
+      .inner {
+        padding-top: 150px;
+      }
+    }
+  }
+
   .tit {
     @include mob-tit(35px, $white);
   }
+  @media screen and (min-width: 1024px) {
+    .tit {
+      @include web-tit(40px, $white);
+      line-height: normal;
+    }
+  }
   @media screen and (min-width: 1280px) {
     .tit {
-      @include web-tit(2.5vw, $white);
+      @include web-tit(48px, $white);
     }
   }
   .content {
@@ -35,11 +56,11 @@
     word-break: keep-all;
     @include mob-bd(16px, $white);
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .content {
       width: 28.75vw;
       height: 2.708vw;
-      @include web-bd(1.042vw, $white);
+      @include web-bd(16px, $white);
       line-height: 1.4;
     }
   }
@@ -101,20 +122,23 @@
   .sidebar-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .sidebar {
       display: none;
     }
     .sidebar-web {
-      display: block;
+      display: flex;
+      align-items: center;
       width: 100%;
       max-height: 80px;
-      height: 4.18vw;
-      padding-left: 16.719vw;
+      padding: 20px 0;
+      // height: 4.18vw;
       background-color: $white;
+      .inner {
+        display: flex;
+      }
       .wrapper {
-        // width: 45.104vw;
-        // max-width: 866px;
+        flex: 1;
         width: 55.227vw;
         max-width: 1060.36px;
         height: 100%;
@@ -127,38 +151,57 @@
         align-items: center;
         justify-content: center;
         flex-grow: 1;
-        // flex-basis: 0;
-        // margin: 18px 0;
         &.active {
           .sidebar-cont {
-            @include web-bd(0.833vw, $white);
-            font-weight: 700;
+            @include web-bd(16px, $white);
             background-color: $bgcBk;
             border-radius: 2.604vw;
           }
         }
       }
       .sidebar-cont {
-        // height: 100%;
-        width: 7.89vw;
-        padding: 0.625vw 1.302vw;
+        flex: 1;
+        padding: 12px 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-        @include web-bd(0.833vw, $txtCont-2);
+        @include web-bd(15px, $txtCont-2);
+        transition: color 0.4s;
+      }
+    }
+  }
+  @media screen and (min-width: 1410px) {
+    .sidebar-web {
+      .inner {
+        display: block;
+      }
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .sidebar-web {
+      .sidebar-cont {
+        flex: 1;
+        padding: 12px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include web-bd(15px, $txtCont-2);
         transition: color 0.4s;
       }
     }
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .sub2-main-visual {
+    display: flex;
+    flex-direction: column;
     height: 34.219vw;
-    max-height: 578px;
+    min-height: 465px;
     background-position: 70% 30%;
     background-size: 150%;
   }
 }
+
 // about-reasons
 .about-reasons {
   padding: 95px 0 50px;
@@ -174,19 +217,24 @@
       color: $primary;
     }
   }
+  @media screen and (min-width: 768px) {
+    .tit {
+      @include web-tit(38px, $txtTit);
+      line-height: 1.1;
+    }
+  }
   @media screen and (min-width: 1280px) {
     .tit {
-      @include web-tit(2.5vw, $txtTit);
+      @include web-tit(40px, $txtTit);
     }
   }
   .cont {
     height: 438px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .cont {
       height: 100%;
       display: flex;
-      justify-content: space-between;
       position: relative;
     }
     .cont-container {
@@ -196,12 +244,12 @@
   .cont-txt {
     padding: 0 20px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .cont-txt {
-      // margin-top: 95px;
-      // margin-top: 4.948vw;
       margin-top: 6.719vw;
       padding: 0;
+      flex: 1;
+      padding-left: 20px;
     }
     .cont-txt-1 {
       order: 2;
@@ -216,6 +264,14 @@
       order: 1;
     }
   }
+  @media screen and (min-width: 1024px) {
+    .cont-txt {
+      padding-left: 90px;
+    }
+    .cont-txt-2 {
+      padding-left: 160px;
+    }
+  }
   .cont-tit {
     @include mob-tit(20px, $primary);
     letter-spacing: -1px;
@@ -223,12 +279,13 @@
   .cont-tit-2-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .cont-tit {
-      @include web-tit(2.5vw, $txtTit-2);
+      @include web-tit(32px, $txtTit-2);
+      line-height: 1.3;
     }
     .cont-tit-1 {
-      width: 14.583vw;
+      // width: 14.583vw;
       word-break: keep-all;
     }
     .cont-tit-2 {
@@ -236,28 +293,60 @@
     }
     .cont-tit-2-web {
       display: block;
-      width: 15.625vw;
+      // width: 15.625vw;
       word-break: keep-all;
     }
     .cont-tit-3 {
-      width: 12.5vw;
+      // width: 12.5vw;
       word-break: keep-all;
     }
   }
+  @media screen and (min-width: 1280px) {
+    .cont-tit-2-web {
+      display: block;
+      width: 15.625vw;
+      word-break: keep-all;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .cont-tit-3 {
+      width: 200px;
+      word-break: keep-all;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .cont-tit {
+      @include web-tit(36px, $txtTit-2);
+      line-height: 1.3;
+    }
+    .cont-tit-2-web {
+      display: block;
+      width: 100%;
+      word-break: keep-all;
+    }
+  }
+
   .cont-desc {
     @include mob-bd(14px, $gray-600);
     margin-top: 17px;
     letter-spacing: normal;
   }
+  @media screen and (min-width: 768px) {
+    .cont-desc {
+      @include web-bd(14px, $gray-500);
+      word-break: keep-all;
+    }
+  }
   @media screen and (min-width: 1280px) {
     .cont-desc {
-      @include web-bd(0.938vw, $gray-500);
+      @include web-bd(16px, $gray-500);
+      width: 370px;
     }
   }
   .cont-1 {
     margin-top: 25px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .cont-1 {
       margin-top: 0;
     }
@@ -270,19 +359,24 @@
     height: 288px;
     margin-top: 55px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .pic {
-      width: 43.75vw;
+      width: 50%;
       height: 27.448vw;
       margin-top: 4.271vw;
       border-radius: 10px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .pic {
+      width: 43.75vw;
     }
   }
   .pic-cont-1 {
     background: url(../../images/sub2-donation-page/sect2-about-reasons/1-fst-pic.png)
       no-repeat 50% 100% / cover;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .pic-cont-1 {
       background-position: 50% 70%;
     }
@@ -291,6 +385,21 @@
     background: url(../../images/sub2-donation-page/sect2-about-reasons/2-snd-pic.png)
       no-repeat 50% 0 / cover;
   }
+  @media screen and (min-width: 768px) {
+    .pic-cont-2 {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .pic-cont-2 {
+      margin-left: 90px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .pic-cont-2 {
+      margin-left: 0px;
+    }
+  }
   .pic-cont-3 {
     background: url(../../images/sub2-donation-page/sect2-about-reasons/3-trd-pic.jpg)
       no-repeat 30% 0 / cover;
@@ -298,7 +407,7 @@
   .bg-deco {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .bg-deco {
       display: block;
       position: absolute;
@@ -312,7 +421,7 @@
       position: absolute;
       // top: 1.875vw;
       // top: -2.125vw;
-      right: -7.604vw;
+      right: -4.604vw;
       width: 40%;
       opacity: 0.6;
     }
@@ -339,8 +448,8 @@
       // display: none;
       position: absolute;
       width: 4.5%;
-      top: 4vw;
-      left: 16.552vw;
+      top: 2.5vw;
+      left: 12.5vw;
       animation: bg-deco-2-2-animation infinite ease-in-out;
     }
     @keyframes bg-deco-2-2-animation {
@@ -361,7 +470,7 @@
     }
     .bg-deco-3 {
       top: 3.438vw;
-      right: -54.698vw;
+      right: -64.698vw;
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -378,15 +487,37 @@
       width: 3.646vw;
     }
   }
-}
-@media screen and (min-width: 1280px) {
-  .about-reasons {
-    padding: 10.417vw 16.667vw;
+  @media screen and (min-width: 1024px) {
+    .bg-deco-2-2 {
+      top: 1.5vw;
+      left: 23.5vw;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .bg-deco-2-2 {
+      top: 1.5vw;
+      left: 21.5vw;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .bg-deco-3 {
+      right: -54.698vw;
+    }
+    .bg-deco-2-2 {
+      top: 42px;
+      left: 20.245vw;
+    }
   }
 }
+// @media screen and (min-width: 1280px) {
+//   .about-reasons {
+//     padding: 10.417vw 16.667vw;
+//   }
+// }
+
 // donation-usage
 .donation-usage {
-  padding: 50px 20px;
+  // padding: 50px 20px;
   .tit {
     @include mob-tit(26px, $txtTit);
     line-height: 31px;
@@ -398,16 +529,21 @@
   .tit-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .tit {
       display: none;
     }
     .tit-web {
       display: block;
-      @include web-tit(2.5vw, $txtTit);
+      @include web-tit(38px, $txtTit);
       .highlight {
         color: $primary;
       }
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .tit-web {
+      @include web-tit(40px, $txtTit);
     }
   }
   .swiper-donation-usage {
@@ -483,7 +619,7 @@
       background: $primary;
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .swiper-donation-usage {
       display: none;
     }
@@ -491,16 +627,17 @@
   .glide-donation-usage-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .glide-donation-usage-web {
       display: flex;
-      // margin-left: 460px;
       margin-top: 6.51vw;
-      margin-left: 17.292vw;
+      margin-left: 10.292vw;
       overflow: hidden;
+      max-width: 768px;
+      margin: 0 auto;
       .glide__track {
         flex-grow: 1;
-        flex-basis: 61.833vw;
+        flex-basis: 91.833vw;
         overflow: hidden;
         order: 2;
         .glide__slides {
@@ -572,15 +709,15 @@
       }
       .glide__arrows {
         flex-grow: 1;
-        flex-basis: 340px;
+        flex-basis: 640px;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         .glide__arrow--left {
           display: block;
-          width: 48px;
-          height: 48px;
+          width: 38px;
+          height: 38px;
           &:after {
             // display: block;
             content: "\f104";
@@ -592,8 +729,8 @@
         }
         .glide__arrow--right {
           display: block;
-          width: 48px;
-          height: 48px;
+          width: 38px;
+          height: 38px;
           &:after {
             // display: block;
             content: "\f105";
@@ -606,14 +743,37 @@
       }
     }
   }
+  @media screen and (min-width: 1024px) {
+    .glide-donation-usage-web {
+      max-width: 1024px;
+    }
+    .glide__arrows {
+      margin-bottom: 20px;
+      .glide__arrow--left {
+        width: 48px;
+        height: 48px;
+      }
+      .glide__arrow--right {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .glide-donation-usage-web {
+      max-width: 1280px;
+    }
+  }
   .cont-txt-wrap-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .cont-txt-wrap-web {
       display: block;
-      position: relative;
-      top: -24.219vw;
+      position: absolute;
+      top: 40%;
+      height: 200px;
+      width: 300px;
       .cont-txt {
         position: absolute;
         opacity: 0;
@@ -626,13 +786,24 @@
       }
       .cont-tit {
         display: block;
-        @include web-tit(2.083vw, $primary);
+        @include web-tit(32px, $primary);
         margin-bottom: 0.625vw;
       }
       .cont-desc {
-        @include web-bd(0.938vw, $txtCont-2);
+        @include web-bd(14px, $txtCont-2);
         line-height: 1.5;
       }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .cont-tit {
+      display: block;
+      @include web-tit(36px, $primary);
+      margin-bottom: 0.625vw;
+    }
+    .cont-desc {
+      @include web-bd(16px, $txtCont-2);
+      line-height: 1.5;
     }
   }
   .bg-deco {
@@ -651,17 +822,18 @@
     .bg-deco-1 {
       position: absolute;
       width: 5%;
-      top: -10.448vw;
+      top: -12.448vw;
       left: 7.969vw;
     }
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .donation-usage {
-    padding: 10.417vw 0 10.417vw 16.667vw;
+    // padding: 10.417vw 0 10.417vw 16.667vw;
     position: relative;
   }
 }
+
 // q&a
 .q-and-a {
   // background: url(../../images/sub2-donation-page/mainSec3-mob.png) no-repeat
@@ -672,7 +844,7 @@
     letter-spacing: -0.9px;
     padding-bottom: 39px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .tit {
       @include web-tit(2.5vw, $txtTit);
       padding-bottom: 0;
@@ -682,7 +854,7 @@
     height: auto;
     overflow: hidden;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .glide-q-and-a {
       width: 77.083vw;
       margin-top: 2vw;
@@ -693,7 +865,7 @@
     display: flex;
     // gap: 12px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .glide__slides {
       width: 119.792vw !important;
       height: 39.063vw;
@@ -717,7 +889,7 @@
     border: none;
     border-radius: 10px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card {
       width: 21.875vw;
       height: 31.979vw;
@@ -727,7 +899,7 @@
     height: auto;
     padding: 0 24px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card-txt {
       padding: 2.604vw;
     }
@@ -740,7 +912,7 @@
     padding-top: 92px;
     padding-left: 9px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card-tit {
       @include web-tit(1.25vw, $white);
       line-height: 1.5;
@@ -756,7 +928,7 @@
     padding-top: 23px;
     letter-spacing: normal;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card-desc {
       @include web-bd(0.781vw, $white);
       line-height: 1.5;
@@ -774,7 +946,7 @@
     background: url(../../images/sub2-donation-page/sect4-q&a/tag.png) no-repeat
       50% 0 / cover;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card-tag {
       right: 1.354vw;
       width: 3.333vw;
@@ -787,7 +959,7 @@
     padding-top: 10px;
     height: auto;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .tag-txt {
       @include web-tit(1.563vw, $gray-700);
     }
@@ -798,7 +970,7 @@
     height: 110px;
     transform: translateX(calc(320px / 2 + -50%));
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .card-illust {
       width: 3.333vw;
       width: 9.167vw;
@@ -841,7 +1013,7 @@
   .glide__button {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .glide__bullets {
       display: none;
     }
@@ -864,7 +1036,7 @@
   .front-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .list-card {
       position: relative;
       width: 21.875vw !important;
@@ -937,7 +1109,7 @@
   .bg-deco-box {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .bg-deco-box {
       display: block;
       position: absolute;
@@ -961,9 +1133,9 @@
     }
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a {
-    padding: 10.417vw 16.667vw;
+    // padding: 10.417vw 16.667vw;
     position: relative;
     &:before {
       content: "";
@@ -1013,6 +1185,7 @@
     .cont-tit {
       @include web-tit(2.5vw, $white);
       margin-bottom: 1.042vw;
+      line-height: 1.3;
     }
   }
   .cont-desc {

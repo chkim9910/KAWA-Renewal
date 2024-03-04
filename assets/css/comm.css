@@ -3667,13 +3667,25 @@ body {
   height: 425px;
   padding: 200px 20px 97px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .sub2-main-visual .txt {
+    flex: 1;
     height: 30.105vw;
-    padding: 15.417vw 54.583vw 7.396vw 16.667vw;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .sub2-main-visual .txt .inner {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-top: 100px;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .sub2-main-visual .txt .inner {
+    padding-top: 150px;
   }
 }
 .sub2-main-visual .tit {
@@ -3686,11 +3698,21 @@ body {
   margin: 0;
   color: #ffffff;
 }
+@media screen and (min-width: 1024px) {
+  .sub2-main-visual .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    line-height: normal;
+  }
+}
 @media screen and (min-width: 1280px) {
   .sub2-main-visual .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 48px;
     letter-spacing: -0.5px;
     color: #ffffff;
   }
@@ -3706,13 +3728,13 @@ body {
   letter-spacing: -0.48px;
   color: #ffffff;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .sub2-main-visual .content {
     width: 28.75vw;
     height: 2.708vw;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.042vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #ffffff;
     line-height: 1.4;
@@ -3777,19 +3799,23 @@ body {
 .sub2-main-visual .sidebar-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .sub2-main-visual .sidebar {
     display: none;
   }
   .sub2-main-visual .sidebar-web {
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
     max-height: 80px;
-    height: 4.18vw;
-    padding-left: 16.719vw;
+    padding: 20px 0;
     background-color: #ffffff;
   }
+  .sub2-main-visual .sidebar-web .inner {
+    display: flex;
+  }
   .sub2-main-visual .sidebar-web .wrapper {
+    flex: 1;
     width: 55.227vw;
     max-width: 1060.36px;
     height: 100%;
@@ -3804,32 +3830,53 @@ body {
   .sub2-main-visual .sidebar-web .list-sidebar.active .sidebar-cont {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.833vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #ffffff;
-    font-weight: 700;
     background-color: #222222;
     border-radius: 2.604vw;
   }
   .sub2-main-visual .sidebar-web .sidebar-cont {
-    width: 7.89vw;
-    padding: 0.625vw 1.302vw;
+    flex: 1;
+    padding: 12px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.833vw;
+    font-size: 15px;
+    letter-spacing: 0%;
+    color: #8e8e8e;
+    transition: color 0.4s;
+  }
+}
+@media screen and (min-width: 1410px) {
+  .sub2-main-visual .sidebar-web .inner {
+    display: block;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .sub2-main-visual .sidebar-web .sidebar-cont {
+    flex: 1;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
     letter-spacing: 0%;
     color: #8e8e8e;
     transition: color 0.4s;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .sub2-main-visual {
+    display: flex;
+    flex-direction: column;
     height: 34.219vw;
-    max-height: 578px;
+    min-height: 465px;
     background-position: 70% 30%;
     background-size: 150%;
   }
@@ -3856,11 +3903,21 @@ body {
 .about-reasons .tit .highlight {
   color: #f76a00;
 }
+@media screen and (min-width: 768px) {
+  .about-reasons .tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    color: #222222;
+    line-height: 1.1;
+  }
+}
 @media screen and (min-width: 1280px) {
   .about-reasons .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 40px;
     letter-spacing: -0.5px;
     color: #222222;
   }
@@ -3868,11 +3925,10 @@ body {
 .about-reasons .cont {
   height: 438px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .cont {
     height: 100%;
     display: flex;
-    justify-content: space-between;
     position: relative;
   }
   .about-reasons .cont-container {
@@ -3882,10 +3938,12 @@ body {
 .about-reasons .cont-txt {
   padding: 0 20px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .cont-txt {
     margin-top: 6.719vw;
     padding: 0;
+    flex: 1;
+    padding-left: 20px;
   }
   .about-reasons .cont-txt-1 {
     order: 2;
@@ -3898,6 +3956,14 @@ body {
   }
   .about-reasons .pic-cont-3 {
     order: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-reasons .cont-txt {
+    padding-left: 90px;
+  }
+  .about-reasons .cont-txt-2 {
+    padding-left: 160px;
   }
 }
 .about-reasons .cont-tit {
@@ -3914,16 +3980,16 @@ body {
 .about-reasons .cont-tit-2-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .cont-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 32px;
     letter-spacing: -0.5px;
     color: #4c4c4c;
+    line-height: 1.3;
   }
   .about-reasons .cont-tit-1 {
-    width: 14.583vw;
     word-break: keep-all;
   }
   .about-reasons .cont-tit-2 {
@@ -3931,11 +3997,37 @@ body {
   }
   .about-reasons .cont-tit-2-web {
     display: block;
-    width: 15.625vw;
     word-break: keep-all;
   }
   .about-reasons .cont-tit-3 {
-    width: 12.5vw;
+    word-break: keep-all;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont-tit-2-web {
+    display: block;
+    width: 15.625vw;
+    word-break: keep-all;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .about-reasons .cont-tit-3 {
+    width: 200px;
+    word-break: keep-all;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .cont-tit {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: -0.5px;
+    color: #4c4c4c;
+    line-height: 1.3;
+  }
+  .about-reasons .cont-tit-2-web {
+    display: block;
+    width: 100%;
     word-break: keep-all;
   }
 }
@@ -3948,19 +4040,30 @@ body {
   margin-top: 17px;
   letter-spacing: normal;
 }
+@media screen and (min-width: 768px) {
+  .about-reasons .cont-desc {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0%;
+    color: #8e8e8e;
+    word-break: keep-all;
+  }
+}
 @media screen and (min-width: 1280px) {
   .about-reasons .cont-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.938vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #8e8e8e;
+    width: 370px;
   }
 }
 .about-reasons .cont-1 {
   margin-top: 25px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .cont-1 {
     margin-top: 0;
   }
@@ -3973,18 +4076,23 @@ body {
   height: 288px;
   margin-top: 55px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .pic {
-    width: 43.75vw;
+    width: 50%;
     height: 27.448vw;
     margin-top: 4.271vw;
     border-radius: 10px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about-reasons .pic {
+    width: 43.75vw;
+  }
+}
 .about-reasons .pic-cont-1 {
   background: url(../../images/sub2-donation-page/sect2-about-reasons/1-fst-pic.png) no-repeat 50% 100%/cover;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .pic-cont-1 {
     background-position: 50% 70%;
   }
@@ -3992,13 +4100,28 @@ body {
 .about-reasons .pic-cont-2 {
   background: url(../../images/sub2-donation-page/sect2-about-reasons/2-snd-pic.png) no-repeat 50% 0/cover;
 }
+@media screen and (min-width: 768px) {
+  .about-reasons .pic-cont-2 {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-reasons .pic-cont-2 {
+    margin-left: 90px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-reasons .pic-cont-2 {
+    margin-left: 0px;
+  }
+}
 .about-reasons .pic-cont-3 {
   background: url(../../images/sub2-donation-page/sect2-about-reasons/3-trd-pic.jpg) no-repeat 30% 0/cover;
 }
 .about-reasons .bg-deco {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about-reasons .bg-deco {
     display: block;
     position: absolute;
@@ -4010,7 +4133,7 @@ body {
   }
   .about-reasons .bg-deco-1-1 {
     position: absolute;
-    right: -7.604vw;
+    right: -4.604vw;
     width: 40%;
     opacity: 0.6;
   }
@@ -4036,8 +4159,8 @@ body {
   .about-reasons .bg-deco-2-2 {
     position: absolute;
     width: 4.5%;
-    top: 4vw;
-    left: 16.552vw;
+    top: 2.5vw;
+    left: 12.5vw;
     animation: bg-deco-2-2-animation infinite ease-in-out;
   }
   @keyframes bg-deco-2-2-animation {
@@ -4058,7 +4181,7 @@ body {
   }
   .about-reasons .bg-deco-3 {
     top: 3.438vw;
-    right: -54.698vw;
+    right: -64.698vw;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -4075,15 +4198,28 @@ body {
     width: 3.646vw;
   }
 }
-
-@media screen and (min-width: 1280px) {
-  .about-reasons {
-    padding: 10.417vw 16.667vw;
+@media screen and (min-width: 1024px) {
+  .about-reasons .bg-deco-2-2 {
+    top: 1.5vw;
+    left: 23.5vw;
   }
 }
-.donation-usage {
-  padding: 50px 20px;
+@media screen and (min-width: 1280px) {
+  .about-reasons .bg-deco-2-2 {
+    top: 1.5vw;
+    left: 21.5vw;
+  }
 }
+@media screen and (min-width: 1400px) {
+  .about-reasons .bg-deco-3 {
+    right: -54.698vw;
+  }
+  .about-reasons .bg-deco-2-2 {
+    top: 42px;
+    left: 20.245vw;
+  }
+}
+
 .donation-usage .tit {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
@@ -4102,7 +4238,7 @@ body {
 .donation-usage .tit-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .donation-usage .tit {
     display: none;
   }
@@ -4110,12 +4246,21 @@ body {
     display: block;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.5vw;
+    font-size: 38px;
     letter-spacing: -0.5px;
     color: #222222;
   }
   .donation-usage .tit-web .highlight {
     color: #f76a00;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .donation-usage .tit-web {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    color: #222222;
   }
 }
 .donation-usage .swiper-donation-usage {
@@ -4171,7 +4316,7 @@ body {
 .donation-usage .swiper-donation-usage .swiper-pagination-bullet-active {
   background: #f76a00;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .donation-usage .swiper-donation-usage {
     display: none;
   }
@@ -4179,16 +4324,18 @@ body {
 .donation-usage .glide-donation-usage-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .donation-usage .glide-donation-usage-web {
     display: flex;
     margin-top: 6.51vw;
-    margin-left: 17.292vw;
+    margin-left: 10.292vw;
     overflow: hidden;
+    max-width: 768px;
+    margin: 0 auto;
   }
   .donation-usage .glide-donation-usage-web .glide__track {
     flex-grow: 1;
-    flex-basis: 61.833vw;
+    flex-basis: 91.833vw;
     overflow: hidden;
     order: 2;
   }
@@ -4228,16 +4375,15 @@ body {
   }
   .donation-usage .glide-donation-usage-web .glide__arrows {
     flex-grow: 1;
-    flex-basis: 340px;
+    flex-basis: 640px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    margin-bottom: 20px;
   }
   .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--left {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
   }
   .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--left:after {
     content: "\f104";
@@ -4248,8 +4394,8 @@ body {
   }
   .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--right {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
   }
   .donation-usage .glide-donation-usage-web .glide__arrows .glide__arrow--right:after {
     content: "\f105";
@@ -4259,14 +4405,37 @@ body {
     color: #f76a00;
   }
 }
+@media screen and (min-width: 1024px) {
+  .donation-usage .glide-donation-usage-web {
+    max-width: 1024px;
+  }
+  .donation-usage .glide__arrows {
+    margin-bottom: 20px;
+  }
+  .donation-usage .glide__arrows .glide__arrow--left {
+    width: 48px;
+    height: 48px;
+  }
+  .donation-usage .glide__arrows .glide__arrow--right {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .donation-usage .glide-donation-usage-web {
+    max-width: 1280px;
+  }
+}
 .donation-usage .cont-txt-wrap-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .donation-usage .cont-txt-wrap-web {
     display: block;
-    position: relative;
-    top: -24.219vw;
+    position: absolute;
+    top: 40%;
+    height: 200px;
+    width: 300px;
   }
   .donation-usage .cont-txt-wrap-web .cont-txt {
     position: absolute;
@@ -4282,7 +4451,7 @@ body {
     display: block;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.083vw;
+    font-size: 32px;
     letter-spacing: -0.5px;
     color: #f76a00;
     margin-bottom: 0.625vw;
@@ -4290,7 +4459,26 @@ body {
   .donation-usage .cont-txt-wrap-web .cont-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 0.938vw;
+    font-size: 14px;
+    letter-spacing: 0%;
+    color: #8e8e8e;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 768px) {
+  .donation-usage .cont-tit {
+    display: block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: -0.5px;
+    color: #f76a00;
+    margin-bottom: 0.625vw;
+  }
+  .donation-usage .cont-desc {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #8e8e8e;
     line-height: 1.5;
@@ -4312,14 +4500,13 @@ body {
   .donation-usage .bg-deco-1 {
     position: absolute;
     width: 5%;
-    top: -10.448vw;
+    top: -12.448vw;
     left: 7.969vw;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .donation-usage {
-    padding: 10.417vw 0 10.417vw 16.667vw;
     position: relative;
   }
 }
@@ -4338,7 +4525,7 @@ body {
   letter-spacing: -0.9px;
   padding-bottom: 39px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -4352,7 +4539,7 @@ body {
   height: auto;
   overflow: hidden;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .glide-q-and-a {
     width: 77.083vw;
     margin-top: 2vw;
@@ -4362,7 +4549,7 @@ body {
 .q-and-a .glide__slides {
   display: flex;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .glide__slides {
     width: 119.792vw !important;
     height: 39.063vw;
@@ -4384,7 +4571,7 @@ body {
   border: none;
   border-radius: 10px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .card {
     width: 21.875vw;
     height: 31.979vw;
@@ -4394,7 +4581,7 @@ body {
   height: auto;
   padding: 0 24px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .card-txt {
     padding: 2.604vw;
   }
@@ -4414,7 +4601,7 @@ body {
   padding-top: 92px;
   padding-left: 9px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .card-tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -4438,7 +4625,7 @@ body {
   padding-top: 23px;
   letter-spacing: normal;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .card-desc {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
@@ -4459,7 +4646,7 @@ body {
   justify-content: center;
   background: url(../../images/sub2-donation-page/sect4-q&a/tag.png) no-repeat 50% 0/cover;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .card-tag {
     right: 1.354vw;
     width: 3.333vw;
@@ -4479,7 +4666,7 @@ body {
   padding-top: 10px;
   height: auto;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .tag-txt {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
@@ -4494,7 +4681,7 @@ body {
   height: 110px;
   transform: translateX(calc(160px - 50%));
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .card-illust {
     width: 3.333vw;
     width: 9.167vw;
@@ -4537,7 +4724,7 @@ body {
 .q-and-a .glide__button {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .glide__bullets {
     display: none;
   }
@@ -4560,7 +4747,7 @@ body {
 .q-and-a .front-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .list-card {
     position: relative;
     width: 21.875vw !important;
@@ -4639,7 +4826,7 @@ body {
 .q-and-a .bg-deco-box {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a .bg-deco-box {
     display: block;
     position: absolute;
@@ -4663,9 +4850,8 @@ body {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .q-and-a {
-    padding: 10.417vw 16.667vw;
     position: relative;
   }
   .q-and-a:before {
@@ -4722,6 +4908,7 @@ body {
     letter-spacing: -0.5px;
     color: #ffffff;
     margin-bottom: 1.042vw;
+    line-height: 1.3;
   }
 }
 .financial-report .cont-desc {
