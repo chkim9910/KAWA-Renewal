@@ -1295,7 +1295,6 @@ body {
     font-weight: 700;
     font-size: 46px;
     letter-spacing: -0.5px;
-    line-height: 55.2px;
     color: #ffffff;
   }
 }
@@ -1639,7 +1638,6 @@ body {
     font-weight: 700;
     font-size: 48px;
     letter-spacing: -0.5px;
-    line-height: 57.6px;
     color: #222222;
   }
 }
@@ -1745,6 +1743,16 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .main-activities .wrapper .txt {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0%;
+    color: #ffffff;
+    line-height: 120%;
+  }
+}
+@media screen and (min-width: 1280px) {
   .main-activities .wrapper .txt {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
@@ -1890,19 +1898,40 @@ body {
 }
 
 .oncenter {
-  padding: 100px 20px;
   background-color: #ffffff;
+}
+.oncenter .wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .oncenter .txt {
   margin-top: -3px;
+  padding-bottom: 12px;
+  height: 81px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 480px) {
+  .oncenter .txt {
+    padding-bottom: 0;
+    margin-bottom: -10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .oncenter .txt {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
   .oncenter .txt {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 4.583vw;
-    width: 24.22vw;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .oncenter .txt {
+    padding-bottom: 45px;
   }
 }
 .oncenter .tit {
@@ -1915,13 +1944,12 @@ body {
   margin: 0;
   color: #222222;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .tit {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
-    font-size: 2.917vw;
+    font-size: 48px;
     letter-spacing: -0.5px;
-    line-height: 3.5004vw;
     color: #222222;
   }
 }
@@ -1933,41 +1961,53 @@ body {
   color: #222222;
   line-height: 32px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .content {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.25vw;
+    font-size: 16px;
     letter-spacing: 0%;
     color: #4c4c4c;
     word-wrap: break-word;
     word-break: keep-all;
-    margin-top: 1.042vw;
+    margin-top: 12px;
   }
 }
 .oncenter .img-list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  padding-top: 50px;
+  width: 322px;
+  height: 310px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 480px) {
   .oncenter .img-list {
-    align-content: flex-end;
-    width: 42.031vw;
+    width: 100%;
+    height: 430px;
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .oncenter .img-list {
+    width: 100%;
+    height: 430px;
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .oncenter .img-list {
+    width: 807px;
     height: 100%;
     padding-top: 0;
-    gap: 0.625vw;
   }
 }
 .oncenter .img {
-  width: 155px;
-  height: 146px;
-  flex-grow: 1;
+  width: calc(50% - 5px);
+  height: 50%;
   border: 0.5px solid #dddddd;
   border-radius: 10px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .img {
     width: 100%;
     height: 100%;
@@ -1980,7 +2020,7 @@ body {
 .oncenter .dog:hover {
   background-size: 180%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .dog {
     background: url(../../images/main/sect3-oncenter/01-dog.png) no-repeat 50% 50%/cover;
     transition: none;
@@ -1996,7 +2036,7 @@ body {
 .oncenter .oncat-info:hover {
   background-size: 160%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .oncat-info {
     background: url(../../images/main/sect3-oncenter/02-oncat-info.png) no-repeat 50% 50%/contain;
     transition: none;
@@ -2012,7 +2052,7 @@ body {
 .oncenter .ondog-info:hover {
   background-size: 160%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .ondog-info {
     background: url(../../images/main/sect3-oncenter/03-ondog-info.png) no-repeat 50% 50%/contain;
     transition: none;
@@ -2028,7 +2068,7 @@ body {
 .oncenter .cat:hover {
   background-size: 190%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .cat {
     background: url(../../images/main/sect3-oncenter/04-cat.png) no-repeat 50% 50%/cover;
     transition: none;
@@ -2040,7 +2080,7 @@ body {
 .oncenter .img-list-web {
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .oncenter .img-list {
     display: none;
   }
@@ -2063,19 +2103,14 @@ body {
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .oncenter {
-    height: 120vh !important;
-    padding: 9.166vw 0 9.791vw 16.666vw;
-  }
+@media screen and (min-width: 1024px) {
   .oncenter .wrapper {
     display: flex;
     flex-direction: column;
   }
 }
 .oncenter-info {
-  padding: 120px 20px;
-  background-color: #222222;
+  background-color: #000;
 }
 .oncenter-info .wrapper {
   position: relative;
@@ -2092,7 +2127,7 @@ body {
   z-index: 0;
   content: "";
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .oncenter-info .wrapper {
     display: none;
   }
@@ -2182,7 +2217,7 @@ body {
   z-index: 1;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .oncenter-info {
     padding: 25.365vw 18.021vw;
   }
@@ -2205,7 +2240,7 @@ body {
   .oncenter-info .tit {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 2.083vw;
+    font-size: 28px;
     letter-spacing: 0%;
     color: #ffffff;
   }
@@ -2213,7 +2248,7 @@ body {
     margin-top: 1.563vw;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
-    font-size: 1.25vw;
+    font-size: 14px;
     letter-spacing: 0%;
     color: #ffffff;
   }
@@ -2235,6 +2270,40 @@ body {
     background: url(../../images/main/sect4-oncenter-info/oncenter-bg-deco-35.png) no-repeat 50% 0/100%;
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .oncenter-info .tit {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0%;
+    color: #ffffff;
+  }
+  .oncenter-info .content {
+    margin-top: 1.563vw;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0%;
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .oncenter-info .tit {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: 0%;
+    color: #ffffff;
+  }
+  .oncenter-info .content {
+    margin-top: 1.563vw;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0%;
+    color: #ffffff;
   }
 }
 .campaign {
@@ -2284,7 +2353,6 @@ body {
     font-weight: 700;
     font-size: 2.917vw;
     letter-spacing: -0.5px;
-    line-height: 3.5004vw;
     color: #ffffff;
   }
 }
@@ -2388,7 +2456,6 @@ body {
     font-weight: 700;
     font-size: 1.875vw;
     letter-spacing: -0.5px;
-    line-height: 2.25vw;
     color: #ffffff;
     margin-top: 0.365vw;
   }
@@ -2555,7 +2622,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #222222;
   }
 }
@@ -2714,7 +2780,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #ffffff;
     text-align: center;
   }
@@ -2874,7 +2939,6 @@ body {
     font-weight: 700;
     font-size: 2.083vw;
     letter-spacing: -0.5px;
-    line-height: 2.4996vw;
     color: #222222;
   }
 }
@@ -2974,7 +3038,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #ffffff;
     height: auto;
     width: auto;
@@ -3263,7 +3326,6 @@ body {
     font-weight: 700;
     font-size: 3.125vw;
     letter-spacing: -0.5px;
-    line-height: 3.75vw;
     color: #222222;
     text-align: center;
   }
@@ -3333,7 +3395,6 @@ body {
     font-weight: 700;
     font-size: 2.083vw;
     letter-spacing: -0.5px;
-    line-height: 2.4996vw;
     color: #4c4c4c;
     line-height: 1.3;
     margin-bottom: 0.521vw;
@@ -3409,7 +3470,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #222222;
     margin-bottom: 5.208vw;
   }
@@ -3601,7 +3661,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #ffffff;
   }
 }
@@ -3772,7 +3831,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #222222;
   }
 }
@@ -3831,7 +3889,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #4c4c4c;
   }
   .about-reasons .cont-tit-1 {
@@ -4024,7 +4081,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #222222;
   }
   .donation-usage .tit-web .highlight {
@@ -4197,7 +4253,6 @@ body {
     font-weight: 700;
     font-size: 2.083vw;
     letter-spacing: -0.5px;
-    line-height: 2.4996vw;
     color: #f76a00;
     margin-bottom: 0.625vw;
   }
@@ -4258,7 +4313,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #222222;
     padding-bottom: 0;
   }
@@ -4335,7 +4389,6 @@ body {
     font-weight: 700;
     font-size: 1.25vw;
     letter-spacing: -0.5px;
-    line-height: 1.5vw;
     color: #ffffff;
     line-height: 1.5;
     padding-left: 0;
@@ -4401,7 +4454,6 @@ body {
     font-weight: 700;
     font-size: 1.563vw;
     letter-spacing: -0.5px;
-    line-height: 1.8756vw;
     color: #4c4c4c;
   }
 }
@@ -4518,7 +4570,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -4638,7 +4689,6 @@ body {
     font-weight: 700;
     font-size: 2.5vw;
     letter-spacing: -0.5px;
-    line-height: 3vw;
     color: #ffffff;
     margin-bottom: 1.042vw;
   }

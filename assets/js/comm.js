@@ -225,8 +225,8 @@ $(function () {
     scrollTrigger: {
       trigger: ".main-activities",
       // pin: ".main-activities",
-      start: "top center",
-      end: "bottom top",
+      start: "top 80%",
+      end: "top center",
       scrub: 2,
       //markers: true,
     },
@@ -309,33 +309,6 @@ $(function () {
       },
     },
   });
-  // 모든 슬라이드에 대해 active 클래스를 설정하는 함수 정의
-  // function setActiveSlide() {
-  //   var swiperSlides = document.querySelectorAll(
-  //     ".swiper-main-activities .swiper-slide"
-  //   );
-  //   swiperSlides.forEach(function (slide) {
-  //     slide.classList.remove("active");
-  //   });
-  //   var activeSlide = document.querySelector(
-  //     ".swiper-main-activities .swiper-slide-active"
-  //   );
-  //   activeSlide.classList.add("active");
-  // }
-
-  // // Swiper 초기화 후 active 클래스 설정 함수 호출
-  // swiper2.on("init", function () {
-  //   setActiveSlide();
-  // });
-
-  // // 슬라이드 변경 시 active 클래스 설정 함수 호출
-  // swiper2.on("slideChange", function () {
-  //   setActiveSlide();
-  // });
-
-  // swiper.on("slideChange", function () {
-  //   setActiveSlide();
-  // });
 
   // ****************oncenter****************
   const onCenter = gsap.timeline({
@@ -343,8 +316,8 @@ $(function () {
       trigger: ".oncenter",
       // pin: ".oncenter",
       pinSpacing: true,
-      start: "top center",
-      end: "center center",
+      start: "top 80%",
+      end: "top center",
       scrub: 2,
       // markers: true,
     },
@@ -379,7 +352,7 @@ $(function () {
   // ****************swiper-oncenter****************
   var swiper = new Swiper(".img-list-web", {
     loop: false,
-    spaceBetween: 20,
+    spaceBetween: 12,
     centeredSlides: true,
     mousewheel: true,
     // autoplay: {
