@@ -617,12 +617,16 @@
 #footer {
   // background: url(../../images/main/mobile-ver2-foooter.png) no-repeat 50% 0 /
   //   cover;
-  height: $ftH;
-  padding: 60px 20px;
+  // height: $ftH;
+  padding: 60px 0;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: flex-start;
   z-index: 9;
+  .inner {
+    display: flex;
+    flex-direction: column;
+  }
   .logo {
     &:before {
       display: block;
@@ -632,7 +636,7 @@
       content: "";
       background: url(../../images/comm/logo-blue-mob.png) no-repeat 0 0 / cover;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
       &:before {
         width: 16.406vw;
         height: 5vw;
@@ -644,7 +648,7 @@
   .info {
     margin-top: 11px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .info {
       display: flex;
       flex-wrap: wrap;
@@ -659,18 +663,18 @@
     margin-bottom: 2px;
     margin-right: 10px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .item {
-      @include web-bd(16px, $gray-700);
+      @include web-bd(14px, $gray-700);
       font-weight: 400;
     }
   }
   .terms {
     @include mob-bd(12px, $txtCont);
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .terms {
-      @include web-bd(16px, $gray-700);
+      @include web-bd(14px, $gray-700);
       font-weight: 400;
     }
   }
@@ -744,7 +748,7 @@
     @include mob-tit(12px, #999);
     margin-top: 10px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .copyright {
       display: none;
     }
@@ -752,14 +756,14 @@
   .copyright-web {
     display: none;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .copyright-web {
       display: block;
-      @include web-bd(16px, $gray-700);
+      @include web-bd(14px, $gray-700);
       font-weight: 400;
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .content-wrap {
       display: flex;
       flex-direction: column;
@@ -793,11 +797,16 @@
     color: #fff;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   #footer {
-    padding: 9.062vw 9.895vw 8.593vw 8.593vw;
+    // padding: 9.062vw 9.895vw 8.593vw 8.593vw;
     flex-direction: row;
     align-items: center;
+    .inner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
 // search-layer

@@ -1,4 +1,7 @@
 $(function () {
+  $("a").click(function (e) {
+    e.preventDefault();
+  });
   // -----------------------header-----------------------
   const $header = $("#header");
   const $topBtn = $("#footer #top_btn");
@@ -436,6 +439,7 @@ $(function () {
         delay: 1,
       });
   }
+
   // ****************campaign****************
   if (window.innerWidth >= 1280) {
     const campaign = gsap.timeline({
@@ -443,16 +447,16 @@ $(function () {
         trigger: ".campaign",
         // pin: ".campaign",
         // pinSpacing: true,
-        start: "top center",
-        end: "center center",
+        start: "top 70%",
+        end: "center 45%",
         scrub: 2,
         // markers: true,
       },
     });
     campaign
       .from(".campaign .bg-deco-web", {
-        duration: 0.8,
-        x: -2000,
+        duration: 1,
+        x: -1200,
         // opacity: 0,
         ease: "power2.out",
         // delay: 1,
@@ -480,11 +484,11 @@ $(function () {
   // ****************swiper-campaign****************
   var swiper = new Swiper(".carousel-campaign", {
     centeredSlides: true,
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    effect: "coverflow",
+    slidesPerView: 1,
+    // slidesPerView: "auto",
+    spaceBetween: 12,
+    initialSlide: 1,
     grabCursor: true,
-    slidesPerView: "auto",
     keyboard: {
       enabled: true,
     },
@@ -505,8 +509,12 @@ $(function () {
       clickable: true,
     },
     breakpoints: {
+      480: { slidesPerView: "auto", spaceBetween: 15 },
+      1024: { slidesPerView: "auto", spaceBetween: 15 },
       1280: {
-        spaceBetween: 60,
+        // effect: "coverflow",
+        slidesPerView: "auto",
+        spaceBetween: 30,
         loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -560,7 +568,7 @@ $(function () {
       trigger: ".subscribe",
       // pin: ".subscribe",
       pinSpacing: true,
-      start: "top 40%",
+      start: "top 70%",
       end: "center center",
       scrub: 2,
       // markers: true,
@@ -590,14 +598,15 @@ $(function () {
       trigger: ".donation",
       // pin: ".subscribe",
       pinSpacing: true,
-      start: "top 40%",
+      start: "top 70%",
       end: "center center",
       scrub: 2,
       // markers: true,
     },
   });
   donation.from(
-    [".regular-donation .tit", ".regular-donation .content", ".btn-rd"],
+    [".regular-donation"],
+    // [".regular-donation .tit", ".regular-donation .content", ".btn-rd"],
     {
       duration: 1.5,
       y: 100,
@@ -608,7 +617,8 @@ $(function () {
     }
   );
   donation.from(
-    [".associated-donation .tit", ".associated-donation .content", ".btn-ad"],
+    [".associated-donation"],
+    // [".associated-donation .tit", ".associated-donation .content", ".btn-ad"],
     {
       duration: 1.5,
       y: 100,

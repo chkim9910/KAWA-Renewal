@@ -83,6 +83,7 @@
   @media screen and (min-width: 1024px) {
     .tit {
       @include web-tit(46px, $white);
+      line-height: normal;
     }
   }
   .contents-mob {
@@ -539,7 +540,7 @@
   @media screen and (min-width: 768px) {
     .wrapper {
       .txt {
-        @include web-bd(25px, $white);
+        @include web-bd(20px, $white);
         // transform: translateY(calc(526px / 2.5));
       }
     }
@@ -723,6 +724,7 @@
   }
   .tit {
     @include mob-tit(30px, $txtTit);
+    line-height: normal;
   }
   @media screen and (min-width: 1024px) {
     .tit {
@@ -738,7 +740,7 @@
       @include web-bd(16px, $txtTit-2);
       word-wrap: break-word;
       word-break: keep-all;
-      margin-top: 12px;
+      // margin-top: 12px;
     }
   }
   .img-list {
@@ -979,9 +981,8 @@
     padding: 25.365vw 18.021vw;
     .wrapper-web {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       position: relative;
-      // padding: 266px 26px 300px;
     }
     .info-list-web {
       width: 49.479vw;
@@ -991,7 +992,7 @@
       gap: 2.083vw;
     }
     .list-el {
-      width: 23.333vw;
+      width: 100%;
       height: 8.906vw;
     }
     .tit {
@@ -1038,6 +1039,17 @@
 }
 @media screen and (min-width: 1280px) {
   .oncenter-info {
+    padding: 25.365vw 18.021vw;
+    .wrapper-web {
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      // padding: 266px 26px 300px;
+    }
+    .list-el {
+      width: 23.333vw;
+      height: 8.906vw;
+    }
     .tit {
       @include web-bd(40px, $white);
     }
@@ -1053,16 +1065,15 @@
   //   cover;
   // background-size: 360px auto;
   padding: 60px 20px;
-  background-color: $bgcBk;
+  background-color: $black;
   .wrapper {
     position: relative;
     .bg-deco {
       position: absolute;
       top: 0;
-      left: 0;
+      left: -25%;
       transform: translateY(-2%);
       width: 100%;
-      height: 500px;
       background: url(../../images/main/sect5-campaign/bg-deco-mob.png)
         no-repeat 50% 0 / 100%;
       // background-attachment: fixed;
@@ -1070,9 +1081,9 @@
     .bg-deco-web {
       display: none;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
       .bg-deco {
-        transform: translateY(-7%);
+        transform: translateY(-35%);
         background: none;
         // height: 1000px;
         // background: url(../../images/main/sect5-campaign/bg-deco-mob.png)
@@ -1083,15 +1094,29 @@
         display: block;
       }
     }
+    @media screen and (min-width: 1024px) {
+      .bg-deco {
+        transform: translateY(-30%);
+        background: none;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      .bg-deco {
+        transform: translateY(-15%);
+        background: none;
+      }
+    }
     .tit {
       @include mob-tit(30px, $white);
     }
     @media screen and (min-width: 1280px) {
       .txt {
-        margin-left: 16.667vw;
+        position: relative;
+        z-index: 10;
       }
       .tit {
-        @include web-tit(2.917vw, $white);
+        @include web-tit(48px, $white);
+        line-height: normal;
       }
     }
     .content {
@@ -1099,17 +1124,16 @@
     }
     @media screen and (min-width: 1280px) {
       .content {
-        @include web-bd(1.25vw, $white);
+        @include web-bd(16px, $white);
         word-wrap: break-word;
         word-break: keep-all;
-        margin-top: 1.042vw;
       }
     }
   }
   .carousel-campaign {
     height: 480px;
     margin-top: 55px;
-    border: 1px solid rgba(158, 158, 158, 0.1);
+    // border: 1px solid rgba(158, 158, 158, 0.1);
     border-radius: 10px;
     .txt {
       margin-top: 81px;
@@ -1334,17 +1358,6 @@
     .swiper-pagination {
       display: none;
     }
-    // .swiper-pagination {
-    //   bottom: 0.3vw;
-    //   display: flex;
-    //   justify-content: flex-end;
-    //   padding-right: 23.958vw;
-    // }
-    // .swiper-pagination-bullet {
-    //   width: 20px;
-    //   height: 20px;
-    //   font-size: 14px;
-    // }
     .swiper-button-next,
     .swiper-button-prev {
       display: block;
@@ -1362,9 +1375,7 @@
 }
 //notice
 .notice {
-  // background: url(../../images/main/mobile-ver2-mainSec4.png) no-repeat 50% 0 /
-  //   cover;
-  padding: 60px 20px;
+  // padding: 60px 20px;
   .wrapper {
     position: relative;
   }
@@ -1372,15 +1383,15 @@
     @include mob-tit(30px, $txtTit);
     text-align: center;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .tit-notice {
-      @include web-tit(2.5vw, $txtTit);
+      @include web-tit(40px, $txtTit);
     }
   }
   .list-notice {
     padding-top: 31px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .list-notice {
       padding-top: 3.489vw;
     }
@@ -1392,7 +1403,7 @@
   }
   @media screen and (min-width: 1280px) {
     .list {
-      height: 3.021vw;
+      // height: 3.021vw;
     }
   }
   .border-bm {
@@ -1408,7 +1419,30 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-    margin-left: 21px;
+  }
+  @media screen and (min-width: 768px) {
+    .list-1,
+    .list-2,
+    .list-3,
+    .list-4,
+    .list-5 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .list-1,
+    .list-2,
+    .list-3,
+    .list-4,
+    .list-5 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%;
+    }
   }
   @media screen and (min-width: 1280px) {
     .list-1,
@@ -1419,19 +1453,28 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 0 15%;
     }
   }
   .tit {
-    @include mob-tit(14px, $txtTit);
+    @include mob-bd(14px, $txtTit);
     display: flex;
     align-items: center;
     height: 44px;
     width: 279px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .tit {
       width: 28.333vw;
-      @include web-bd(1.042vw, $txtTit);
+      @include web-bd(16px, $txtTit);
+      line-height: 1.5;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .tit {
+      width: 28.333vw;
+      @include web-bd(18px, $txtTit);
+      line-height: 1.5;
     }
   }
   .date {
@@ -1439,9 +1482,9 @@
     display: block;
     height: 21px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     .date {
-      @include web-bd(1.042vw, $txtCont-2);
+      @include web-bd(16px, $txtCont-2);
       font-weight: 400;
     }
   }
@@ -1461,10 +1504,10 @@
 }
 @media screen and (min-width: 1280px) {
   .notice {
-    height: 100vh;
-    padding: 10.416vw 16.666vw;
+    // height: 100vh;
+    // padding: 0;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
   }
 }
@@ -1478,21 +1521,14 @@
   padding: 70px 20px 60px;
   &:after {
     content: "";
-    background: url(../../images/main/sect7-newsletter/bg-deco.png) no-repeat
-      50% 0 / cover;
-    height: 50px;
+    background: url(../../images/main/sect7-newsletter/bg-deco-web.png)
+      no-repeat 50% 0 / cover;
+    height: 5.208vw;
     width: 100%;
     position: absolute;
     right: 0;
     left: 0;
     bottom: 1px;
-  }
-  @media screen and (min-width: 1280px) {
-    &:after {
-      background: url(../../images/main/sect7-newsletter/bg-deco-web.png)
-        no-repeat 50% 0 / cover;
-      height: 5.208vw;
-    }
   }
   .wrapper {
     display: flex;
@@ -1577,7 +1613,7 @@
     }
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .subscribe {
     padding: 21.614vw 16.666vw 6.77vw;
     // height: 100vh;
@@ -1588,20 +1624,17 @@
 }
 //donation
 .donation {
-  // background: url(../../images/main/mobile-ver2-mainSec6.png) no-repeat 50% 0 /
-  //   cover;
-  // background-size: 360px auto;
-  padding: 60px 20px;
   .wrapper {
     display: flex;
     flex-direction: column;
     gap: 54px;
     padding-top: 3px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .wrapper {
       flex-direction: row;
-      gap: 6.354vw;
+      gap: 120px;
+      padding: 0;
     }
   }
   .regular-donation,
@@ -1610,26 +1643,14 @@
     width: 100%;
     justify-content: space-between;
   }
-  @media screen and (min-width: 1280px) {
-    .regular-donation,
-    .associated-donation {
-      // width: 29.040999999999997vw;
-      width: 37.041vw;
-      gap: 2.604vw;
-    }
-    .regular-donation {
-      justify-content: flex-end;
-    }
-    .associated-donation {
-      justify-content: flex-start;
-    }
-  }
+
   .txt {
     width: 162px;
     word-break: keep-all;
   }
   @media screen and (min-width: 1280px) {
     .txt {
+      flex: 1;
       width: 17.656vw;
     }
   }
@@ -1680,7 +1701,7 @@
 @media screen and (min-width: 1280px) {
   .donation {
     // padding: 10.416vw 16.666vw;
-    padding: 10.416vw 0;
+    // padding: 10.416vw 0;
     display: flex;
     justify-content: center;
   }
