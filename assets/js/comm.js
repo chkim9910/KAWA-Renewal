@@ -14,7 +14,7 @@ $(function () {
     "scroll",
     _.throttle(() => {
       const windowScrolled = $window.scrollTop();
-      console.log(windowScrolled);
+      // console.log(windowScrolled);
       if ($window.innerWidth() < 1280) {
         if (windowScrolled > 60) {
           gsap.to($header, 0.3, {
@@ -58,6 +58,10 @@ $(function () {
       }
     })
   );
+  $topBtn.on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, "500");
+    return false;
+  });
   // -----------------------header-gnb-mob-----------------------
   const $gnbMenuMob = $(".btn-menu");
   const $gnbMob = $("#gnb");
@@ -157,6 +161,7 @@ $(function () {
   $langWeb.on("click", () => {
     $selectLangWeb.toggleClass("active");
   });
+
   // -----------------------main-page-----------------------
   // ****************main-visual****************
   // ****************swiper-main-visual****************
@@ -632,20 +637,18 @@ $(function () {
   // -----------------------common-sub1-and-sub2-----------------------
   // sidebar
   // list에서 active 지우기
-  $(function () {
-    if (window.innerWidth >= 1280) {
-      $(".sidebar-web .list-sidebar").removeClass("active");
-      $(".info-active").addClass("active");
-      $(".mission-vision-active").addClass("active");
+  if (window.innerWidth >= 1280) {
+    $(".sidebar-web .list-sidebar").removeClass("active");
+    $(".info-active").addClass("active");
+    $(".mission-vision-active").addClass("active");
 
-      $(".sidebar-web .list-sidebar").click(function () {
-        // list에서 active 지우기
-        $(".list-sidebar").removeClass("active");
-        // this에 active 부여하기
-        $(this).addClass("active");
-      });
-    }
-  });
+    $(".sidebar-web .list-sidebar").click(function () {
+      // list에서 active 지우기
+      $(".list-sidebar").removeClass("active");
+      // this에 active 부여하기
+      $(this).addClass("active");
+    });
+  }
 
   // -----------------------sub-2-page-----------------------
   // ****************about-reasons****************
@@ -1054,42 +1057,18 @@ $(function () {
   $(".list-card").mouseleave(function () {
     $(this).find(".card").removeClass("flipped");
   });
-});
 
-// ****************financial-report****************
-const financialReportMob = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".financial-report",
-    start: "top 70%",
-    end: "top 50%",
-    scrub: 2,
-    // markers: true,
-  },
-});
-financialReportMob
-  .from(".financial-report .container-financial-report", {
-    duration: 0.6,
-    y: 100,
-    opacity: 0,
-    ease: "power2.out",
-  })
-  .from(".financial-report .btn-more", {
-    duration: 0.6,
-    y: 100,
-    opacity: 0,
-    ease: "power2.out",
-  });
-if (window.innerWidth >= 1280) {
-  const financialReport = gsap.timeline({
+  // ****************financial-report****************
+  const financialReportMob = gsap.timeline({
     scrollTrigger: {
       trigger: ".financial-report",
-      start: "bottom top",
-      end: "center center",
+      start: "top 70%",
+      end: "top 50%",
       scrub: 2,
       // markers: true,
     },
   });
-  financialReport
+  financialReportMob
     .from(".financial-report .container-financial-report", {
       duration: 0.6,
       y: 100,
@@ -1102,8 +1081,31 @@ if (window.innerWidth >= 1280) {
       opacity: 0,
       ease: "power2.out",
     });
-}
-
+  if (window.innerWidth >= 1280) {
+    const financialReport = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".financial-report",
+        start: "bottom top",
+        end: "center center",
+        scrub: 2,
+        // markers: true,
+      },
+    });
+    financialReport
+      .from(".financial-report .container-financial-report", {
+        duration: 0.6,
+        y: 100,
+        opacity: 0,
+        ease: "power2.out",
+      })
+      .from(".financial-report .btn-more", {
+        duration: 0.6,
+        y: 100,
+        opacity: 0,
+        ease: "power2.out",
+      });
+  }
+});
 // -----------------------sub-1-page-----------------------
 // ****************mission-vision****************
 gsap.registerPlugin(ScrollTrigger);
@@ -1111,8 +1113,9 @@ const missionvision = gsap.timeline({
   scrollTrigger: {
     trigger: ".mission-vision",
     // pin: ".bg-from-left",
-    start: "20% center",
-    end: "center 30%",
+    // start: "20% center",
+    start: "top center",
+    end: "center center",
     scrub: 2,
     // markers: true,
   },
@@ -1143,7 +1146,7 @@ missionvision
 
 // ****************core-value****************
 gsap.registerPlugin(ScrollTrigger);
-if (window.innerWidth < 1280) {
+if (window.innerWidth < 768) {
   const coreValueMob = gsap.timeline({
     scrollTrigger: {
       trigger: "#corevalue",
@@ -1259,7 +1262,7 @@ if (window.innerWidth < 1280) {
 // cont 배열
 const conts = gsap.utils.toArray("#projectInitiative .cont");
 
-if (window.innerWidth < 1280) {
+if (window.innerWidth < 1024) {
   conts.forEach((cont) => {
     gsap.from(cont, {
       duration: 0.6,
@@ -1268,8 +1271,9 @@ if (window.innerWidth < 1280) {
       ease: "power2.out",
       scrollTrigger: {
         trigger: cont,
-        start: "-10% center",
-        end: "center 40%",
+        // start: "-10% center",
+        start: "top 80%",
+        end: "top center",
         scrub: 1,
         // markers: true,
       },
@@ -1281,7 +1285,8 @@ if (window.innerWidth < 1280) {
     xPercent: -100 * (conts.length - 1),
     ease: "none",
     scrollTrigger: {
-      trigger: "#projectInitiative .wrapper",
+      // trigger: "#projectInitiative .wrapper",
+      trigger: "#projectInitiative",
       start: "top top",
       end: "+=300%",
       pin: true,
@@ -1307,7 +1312,7 @@ if (window.innerWidth < 1280) {
         start: "top center",
         end: "center center",
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
 
