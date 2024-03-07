@@ -166,11 +166,12 @@ $(function () {
   // ****************main-visual****************
   // ****************swiper-main-visual****************
   var leftNumber = document.querySelector(".fst-num .fst-01"); // 첫 번째 슬라이드 번호로 초기 설정
-  var swiper = new Swiper(".main-visual", {
+  var swiper1 = new Swiper(".main-visual", {
+    effect: "fade",
     slidesPerView: 1, // 보여질 슬라이드 수
     centeredSlides: true, // 가운데 정렬된 슬라이드
     autoplay: {
-      delay: 300000, // 자동 재생 딜레이(ms)
+      delay: 3500, // 자동 재생 딜레이(ms)
       disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
     },
     pagination: {
@@ -211,17 +212,36 @@ $(function () {
         var rightNumber = document.querySelector(".lst-num");
         rightNumber.innerText = "03";
       },
-
-      // function () {
-      //   if ($(".dog").hasClass("swiper-slide-active")) {
-      //     $(".btn-wrap").css("top", "103%");
-      //   } else {
-      //     $(".btn-wrap").css("top", "112%");
-      //   }
-      // },
     },
   });
 
+  $(".pause-play").on("click", function () {
+    if (swiper1.autoplay.running) {
+      swiper1.autoplay.stop();
+      $(this).addClass("paused");
+    } else {
+      swiper1.autoplay.start();
+      $(this).removeClass("paused");
+    }
+  });
+
+  // $(".pausePlay").on("click", function () {
+  //   console.log("Button clicked"); // 버튼 클릭 확인용 로그
+
+  //   if (swiper.autoplay.running) {
+  //     console.log("Autoplay stopped"); // 자동 재생 중지 확인용 로그
+  //     swiper.stopAutoplay();
+  //     console.log(swiper.autoplay);
+  //   } else {
+  //     console.log("Autoplay started"); // 자동 재생 시작 확인용 로그
+  //     swiper.startAutoplay();
+  //     console.log(swiper.autoplay);
+  //   }
+  // });
+
+  // $(".pausePlay").on("click", function () {
+  //   swiper.autoplay.start();
+  // });
   // if ($(".dog").hasClass("swiper-slide-active")) {
   //   $(".btn-wrap").css("top", "103%");
   // } else {
@@ -375,7 +395,7 @@ $(function () {
   });
 
   // ****************oncenter-info****************
-  if (window.innerWidth >= 1280) {
+  if (window.innerWidth >= 768) {
     const oncenterInfo = gsap.timeline({
       scrollTrigger: {
         trigger: ".oncenter-info",
@@ -443,10 +463,27 @@ $(function () {
         opacity: 0,
         delay: 1,
       });
+  } else {
+    const oncenterInfomob = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".oncenter-info",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 2,
+        // markers: true,
+      },
+    });
+    oncenterInfomob.from(".oncenter-info .wrapper-mob", {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+      // delay: 1,
+    });
   }
 
   // ****************campaign****************
-  if (window.innerWidth >= 1280) {
+  if (window.innerWidth >= 768) {
     const campaign = gsap.timeline({
       scrollTrigger: {
         trigger: ".campaign",
@@ -484,6 +521,23 @@ $(function () {
       .to(".campaign .carousel-campaign", {
         duration: 2,
       });
+  } else {
+    const campaignMob = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".campaign",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+    campaignMob.from(".campaign .inner", {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+      // delay: 1,
+    });
   }
 
   // ****************swiper-campaign****************
