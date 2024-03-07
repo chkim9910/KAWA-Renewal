@@ -171,7 +171,7 @@ $(function () {
     slidesPerView: 1, // 보여질 슬라이드 수
     centeredSlides: true, // 가운데 정렬된 슬라이드
     autoplay: {
-      delay: 3500, // 자동 재생 딜레이(ms)
+      delay: 3500000, // 자동 재생 딜레이(ms)
       disableOnInteraction: false, // 유저 상호작용 후에도 자동 재생 유지
     },
     pagination: {
@@ -1276,7 +1276,7 @@ if (window.innerWidth < 768) {
   // 각각의 content에 대한 애니메이션
   contents.forEach(function (elem, i) {
     const tlDelay = i;
-    var titles = elem.querySelectorAll("#corevalue #text");
+    var titles = elem.querySelectorAll("#corevalue .text");
     var contentTl = gsap.timeline();
 
     gsap.set("#corevalue .content", {

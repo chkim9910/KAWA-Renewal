@@ -6,8 +6,6 @@
     <title>mission-vision-page</title>
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
     <link
@@ -46,6 +44,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script defer src="/assets/js/comm.js"></script>
   </head>
   <body>
@@ -247,9 +246,9 @@
             </button>
             <button type="button" class="btn-menu">
               <span class="blind">메뉴</span>
-              <div class="btn-line btn-line-top"></div>
-              <div class="btn-line btn-line-middle"></div>
-              <div class="btn-line btn-line-bottom"></div>
+              <span class="btn-line btn-line-top"></span>
+              <span class="btn-line btn-line-middle"></span>
+              <span class="btn-line btn-line-bottom"></span>
             </button>
             <button type="button" class="btn-lang-web">
               <span class="lang-icon material-symbols-outlined">
@@ -461,7 +460,7 @@
         <section class="sect-exp2 sub1-main-visual">
           <div class="txt">
             <div class="inner">
-              <strong class="tit">MISSION & VISION</strong>
+              <h2 class="tit">MISSION & VISION</h2>
             </div>
           </div>
           <div class="sidebar">
@@ -548,6 +547,7 @@
         <section class="sect-exp mission-vision">
           <div class="inner">
             <div class="wrapper-mission-vision">
+              <h2 class="blind">미션과 비전</h2>
               <div class="bg-deco">
                 <svg
                   class="logo-bg-deco"
@@ -608,7 +608,7 @@
                     동물을 생명체로 <br />
                     존중하는 마음
                   </strong>
-                  <div id="text">
+                  <div class="text">
                     <strong class="content-tit-web content-1-tit-web">
                       동물을 <br />
                       생명체로 <br />
@@ -625,7 +625,7 @@
                     배려와 <br />
                     생활방식의 변화
                   </strong>
-                  <div id="text">
+                  <div class="text">
                     <strong class="content-tit-web content-2-tit-web">
                       배려와 <br />
                       생활방식의 <br />
@@ -642,7 +642,7 @@
                   <strong class="content-tit content-3-tit">
                     동물의 대변자
                   </strong>
-                  <div id="text">
+                  <div class="text">
                     <strong class="content-tit-web content-3-tit-web">
                       동물의 <br />
                       대변자
@@ -659,7 +659,7 @@
                     과학과 생명윤리의 <br />
                     합리적 기반
                   </strong>
-                  <div id="text">
+                  <div class="text">
                     <strong class="content-tit-web content-4-tit-web">
                       과학과 <br />
                       생명윤리의 <br />
@@ -678,7 +678,7 @@
                     문화로 정착되는 <br />
                     동물보호
                   </strong>
-                  <div id="text">
+                  <div class="text">
                     <strong class="content-tit-web content-5-tit-web">
                       문화로 <br />
                       정착되는 <br />
@@ -695,7 +695,7 @@
                   <strong class="content-tit content-6-tit">
                     협력과 성실
                   </strong>
-                  <div id="text">
+                  <div class="text">
                     <strong class="content-tit-web content-6-tit-web">
                       협력과 <br />
                       성실
@@ -778,8 +778,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <path
                           class="bg-deco-1-cls-1"
                           d="M142.78,270.35l17.05,21.91a11.16,11.16,0,0,0,15,2.4l23-15.51a11.16,11.16,0,0,1,17.28,7.72l3.81,27.5A11.15,11.15,0,0,0,230.8,324l27.7-1.91a11.15,11.15,0,0,1,11.1,15.32l-10.45,25.72a11.16,11.16,0,0,0,5.44,14.22l25,12.19a11.15,11.15,0,0,1,1.95,18.82l-21.91,17.06a11.16,11.16,0,0,0-2.4,15l15.51,23A11.15,11.15,0,0,1,275,480.71l-27.5,3.82a11.14,11.14,0,0,0-9.59,11.82L239.79,524a11.16,11.16,0,0,1-15.32,11.11L198.75,524.7a11.16,11.16,0,0,0-14.22,5.44l-12.19,24.94a11.16,11.16,0,0,1-18.82,2l-17.06-21.91a11.14,11.14,0,0,0-15-2.4l-23,15.51a11.15,11.15,0,0,1-17.27-7.72L77.31,513a11.16,11.16,0,0,0-11.82-9.6L37.8,505.34A11.16,11.16,0,0,1,26.69,490l10.45-25.73a11.15,11.15,0,0,0-5.44-14.21L6.76,437.89a11.16,11.16,0,0,1-2-18.83L26.71,402a11.14,11.14,0,0,0,2.4-15L13.6,364a11.16,11.16,0,0,1,7.72-17.28l27.5-3.81A11.16,11.16,0,0,0,58.42,331l-1.92-27.7a11.15,11.15,0,0,1,15.32-11.1l25.73,10.45a11.15,11.15,0,0,0,14.21-5.44L124,272.3A11.16,11.16,0,0,1,142.78,270.35Z"
@@ -841,8 +841,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <line
                           class="bg-deco-2-cls-2"
                           x1="55.26"
@@ -928,8 +928,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <line
                           class="cls-1"
                           x1="392.75"
@@ -1040,8 +1040,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <path
                           class="bg-deco-3-cls-1"
                           d="M189,248.06l14.52-18.64a9.48,9.48,0,0,1,12.79-2l19.6,13.19a9.49,9.49,0,0,0,14.7-6.57l3.25-23.4a9.48,9.48,0,0,1,10.05-8.16l23.58,1.63A9.49,9.49,0,0,0,297,191l-8.89-21.89A9.5,9.5,0,0,1,292.7,157l21.23-10.38a9.48,9.48,0,0,0,1.66-16L297,116.13a9.48,9.48,0,0,1-2-12.79l13.19-19.6A9.49,9.49,0,0,0,301.54,69l-23.41-3.25A9.48,9.48,0,0,1,270,55.74l1.63-23.58a9.49,9.49,0,0,0-13-9.44l-21.89,8.89A9.5,9.5,0,0,1,224.57,27L214.19,5.75a9.48,9.48,0,0,0-16-1.66L183.66,22.73a9.48,9.48,0,0,1-12.79,2l-19.6-13.19a9.49,9.49,0,0,0-14.7,6.57l-3.25,23.4a9.48,9.48,0,0,1-10,8.16L99.7,48.08a9.49,9.49,0,0,0-9.45,13L99.14,83a9.5,9.5,0,0,1-4.63,12.1L73.28,105.49a9.48,9.48,0,0,0-1.66,16L90.26,136a9.48,9.48,0,0,1,2,12.79l-13.19,19.6a9.49,9.49,0,0,0,6.57,14.7l23.4,3.25a9.48,9.48,0,0,1,8.16,10L115.61,220a9.49,9.49,0,0,0,13,9.44l21.89-8.89a9.5,9.5,0,0,1,12.1,4.63L173,246.4A9.48,9.48,0,0,0,189,248.06Z"
@@ -1103,8 +1103,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <line
                           class="bg-deco-4-cls-1"
                           x1="55.26"
@@ -1212,8 +1212,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <path
                           class="bg-deco-5-cls-1"
                           d="M511.39,185.77c-78,0-137.52,64.8-137.52,145.57V517.81"
@@ -1318,8 +1318,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <polygon
                           class="bg-deco-6-cls-1"
                           points="59.07 303.38 88.18 353.79 117.28 404.2 59.07 404.2 0.87 404.2 29.97 353.79 59.07 303.38"
@@ -1398,8 +1398,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <path
                           class="bg-deco-7-cls-1"
                           d="M259.78,492.12l-1,20.13-1-20.13a35.28,35.28,0,0,0-33.45-33.51l-20.13-1,20.13-1a35.3,35.3,0,0,0,33.5-33.46l1-20.13,1,20.13a35.3,35.3,0,0,0,33.45,33.51l20.13,1-20.13,1A35.3,35.3,0,0,0,259.78,492.12Z"
@@ -1501,8 +1501,8 @@
                         }
                       </style>
                     </defs>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_2-2" data-name="Layer 2">
+                    <g data-name="Layer 2">
+                      <g data-name="Layer 2">
                         <circle
                           class="bg-deco-8-cls-1"
                           cx="76.85"

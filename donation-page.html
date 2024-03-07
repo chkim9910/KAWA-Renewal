@@ -6,8 +6,6 @@
     <title>donation-page</title>
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
     <link
@@ -46,6 +44,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script defer src="/assets/js/comm.js"></script>
   </head>
   <body>
@@ -246,9 +245,9 @@
             </button>
             <button type="button" class="btn-menu">
               <span class="blind">메뉴</span>
-              <div class="btn-line btn-line-top"></div>
-              <div class="btn-line btn-line-middle"></div>
-              <div class="btn-line btn-line-bottom"></div>
+              <span class="btn-line btn-line-top"></span>
+              <span class="btn-line btn-line-middle"></span>
+              <span class="btn-line btn-line-bottom"></span>
             </button>
             <button type="button" class="btn-lang-web">
               <span class="lang-icon material-symbols-outlined">
@@ -460,7 +459,7 @@
         <section class="sect-exp2 sub2-main-visual">
           <div class="txt">
             <div class="inner">
-              <h1 class="tit">후원안내</h1>
+              <h2 class="tit">후원안내</h2>
               <p class="content">
                 동물자유연대는 인간과 동물이 생태적 · 윤리적 조화를 이루며
                 살아가는 사회를 만들어 가기 위해 변화를 만들고 있습니다.
@@ -614,8 +613,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <path
                               class="bg-deco-1-1-cls-1"
                               d="M1.25,458.1C52.72,559.65,158.08,629.25,279.71,629.25c172.31,0,312-139.69,312-312s-139.69-312-312-312a310.69,310.69,0,0,0-190.58,65"
@@ -655,8 +654,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <line
                               class="bg-deco-1-2-cls-1"
                               x1="55.26"
@@ -722,8 +721,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <path
                               class="bg-deco-2-1-cls-1"
                               d="M340.35,60.54,306.48,9.62A20.44,20.44,0,0,0,273.32,8.4L235.8,56.69a20.42,20.42,0,0,1-24.33,6.18l-56-24.52a20.45,20.45,0,0,0-28.55,16.9l-5.46,60.92a20.44,20.44,0,0,1-17.12,18.35l-60.4,9.67A20.44,20.44,0,0,0,29,173.84L57.38,228a20.44,20.44,0,0,1-4.49,24.7L7.31,293.51a20.44,20.44,0,0,0,3.51,33L64,356.77A20.45,20.45,0,0,1,73.55,380l-16.3,58.95A20.43,20.43,0,0,0,78,464.77l61.07-3.26a20.44,20.44,0,0,1,20.61,14.34l18.16,58.4a20.43,20.43,0,0,0,31.46,10.51L259,509a20.44,20.44,0,0,1,25.09.92l46.85,39.32A20.44,20.44,0,0,0,363,541.06l22.4-56.91"
@@ -743,8 +742,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <path
                               class="bg-deco-2-2-cls-1"
                               d="M43.93,70.4l-.81,15.91L42.33,70.4A27.88,27.88,0,0,0,15.9,43.93L0,43.12l15.9-.79A27.88,27.88,0,0,0,42.37,15.9L43.18,0,44,15.9A27.89,27.89,0,0,0,70.4,42.37l15.91.81L70.4,44A27.89,27.89,0,0,0,43.93,70.4Z"
@@ -766,8 +765,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <path
                               class="bg-deco-2-3-cls-1"
                               d="M324.74.11S304.65,91.36,197,119.16c-35.57,9.18-65.55,31.65-77,67.45-7.23,22.69-9.17,49,.13,71.43,9.54,23,34.8,44,60.47,43.63,13.63-.2,26-8.7,30.18-21.67,3.83-11.85,1.51-28.61-23.08-48.21-49.19-39.21-119-31.37-119-31.37S27.32,203.28.24,218.25"
@@ -803,8 +802,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <path
                               class="bg-deco-3-1-cls-1"
                               d="M372.42,0s-3.21,131.72,142.22,203.37c0,0,49.19,24.59,74.85-4.28s-25.66-77-25.66-77S506.09,67.58,427,52.61,286.07,59,286.05,59c-33,11.41-63,21.53-92.48,41.59-58.43,39.73-111.52,100.12-133,168.24-8.66,27.49-11.2,54.3-7.08,82.91,4.1,28.39,11.8,65,38,81.22,17.16,10.64,40.58,4.46,49-14.22,9.44-20.91-5.52-47.88-20.74-62.32C86.67,325,37.62,332.18.22,350.94"
@@ -825,8 +824,8 @@
                             }
                           </style>
                         </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                          <g id="Layer_2-2" data-name="Layer 2">
+                        <g data-name="Layer 2">
+                          <g data-name="Layer 2">
                             <path
                               class="bg-deco-3-2-cls-1"
                               d="M43.93,70.4l-.81,15.91L42.33,70.4A27.88,27.88,0,0,0,15.9,43.93L0,43.12l15.9-.79A27.88,27.88,0,0,0,42.37,15.9L43.18,0,44,15.9A27.89,27.89,0,0,0,70.4,42.37l15.91.81L70.4,44A27.89,27.89,0,0,0,43.93,70.4Z"
@@ -862,8 +861,8 @@
                           }
                         </style>
                       </defs>
-                      <g id="Layer_2" data-name="Layer 2">
-                        <g id="Layer_2-2" data-name="Layer 2">
+                      <g   data-name="Layer 2">
+                        <g   data-name="Layer 2">
                           <line
                             class="cls-1"
                             x1="392.75"
@@ -1071,7 +1070,7 @@
             </div>
           </div>
           <div class="glide glide-donation-usage-web">
-            <!-- ---------------  Glider  ---------------- -->
+            <!-- Glider -->
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
                 <li class="glide__slide cont-img cont-img-1"></li>
@@ -1081,7 +1080,7 @@
                 <li class="glide__slide cont-img cont-img-5"></li>
               </ul>
             </div>
-            <!-- ---------------  Controls  ---------------- -->
+            <!-- Controls -->
             <div class="glide__arrows" data-glide-el="controls">
               <button
                 id="btnPrev"
@@ -1112,8 +1111,8 @@
                   }
                 </style>
               </defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Layer_2-2" data-name="Layer 2">
+              <g data-name="Layer 2">
+                <g data-name="Layer 2">
                   <line
                     class="bg-deco-1-cls-1"
                     x1="55.26"
@@ -1398,7 +1397,6 @@
                               fill="#3f3d56"
                             />
                             <path
-                              id="f4e08e8b-ef08-4d70-8ad3-b81af8a71ff9-194"
                               data-name="a1ca5f83-7fa1-45b1-9d3b-bf096f25c0e5"
                               d="M771.84232,467.13077V443.864a31.177,31.177,0,1,1,62.35408-.04005v.04005c5.49493,11.45055,2.05727,16.8945,0,23.2668a4.19307,4.19307,0,0,1-4.18608,4.18608H776.03048A4.1931,4.1931,0,0,1,771.84232,467.13077Z"
                               transform="translate(-262.16498 -134.02654)"
@@ -1649,7 +1647,6 @@
                               fill="#3f3d56"
                             />
                             <path
-                              id="f4e08e8b-ef08-4d70-8ad3-b81af8a71ff9-194"
                               data-name="a1ca5f83-7fa1-45b1-9d3b-bf096f25c0e5"
                               d="M771.84232,467.13077V443.864a31.177,31.177,0,1,1,62.35408-.04005v.04005c5.49493,11.45055,2.05727,16.8945,0,23.2668a4.19307,4.19307,0,0,1-4.18608,4.18608H776.03048A4.1931,4.1931,0,0,1,771.84232,467.13077Z"
                               transform="translate(-262.16498 -134.02654)"
@@ -1880,7 +1877,6 @@
                               />
                             </g>
                             <circle
-                              id="b"
                               cx="449.61813"
                               cy="38.77752"
                               r="21.37412"
@@ -2059,7 +2055,6 @@
                               />
                             </g>
                             <circle
-                              id="b"
                               cx="449.61813"
                               cy="38.77752"
                               r="21.37412"
@@ -3281,8 +3276,8 @@
                   }
                 </style>
               </defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Layer_2-2" data-name="Layer 2">
+              <g data-name="Layer 2">
+                <g data-name="Layer 2">
                   <path
                     class="deco-1-cls-1"
                     d="M43.93,70.4l-.81,15.91L42.33,70.4A27.88,27.88,0,0,0,15.9,43.93L0,43.12l15.9-.79A27.88,27.88,0,0,0,42.37,15.9L43.18,0,44,15.9A27.89,27.89,0,0,0,70.4,42.37l15.91.81L70.4,44A27.89,27.89,0,0,0,43.93,70.4Z"
@@ -3304,8 +3299,8 @@
                   }
                 </style>
               </defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Layer_2-2" data-name="Layer 2">
+              <g data-name="Layer 2">
+                <g data-name="Layer 2">
                   <path
                     class="deco-2-cls-1"
                     d="M372.42,0s-3.21,131.72,142.22,203.37c0,0,49.19,24.59,74.85-4.28s-25.66-77-25.66-77S506.09,67.58,427,52.61,286.07,59,286.05,59c-33,11.41-63,21.53-92.48,41.59-58.43,39.73-111.52,100.12-133,168.24-8.66,27.49-11.2,54.3-7.08,82.91,4.1,28.39,11.8,65,38,81.22,17.16,10.64,40.58,4.46,49-14.22,9.44-20.91-5.52-47.88-20.74-62.32C86.67,325,37.62,332.18.22,350.94"

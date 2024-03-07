@@ -217,7 +217,7 @@
     left: 40px;
     transform: translateY(0%);
     width: 40px;
-    height: 40px;
+    // height: 40px;
     // margin: 198px 251px 0 0;
     &:after {
       // display: block;
@@ -238,7 +238,7 @@
   .pause-play {
     position: absolute;
     left: 80px;
-    transform: translateY(2px);
+    transform: translateY(3.5px);
     width: 40px;
     height: 40px;
     z-index: 10;
@@ -250,7 +250,7 @@
   @media screen and (min-width: 1024px) {
     .pause-play {
       // top: 50%;
-      left: 135%;
+      left: 140%;
     }
     .pause-play-icon {
       color: $white;
@@ -262,7 +262,7 @@
     // top: 297px;
     left: 0;
     width: 40px;
-    height: 40px;
+    // height: 40px;
     // margin: 198px 0 0 12px;
     &:after {
       // display: block;
@@ -286,6 +286,7 @@
   @media screen and (min-width: 1024px) {
     .progress {
       width: 200px;
+      height: 40px;
       // width: 600px;
       // height: 15.885vw;
       // margin-left: 16.666vw;
@@ -294,6 +295,7 @@
       display: flex;
       // align-items: flex-end;
       justify-content: flex-end;
+      align-items: flex-end;
       z-index: 1;
       position: relative;
       background: none;
@@ -357,7 +359,7 @@
       height: var(--swiper-pagination-progressbar-size, 4px);
       left: 30px;
       // left: 17.76vw;
-      top: 9px;
+      top: 21px;
       // top: 14.25vw;
       border-radius: 10px;
       // margin-top: 0.521vw;

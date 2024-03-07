@@ -6,8 +6,6 @@
     <title>동물자유연대-main-page</title>
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
     <link
@@ -40,6 +38,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -243,9 +242,9 @@
             </button>
             <button type="button" class="btn-menu">
               <span class="blind">메뉴</span>
-              <div class="btn-line btn-line-top"></div>
-              <div class="btn-line btn-line-middle"></div>
-              <div class="btn-line btn-line-bottom"></div>
+              <span class="btn-line btn-line-top"></span>
+              <span class="btn-line btn-line-middle"></span>
+              <span class="btn-line btn-line-bottom"></span>
             </button>
             <button type="button" class="btn-lang-web">
               <span class="lang-icon material-symbols-outlined">
@@ -459,6 +458,7 @@
       <main id="main">
         <!-- main-visual -->
         <section class="swiper sect main-visual">
+          <h2 class="blind">main visual</h2>
           <div class="swiper-wrapper">
             <div class="swiper-slide horse">
               <div class="inner">
@@ -646,7 +646,7 @@
                 </div>
               </div>
             </div>
-            <div thumbsSlider="" class="swiper thumb-tit">
+            <div class="swiper thumb-tit">
               <div class="swiper-wrapper">
                 <div class="swiper-slide tit">정책·입법</div>
                 <div class="swiper-slide tit">반려동물</div>
@@ -676,13 +676,13 @@
               </ul>
               <div class="swiper img-list-web">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><li class="img dog"></li></div>
-                  <div class="swiper-slide"><li class="img cat"></li></div>
+                  <div class="swiper-slide"><div class="img dog"></div></div>
+                  <div class="swiper-slide"><div class="img cat"></div></div>
                   <div class="swiper-slide">
-                    <li class="img oncat-info"></li>
+                    <div class="img oncat-info"></div>
                   </div>
                   <div class="swiper-slide">
-                    <li class="img ondog-info"></li>
+                    <div class="img ondog-info"></div>
                   </div>
                 </div>
                 <div class="swiper-scrollbar"></div>
@@ -694,6 +694,7 @@
         <section class="sect-exp oncenter-info">
           <div class="inner">
             <div class="wrapper wrapper-mob">
+              <h2 class="blind">온센터 안내</h2>
               <ul class="info-list">
                 <li class="rescue">
                   <strong class="tit">구조</strong>
@@ -1352,16 +1353,16 @@
       <section class="search-layer">
         <div class="layer-head">
           <a href="/">
-            <h1 id="logo">
+            <h3 class="logo">
               <span class="blind">동물자유연대</span>
-            </h1>
+            </h3>
           </a>
         </div>
         <div class="layer-body">
           <h2 class="blind">검색</h2>
           <div class="area-search">
             <div class="content">
-              <form action="" class="search">
+              <form action="#" class="search">
                 <input type="text" id="inpSearch" />
                 <label for="inpSearch" class="blind">검색어</label>
               </form>

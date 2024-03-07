@@ -300,6 +300,7 @@
     }
   }
   .btn-line {
+    display: block;
     width: 100%;
     border: 1px solid $white;
     border-radius: 1px;
@@ -339,7 +340,7 @@
     .en {
       width: 100%;
       height: 50px;
-      @include web-bd($txtTit);
+      @include web-bd(14px, $txtTit);
       background: $white;
       &:hover {
         background: $point;
@@ -698,7 +699,7 @@
       }
     }
     .btn-primary {
-      background-color: linear-gradient(to right, #bcd8de, #dfddd7) !important;
+      background: linear-gradient(to right, #bcd8de, #dfddd7) !important;
       --bs-btn-color: #fff;
       --bs-btn-bg: rgba(13, 110, 253, 0);
       --bs-btn-border-color: rgba(13, 110, 253, 0);
@@ -716,11 +717,7 @@
     }
     .btn {
       &:hover {
-        background-color: linear-gradient(
-          to right,
-          #bcd8de,
-          #dfddd7
-        ) !important;
+        background: linear-gradient(to right, #bcd8de, #dfddd7) !important;
       }
     }
     .inner-content-txt {
@@ -980,7 +977,7 @@
     width: 42px;
     height: 42px;
     line-height: 46px;
-    border: 0px solid rgb(173 87 0 / 50%);
+    // border: 0px solid rgb(173 87 0 / 50%);
     border-radius: 15px;
     color: #fff;
     text-align: center;
@@ -992,7 +989,7 @@
     /* backdrop-filter: blur(20px); */
   }
   #top_btn:hover {
-    border-color: #ff862b;
+    // border-color: #ff862b;
     /* border-color: #3059c7; */
     background: #ff862b;
     /* background: #3059c7; */
