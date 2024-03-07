@@ -840,8 +840,8 @@
     }
     @media screen and (min-width: 768px) {
       &:before {
-        width: 16.406vw;
-        height: 5vw;
+        width: 11.093vw;
+        height: 3.281vw;
         background-size: 100%;
         transform: translateY(15%);
       }
@@ -1008,6 +1008,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: center;
     }
   }
 }
