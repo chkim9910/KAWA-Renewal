@@ -1,5 +1,5 @@
 $(function () {
-  $("a").click(function (e) {
+  $("a:not(.gotolink)").click(function (e) {
     e.preventDefault();
   });
   // -----------------------header-----------------------
@@ -1059,39 +1059,17 @@ $(function () {
   });
 
   // ****************financial-report****************
-  const financialReportMob = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".financial-report",
-      start: "top 70%",
-      end: "top 50%",
-      scrub: 2,
-      // markers: true,
-    },
-  });
-  financialReportMob
-    .from(".financial-report .container-financial-report", {
-      duration: 0.6,
-      y: 100,
-      opacity: 0,
-      ease: "power2.out",
-    })
-    .from(".financial-report .btn-more", {
-      duration: 0.6,
-      y: 100,
-      opacity: 0,
-      ease: "power2.out",
-    });
-  if (window.innerWidth >= 1280) {
-    const financialReport = gsap.timeline({
+  if (window.innerWidth < 768) {
+    const financialReportMob = gsap.timeline({
       scrollTrigger: {
         trigger: ".financial-report",
-        start: "bottom top",
-        end: "center center",
+        start: "top 70%",
+        end: "top 50%",
         scrub: 2,
         // markers: true,
       },
     });
-    financialReport
+    financialReportMob
       .from(".financial-report .container-financial-report", {
         duration: 0.6,
         y: 100,
@@ -1104,6 +1082,33 @@ $(function () {
         opacity: 0,
         ease: "power2.out",
       });
+  } else {
+    const financialReport = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".financial-report",
+        start: "top 80%",
+        end: "center 60%",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+    financialReport.from(
+      ".container-financial-report",
+      // ".financial-report .container-financial-report",
+
+      {
+        duration: 0.6,
+        y: 100,
+        opacity: 0,
+        ease: "power2.out",
+      }
+    );
+    // .from(".financial-report .btn-more", {
+    //   duration: 0.3,
+    //   y: 100,
+    //   opacity: 0,
+    //   ease: "power2.out",
+    // });
   }
 });
 // -----------------------sub-1-page-----------------------
