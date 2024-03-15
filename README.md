@@ -9,7 +9,7 @@
 > <br>국내의 비영리단체 동물자유연대의 리뉴얼 사이트입니다.<br>
 > 기존의 단순하고 옛스러운 느낌에서 탈피하여 현대적이고 <br>
 > 시선을 집중시킬 수 있도록 다양한 인터렉션 요소를 배치하였습니다.
-> <br> > <br>
+> <br> <br>
 
 <h2>Page Link</h2>
 
@@ -37,14 +37,14 @@
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/adobeillustrator.svg" />
     <br>
 - **Web Development Technologies** <br><br>
-  - HTML5
+  - HTML5<br>
     <img height="32" width="24" src="https://unpkg.com/simple-icons@v11/icons/html5.svg" />
-  - CSS3
+  - CSS3<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" />
-  - SCSS
+  - SCSS<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/sass.svg" />
-  - JavaScript
+  - JavaScript<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" />
-  - JQuery
+  - JQuery<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jquery.svg" />
     <br>
